@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>【知识图谱系列合集】四、知识存储.md | Kaikai&#39;s Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="导读：  1.知识提取：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。1https:&#x2F;&#x2F;blog.csdn.net&#x2F;zkzbhh&#x2F;article&#x2F;details&#x2F;107921135 2.知识表示：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR模型、">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【知识图谱系列合集】四、知识存储.md">
+<meta property="og:url" content="kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8-md/index.html">
+<meta property="og:site_name" content="Kaikai&#39;s Blogs">
+<meta property="og:description" content="导读：  1.知识提取：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。1https:&#x2F;&#x2F;blog.csdn.net&#x2F;zkzbhh&#x2F;article&#x2F;details&#x2F;107921135 2.知识表示：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR模型、">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810210037352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810210302969.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810210200426.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810210239944.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810210539178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-08-14T14:22:04.000Z">
+<meta property="article:modified_time" content="2020-08-14T14:22:24.500Z">
+<meta property="article:author" content="kaikai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200810210037352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+  
+    <link rel="alternate" href="/atom.xml" title="Kaikai&#39;s Blogs" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Kaikai&#39;s Blogs</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="kaikaihit.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-【知识图谱系列合集】四、知识存储-md" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8-md/" class="article-date">
+  <time datetime="2020-08-14T14:22:04.000Z" itemprop="datePublished">2020-08-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【知识图谱系列合集】四、知识存储.md
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://img-blog.csdnimg.cn/20200810210037352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong><em>导读：</em></strong></p>
+<ul>
+<li>1.<a target="_blank" rel="noopener" href="https://blog.csdn.net/zkzbhh/article/details/107921135">知识提取</a>：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921135</span></span><br></pre></td></tr></table></figure></li>
+<li>2.<a target="_blank" rel="noopener" href="https://blog.csdn.net/zkzbhh/article/details/107921258">知识表示</a>：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR模型、TransD模型、TranSpare模型、TransA模型、TransG模型、KG2E模型。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921258</span></span><br></pre></td></tr></table></figure></li>
+<li>3.<a target="_blank" rel="noopener" href="https://blog.csdn.net/zkzbhh/article/details/107921782">实体对齐</a>：介绍实体消歧和共指消歧的方法。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921782</span></span><br></pre></td></tr></table></figure>
+<strong>本篇文章，主要介绍知识图谱的知识存储。</strong></li>
+</ul>
+<p><strong><em>1.RDF、RDFS和OWL数据模型</em></strong></p>
+<p>RDF、RDFS和OWL是W3C[1]推荐的本体描述用护眼，也是知识图谱中数据的常用存储格式，它们都是基于XML[2]编写的元数据[3]，是用于计算机传输数据，让机器可理解，而不是面向用户展示的数据模型。</p>
+<p><strong>(1)RDF</strong></p>
+<p>RDF本质是一个数据模型，它提供了一个统一的标准描述web资源，资源指的是类、属性、实例等。RDF在形式上表示为三元组。用于描述具体事物及关系，RDF也可以表示为一张带有标记的有向图，图中有节点和边，节点对应实体，边对应关系或者属性，关系指的是实体之间，实体与属性之间的关系。</p>
+<p><strong>RDF中的三元组Triple：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210302969.png" alt="在这里插入图片描述"></p>
+<p><strong>带有资源标识符URI的三元组：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210200426.png" alt="在这里插入图片描述"><br>声明命名空间ex = <a target="_blank" rel="noopener" href="http://ex.org/%E5%92%8Cex-schema">http://ex.org/和ex-schema</a> = <a target="_blank" rel="noopener" href="http://ex.org/schema%EF%BC%8C%E4%BA%8E%E6%98%AF%E5%B8%A6%E6%9C%89%E8%B5%84%E6%BA%90%E6%A0%87%E8%AF%86%E7%AC%A6%E7%9A%84URI%E4%B8%89%E5%85%83%E7%BB%84%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%A1%A8%E7%A4%BA%E4%B8%BA%E4%B8%8B%E5%9B%BE%E5%BD%A2%E5%BC%8F%E3%80%82">http://ex.org/schema，于是带有资源标识符的URI三元组就可以表示为下图形式。</a></p>
+<p><strong>声明前缀的三元组：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210239944.png" alt="在这里插入图片描述"></p>
+<p>RDF以三元组的形式描述资源，简洁明了，但是有着语义表达能力的缺陷。RDF中没有定义类、属性等词汇。RDF只能是对具体的事物进行描述，缺乏抽象能力，无法对同一个类别的事物进行定义和描述。RDF可以描述实体、实体的属性以及他们之间的关系，但是无法描述类与类之间的关系，类的属性等</p>
+<p><strong>(2)RDFS</strong></p>
+<p>RDFS在RDF的基础上定义了类（class）、属性（property）以及关系（relation）来描述资源，并且通过属性的定义域（domain）和值域（range）来约束资源。RDFS在数据层（data）的基础上引入了模式层（schema），模式层定义了一种约束规则，而数据层是在这种规则下的一个实例填充。</p>
+<p>RDFS相比于RDF语义表达能力有所提升，但RDFS依旧有语义表达的缺陷。在RDFS中关于类与类之间的关系它只能声明子类关系，无法声明互斥类的关系，也无法声明多个类、实例、属性是否等价。</p>
+<p><strong>(3)OWL</strong></p>
+<p>OWL是对RDFS关于描述资源词汇的一个扩展，OWL中添加了额外的预定于词汇来描述资源，具备更好的语义表达能力。在OWL中可以声明资源的等价性，属性的传递性、互斥性、函数性、对称性等等，具体见OWL的词汇扩展。</p>
+<p>本体和知识图谱在构建过程中，数据的存储常以RDF格式存放。而基于RDF数据的结构化查询语言SPARQL，可以实现对三元组的查询。在SPARQL中，常以“？”来表示变量或者资源标识符，select子句检索指定资源的资源标识符，where子句限定资源的由来。</p>
+<p><strong><em>2.基于RDF的存储</em></strong></p>
+<p>大部分开放的知识图谱，都是以RDF形式对外开放。</p>
+<p><strong>RDF结构：</strong></p>
+<p>RDF 为描述资源提供的基本元素有 IRI，字面值和空节点 (blank node)。IRI 就是一个符合特定语法的 UINICODE 字符串，跟 URL 的形式比较类似。其实 URL 属于 IRI 的一种。字面值可以理解为像时间、人名、数字等常量的表示，由字符串和表示数据类型的 IRI 构成。例如数字 1 的字面值可以表示为”1”^^xs:integer，其中 xs:integer 是表示整型数据类型的 IRI。空节点是指没有 IRI 的匿名节点。一般是 RDF 内部使用的一个特殊结构，不可被引用。</p>
+<p><strong>一个 RDF 数据集由一组相关的三元组的组成。</strong>由于这个三元组集合可以抽象为一张 graph，因此也称为 RDF graph。</p>
+<p><strong>例如，</strong>用 RDF 描述一本书，RDF 字典就需要定义一本书需要包含作者、书名、页数、出版时间、语言类型等。RDF 字典定义了数据建模的元数据项，这些元数据项主要包括两种类型 class 和 property。Class 是指对象实例的集合，可以理解为面向对象编程里的 class；Property 还分为两种子类型：一个是表示 class 的属性 (attribute)，另一个是表示多个 class 之间的关系 (relationship)。</p>
+<p>另外，RDF 字典的定义自身也是一个 RDF graph。这也是说明 RDF 是自描述的数据模型，是一种 schema-free 的数据模型。</p>
+<p><strong><em>3.基于图数据库的存储</em></strong></p>
+<p>图数据库是一种非关系型数据库，以解决现有关系数据库的局限性。图模型明确地列出了数据节点之间的依赖关系，而关系模型和其他 NoSQL 数据库模型则通过隐式连接来链接数据。图数据库从设计上，就是可以简单快速地检索难以在关系系统中建模的复杂层次结构的。</p>
+<p><strong>以neo4j为例介绍。</strong></p>
+<p>数据存储形式：主要是 <strong>节点（node）和 边（edge）</strong> 来组织数据。node可以代表知识图谱中的实体，edge可以用来代表实体间的关系，关系可以有方向，两端对应开始节点和结束节点。另外，可以在node上加一个或多个<strong>标签（Node Label）表示实体的分类</strong>，以及一个键值对集合来表示该实体除了关系属性之外的一些额外属性。关系也可以附带额外的属性。</p>
+<p>查询语言Cypher：neo4j采用自己设计的查询语言cypher，其特点和sql有很多相似的地方。<strong>match、where、return</strong>是最常用到的关键词：</p>
+<ul>
+<li>match: 相当于 sql中的select，用来说明<strong>查询匹配的数据模式</strong>（或者说图模式）</li>
+<li>where: 用来限制node或者关系中部分属性的属性值，从而返回我们想要的数据</li>
+<li>return: 返回节点或者关系</li>
+</ul>
+<p><strong>例子：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210539178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="图片来自网络，侵权删"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8-md/" data-id="ckdubmxle0004y4tr3y858w3u" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90-md/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">【知识图谱系列合集】三、实体对齐.md</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8-md/">【知识图谱系列合集】四、知识存储.md</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90-md/">【知识图谱系列合集】三、实体对齐.md</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%BA%8C%E3%80%81%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA-md/">【知识图谱系列合集】二、知识表示.md</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%80%E3%80%81%E7%9F%A5%E8%AF%86%E6%8F%90%E5%8F%96/">【知识图谱系列合集】一、知识提取</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/Method/">Method</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 kaikai<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>【知识图谱系列合集】二、知识表示.md | Kaikai&#39;s Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="将结构化、半结构化和非结构化数据中的实体、关系和属性进行提取。之后就要进行知识表示。本文主要介绍知识表示的概念、常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型和Trans系列模型。 说明： 1摘自刘知远：知识表示学习研究进展（DOI;10.7544&#x2F;issn1000-1239.2016.20160020) 导读：  知识提取  目录：  一、知识表">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【知识图谱系列合集】二、知识表示.md">
+<meta property="og:url" content="kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%BA%8C%E3%80%81%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA-md/index.html">
+<meta property="og:site_name" content="Kaikai&#39;s Blogs">
+<meta property="og:description" content="将结构化、半结构化和非结构化数据中的实体、关系和属性进行提取。之后就要进行知识表示。本文主要介绍知识表示的概念、常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型和Trans系列模型。 说明： 1摘自刘知远：知识表示学习研究进展（DOI;10.7544&#x2F;issn1000-1239.2016.20160020) 导读：  知识提取  目录：  一、知识表">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810202240689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810202439393.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2020081020250574.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810202546740.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810202602385.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810202614946.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810202720407.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810202751191.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810202805711.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810203540774.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810203556520.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810203617402.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810204641888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810203754256.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810203800147.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810203823358.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810203853566.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810203940111.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810203954891.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810204006764.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810204037748.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810204049578.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810204103696.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810204120186.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810204130645.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810204428630.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810204419823.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810204517797.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810204459833.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-08-14T14:20:31.000Z">
+<meta property="article:modified_time" content="2020-08-14T14:20:45.546Z">
+<meta property="article:author" content="kaikai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200810202240689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+  
+    <link rel="alternate" href="/atom.xml" title="Kaikai&#39;s Blogs" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Kaikai&#39;s Blogs</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="kaikaihit.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-【知识图谱系列合集】二、知识表示-md" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%BA%8C%E3%80%81%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA-md/" class="article-date">
+  <time datetime="2020-08-14T14:20:31.000Z" itemprop="datePublished">2020-08-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【知识图谱系列合集】二、知识表示.md
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://img-blog.csdnimg.cn/20200810202240689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="知识图谱构建流程"><br>将结构化、半结构化和非结构化数据中的实体、关系和属性进行提取。之后就要进行知识表示。本文主要介绍知识表示的概念、常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型和Trans系列模型。</p>
+<p><strong><em>说明：</em></strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">摘自刘知远：知识表示学习研究进展（DOI;<span class="number">10.7544</span>/issn1000-<span class="number">1239.2016</span>.<span class="number">20160020</span>)</span><br></pre></td></tr></table></figure>
+<p><strong><em>导读：</em></strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/zkzbhh/article/details/107921135">知识提取</a></li>
+</ul>
+<p><strong><em>目录：</em></strong></p>
+<ul>
+<li>一、知识表示学习概念</li>
+<li>二、知识表示学习主要方法</li>
+</ul>
+<p><strong><em>一.知识表示学习的概念</em></strong><br><strong>one-hot representation</strong>：将研究对象表示为向量，该向量只有某一维非零，其它维度上的值均为0，独热表示是信息检索和搜索引擎中广泛使用的词袋模型的基础。优点是无需学习过程，简单高效，在信息检索和自然语言处理中得到广泛应用。缺点是会丢失大量有用信息，无法有效表示短文本、容易受到数据稀疏问题的影响。</p>
+<p><strong>表示学习的目标</strong>：通过机器学习将研究对象的语义信息表示为稠密低维实值向量。将实体e和关系r表示为两个不同向量，在向量空间中，通过欧式距离或余弦距离等方式，计算任意两个对象之间的语义相似度。</p>
+<p>知识表示学习得到的分布式表示，我们可以快速计算实体间的语义相似度，这对于自然语言处理和信息检索的很多任务有重要意义；我们还可以知识图谱补全，构建大规模知识图谱，需要不断补充实体间的关系，利用知识表示学习模型，我们可以预测2个实体的关系；除此之外，还可以用于关系抽取，自动问答，实体链指等任务，展现出巨大的应用潜力。</p>
+<p><strong>知识表示学习的优点</strong>：显著提升计算效率，知识库的三元组表示实际就是基于独热表示的，在这种表示方式下，需要设计专门的图算法计算实体间的语义和推理关系，计算复杂度高、可扩展性差。而表示学习得到的分布式表示，能够高效地实现语义相似度计算等操作，显著提升计算效率；有效缓解数据稀疏；实现异质信息融合。</p>
+<p><strong><em>二.知识表示学习的主要方法</em></strong><br>知识表示学习的代表模型，包括距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型和翻译模型，还有最重要的Trans系列模型。</p>
+<p><strong>1.距离模型（SE）</strong></p>
+<p>每个实体用d维的向量表示，所有实体被投影到同一个d维向量空间中，同时，距离模型还未每个关系r定义2个矩阵，用于三元组中头实体和尾实体的投影操作。最后，距离模型为每个三元组（h,r,t）定义了如下损失函数：<br><img src="https://img-blog.csdnimg.cn/20200810202439393.png" alt="距离模型的损失函数"><br>距离模型的<strong>损失函数</strong><br><img src="https://img-blog.csdnimg.cn/2020081020250574.png" alt="在这里插入图片描述"><br>距离模型将头实体向量和尾实体向量通过关系r的2个矩阵投影到r的对应空间中，然后在该空间中计算两投影向量的距离。这个距离反映了2个实体在关系r下的语义相似度，他们距离越小，说明这2个实体存在这种关系。</p>
+<p>距离模型能够利用学习得到的知识表示进行链接预测，即通过计算，找到让两实体距离最近的关系矩阵。</p>
+<p>距离模型的缺陷：协同性差，无法精确刻画两个实体之间的语义联系</p>
+<p><strong>2.单层神经网络模型(SLM）</strong></p>
+<p>采用单层神经网络的非线性操作，来减轻距离模型无法协同精确刻画实体与关系的语义联系的问题。SLM为每个三元组（h,r,t）定义了评分函数：<br><img src="https://img-blog.csdnimg.cn/20200810202546740.png" alt="在这里插入图片描述"><br>SLM是SE模型的改进版本，但是它的非线性操作仅提供了实体和关系之间比较微弱的联系，与此同时，引进了更高的计算复杂度。</p>
+<p><strong>3.能量模型（SME）</strong></p>
+<p>语义匹配能量模型，提出更复杂的操作，寻找实体和关系之间的语义联系。在SME中，每个实体和关系都用低维向量表示，在此基础上，SME定义若干投影矩阵，刻画实体与关系的内在联系，SME为每个三元组（h,r,t）定义了2种评分函数，分别是线性形式：<br><img src="https://img-blog.csdnimg.cn/20200810202602385.png" alt="在这里插入图片描述"><br>和双线性形式：<br><img src="https://img-blog.csdnimg.cn/20200810202614946.png" alt="在这里插入图片描述"><br>此外，也可以用三阶张量代替SME的双线性形式。</p>
+<p><strong>4.双线性模型（LFM）</strong></p>
+<p>隐变量模型提出利用基于关系的双线性变换，刻画实体和关系之间的二阶关系，LFM为每个三元组（h,r,t）定义了如下双线性评分函数：<br><img src="https://img-blog.csdnimg.cn/20200810202720407.png" alt="在这里插入图片描述"></p>
+<p><strong>5.张量神经网络模型（NTN）</strong></p>
+<p>张量神经网络模型的基本思想是，用双线性张量取代传统神经网络中的线性变换层，在不同的维度下将头、尾实体向量联系起来。基本思想如下图：<br><img src="https://img-blog.csdnimg.cn/20200810202751191.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>张量神经网络模型<br>NTN为每个三元组（h,r,t）定义了如下评分函数，评价2个实体之间存在的某个特定关系r的可能性：<br><img src="https://img-blog.csdnimg.cn/20200810202805711.png" alt="在这里插入图片描述"><br>NTN中的实体向量是该实体中所有单词向量的平均值，这样做的好处是，实体中的单词数量远小于实体数量，可以充分重复利用单词向量构建实体表示，降低实体表示学习的稀疏性问题，增强不同实体的语义联系。</p>
+<p>NTN的缺陷：虽然能够更精确地刻画实体和关系的复杂语义联系，但复杂度非常高，需要大量三元组样例才能得到充分学习，NTN在大规模稀疏知识图谱上的效果较差。</p>
+<p><strong>6.矩阵分解模型（RESACL）</strong></p>
+<p>知识库三元组构成了一张大的张量X，如果三元组（h,r,t）存在，则X=1，否则为0.张量分解旨在将每个三元组（h,r,t）对应的张量值X分解为实体和关系表示，使得X尽量地接近于LML</p>
+<p>RESACL的基本思想与前述LFM类似，不同之处在于，RESACL会优化张量中的所有位置，包括0的位置；而LFM只会优化知识库中存在的三元组。</p>
+<p><strong>7.Trans系列模型</strong><br><strong>7.1TransH模型</strong><br>在处理1-N，N-1，N-N复杂关系时的局限性，TransH模型提出让一个实体在不同的关系下拥有不同的表示。<br><img src="https://img-blog.csdnimg.cn/20200810203540774.png" alt="在这里插入图片描述"><br>损失函数：<br><img src="https://img-blog.csdnimg.cn/20200810203556520.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200810203617402.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="TransH model"><br><strong>7.2TransR/CTransR模型</strong></p>
+<p>虽然TransH模型使每个实体在不同关系下拥有不同的表示，它仍然假设实体和关系处于相同的语义空间R中，在一定程度上限制了TransH的表达能力。TransR模型认为，一个实体是多种属性的综合体，不同关系关注实体的不同属性。TransR认为不同的关系拥有不同的语义空间，对每个三元组，首先应将实体投影到对应的关系空间中，然后再建立从头实体到尾实体的翻译关系。</p>
+<p><img src="https://img-blog.csdnimg.cn/20200810204641888.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>上图是TransR模型的简单示例，对于每个三元组（h,r,t），我们首先将实体向量向关系r空间投影，原来在实体空间中与头（圆圈表示）、尾实体相似的实体（三角形表示），在关系r空间内被区分开了。具体而言，对于每一个关系r，TransR表示如下：<br><img src="https://img-blog.csdnimg.cn/20200810203754256.png" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200810203800147.png" alt="[公式]"><br>因此 TransR定义了如下损失函数：<br><img src="https://img-blog.csdnimg.cn/20200810203823358.png" alt="在这里插入图片描述"><br>相关研究表明，某些关系还可以进行更细致的划分。于是，Lin等人进一步提出了CTransR模型，通过把关系r对应的实体对的向量差值 进行聚类，将关系r细分为多个子关系.CTransR模型为每一个子关系分别学习向量表示，对于每个三元组，定义了如下损失函数：<br><img src="https://img-blog.csdnimg.cn/20200810203853566.png" alt="在这里插入图片描述"><br><strong>TransR模型的缺点：</strong><br>（1）在同一个关系r下，头、尾实体共享相同的投影矩阵。然而，一个关系的头、尾实体的类型或属性可能差异巨大。例如（美国，总统，奥巴马），美国和奥巴马的类型不同，一个是国家，一个是人物。<br>（2）从实体空间到关系空间的投影是实体和关系的交互过程。因此TransR让投影矩阵仅与关系有关是不合理的。<br>（3）与TransE和TransH相比，TransR引入了空间投影，使得TransR模型参数急剧增加，计算复杂率大大提高。</p>
+<p><strong>7.3TransD模型</strong></p>
+<p>为了解决TransR模型的缺点，Ji等人提出了TransD模型，如下图所示，给定三元组,TransD模型设置了2个分别将头实体和尾实体投影到关系空间的投影矩阵，具体定义如下：<br><img src="https://img-blog.csdnimg.cn/20200810203940111.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20200810203954891.png" alt="[公式] ， [公式]"><br>利用2个投影向量构建投影矩阵，解决了原来TransR模型参数过多的问题。最后，TransD模型定义了损失函数：<br><img src="https://img-blog.csdnimg.cn/20200810204006764.png" alt="[公式]"><br><strong>7.4TransSpare模型</strong></p>
+<p>知识库中实体和关系的异质性和不平衡性是制约知识表示学习的难题：<br>（1）异质性：知识库中某些关系可能会与大量的实体有连接，而某些关系则可能仅仅与少量实体有连接。</p>
+<p>（2）不均衡性：在某些关系中，头实体和尾实体的种类和数量可能差别巨大。</p>
+<p>为了解决实体和关系的异质性。TransSparse提出使用稀疏矩阵 [公式] 的稀疏度由关系r连接的实体对数量决定。这里头、尾实体共享同一个投影矩阵，投影矩阵的稀疏度定义如下：<br><img src="https://img-blog.csdnimg.cn/20200810204037748.png" alt="在这里插入图片描述"><br>这样，投影向量可定义为：<br><img src="https://img-blog.csdnimg.cn/20200810204049578.png" alt="[公式] , [公式]"><br>为了解决关系的不平衡性问题，TranSparse对于头实体和尾实体分别使用2个不同的投影矩阵.;两者的稀疏度定义如下：<br><img src="https://img-blog.csdnimg.cn/20200810204103696.png" alt="在这里插入图片描述"><br>这样，投影向量可定义为：<br><img src="https://img-blog.csdnimg.cn/20200810204120186.png" alt="[公式] , [公式]"><br>TranSparse对于以上2种形式，均定义如下损失函数：<br><img src="https://img-blog.csdnimg.cn/20200810204130645.png" alt="在这里插入图片描述"><br><strong>7.5TransA模型</strong><br><strong>加粗样式</strong><br>Xiao等人提出TransA模型，将损失函数中的距离度量改为马氏距离，并为每一维学习不同的权重，对于每个三元组.TransA模型定义了如下评分函数：<br><img src="https://img-blog.csdnimg.cn/20200810204428630.png" alt="在这里插入图片描述"><br>如下图所示：<br><img src="https://img-blog.csdnimg.cn/20200810204419823.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>7.6 TransG模型</strong></p>
+<p>TransG模型提出使用高斯混合模型描述头、尾实体之间的关系。该模型认为，一个关系会对应多种语义，每种语义用一个高斯分布来刻画，其中I表示单位矩阵。<br><img src="https://img-blog.csdnimg.cn/20200810204517797.png" alt="在这里插入图片描述"><br>TransG模型与传统模型的对比如下图所示。其中三角形表示正确的尾实体，圆形表示错误的尾实体。<br><img src="https://img-blog.csdnimg.cn/20200810204459833.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>图(a)中为传统模型示例，由于将关系r的所有语义混为一谈，导致错误的实体无法被区分开，而图(b)所示，TransG模型通过考虑关系r的不同语义，形成多个高斯分布，就能区分出正确和错误实体。</p>
+<p><strong>7.7KG2E模型</strong></p>
+<p>知识库中的关系和实体的语义 本身具有不确定性，这在过去模型中被忽略了。因此He等人提出KG2E，使得高斯分布来表示实体和关系。其中高斯分布的均值表示的是实体或关系在语义空间中的中心位置，而高斯分布的协方差则表示该实体或关系的不确定度。下图为KG2E的模型示例，每个圆圈代表不同实体与关系的表示，其中圈圈大小表示的是不同实体或关系的不确定度。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%BA%8C%E3%80%81%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA-md/" data-id="ckdubmxle0003y4tr4q53bl3s" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90-md/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          【知识图谱系列合集】三、实体对齐.md
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%80%E3%80%81%E7%9F%A5%E8%AF%86%E6%8F%90%E5%8F%96/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">【知识图谱系列合集】一、知识提取</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8-md/">【知识图谱系列合集】四、知识存储.md</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90-md/">【知识图谱系列合集】三、实体对齐.md</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%BA%8C%E3%80%81%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA-md/">【知识图谱系列合集】二、知识表示.md</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%80%E3%80%81%E7%9F%A5%E8%AF%86%E6%8F%90%E5%8F%96/">【知识图谱系列合集】一、知识提取</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/Method/">Method</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 kaikai<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

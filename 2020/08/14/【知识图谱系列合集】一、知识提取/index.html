@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>【知识图谱系列合集】一、知识提取 | Kaikai&#39;s Blogs</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="数据主要有三类：结构化数据、半结构化数据和非结构化数据。知识提取的目的：通过自动化或者半自动化的技术抽取出可用的知识单元，知识单元包括实体、属性和关系，并以此为基础，形成一系列高质量的事实表达，为上层模式层的构建奠定基础。**本文主要讲述知识图谱构建过程中的知识提取，实体抽取、属性抽取和关系抽取。** 1.实体抽取实体抽取也称为命名实体学习，指的是从原始数据语料中自动识别出命名实体。实体是知识图谱">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【知识图谱系列合集】一、知识提取">
+<meta property="og:url" content="kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%80%E3%80%81%E7%9F%A5%E8%AF%86%E6%8F%90%E5%8F%96/index.html">
+<meta property="og:site_name" content="Kaikai&#39;s Blogs">
+<meta property="og:description" content="数据主要有三类：结构化数据、半结构化数据和非结构化数据。知识提取的目的：通过自动化或者半自动化的技术抽取出可用的知识单元，知识单元包括实体、属性和关系，并以此为基础，形成一系列高质量的事实表达，为上层模式层的构建奠定基础。**本文主要讲述知识图谱构建过程中的知识提取，实体抽取、属性抽取和关系抽取。** 1.实体抽取实体抽取也称为命名实体学习，指的是从原始数据语料中自动识别出命名实体。实体是知识图谱">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810201749355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-08-14T14:19:39.000Z">
+<meta property="article:modified_time" content="2020-08-14T14:20:06.000Z">
+<meta property="article:author" content="kaikai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200810201749355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+  
+    <link rel="alternate" href="/atom.xml" title="Kaikai&#39;s Blogs" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.0.2"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Kaikai&#39;s Blogs</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="kaikaihit.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-【知识图谱系列合集】一、知识提取" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%80%E3%80%81%E7%9F%A5%E8%AF%86%E6%8F%90%E5%8F%96/" class="article-date">
+  <time datetime="2020-08-14T14:19:39.000Z" itemprop="datePublished">2020-08-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      【知识图谱系列合集】一、知识提取
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://img-blog.csdnimg.cn/20200810201749355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="知识图谱构建流程"><br>数据主要有三类：结构化数据、半结构化数据和非结构化数据。<br>知识提取的目的：通过自动化或者半自动化的技术抽取出可用的知识单元，知识单元包括实体、属性和关系，并以此为基础，形成一系列高质量的事实表达，为上层模式层的构建奠定基础。<br>**<em>本文主要讲述知识图谱构建过程中的知识提取，实体抽取、属性抽取和关系抽取。**</em></p>
+<p><strong><em>1.实体抽取</em></strong><br>实体抽取也称为命名实体学习，指的是从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素，所以实体抽取是知识抽取中最重要且最基础的一步。实体抽取的方法可以分为以下四种。</p>
+<p><strong>1.1基于百科站点或垂直站点提取</strong><br>很常规基本的提取方法。<br>从百科类站点的标题和链接中提取实体名。优点是可以得到开放互联网中最常见的实体名，其缺点是对于中低频的覆盖率低。与一般性通用的网站相比，垂直类站点的实体提取可以获取特定领域的实体。例如从豆瓣各频道(音乐、读书、电影等)获取各种实体列表。这种方法主要是基于爬取技术来实现和获取。</p>
+<p><strong>1.2基于规则与词典的方法</strong><br>需要为目标实体编写模板，然后在原始语料中进行匹配。<br>早期的实体抽取是在限定文本领域、限定语义单元类型的条件下进行的，主要采用的是基于规则与词典的方法，例如使用已定义的规则，抽取出文本中的人名、地名、组织机构名、特定时间等实体。然而，基于规则模板的方法不仅需要依靠大量的专家来编写规则或模板，覆盖的领域范围有限，而且很难适应数据变化的新需求。</p>
+<p><strong>1.3基于统计机器学习的方法</strong><br>通过机器学习的方法对原始语料进行训练，然后再利用训练好的模型去识别实体。<br>鉴于基于规则与词典实体的局限性，为具更有可扩展性，相关研究人员将机器学习中的监督学习算法用于命名实体的抽取问题上。近年来随着深度学习的兴起应用，基于深度学习的命名实体识别得到广泛应用。</p>
+<p><strong>1.4面向开放域的抽取方法</strong><br>是面向海量的Web语料。<br>针对如何从少量实体实例中自动发现具有区分力的模式，进而扩展到海量文本去给实体做分类与聚类的问题。</p>
+<p><strong><em>2.属性和属性值抽取</em></strong><br>属性提取的任务是为每个本体语义类构造属性列表，而属性值提取则为一个语义类的实体附加属性值。属性和属性值的抽取能够形成完整的实体概念的知识图谱维度。常见的属性和属性值抽取方法包括从百科类站点中提取，从垂直网站中进行包装器归纳，从网页表格中提取，以及利用手工定义或自动生成的模式从句子和查询日志中提取。</p>
+<p>常见的语义类/ 实体的常见属性/ 属性值可以通过解析百科类站点中的半结构化信息（如维基百科的信息盒和百度百科的属性表格）而获得。尽管通过这种简单手段能够得到高质量的属性，但同时需要采用其它方法来增加覆盖率（即为语义类增加更多属性以及为更多的实体添加属性值）。</p>
+<p><strong><em>3.关系抽取</em></strong><br>关系抽取的目标是解决实体语义链接的问题。关系的基本信息包括参数类型、满足此关系的元组模式等。分为开放式实体关系抽取，基于联合推理的实体关系抽取等。</p>
+<p><strong>3.1开放式实体关系抽取</strong><br>开放式实体关系抽取可分为二元开放式关系抽取和n元开放式关系抽取。</p>
+<p>在二元开放式关系抽取中，早期的研究有KnowItAll与TextRunner系统，在准确率与召回率上表现一般。有文献提出了一种基于Wikipedia的OIE方法WOE，经自监督学习得到抽取器，准确率较TextRunner有明显的提高。针对WOE的缺点，有文献提出了第二代OIE ReVerb系统，以动词关系抽取为主。有文献提出了第三代OIE系统OLLIE(open language learning for information extraction)，尝试弥补并扩展OIE的模型及相应的系统，抽取结果的准确度得到了增强。</p>
+<p>然而，基于语义角色标注的OIE分析显示：英文语句中40%的实体关系是n元的[32]，如处理不当，可能会影响整体抽取的完整性。有文献提出了一种可抽取任意英文语句中n元实体关系的方法KPAKEN，弥补了ReVerb的不足。但是由于算法对语句深层语法特征的提取导致其效率显著下降，并不适用于大规模开放域语料的情况。</p>
+<p><strong>3.2基于联合推理的实体关系抽取</strong><br>联合推理的关系抽取中的典型方法是马尔可夫逻辑网，它是一种将马尔可夫网络与一阶逻辑相结合的统计关系学习框架，同时也是在OIE中融入推理的一种重要实体关系抽取模型。</p>
+<p>联合推理的关系抽取中的典型方法是马尔可夫逻辑网MLN，它是一种将马尔可夫网络与一阶逻辑相结合的统计关系学习框架，同时也是在OIE中融入推理的一种重要实体关系抽取模型。基于该模型，有文献提出了一种无监督学习模型StatSnowball，不同于传统的OIE，该方法可自动产生或选择模板生成抽取器。在StatSnowball的基础上，有文献提出了一种实体识别与关系抽取相结合的模型EntSum，主要由扩展的CRF命名实体识别模块与基于StatSnowball的关系抽取模块组成，在保证准确率的同时也提高了召回率。有文献提出了一种简易的Markov逻辑TML(tractable Markov logic)，TML将领域知识分解为若干部分，各部分主要来源于事物类的层次化结构，并依据此结构，将各大部分进一步分解为若干个子部分，以此类推。TML具有较强的表示能力，能够较为简洁地表示概念以及关系的本体结构。</p>
+<p><strong><em>4.语义类提取</em></strong><br>语义类抽取是指从文本中自动抽取信息来构造语义类并建立实体和语义类的关联, 作为实体层面上的规整和抽象。以下介绍有效的语义类抽取方法，包含三个模块：并列度相似计算、上下位关系提取以及语义类生成 。</p>
+<p><strong>4.1并列度相似计算</strong><br>当前主流的并列相似度计算方法有分布相似度法和模式匹配法。</p>
+<p>分布相似度方法：经常出现在类似的上下文环境中的两个词具有语义上的相似性。分布相似度方法的实现分三个步骤：第一步，定义上下文；第二步，把每个词表示成一个特征向量，向量每一维代表一个不同的上下文，向量的值表示本词相对于上下文的权重；第三步，计算两个特征向量之间的相似度，将其作为它们所代表的词之间的相似度。 、</p>
+<p>模式匹配法：基本思路是把一些模式作用于源数据，得到一些词和词之间共同出现的信息，然后把这些信息聚集起来生成单词之间的相似度。模式可以是手工定义的，也可以是根据一些种子数据而自动生成的。</p>
+<p>分布相似度法和模式匹配法都可以用来在数以百亿计的句子中或者数以十亿计的网页中抽取词的相似性信息。。</p>
+<p><strong>4.2上下位关系提取</strong><br>该模块从文档中抽取词的上下位关系信息，生成（下义词，上义词）数据对，例如（狗，动物）、（悉尼，城市）。这种方法的主要缺点包括：并不是所有的分类词条都代表上位词，例如百度百科中“狗”的开放分类“养殖”就不是其上位词；生成的关系图中没有权重信息，因此不能区分同一个实体所对应的不同上位词的重要性；覆盖率偏低，即很多上下位关系并没有包含在百科站点的分类信息中。</p>
+<p><strong>4.3语义类生成</strong><br>该模块包括聚类和语义类标定两个子模块。聚类的结果决定了要生成哪些语义类以及每个语义类包含哪些实体，而语义类标定的任务是给一个语义类附加一个或者多个上位词作为其成员的公共上位词。此模块依赖于并列相似性和上下位关系信息来进行聚类和标定。有些研究工作只根据上下位关系图来生成语义类，但经验表明并列相似性信息对于提高最终生成的语义类的精度和覆盖率都至关重要。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%80%E3%80%81%E7%9F%A5%E8%AF%86%E6%8F%90%E5%8F%96/" data-id="ckdubmxl90001y4tr5si753tu" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%BA%8C%E3%80%81%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA-md/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          【知识图谱系列合集】二、知识表示.md
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/08/14/Method/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Method</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">August 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8-md/">【知识图谱系列合集】四、知识存储.md</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90-md/">【知识图谱系列合集】三、实体对齐.md</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%BA%8C%E3%80%81%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA-md/">【知识图谱系列合集】二、知识表示.md</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%80%E3%80%81%E7%9F%A5%E8%AF%86%E6%8F%90%E5%8F%96/">【知识图谱系列合集】一、知识提取</a>
+          </li>
+        
+          <li>
+            <a href="/2020/08/14/Method/">Method</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 kaikai<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

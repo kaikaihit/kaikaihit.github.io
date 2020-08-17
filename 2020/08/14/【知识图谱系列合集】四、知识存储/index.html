@@ -22,7 +22,7 @@
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"kaikaihit.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"kaikaihit.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
   <meta name="description" content="导读：  1.知识提取：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。1https:&#x2F;&#x2F;blog.csdn.net&#x2F;zkzbhh&#x2F;article&#x2F;details&#x2F;107921135 2.知识表示：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR模型、">
@@ -101,6 +101,8 @@
   </style>
 </noscript>
 
+  <script type="text/javascript" src="/js/myjs/clicklove.js"></script>
+<link rel="alternate" href="/atom.xml" title="Kaikai's Blogs" type="application/atom+xml">
 </head>
 <script type="text/javascript" src="/lib/clipboard/clipboard.js"></script>
 <script type="text/javascript" src="/js/src/custom.js"></script>
@@ -108,6 +110,12 @@
   <div class="headband">
     <a target="_blank" rel="noopener" href="https://github.com/kaikaihit" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
   </div>
+  
+<!--   <link rel="stylesheet" href="/dist/APlayer.min.css">
+  <div id="aplayer"></div>
+  <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+  <script type="text/javascript" src="/dist/music.js"></script> -->
+
 
   <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -207,7 +215,7 @@
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
   </div>
-
+  
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-overview-active">
@@ -279,17 +287,32 @@
 
   <div class="links-of-blogroll animated">
     <div class="links-of-blogroll-title"><i class="fa fa-globe fa-fw"></i>
-      Links
+      链接
     </div>
     <ul class="links-of-blogroll-list">
         <li class="links-of-blogroll-item">
-          <a href="https://www.zhihu.com/people/zhangkaia" title="https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;zhangkaia" rel="noopener" target="_blank">zhihu</a>
+          <a href="https://console.leancloud.app/" title="https:&#x2F;&#x2F;console.leancloud.app&#x2F;" rel="noopener" target="_blank">LeanCloud</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="https://blog.csdn.net/zkzbhh" title="https:&#x2F;&#x2F;blog.csdn.net&#x2F;zkzbhh" rel="noopener" target="_blank">CSDN</a>
+          <a href="http://xxx.itp.ac.cn/" title="http:&#x2F;&#x2F;xxx.itp.ac.cn&#x2F;" rel="noopener" target="_blank">arxiv</a>
         </li>
         <li class="links-of-blogroll-item">
-          <a href="http://yoursite.com/" title="http:&#x2F;&#x2F;yoursite.com" rel="noopener" target="_blank">Title</a>
+          <a href="http://arxiv-sanity.com/" title="http:&#x2F;&#x2F;arxiv-sanity.com&#x2F;" rel="noopener" target="_blank">arxiv-santity</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dblp.uni-trier.de/db/journals/tc/index.html" title="https:&#x2F;&#x2F;dblp.uni-trier.de&#x2F;db&#x2F;journals&#x2F;tc&#x2F;index.html" rel="noopener" target="_blank">TC</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dblp.uni-trier.de/db/journals/re/" title="https:&#x2F;&#x2F;dblp.uni-trier.de&#x2F;db&#x2F;journals&#x2F;re&#x2F;" rel="noopener" target="_blank">RE</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dblp.uni-trier.de/db/journals/tsc/" title="https:&#x2F;&#x2F;dblp.uni-trier.de&#x2F;db&#x2F;journals&#x2F;tsc&#x2F;" rel="noopener" target="_blank">TSC</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dblp.uni-trier.de/db/conf/icsoc/" title="https:&#x2F;&#x2F;dblp.uni-trier.de&#x2F;db&#x2F;conf&#x2F;icsoc&#x2F;" rel="noopener" target="_blank">ICSOC</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://dblp.uni-trier.de/db/conf/IEEEscc/" title="https:&#x2F;&#x2F;dblp.uni-trier.de&#x2F;db&#x2F;conf&#x2F;IEEEscc&#x2F;" rel="noopener" target="_blank">SCC</a>
         </li>
     </ul>
   </div>
@@ -308,6 +331,7 @@
 
     
   <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
   <a href="https://github.com/kaikaihit" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a>
 
@@ -377,7 +401,21 @@
               </span>
               <span class="post-meta-item-text">阅读次数：</span>
               <span id="busuanzi_value_page_pv"></span>
-            </span><br>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
             <span class="post-meta-item" title="本文字数">
               <span class="post-meta-item-icon">
                 <i class="far fa-file-word"></i>
@@ -400,7 +438,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><img src="https://img-blog.csdnimg.cn/20200810210037352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+        <p><img data-src="https://img-blog.csdnimg.cn/20200810210037352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <p><strong><em>导读：</em></strong></p>
 <ul>
 <li>1.<a target="_blank" rel="noopener" href="https://blog.csdn.net/zkzbhh/article/details/107921135">知识提取</a>：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921135</span></span><br></pre></td></tr></table></figure></li>
@@ -414,9 +452,9 @@
 <p>RDF、RDFS和OWL是W3C[1]推荐的本体描述用护眼，也是知识图谱中数据的常用存储格式，它们都是基于XML[2]编写的元数据[3]，是用于计算机传输数据，让机器可理解，而不是面向用户展示的数据模型。</p>
 <p><strong>(1)RDF</strong></p>
 <p>RDF本质是一个数据模型，它提供了一个统一的标准描述web资源，资源指的是类、属性、实例等。RDF在形式上表示为三元组。用于描述具体事物及关系，RDF也可以表示为一张带有标记的有向图，图中有节点和边，节点对应实体，边对应关系或者属性，关系指的是实体之间，实体与属性之间的关系。</p>
-<p><strong>RDF中的三元组Triple：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210302969.png" alt="在这里插入图片描述"></p>
-<p><strong>带有资源标识符URI的三元组：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210200426.png" alt="在这里插入图片描述"><br>声明命名空间ex = <a target="_blank" rel="noopener" href="http://ex.org/%E5%92%8Cex-schema">http://ex.org/和ex-schema</a> = <a target="_blank" rel="noopener" href="http://ex.org/schema%EF%BC%8C%E4%BA%8E%E6%98%AF%E5%B8%A6%E6%9C%89%E8%B5%84%E6%BA%90%E6%A0%87%E8%AF%86%E7%AC%A6%E7%9A%84URI%E4%B8%89%E5%85%83%E7%BB%84%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%A1%A8%E7%A4%BA%E4%B8%BA%E4%B8%8B%E5%9B%BE%E5%BD%A2%E5%BC%8F%E3%80%82">http://ex.org/schema，于是带有资源标识符的URI三元组就可以表示为下图形式。</a></p>
-<p><strong>声明前缀的三元组：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210239944.png" alt="在这里插入图片描述"></p>
+<p><strong>RDF中的三元组Triple：</strong><br><img data-src="https://img-blog.csdnimg.cn/20200810210302969.png" alt="在这里插入图片描述"></p>
+<p><strong>带有资源标识符URI的三元组：</strong><br><img data-src="https://img-blog.csdnimg.cn/20200810210200426.png" alt="在这里插入图片描述"><br>声明命名空间ex = <a target="_blank" rel="noopener" href="http://ex.org/%E5%92%8Cex-schema">http://ex.org/和ex-schema</a> = <a target="_blank" rel="noopener" href="http://ex.org/schema%EF%BC%8C%E4%BA%8E%E6%98%AF%E5%B8%A6%E6%9C%89%E8%B5%84%E6%BA%90%E6%A0%87%E8%AF%86%E7%AC%A6%E7%9A%84URI%E4%B8%89%E5%85%83%E7%BB%84%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%A1%A8%E7%A4%BA%E4%B8%BA%E4%B8%8B%E5%9B%BE%E5%BD%A2%E5%BC%8F%E3%80%82">http://ex.org/schema，于是带有资源标识符的URI三元组就可以表示为下图形式。</a></p>
+<p><strong>声明前缀的三元组：</strong><br><img data-src="https://img-blog.csdnimg.cn/20200810210239944.png" alt="在这里插入图片描述"></p>
 <p>RDF以三元组的形式描述资源，简洁明了，但是有着语义表达能力的缺陷。RDF中没有定义类、属性等词汇。RDF只能是对具体的事物进行描述，缺乏抽象能力，无法对同一个类别的事物进行定义和描述。RDF可以描述实体、实体的属性以及他们之间的关系，但是无法描述类与类之间的关系，类的属性等</p>
 <p><strong>(2)RDFS</strong></p>
 <p>RDFS在RDF的基础上定义了类（class）、属性（property）以及关系（relation）来描述资源，并且通过属性的定义域（domain）和值域（range）来约束资源。RDFS在数据层（data）的基础上引入了模式层（schema），模式层定义了一种约束规则，而数据层是在这种规则下的一个实例填充。</p>
@@ -441,7 +479,7 @@
 <li>where: 用来限制node或者关系中部分属性的属性值，从而返回我们想要的数据</li>
 <li>return: 返回节点或者关系</li>
 </ul>
-<p><strong>例子：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210539178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="图片来自网络，侵权删"></p>
+<p><strong>例子：</strong><br><img data-src="https://img-blog.csdnimg.cn/20200810210539178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="图片来自网络，侵权删"></p>
 
     </div>
 
@@ -513,6 +551,7 @@
 
 
       
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -597,7 +636,8 @@
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1.15.0/dist/lozad.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
 
   
 
@@ -630,6 +670,17 @@
   
 
   
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({
+      el  : '#valine-comments',
+      path: location.pathname,
+    }, {"enable":true,"appId":"qUIN6N9COpssfilUEP3pbfRg-MdYXbMMI","appKey":"CuOrnj42lHdgBXqCU3TCwPkl","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":false,"comment_count":true,"recordIP":false,"serverURLs":null,"enableQQ":false,"requiredFields":[]}
+    ));
+  }, window.Valine);
+});
+</script>
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 </html>

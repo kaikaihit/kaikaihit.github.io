@@ -1,60 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Method</title>
-    <url>/2020/08/14/Method/</url>
-    <content><![CDATA[<p><strong>初始化并安装所需组件：</strong></p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo init      # 初始化</span><br><span class="line">npm install    # 安装组件</span><br></pre></td></tr></table></figure>
+    <title>BOM简介</title>
+    <url>/2020/08/17/BOM%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<p>BOM（Bill of Material）物料清单，也就是以数据格式来描述产品结构的文件，是计算机可以识别的产品结构数据文件，也是ERP的主导文件。BOM使系统识别产品结构，也是联系与沟通企业各项业务的纽带。</p>
+<p>物料清单(BOM)是指生产或组装最小批量的某个产品所需物料的需求清单，包含物料、单位用量、损耗率等信息，其中最小批量没有指明默认值就是数量1。</p>
+<p>物料清单(BOM)也是计算生产一批产品所需物料的毛需求的前置基础资料,单位用量乘以生产数量就是所需某个物料的毛需求数量。</p>
+<p>物料清单(BOM)也是接单时核算产品预估成本的重要依据,单项物料成本用单位用量乘以市场购买价得到，然后累计各单项物料成本，就是生产一个产品的材料成本。</p>
+<a id="more"></a>
 
-<p>完成后依次输入下面命令，<strong>启动本地服务器进行预览</strong>：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo g   # 生成页面</span><br><span class="line">hexo s   # 启动预览</span><br></pre></td></tr></table></figure>
+<p><strong>成套设备</strong>：在生产企业一般不用装配工序连接，但用于完成相互联系的使用功能的两个或两个以上的产品的总和；</p>
+<p><strong>零件</strong>：不采用装配工序制成的单一成品；</p>
+<p><strong>部件</strong>：由若干个部分（零件、分部件），以可拆成或不可拆的形式组成的成品；分部件可以按照其从属产品关系划分为1级分部件，2级分部件。</p>
+<p><strong>总成</strong>：能够执行一定独立功能的由若干个部门以可拆成或不可拆的形式组成的复杂成品，例如发动机总成，车桥总成，前轴总成等；由零件和部件组成；也可能叫组件、整件、装置、全件等说法。复杂产品可能还有分总成。</p>
+<p><strong>模块</strong>：具有相对独立功能和通用接口的单元。类似总成，但可能比较简单。</p>
+<p><strong>专用件（基本件）</strong>：本产品专用的零部件。不过在实际中往往借用关系比较多，专用件的实际含义是首次应用在本产品上的零部件。</p>
+<p><strong>借用件</strong>：在本产品中采用已有产品的组成部分，这些组成部分叫借用件。</p>
+<p><strong>通用件</strong>：在不同类型或同类型不同规格的产品中具有互换性的零部件。</p>
+<p><strong>标准件</strong>：经过优选、简化、统一并给予标准代号的零部件。</p>
+<p><strong>替换件</strong>：本产品必须要有的组成部分，一般数量都不变化，例如汽车的发动机。可以有多种选装规格。</p>
+<p><strong>选装件</strong>：本产品不一定要有的组成部分，可以有多个选装规格。</p>
+<h5 id="为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。"><a href="#为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。" class="headerlink" title="为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。"></a>为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。</h5><p><img src="https://img-blog.csdnimg.cn/20200817112853508.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20200817112906774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>参考：</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">http<span class="variable">s:</span>//www.zhihu.<span class="keyword">com</span>/<span class="built_in">search</span>?<span class="built_in">type</span>=content&amp;q=BOM</span><br></pre></td></tr></table></figure>
 
-<p>首先<strong>安装 hexo-deployer-git</strong>：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>然后<strong>修改 _config.yml</strong> 文件末尾的 Deployment 部分，修改成如下：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:用户名/用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>清楚缓存等文件并重新发布网站：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean   # 清除缓存文件等</span><br><span class="line">hexo g       # 生成页面</span><br><span class="line">hexo s       # 启动预览</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo deploy #部署发布</span><br></pre></td></tr></table></figure>]]></content>
-  </entry>
-  <entry>
-    <title>【知识图谱系列合集】一、知识提取</title>
-    <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%80%E3%80%81%E7%9F%A5%E8%AF%86%E6%8F%90%E5%8F%96/</url>
-    <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20200810201749355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="知识图谱构建流程"><br>数据主要有三类：结构化数据、半结构化数据和非结构化数据。<br>知识提取的目的：通过自动化或者半自动化的技术抽取出可用的知识单元，知识单元包括实体、属性和关系，并以此为基础，形成一系列高质量的事实表达，为上层模式层的构建奠定基础。<br>**<em>本文主要讲述知识图谱构建过程中的知识提取，实体抽取、属性抽取和关系抽取。**</em></p>
-<p><strong><em>1.实体抽取</em></strong><br>实体抽取也称为命名实体学习，指的是从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素，所以实体抽取是知识抽取中最重要且最基础的一步。实体抽取的方法可以分为以下四种。</p>
-<p><strong>1.1基于百科站点或垂直站点提取</strong><br>很常规基本的提取方法。<br>从百科类站点的标题和链接中提取实体名。优点是可以得到开放互联网中最常见的实体名，其缺点是对于中低频的覆盖率低。与一般性通用的网站相比，垂直类站点的实体提取可以获取特定领域的实体。例如从豆瓣各频道(音乐、读书、电影等)获取各种实体列表。这种方法主要是基于爬取技术来实现和获取。</p>
-<p><strong>1.2基于规则与词典的方法</strong><br>需要为目标实体编写模板，然后在原始语料中进行匹配。<br>早期的实体抽取是在限定文本领域、限定语义单元类型的条件下进行的，主要采用的是基于规则与词典的方法，例如使用已定义的规则，抽取出文本中的人名、地名、组织机构名、特定时间等实体。然而，基于规则模板的方法不仅需要依靠大量的专家来编写规则或模板，覆盖的领域范围有限，而且很难适应数据变化的新需求。</p>
-<p><strong>1.3基于统计机器学习的方法</strong><br>通过机器学习的方法对原始语料进行训练，然后再利用训练好的模型去识别实体。<br>鉴于基于规则与词典实体的局限性，为具更有可扩展性，相关研究人员将机器学习中的监督学习算法用于命名实体的抽取问题上。近年来随着深度学习的兴起应用，基于深度学习的命名实体识别得到广泛应用。</p>
-<p><strong>1.4面向开放域的抽取方法</strong><br>是面向海量的Web语料。<br>针对如何从少量实体实例中自动发现具有区分力的模式，进而扩展到海量文本去给实体做分类与聚类的问题。</p>
-<p><strong><em>2.属性和属性值抽取</em></strong><br>属性提取的任务是为每个本体语义类构造属性列表，而属性值提取则为一个语义类的实体附加属性值。属性和属性值的抽取能够形成完整的实体概念的知识图谱维度。常见的属性和属性值抽取方法包括从百科类站点中提取，从垂直网站中进行包装器归纳，从网页表格中提取，以及利用手工定义或自动生成的模式从句子和查询日志中提取。</p>
-<p>常见的语义类/ 实体的常见属性/ 属性值可以通过解析百科类站点中的半结构化信息（如维基百科的信息盒和百度百科的属性表格）而获得。尽管通过这种简单手段能够得到高质量的属性，但同时需要采用其它方法来增加覆盖率（即为语义类增加更多属性以及为更多的实体添加属性值）。</p>
-<p><strong><em>3.关系抽取</em></strong><br>关系抽取的目标是解决实体语义链接的问题。关系的基本信息包括参数类型、满足此关系的元组模式等。分为开放式实体关系抽取，基于联合推理的实体关系抽取等。</p>
-<p><strong>3.1开放式实体关系抽取</strong><br>开放式实体关系抽取可分为二元开放式关系抽取和n元开放式关系抽取。</p>
-<p>在二元开放式关系抽取中，早期的研究有KnowItAll与TextRunner系统，在准确率与召回率上表现一般。有文献提出了一种基于Wikipedia的OIE方法WOE，经自监督学习得到抽取器，准确率较TextRunner有明显的提高。针对WOE的缺点，有文献提出了第二代OIE ReVerb系统，以动词关系抽取为主。有文献提出了第三代OIE系统OLLIE(open language learning for information extraction)，尝试弥补并扩展OIE的模型及相应的系统，抽取结果的准确度得到了增强。</p>
-<p>然而，基于语义角色标注的OIE分析显示：英文语句中40%的实体关系是n元的[32]，如处理不当，可能会影响整体抽取的完整性。有文献提出了一种可抽取任意英文语句中n元实体关系的方法KPAKEN，弥补了ReVerb的不足。但是由于算法对语句深层语法特征的提取导致其效率显著下降，并不适用于大规模开放域语料的情况。</p>
-<p><strong>3.2基于联合推理的实体关系抽取</strong><br>联合推理的关系抽取中的典型方法是马尔可夫逻辑网，它是一种将马尔可夫网络与一阶逻辑相结合的统计关系学习框架，同时也是在OIE中融入推理的一种重要实体关系抽取模型。</p>
-<p>联合推理的关系抽取中的典型方法是马尔可夫逻辑网MLN，它是一种将马尔可夫网络与一阶逻辑相结合的统计关系学习框架，同时也是在OIE中融入推理的一种重要实体关系抽取模型。基于该模型，有文献提出了一种无监督学习模型StatSnowball，不同于传统的OIE，该方法可自动产生或选择模板生成抽取器。在StatSnowball的基础上，有文献提出了一种实体识别与关系抽取相结合的模型EntSum，主要由扩展的CRF命名实体识别模块与基于StatSnowball的关系抽取模块组成，在保证准确率的同时也提高了召回率。有文献提出了一种简易的Markov逻辑TML(tractable Markov logic)，TML将领域知识分解为若干部分，各部分主要来源于事物类的层次化结构，并依据此结构，将各大部分进一步分解为若干个子部分，以此类推。TML具有较强的表示能力，能够较为简洁地表示概念以及关系的本体结构。</p>
-<p><strong><em>4.语义类提取</em></strong><br>语义类抽取是指从文本中自动抽取信息来构造语义类并建立实体和语义类的关联, 作为实体层面上的规整和抽象。以下介绍有效的语义类抽取方法，包含三个模块：并列度相似计算、上下位关系提取以及语义类生成 。</p>
-<p><strong>4.1并列度相似计算</strong><br>当前主流的并列相似度计算方法有分布相似度法和模式匹配法。</p>
-<p>分布相似度方法：经常出现在类似的上下文环境中的两个词具有语义上的相似性。分布相似度方法的实现分三个步骤：第一步，定义上下文；第二步，把每个词表示成一个特征向量，向量每一维代表一个不同的上下文，向量的值表示本词相对于上下文的权重；第三步，计算两个特征向量之间的相似度，将其作为它们所代表的词之间的相似度。 、</p>
-<p>模式匹配法：基本思路是把一些模式作用于源数据，得到一些词和词之间共同出现的信息，然后把这些信息聚集起来生成单词之间的相似度。模式可以是手工定义的，也可以是根据一些种子数据而自动生成的。</p>
-<p>分布相似度法和模式匹配法都可以用来在数以百亿计的句子中或者数以十亿计的网页中抽取词的相似性信息。。</p>
-<p><strong>4.2上下位关系提取</strong><br>该模块从文档中抽取词的上下位关系信息，生成（下义词，上义词）数据对，例如（狗，动物）、（悉尼，城市）。这种方法的主要缺点包括：并不是所有的分类词条都代表上位词，例如百度百科中“狗”的开放分类“养殖”就不是其上位词；生成的关系图中没有权重信息，因此不能区分同一个实体所对应的不同上位词的重要性；覆盖率偏低，即很多上下位关系并没有包含在百科站点的分类信息中。</p>
-<p><strong>4.3语义类生成</strong><br>该模块包括聚类和语义类标定两个子模块。聚类的结果决定了要生成哪些语义类以及每个语义类包含哪些实体，而语义类标定的任务是给一个语义类附加一个或者多个上位词作为其成员的公共上位词。此模块依赖于并列相似性和上下位关系信息来进行聚类和标定。有些研究工作只根据上下位关系图来生成语义类，但经验表明并列相似性信息对于提高最终生成的语义类的精度和覆盖率都至关重要。</p>
 ]]></content>
       <categories>
-        <category>知识图谱</category>
+        <category>工业机理模型</category>
       </categories>
       <tags>
+        <tag>BOM</tag>
         <tag>知识图谱</tag>
+        <tag>工业机理模型</tag>
       </tags>
   </entry>
   <entry>
-    <title>【知识图谱系列合集】三、实体对齐.md</title>
-    <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90-md/</url>
+    <title>【知识图谱系列合集】三、实体对齐</title>
+    <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90/</url>
     <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20200810204859835.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong><em>导读：</em></strong></p>
 <ul>
 <li>1.<a href="https://blog.csdn.net/zkzbhh/article/details/107921135">知识提取</a>：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。</li>
@@ -66,6 +49,8 @@
 </ul>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921258</span></span><br></pre></td></tr></table></figure>
 <p><strong>本篇文章，我们介绍实体对齐的相关内容，包括实体消歧和共指消歧。</strong></p>
+<a id="more"></a>
+
 <p><strong><em>一、实体消歧</em></strong><br><strong>含义</strong>：实体消歧的本质在于一个词有很多可能的意思，也就是在不同的上下文中所表达的含义不太一样。</p>
 <p><strong>例子</strong>：<br><img src="https://img-blog.csdnimg.cn/20200810205414690.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>“我的手机是苹果”和”我喜欢吃苹果”这两个句子中的“苹果”代表的含义是不一样的。前者代表是手机、后者代表是水果。</p>
 <p><strong>具体实现</strong>：</p>
@@ -97,9 +82,145 @@
       </tags>
   </entry>
   <entry>
-    <title>【知识图谱系列合集】二、知识表示.md</title>
-    <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%BA%8C%E3%80%81%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA-md/</url>
+    <title>【知识图谱系列合集】一、知识提取</title>
+    <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%80%E3%80%81%E7%9F%A5%E8%AF%86%E6%8F%90%E5%8F%96/</url>
+    <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20200810201749355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="知识图谱构建流程"><br>数据主要有三类：结构化数据、半结构化数据和非结构化数据。<br>知识提取的目的：通过自动化或者半自动化的技术抽取出可用的知识单元，知识单元包括实体、属性和关系，并以此为基础，形成一系列高质量的事实表达，为上层模式层的构建奠定基础。<br>**<em>本文主要讲述知识图谱构建过程中的知识提取，实体抽取、属性抽取和关系抽取。**</em></p>
+<a id="more"></a>
+
+<p><strong><em>1.实体抽取</em></strong><br>实体抽取也称为命名实体学习，指的是从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素，所以实体抽取是知识抽取中最重要且最基础的一步。实体抽取的方法可以分为以下四种。</p>
+<p><strong>1.1基于百科站点或垂直站点提取</strong><br>很常规基本的提取方法。<br>从百科类站点的标题和链接中提取实体名。优点是可以得到开放互联网中最常见的实体名，其缺点是对于中低频的覆盖率低。与一般性通用的网站相比，垂直类站点的实体提取可以获取特定领域的实体。例如从豆瓣各频道(音乐、读书、电影等)获取各种实体列表。这种方法主要是基于爬取技术来实现和获取。</p>
+<p><strong>1.2基于规则与词典的方法</strong><br>需要为目标实体编写模板，然后在原始语料中进行匹配。<br>早期的实体抽取是在限定文本领域、限定语义单元类型的条件下进行的，主要采用的是基于规则与词典的方法，例如使用已定义的规则，抽取出文本中的人名、地名、组织机构名、特定时间等实体。然而，基于规则模板的方法不仅需要依靠大量的专家来编写规则或模板，覆盖的领域范围有限，而且很难适应数据变化的新需求。</p>
+<p><strong>1.3基于统计机器学习的方法</strong><br>通过机器学习的方法对原始语料进行训练，然后再利用训练好的模型去识别实体。<br>鉴于基于规则与词典实体的局限性，为具更有可扩展性，相关研究人员将机器学习中的监督学习算法用于命名实体的抽取问题上。近年来随着深度学习的兴起应用，基于深度学习的命名实体识别得到广泛应用。</p>
+<p><strong>1.4面向开放域的抽取方法</strong><br>是面向海量的Web语料。<br>针对如何从少量实体实例中自动发现具有区分力的模式，进而扩展到海量文本去给实体做分类与聚类的问题。</p>
+<p><strong><em>2.属性和属性值抽取</em></strong><br>属性提取的任务是为每个本体语义类构造属性列表，而属性值提取则为一个语义类的实体附加属性值。属性和属性值的抽取能够形成完整的实体概念的知识图谱维度。常见的属性和属性值抽取方法包括从百科类站点中提取，从垂直网站中进行包装器归纳，从网页表格中提取，以及利用手工定义或自动生成的模式从句子和查询日志中提取。</p>
+<p>常见的语义类/ 实体的常见属性/ 属性值可以通过解析百科类站点中的半结构化信息（如维基百科的信息盒和百度百科的属性表格）而获得。尽管通过这种简单手段能够得到高质量的属性，但同时需要采用其它方法来增加覆盖率（即为语义类增加更多属性以及为更多的实体添加属性值）。</p>
+<p><strong><em>3.关系抽取</em></strong><br>关系抽取的目标是解决实体语义链接的问题。关系的基本信息包括参数类型、满足此关系的元组模式等。分为开放式实体关系抽取，基于联合推理的实体关系抽取等。</p>
+<p><strong>3.1开放式实体关系抽取</strong><br>开放式实体关系抽取可分为二元开放式关系抽取和n元开放式关系抽取。</p>
+<p>在二元开放式关系抽取中，早期的研究有KnowItAll与TextRunner系统，在准确率与召回率上表现一般。有文献提出了一种基于Wikipedia的OIE方法WOE，经自监督学习得到抽取器，准确率较TextRunner有明显的提高。针对WOE的缺点，有文献提出了第二代OIE ReVerb系统，以动词关系抽取为主。有文献提出了第三代OIE系统OLLIE(open language learning for information extraction)，尝试弥补并扩展OIE的模型及相应的系统，抽取结果的准确度得到了增强。</p>
+<p>然而，基于语义角色标注的OIE分析显示：英文语句中40%的实体关系是n元的[32]，如处理不当，可能会影响整体抽取的完整性。有文献提出了一种可抽取任意英文语句中n元实体关系的方法KPAKEN，弥补了ReVerb的不足。但是由于算法对语句深层语法特征的提取导致其效率显著下降，并不适用于大规模开放域语料的情况。</p>
+<p><strong>3.2基于联合推理的实体关系抽取</strong><br>联合推理的关系抽取中的典型方法是马尔可夫逻辑网，它是一种将马尔可夫网络与一阶逻辑相结合的统计关系学习框架，同时也是在OIE中融入推理的一种重要实体关系抽取模型。</p>
+<p>联合推理的关系抽取中的典型方法是马尔可夫逻辑网MLN，它是一种将马尔可夫网络与一阶逻辑相结合的统计关系学习框架，同时也是在OIE中融入推理的一种重要实体关系抽取模型。基于该模型，有文献提出了一种无监督学习模型StatSnowball，不同于传统的OIE，该方法可自动产生或选择模板生成抽取器。在StatSnowball的基础上，有文献提出了一种实体识别与关系抽取相结合的模型EntSum，主要由扩展的CRF命名实体识别模块与基于StatSnowball的关系抽取模块组成，在保证准确率的同时也提高了召回率。有文献提出了一种简易的Markov逻辑TML(tractable Markov logic)，TML将领域知识分解为若干部分，各部分主要来源于事物类的层次化结构，并依据此结构，将各大部分进一步分解为若干个子部分，以此类推。TML具有较强的表示能力，能够较为简洁地表示概念以及关系的本体结构。</p>
+<p><strong><em>4.语义类提取</em></strong><br>语义类抽取是指从文本中自动抽取信息来构造语义类并建立实体和语义类的关联, 作为实体层面上的规整和抽象。以下介绍有效的语义类抽取方法，包含三个模块：并列度相似计算、上下位关系提取以及语义类生成 。</p>
+<p><strong>4.1并列度相似计算</strong><br>当前主流的并列相似度计算方法有分布相似度法和模式匹配法。</p>
+<p>分布相似度方法：经常出现在类似的上下文环境中的两个词具有语义上的相似性。分布相似度方法的实现分三个步骤：第一步，定义上下文；第二步，把每个词表示成一个特征向量，向量每一维代表一个不同的上下文，向量的值表示本词相对于上下文的权重；第三步，计算两个特征向量之间的相似度，将其作为它们所代表的词之间的相似度。 、</p>
+<p>模式匹配法：基本思路是把一些模式作用于源数据，得到一些词和词之间共同出现的信息，然后把这些信息聚集起来生成单词之间的相似度。模式可以是手工定义的，也可以是根据一些种子数据而自动生成的。</p>
+<p>分布相似度法和模式匹配法都可以用来在数以百亿计的句子中或者数以十亿计的网页中抽取词的相似性信息。。</p>
+<p><strong>4.2上下位关系提取</strong><br>该模块从文档中抽取词的上下位关系信息，生成（下义词，上义词）数据对，例如（狗，动物）、（悉尼，城市）。这种方法的主要缺点包括：并不是所有的分类词条都代表上位词，例如百度百科中“狗”的开放分类“养殖”就不是其上位词；生成的关系图中没有权重信息，因此不能区分同一个实体所对应的不同上位词的重要性；覆盖率偏低，即很多上下位关系并没有包含在百科站点的分类信息中。</p>
+<p><strong>4.3语义类生成</strong><br>该模块包括聚类和语义类标定两个子模块。聚类的结果决定了要生成哪些语义类以及每个语义类包含哪些实体，而语义类标定的任务是给一个语义类附加一个或者多个上位词作为其成员的公共上位词。此模块依赖于并列相似性和上下位关系信息来进行聚类和标定。有些研究工作只根据上下位关系图来生成语义类，但经验表明并列相似性信息对于提高最终生成的语义类的精度和覆盖率都至关重要。</p>
+]]></content>
+      <categories>
+        <category>知识图谱</category>
+      </categories>
+      <tags>
+        <tag>知识图谱</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【知识图谱系列合集】四、知识存储</title>
+    <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8/</url>
+    <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20200810210037352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p><strong><em>导读：</em></strong></p>
+<ul>
+<li>1.<a href="https://blog.csdn.net/zkzbhh/article/details/107921135">知识提取</a>：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921135</span></span><br></pre></td></tr></table></figure></li>
+<li>2.<a href="https://blog.csdn.net/zkzbhh/article/details/107921258">知识表示</a>：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR模型、TransD模型、TranSpare模型、TransA模型、TransG模型、KG2E模型。<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921258</span></span><br></pre></td></tr></table></figure></li>
+<li>3.<a href="https://blog.csdn.net/zkzbhh/article/details/107921782">实体对齐</a>：介绍实体消歧和共指消歧的方法。<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921782</span></span><br></pre></td></tr></table></figure>
+<strong>本篇文章，主要介绍知识图谱的知识存储。</strong></li>
+</ul>
+<a id="more"></a>
+
+<p><strong><em>1.RDF、RDFS和OWL数据模型</em></strong></p>
+<p>RDF、RDFS和OWL是W3C[1]推荐的本体描述用护眼，也是知识图谱中数据的常用存储格式，它们都是基于XML[2]编写的元数据[3]，是用于计算机传输数据，让机器可理解，而不是面向用户展示的数据模型。</p>
+<p><strong>(1)RDF</strong></p>
+<p>RDF本质是一个数据模型，它提供了一个统一的标准描述web资源，资源指的是类、属性、实例等。RDF在形式上表示为三元组。用于描述具体事物及关系，RDF也可以表示为一张带有标记的有向图，图中有节点和边，节点对应实体，边对应关系或者属性，关系指的是实体之间，实体与属性之间的关系。</p>
+<p><strong>RDF中的三元组Triple：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210302969.png" alt="在这里插入图片描述"></p>
+<p><strong>带有资源标识符URI的三元组：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210200426.png" alt="在这里插入图片描述"><br>声明命名空间ex = <a href="http://ex.org/%E5%92%8Cex-schema">http://ex.org/和ex-schema</a> = <a href="http://ex.org/schema%EF%BC%8C%E4%BA%8E%E6%98%AF%E5%B8%A6%E6%9C%89%E8%B5%84%E6%BA%90%E6%A0%87%E8%AF%86%E7%AC%A6%E7%9A%84URI%E4%B8%89%E5%85%83%E7%BB%84%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%A1%A8%E7%A4%BA%E4%B8%BA%E4%B8%8B%E5%9B%BE%E5%BD%A2%E5%BC%8F%E3%80%82">http://ex.org/schema，于是带有资源标识符的URI三元组就可以表示为下图形式。</a></p>
+<p><strong>声明前缀的三元组：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210239944.png" alt="在这里插入图片描述"></p>
+<p>RDF以三元组的形式描述资源，简洁明了，但是有着语义表达能力的缺陷。RDF中没有定义类、属性等词汇。RDF只能是对具体的事物进行描述，缺乏抽象能力，无法对同一个类别的事物进行定义和描述。RDF可以描述实体、实体的属性以及他们之间的关系，但是无法描述类与类之间的关系，类的属性等</p>
+<p><strong>(2)RDFS</strong></p>
+<p>RDFS在RDF的基础上定义了类（class）、属性（property）以及关系（relation）来描述资源，并且通过属性的定义域（domain）和值域（range）来约束资源。RDFS在数据层（data）的基础上引入了模式层（schema），模式层定义了一种约束规则，而数据层是在这种规则下的一个实例填充。</p>
+<p>RDFS相比于RDF语义表达能力有所提升，但RDFS依旧有语义表达的缺陷。在RDFS中关于类与类之间的关系它只能声明子类关系，无法声明互斥类的关系，也无法声明多个类、实例、属性是否等价。</p>
+<p><strong>(3)OWL</strong></p>
+<p>OWL是对RDFS关于描述资源词汇的一个扩展，OWL中添加了额外的预定于词汇来描述资源，具备更好的语义表达能力。在OWL中可以声明资源的等价性，属性的传递性、互斥性、函数性、对称性等等，具体见OWL的词汇扩展。</p>
+<p>本体和知识图谱在构建过程中，数据的存储常以RDF格式存放。而基于RDF数据的结构化查询语言SPARQL，可以实现对三元组的查询。在SPARQL中，常以“？”来表示变量或者资源标识符，select子句检索指定资源的资源标识符，where子句限定资源的由来。</p>
+<p><strong><em>2.基于RDF的存储</em></strong></p>
+<p>大部分开放的知识图谱，都是以RDF形式对外开放。</p>
+<p><strong>RDF结构：</strong></p>
+<p>RDF 为描述资源提供的基本元素有 IRI，字面值和空节点 (blank node)。IRI 就是一个符合特定语法的 UINICODE 字符串，跟 URL 的形式比较类似。其实 URL 属于 IRI 的一种。字面值可以理解为像时间、人名、数字等常量的表示，由字符串和表示数据类型的 IRI 构成。例如数字 1 的字面值可以表示为”1”^^xs:integer，其中 xs:integer 是表示整型数据类型的 IRI。空节点是指没有 IRI 的匿名节点。一般是 RDF 内部使用的一个特殊结构，不可被引用。</p>
+<p><strong>一个 RDF 数据集由一组相关的三元组的组成。</strong>由于这个三元组集合可以抽象为一张 graph，因此也称为 RDF graph。</p>
+<p><strong>例如，</strong>用 RDF 描述一本书，RDF 字典就需要定义一本书需要包含作者、书名、页数、出版时间、语言类型等。RDF 字典定义了数据建模的元数据项，这些元数据项主要包括两种类型 class 和 property。Class 是指对象实例的集合，可以理解为面向对象编程里的 class；Property 还分为两种子类型：一个是表示 class 的属性 (attribute)，另一个是表示多个 class 之间的关系 (relationship)。</p>
+<p>另外，RDF 字典的定义自身也是一个 RDF graph。这也是说明 RDF 是自描述的数据模型，是一种 schema-free 的数据模型。</p>
+<p><strong><em>3.基于图数据库的存储</em></strong></p>
+<p>图数据库是一种非关系型数据库，以解决现有关系数据库的局限性。图模型明确地列出了数据节点之间的依赖关系，而关系模型和其他 NoSQL 数据库模型则通过隐式连接来链接数据。图数据库从设计上，就是可以简单快速地检索难以在关系系统中建模的复杂层次结构的。</p>
+<p><strong>以neo4j为例介绍。</strong></p>
+<p>数据存储形式：主要是 <strong>节点（node）和 边（edge）</strong> 来组织数据。node可以代表知识图谱中的实体，edge可以用来代表实体间的关系，关系可以有方向，两端对应开始节点和结束节点。另外，可以在node上加一个或多个<strong>标签（Node Label）表示实体的分类</strong>，以及一个键值对集合来表示该实体除了关系属性之外的一些额外属性。关系也可以附带额外的属性。</p>
+<p>查询语言Cypher：neo4j采用自己设计的查询语言cypher，其特点和sql有很多相似的地方。<strong>match、where、return</strong>是最常用到的关键词：</p>
+<ul>
+<li>match: 相当于 sql中的select，用来说明<strong>查询匹配的数据模式</strong>（或者说图模式）</li>
+<li>where: 用来限制node或者关系中部分属性的属性值，从而返回我们想要的数据</li>
+<li>return: 返回节点或者关系</li>
+</ul>
+<p><strong>例子：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210539178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="图片来自网络，侵权删"></p>
+]]></content>
+      <categories>
+        <category>知识图谱</category>
+      </categories>
+      <tags>
+        <tag>知识图谱 知识存储</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工业机理</title>
+    <url>/2020/08/17/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86/</url>
+    <content><![CDATA[<h4 id="工业机理模型可以实现四类功能"><a href="#工业机理模型可以实现四类功能" class="headerlink" title="工业机理模型可以实现四类功能"></a>工业机理模型可以实现四类功能</h4><ol>
+<li><strong>描述</strong>，描述设备、工艺发生了什么；</li>
+<li><strong>诊断</strong>，发生了什么问题、什么地方发生了问题；</li>
+<li><strong>预测</strong>，如果不处理设备将有什么问题，能耗会有什么问题，质量会有什么问题；</li>
+<li><strong>决策</strong>、最后怎么办，是对那个环节进行维修，那个环节进行优化，或者保养，增加或者减少物料的输入等等，给操作手、给总工、给管理层提供一个解决方案。</li>
+</ol>
+<a id="more"></a>
+
+<h4 id="机理模型落地，会有四个阶段："><a href="#机理模型落地，会有四个阶段：" class="headerlink" title="机理模型落地，会有四个阶段："></a>机理模型落地，会有四个阶段：</h4><ol>
+<li><strong>理论推理</strong>，把工业中的热平衡、物质平衡等通过抽象的方法形成理论模型；</li>
+<li><strong>实验验证</strong>，对理论模型进行实验验证，仿真验证的过程；</li>
+<li><strong>模拟择优</strong>，在虚拟世界里面去完成，通过大数据模拟选择最优的结果；</li>
+<li>大数据分析通过模拟＋大数据发现新的规律。</li>
+</ol>
+<h4 id="机理模型分类"><a href="#机理模型分类" class="headerlink" title="机理模型分类"></a><strong>机理模型分类</strong></h4><p>1.机理模型（白箱）：存在物理关系，通过物理或数学公式来概化表达的模型。这类模型存在在各行各业。根据对象、生产过程的内部机制或者物质流的传递机理建立起来的精确数学模型。它是基于质量平衡方程、能量平衡方程、动量平衡方程、相平衡方程以及某些物性方程、化学反应定律、电路基本定律等而获得对象或过程的数学模型。机理模型的优点是参数具有非常明确的物理意义。</p>
+<p>2.非机理模型（黑箱或灰箱）：人工智能，以神经网络为代表，当然也有决策树、遗传算法以及支持向量机等等</p>
+<hr>
+<p>以后的趋势必然是机器学习与传统数学模型融合。</p>
+<p><strong>人工智能</strong>——&gt;深度学习——&gt;<strong>神经网络(模型)**——&gt;计算机视觉——&gt;**工业界</strong>（自动驾驶、安防、医疗）</p>
+<p><a href="https://cloud.tencent.com/developer/news/25568">https://cloud.tencent.com/developer/news/25568</a></p>
+<p>例如：SVM与传统的内涝数学模型有机结合在一起</p>
+<p>基于物理过程的数学模型已经广泛应用于城市内涝模拟中，但是数值模型在应用到实时内涝预报中，最大的瓶颈既是需要大量的计算资源和模拟时间，虽然有各种各样的简化模型技术被提出来，但是这些技术往往只能应用在满足一定前提条件的项目中</p>
+<p><strong>首先，数据在哪里？</strong></p>
+<p>▲一类是管理数据：结构化的SQL数据为主，如产品属性、工艺、生产、采购、订单、服务等数据，这类数据一般来自企业的ERP、SCM、PLM甚至MES等系统，数据量本身不大，却具有很大的挖掘价值；</p>
+<p>▲另一类则是机器运行和IoT的数据：以非结构化、流式数据居多，如设备工况（压力、温度、振动、应力等）、音视频、日志文本等数据，这类数据一般采集自设备PLC、SCADA以及部分外装传感器，数据量很大，采集频率高，需要结合边缘计算在本地做一些预处理。</p>
+<p>总的来讲，由于场景的割裂和分散，工业数据本身具有量大、多源、异构、实时性要求高等特点，而且随着未来280亿设备逐步接入，这些特性将会进一步加强，这是做工业大数据服务的核心难点之一，和互联网大数据不仅量级不同，结构不同，应用也完全不同。</p>
+<p><strong>其次，基于这些工业数据，平台层应该提供哪些服务？</strong></p>
+<p>▲完整的协议解析：数据采集首先要完成工业协议的打通。以应用层协议为例，EtherNet/IP和PROFINET的市场占有率最大，其次是EtherCAT、Modbus-TCP和EtherNetPOWERLINK；</p>
+<p>▲标准化的数据整合：采集上来的数据要做统一的主数据管理，第一步是建立标准。一般来讲，我们先要用ISO或其他业内标准，制定统一的编码、结构、流转方式和属性，确保数据的一致性，这一点非常重要。</p>
+<p>在项目实施的历程中，逐步积累行业知识库、合适的算法组件以及相关机理模型，这一点也很重要，这是从数据标准进化到业务标准化的关键一步，是为实现真正的产品层面的微服务化打下基础。</p>
+<p>强大的PaaS支持：工业数据本身的特殊性导致平台必须要有强大的中层支撑能力。我们以时序数据库为例，它是设备工况和传感器数据的典型品种。这类数据频率高、量大，用传统关系型数据库处理，需要每次把所有值拉出来计算，吞吐量极大，性能很差。所以，一个高压缩、高性能的时序数据库，就是平台层必备的能力之一。</p>
+<p><strong>最后，我们应该做哪些应用？</strong></p>
+<p>▲设备级：质量控制。在工业智能时代，如果我们能够采集到合适的实时数据，结合该设备所适用的机理模型，就有可能用机器学习的方法挖掘出产品质量与关键数据之间的关联或因果关系，也就有可能实现实时在线的质量控制和故障预警，如果数据频率能对工艺流程形成完美包络，我们还有可能实现最大限度的效率提升。</p>
+<p>▲厂级：计划排产。工业智能的最终目的是要实现大规模的个性化定制，即C2M。这一问题的目标是实现当时当地的产能最优，约束条件来自企业的产线设备、人员、产品属性、供应链数据等等，通过历史数据的学习和训练，不难形成一个较好的预测模型。</p>
+<p>这一模型能根据产线和工厂的实时数据动态分析，动态调整，以帮助企业实现准确把控，最大化经济效益。</p>
+]]></content>
+      <categories>
+        <category>工业机理模型</category>
+      </categories>
+      <tags>
+        <tag>知识图谱</tag>
+        <tag>工业机理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【知识图谱系列合集】二、知识表示</title>
+    <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%BA%8C%E3%80%81%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA/</url>
     <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20200810202240689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="知识图谱构建流程"><br>将结构化、半结构化和非结构化数据中的实体、关系和属性进行提取。之后就要进行知识表示。本文主要介绍知识表示的概念、常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型和Trans系列模型。</p>
+<a id="more"></a>
+
 <p><strong><em>说明：</em></strong></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">摘自刘知远：知识表示学习研究进展（DOI;<span class="number">10.7544</span>/issn1000-<span class="number">1239.2016</span>.<span class="number">20160020</span>)</span><br></pre></td></tr></table></figure>
 <p><strong><em>导读：</em></strong></p>
@@ -155,65 +276,37 @@
       </tags>
   </entry>
   <entry>
-    <title>【知识图谱系列合集】四、知识存储.md</title>
-    <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8-md/</url>
-    <content><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20200810210037352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><strong><em>导读：</em></strong></p>
-<ul>
-<li>1.<a href="https://blog.csdn.net/zkzbhh/article/details/107921135">知识提取</a>：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921135</span></span><br></pre></td></tr></table></figure></li>
-<li>2.<a href="https://blog.csdn.net/zkzbhh/article/details/107921258">知识表示</a>：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR模型、TransD模型、TranSpare模型、TransA模型、TransG模型、KG2E模型。<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921258</span></span><br></pre></td></tr></table></figure></li>
-<li>3.<a href="https://blog.csdn.net/zkzbhh/article/details/107921782">实体对齐</a>：介绍实体消歧和共指消歧的方法。<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921782</span></span><br></pre></td></tr></table></figure>
-<strong>本篇文章，主要介绍知识图谱的知识存储。</strong></li>
-</ul>
-<p><strong><em>1.RDF、RDFS和OWL数据模型</em></strong></p>
-<p>RDF、RDFS和OWL是W3C[1]推荐的本体描述用护眼，也是知识图谱中数据的常用存储格式，它们都是基于XML[2]编写的元数据[3]，是用于计算机传输数据，让机器可理解，而不是面向用户展示的数据模型。</p>
-<p><strong>(1)RDF</strong></p>
-<p>RDF本质是一个数据模型，它提供了一个统一的标准描述web资源，资源指的是类、属性、实例等。RDF在形式上表示为三元组。用于描述具体事物及关系，RDF也可以表示为一张带有标记的有向图，图中有节点和边，节点对应实体，边对应关系或者属性，关系指的是实体之间，实体与属性之间的关系。</p>
-<p><strong>RDF中的三元组Triple：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210302969.png" alt="在这里插入图片描述"></p>
-<p><strong>带有资源标识符URI的三元组：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210200426.png" alt="在这里插入图片描述"><br>声明命名空间ex = <a href="http://ex.org/%E5%92%8Cex-schema">http://ex.org/和ex-schema</a> = <a href="http://ex.org/schema%EF%BC%8C%E4%BA%8E%E6%98%AF%E5%B8%A6%E6%9C%89%E8%B5%84%E6%BA%90%E6%A0%87%E8%AF%86%E7%AC%A6%E7%9A%84URI%E4%B8%89%E5%85%83%E7%BB%84%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%A1%A8%E7%A4%BA%E4%B8%BA%E4%B8%8B%E5%9B%BE%E5%BD%A2%E5%BC%8F%E3%80%82">http://ex.org/schema，于是带有资源标识符的URI三元组就可以表示为下图形式。</a></p>
-<p><strong>声明前缀的三元组：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210239944.png" alt="在这里插入图片描述"></p>
-<p>RDF以三元组的形式描述资源，简洁明了，但是有着语义表达能力的缺陷。RDF中没有定义类、属性等词汇。RDF只能是对具体的事物进行描述，缺乏抽象能力，无法对同一个类别的事物进行定义和描述。RDF可以描述实体、实体的属性以及他们之间的关系，但是无法描述类与类之间的关系，类的属性等</p>
-<p><strong>(2)RDFS</strong></p>
-<p>RDFS在RDF的基础上定义了类（class）、属性（property）以及关系（relation）来描述资源，并且通过属性的定义域（domain）和值域（range）来约束资源。RDFS在数据层（data）的基础上引入了模式层（schema），模式层定义了一种约束规则，而数据层是在这种规则下的一个实例填充。</p>
-<p>RDFS相比于RDF语义表达能力有所提升，但RDFS依旧有语义表达的缺陷。在RDFS中关于类与类之间的关系它只能声明子类关系，无法声明互斥类的关系，也无法声明多个类、实例、属性是否等价。</p>
-<p><strong>(3)OWL</strong></p>
-<p>OWL是对RDFS关于描述资源词汇的一个扩展，OWL中添加了额外的预定于词汇来描述资源，具备更好的语义表达能力。在OWL中可以声明资源的等价性，属性的传递性、互斥性、函数性、对称性等等，具体见OWL的词汇扩展。</p>
-<p>本体和知识图谱在构建过程中，数据的存储常以RDF格式存放。而基于RDF数据的结构化查询语言SPARQL，可以实现对三元组的查询。在SPARQL中，常以“？”来表示变量或者资源标识符，select子句检索指定资源的资源标识符，where子句限定资源的由来。</p>
-<p><strong><em>2.基于RDF的存储</em></strong></p>
-<p>大部分开放的知识图谱，都是以RDF形式对外开放。</p>
-<p><strong>RDF结构：</strong></p>
-<p>RDF 为描述资源提供的基本元素有 IRI，字面值和空节点 (blank node)。IRI 就是一个符合特定语法的 UINICODE 字符串，跟 URL 的形式比较类似。其实 URL 属于 IRI 的一种。字面值可以理解为像时间、人名、数字等常量的表示，由字符串和表示数据类型的 IRI 构成。例如数字 1 的字面值可以表示为”1”^^xs:integer，其中 xs:integer 是表示整型数据类型的 IRI。空节点是指没有 IRI 的匿名节点。一般是 RDF 内部使用的一个特殊结构，不可被引用。</p>
-<p><strong>一个 RDF 数据集由一组相关的三元组的组成。</strong>由于这个三元组集合可以抽象为一张 graph，因此也称为 RDF graph。</p>
-<p><strong>例如，</strong>用 RDF 描述一本书，RDF 字典就需要定义一本书需要包含作者、书名、页数、出版时间、语言类型等。RDF 字典定义了数据建模的元数据项，这些元数据项主要包括两种类型 class 和 property。Class 是指对象实例的集合，可以理解为面向对象编程里的 class；Property 还分为两种子类型：一个是表示 class 的属性 (attribute)，另一个是表示多个 class 之间的关系 (relationship)。</p>
-<p>另外，RDF 字典的定义自身也是一个 RDF graph。这也是说明 RDF 是自描述的数据模型，是一种 schema-free 的数据模型。</p>
-<p><strong><em>3.基于图数据库的存储</em></strong></p>
-<p>图数据库是一种非关系型数据库，以解决现有关系数据库的局限性。图模型明确地列出了数据节点之间的依赖关系，而关系模型和其他 NoSQL 数据库模型则通过隐式连接来链接数据。图数据库从设计上，就是可以简单快速地检索难以在关系系统中建模的复杂层次结构的。</p>
-<p><strong>以neo4j为例介绍。</strong></p>
-<p>数据存储形式：主要是 <strong>节点（node）和 边（edge）</strong> 来组织数据。node可以代表知识图谱中的实体，edge可以用来代表实体间的关系，关系可以有方向，两端对应开始节点和结束节点。另外，可以在node上加一个或多个<strong>标签（Node Label）表示实体的分类</strong>，以及一个键值对集合来表示该实体除了关系属性之外的一些额外属性。关系也可以附带额外的属性。</p>
-<p>查询语言Cypher：neo4j采用自己设计的查询语言cypher，其特点和sql有很多相似的地方。<strong>match、where、return</strong>是最常用到的关键词：</p>
-<ul>
-<li>match: 相当于 sql中的select，用来说明<strong>查询匹配的数据模式</strong>（或者说图模式）</li>
-<li>where: 用来限制node或者关系中部分属性的属性值，从而返回我们想要的数据</li>
-<li>return: 返回节点或者关系</li>
-</ul>
-<p><strong>例子：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210539178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="图片来自网络，侵权删"></p>
+    <title>命令集合</title>
+    <url>/2020/08/14/%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p><strong>生成阅读全文，在markdowm文本中插入：</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- more --&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>初始化并安装所需组件：</strong></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo init      # 初始化</span><br><span class="line">npm install    # 安装组件</span><br></pre></td></tr></table></figure>
+
+<p>完成后依次输入下面命令，<strong>启动本地服务器进行预览</strong>：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo g   # 生成页面</span><br><span class="line">hexo s   # 启动预览</span><br></pre></td></tr></table></figure>
+
+<p>首先<strong>安装 hexo-deployer-git</strong>：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>然后<strong>修改 _config.yml</strong> 文件末尾的 Deployment 部分，修改成如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:用户名/用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>清楚缓存等文件并重新发布网站：</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo</span> clean   <span class="comment"># 清除缓存文件等</span></span><br><span class="line">hexo g       <span class="comment"># 生成页面</span></span><br><span class="line">hexo s       <span class="comment"># 启动预览</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo deploy #部署发布</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <categories>
-        <category>知识图谱</category>
+        <category>方法技巧</category>
       </categories>
       <tags>
-        <tag>知识图谱 知识存储</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hahah</title>
-    <url>/2020/08/16/hahah/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>开玩笑</category>
-      </categories>
-      <tags>
-        <tag>无</tag>
+        <tag>方法技巧</tag>
+        <tag>命令</tag>
       </tags>
   </entry>
 </search>

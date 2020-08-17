@@ -5,16 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 5.0.2">
-
-
-  <script>
-  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/你的app_id.js","daovoice")
-  daovoice('init', {
-      app_id: "a058625e"
-    });
-  daovoice('update');
-  </script>
-
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/kaikai.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/kaikai.png">
@@ -26,35 +16,33 @@
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1.0.2/themes/blue/pace-theme-minimal.css">
   <script src="//cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"kaikaihit.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"kaikaihit.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="导读：  1.知识提取：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。1https:&#x2F;&#x2F;blog.csdn.net&#x2F;zkzbhh&#x2F;article&#x2F;details&#x2F;107921135 2.知识表示：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR模型、">
+  <meta name="description" content="导读：  1.知识提取：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。  1https:&#x2F;&#x2F;blog.csdn.net&#x2F;zkzbhh&#x2F;article&#x2F;details&#x2F;107921135   2.知识表示：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【知识图谱系列合集】四、知识存储.md">
-<meta property="og:url" content="kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8-md/index.html">
+<meta property="og:title" content="【知识图谱系列合集】三、实体对齐">
+<meta property="og:url" content="kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90/index.html">
 <meta property="og:site_name" content="Kaikai&#39;s Blogs">
-<meta property="og:description" content="导读：  1.知识提取：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。1https:&#x2F;&#x2F;blog.csdn.net&#x2F;zkzbhh&#x2F;article&#x2F;details&#x2F;107921135 2.知识表示：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR模型、">
+<meta property="og:description" content="导读：  1.知识提取：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。  1https:&#x2F;&#x2F;blog.csdn.net&#x2F;zkzbhh&#x2F;article&#x2F;details&#x2F;107921135   2.知识表示：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810210037352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810210302969.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810210200426.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810210239944.png">
-<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810210539178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
-<meta property="article:published_time" content="2020-08-14T14:22:04.000Z">
-<meta property="article:modified_time" content="2020-08-16T05:59:07.835Z">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810204859835.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200810205414690.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2020-08-14T14:21:27.000Z">
+<meta property="article:modified_time" content="2020-08-17T01:36:05.945Z">
 <meta property="article:author" content="kaikai">
-<meta property="article:tag" content="知识图谱 知识存储">
+<meta property="article:tag" content="知识图谱 实体对齐">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200810210037352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20200810204859835.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70">
 
 
-<link rel="canonical" href="kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8-md/">
+<link rel="canonical" href="kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90/">
 
 
 <script class="page-configurations">
@@ -67,7 +55,7 @@
   };
 </script>
 
-  <title>【知识图谱系列合集】四、知识存储.md | Kaikai's Blogs</title>
+  <title>【知识图谱系列合集】三、实体对齐 | Kaikai's Blogs</title>
   
 
 
@@ -153,6 +141,11 @@
         <li class="menu-item menu-item-home">
 
     <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
         <li class="menu-item menu-item-tags">
@@ -241,28 +234,24 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">7</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
-  <div class="sidebar-button animated"><i class="fa fa-comment"></i>
-    Chat
-  </a>
-  </div>
   <div class="links-of-author animated">
       <span class="links-of-author-item">
         <a href="https://github.com//kaikaihit/kaikaihit.github.io.git" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;&#x2F;kaikaihit&#x2F;kaikaihit.github.io.git" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
@@ -333,7 +322,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8-md/">
+    <link itemprop="mainEntityOfPage" href="kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -349,7 +338,7 @@
     
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          【知识图谱系列合集】四、知识存储.md
+          【知识图谱系列合集】三、实体对齐
         </h1>
 
         <div class="post-meta">
@@ -359,14 +348,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-08-14 22:22:04" itemprop="dateCreated datePublished" datetime="2020-08-14T22:22:04+08:00">2020-08-14</time>
+              <time title="创建时间：2020-08-14 22:21:27" itemprop="dateCreated datePublished" datetime="2020-08-14T22:21:27+08:00">2020-08-14</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-16 13:59:07" itemprop="dateModified" datetime="2020-08-16T13:59:07+08:00">2020-08-16</time>
+                <time title="修改时间：2020-08-17 09:36:05" itemprop="dateModified" datetime="2020-08-17T09:36:05+08:00">2020-08-17</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -385,6 +374,20 @@
               </span>
               <span class="post-meta-item-text">阅读次数：</span>
               <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span class="post-meta-item-text">本文字数：</span>
+              <span>2k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -394,46 +397,41 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p><img src="https://img-blog.csdnimg.cn/20200810210037352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><strong><em>导读：</em></strong></p>
+        <p><img src="https://img-blog.csdnimg.cn/20200810204859835.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong><em>导读：</em></strong></p>
 <ul>
-<li>1.<a target="_blank" rel="noopener" href="https://blog.csdn.net/zkzbhh/article/details/107921135">知识提取</a>：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921135</span></span><br></pre></td></tr></table></figure></li>
-<li>2.<a target="_blank" rel="noopener" href="https://blog.csdn.net/zkzbhh/article/details/107921258">知识表示</a>：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR模型、TransD模型、TranSpare模型、TransA模型、TransG模型、KG2E模型。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921258</span></span><br></pre></td></tr></table></figure></li>
-<li>3.<a target="_blank" rel="noopener" href="https://blog.csdn.net/zkzbhh/article/details/107921782">实体对齐</a>：介绍实体消歧和共指消歧的方法。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921782</span></span><br></pre></td></tr></table></figure>
-<strong>本篇文章，主要介绍知识图谱的知识存储。</strong></li>
+<li>1.<a target="_blank" rel="noopener" href="https://blog.csdn.net/zkzbhh/article/details/107921135">知识提取</a>：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。</li>
 </ul>
-<p><strong><em>1.RDF、RDFS和OWL数据模型</em></strong></p>
-<p>RDF、RDFS和OWL是W3C[1]推荐的本体描述用护眼，也是知识图谱中数据的常用存储格式，它们都是基于XML[2]编写的元数据[3]，是用于计算机传输数据，让机器可理解，而不是面向用户展示的数据模型。</p>
-<p><strong>(1)RDF</strong></p>
-<p>RDF本质是一个数据模型，它提供了一个统一的标准描述web资源，资源指的是类、属性、实例等。RDF在形式上表示为三元组。用于描述具体事物及关系，RDF也可以表示为一张带有标记的有向图，图中有节点和边，节点对应实体，边对应关系或者属性，关系指的是实体之间，实体与属性之间的关系。</p>
-<p><strong>RDF中的三元组Triple：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210302969.png" alt="在这里插入图片描述"></p>
-<p><strong>带有资源标识符URI的三元组：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210200426.png" alt="在这里插入图片描述"><br>声明命名空间ex = <a target="_blank" rel="noopener" href="http://ex.org/%E5%92%8Cex-schema">http://ex.org/和ex-schema</a> = <a target="_blank" rel="noopener" href="http://ex.org/schema%EF%BC%8C%E4%BA%8E%E6%98%AF%E5%B8%A6%E6%9C%89%E8%B5%84%E6%BA%90%E6%A0%87%E8%AF%86%E7%AC%A6%E7%9A%84URI%E4%B8%89%E5%85%83%E7%BB%84%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%A1%A8%E7%A4%BA%E4%B8%BA%E4%B8%8B%E5%9B%BE%E5%BD%A2%E5%BC%8F%E3%80%82">http://ex.org/schema，于是带有资源标识符的URI三元组就可以表示为下图形式。</a></p>
-<p><strong>声明前缀的三元组：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210239944.png" alt="在这里插入图片描述"></p>
-<p>RDF以三元组的形式描述资源，简洁明了，但是有着语义表达能力的缺陷。RDF中没有定义类、属性等词汇。RDF只能是对具体的事物进行描述，缺乏抽象能力，无法对同一个类别的事物进行定义和描述。RDF可以描述实体、实体的属性以及他们之间的关系，但是无法描述类与类之间的关系，类的属性等</p>
-<p><strong>(2)RDFS</strong></p>
-<p>RDFS在RDF的基础上定义了类（class）、属性（property）以及关系（relation）来描述资源，并且通过属性的定义域（domain）和值域（range）来约束资源。RDFS在数据层（data）的基础上引入了模式层（schema），模式层定义了一种约束规则，而数据层是在这种规则下的一个实例填充。</p>
-<p>RDFS相比于RDF语义表达能力有所提升，但RDFS依旧有语义表达的缺陷。在RDFS中关于类与类之间的关系它只能声明子类关系，无法声明互斥类的关系，也无法声明多个类、实例、属性是否等价。</p>
-<p><strong>(3)OWL</strong></p>
-<p>OWL是对RDFS关于描述资源词汇的一个扩展，OWL中添加了额外的预定于词汇来描述资源，具备更好的语义表达能力。在OWL中可以声明资源的等价性，属性的传递性、互斥性、函数性、对称性等等，具体见OWL的词汇扩展。</p>
-<p>本体和知识图谱在构建过程中，数据的存储常以RDF格式存放。而基于RDF数据的结构化查询语言SPARQL，可以实现对三元组的查询。在SPARQL中，常以“？”来表示变量或者资源标识符，select子句检索指定资源的资源标识符，where子句限定资源的由来。</p>
-<p><strong><em>2.基于RDF的存储</em></strong></p>
-<p>大部分开放的知识图谱，都是以RDF形式对外开放。</p>
-<p><strong>RDF结构：</strong></p>
-<p>RDF 为描述资源提供的基本元素有 IRI，字面值和空节点 (blank node)。IRI 就是一个符合特定语法的 UINICODE 字符串，跟 URL 的形式比较类似。其实 URL 属于 IRI 的一种。字面值可以理解为像时间、人名、数字等常量的表示，由字符串和表示数据类型的 IRI 构成。例如数字 1 的字面值可以表示为”1”^^xs:integer，其中 xs:integer 是表示整型数据类型的 IRI。空节点是指没有 IRI 的匿名节点。一般是 RDF 内部使用的一个特殊结构，不可被引用。</p>
-<p><strong>一个 RDF 数据集由一组相关的三元组的组成。</strong>由于这个三元组集合可以抽象为一张 graph，因此也称为 RDF graph。</p>
-<p><strong>例如，</strong>用 RDF 描述一本书，RDF 字典就需要定义一本书需要包含作者、书名、页数、出版时间、语言类型等。RDF 字典定义了数据建模的元数据项，这些元数据项主要包括两种类型 class 和 property。Class 是指对象实例的集合，可以理解为面向对象编程里的 class；Property 还分为两种子类型：一个是表示 class 的属性 (attribute)，另一个是表示多个 class 之间的关系 (relationship)。</p>
-<p>另外，RDF 字典的定义自身也是一个 RDF graph。这也是说明 RDF 是自描述的数据模型，是一种 schema-free 的数据模型。</p>
-<p><strong><em>3.基于图数据库的存储</em></strong></p>
-<p>图数据库是一种非关系型数据库，以解决现有关系数据库的局限性。图模型明确地列出了数据节点之间的依赖关系，而关系模型和其他 NoSQL 数据库模型则通过隐式连接来链接数据。图数据库从设计上，就是可以简单快速地检索难以在关系系统中建模的复杂层次结构的。</p>
-<p><strong>以neo4j为例介绍。</strong></p>
-<p>数据存储形式：主要是 <strong>节点（node）和 边（edge）</strong> 来组织数据。node可以代表知识图谱中的实体，edge可以用来代表实体间的关系，关系可以有方向，两端对应开始节点和结束节点。另外，可以在node上加一个或多个<strong>标签（Node Label）表示实体的分类</strong>，以及一个键值对集合来表示该实体除了关系属性之外的一些额外属性。关系也可以附带额外的属性。</p>
-<p>查询语言Cypher：neo4j采用自己设计的查询语言cypher，其特点和sql有很多相似的地方。<strong>match、where、return</strong>是最常用到的关键词：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921135</span></span><br></pre></td></tr></table></figure>
+
 <ul>
-<li>match: 相当于 sql中的select，用来说明<strong>查询匹配的数据模式</strong>（或者说图模式）</li>
-<li>where: 用来限制node或者关系中部分属性的属性值，从而返回我们想要的数据</li>
-<li>return: 返回节点或者关系</li>
+<li>2.<a target="_blank" rel="noopener" href="https://blog.csdn.net/zkzbhh/article/details/107921258">知识表示</a>：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR模型、TransD模型、TranSpare模型、TransA模型、TransG模型、KG2E模型。</li>
 </ul>
-<p><strong>例子：</strong><br><img src="https://img-blog.csdnimg.cn/20200810210539178.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="图片来自网络，侵权删"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921258</span></span><br></pre></td></tr></table></figure>
+<p><strong>本篇文章，我们介绍实体对齐的相关内容，包括实体消歧和共指消歧。</strong></p>
+<a id="more"></a>
+
+<p><strong><em>一、实体消歧</em></strong><br><strong>含义</strong>：实体消歧的本质在于一个词有很多可能的意思，也就是在不同的上下文中所表达的含义不太一样。</p>
+<p><strong>例子</strong>：<br><img src="https://img-blog.csdnimg.cn/20200810205414690.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>“我的手机是苹果”和”我喜欢吃苹果”这两个句子中的“苹果”代表的含义是不一样的。前者代表是手机、后者代表是水果。</p>
+<p><strong>具体实现</strong>：</p>
+<p>“美国一家高科技公司，经典的产品有Iphone手机”转换为向量 [公式] ；“水果的一种，一般产自于…”转换为向量 [公式] ；然后将“今天苹果发布了新的手机”中“苹果”的上下文“今天，发布了新的手机”转换为向量 [公式] ;我们只要将 [公式] 分别与 [公式] 和 [公式] 计算相似度，然后对比 [公式] 和 [公式] ;相似度高的，我们则将其看作“苹果”的真实语义。</p>
+<p><strong><em>二、共指消歧</em></strong></p>
+<p>共指消解，也叫指代消解。很难因为自然语言充满歧义，因此必须使用多种信号和知识来消除歧义。需要基于对周围世界的了解才能明白这些指代，而这种知识很难编码到计算机中。举个例子：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">乔布斯改变了我们听音乐、购买音乐、打电话、使用手机、看电影等各方面的体验。当他去世时，奥巴马称他为最伟大的创新者。</span><br></pre></td></tr></table></figure>
+<p>上面这句话中的他指代的是乔布斯。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">乔布斯改变了我们听音乐、购买音乐、打电话、使用手机、看电影等各方面的体验。当他听到这个消息，奥巴马致电慰问他的妻子。</span><br></pre></td></tr></table></figure>
+<p>那这段话中的他指代的是奥巴马。</p>
+<p>指代消解主要有两个步骤。第一步是指代识别（mention detection），即找出句子中所有的指代，这一步相对简单。第二步才是进行真正的指代消解（coreference resolution），这一步比较难。</p>
+<p><strong>1.指代识别</strong></p>
+<p>指代识别阶段尽量保召回率，保留所有找到的可能是指代的词，都参与后期的指代消解。如果一个指代没有找到它的共同指代（coreference），则说明这个指代是孤立的（singleton mention），有可能是指代识别阶段找到的不是指代的词，直接舍弃。</p>
+<p><strong>2.指代消解</strong></p>
+<p>指代消解发展至今，经历了四种不同的方法，分别是Rule-based、Mention pair、Mention Ranking。</p>
+<p><strong>Rule-based方法</strong>：1976年，Hobbs提出了基于规则的朴素算法，被后人称为Hobbs算法。该方法有9个步骤，包含了很多规则，非常繁琐。Hobbs算法虽然是基于规则的，但在当时取得了不错的效果，现在也常常作为该领域的baseline模型。但是因为该方法是基于规则的，有很多指代消解没法解决。</p>
+<p><strong>Mention pair方法</strong>：该方法把指代消解问题转化为一个二分类问题。从左到右遍历句子，每找到一个指代，就把它和前面找到的每个指代作为一个pair，问分类器这个pair是否指代同一个实体，如果是的话，就把它们连起来。二分类的损失就是交叉熵。很简单的一个模型。</p>
+<p><strong>Mention Ranking</strong>：每个指代同时和前面所有指代打分，用softmax归一化，找出概率最大的先行词，添加一条连边。注意需要添加一个NA节点，因为有的指代可能第一次出现，前面没有先行词，或者这个指代根本就不是一个真正的指代。</p>
+<p>前面的内容都是假设我们计算好了任意两个指代是coreference的概率，那么，如何来计算这个概率呢？主要有三种方法，分别是Non-neural statistical classifier、Simple neural network和More advanced model using LSTMs, attention。</p>
+<p><strong>A. Non-neural statistical classifie</strong>r。统计机器学习方法，抽取每个指代的各种特征，然后用机器学习分类器来计算两个指代是coreference的概率。这里面的特征包括人称、性别一致性，语义相容性等等。</p>
+<p><strong>B. Neural Coref Model</strong>。输入是候选先行词和当前指代词的词向量，还需要加入一些额外的特征（Additional Feature），也就是上面统计机器学习方法里用到的一些特征。中间是FFNN，即全连接网络，最后输出两个指代是coreference的概率。</p>
+<p><strong>C. End-to-end Model</strong>。end2end模型是目前指代消解的SOTA模型，它把指代识别和指代消解两个任务融合到一起，用一个模型来解决。</p>
 
     </div>
 
@@ -467,7 +465,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="/kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8-md/" title="【知识图谱系列合集】四、知识存储.md">kaikaihit.github.io/2020/08/14/【知识图谱系列合集】四、知识存储-md/</a>
+    <a href="/kaikaihit.github.io/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90/" title="【知识图谱系列合集】三、实体对齐">kaikaihit.github.io/2020/08/14/【知识图谱系列合集】三、实体对齐/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -478,20 +476,20 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1-%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8/" rel="tag"># 知识图谱 知识存储</a>
+              <a href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1-%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90/" rel="tag"># 知识图谱 实体对齐</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90-md/" rel="prev" title="【知识图谱系列合集】三、实体对齐.md">
-                  <i class="fa fa-chevron-left"></i> 【知识图谱系列合集】三、实体对齐.md
+                <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%BA%8C%E3%80%81%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA/" rel="prev" title="【知识图谱系列合集】二、知识表示">
+                  <i class="fa fa-chevron-left"></i> 【知识图谱系列合集】二、知识表示
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2020/08/16/hahah/" rel="next" title="hahah">
-                  hahah <i class="fa fa-chevron-right"></i>
+                <a href="/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8/" rel="next" title="【知识图谱系列合集】四、知识存储">
+                  【知识图谱系列合集】四、知识存储 <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -546,6 +544,22 @@
   </span>
   <span class="author" itemprop="copyrightHolder">kaikai</span>
 </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">14k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">13 分钟</span>
+  </span>
+</div>
 <div class="busuanzi-count">
     <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
       <span class="post-meta-item-icon">
@@ -569,7 +583,10 @@
   </footer>
 
   
+  <script size="300" alpha="0.6" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   

@@ -2799,7 +2799,7 @@ mark.search-keyword {
   }
 }
 .site-brand-container {
-  background: #222;
+  background-image: url("/images/background.jpg");
 }
 @media (max-width: 991px) {
   .site-brand-container {

@@ -70,6 +70,52 @@
       </tags>
   </entry>
   <entry>
+    <title>【知识图谱系列合集】三、实体对齐</title>
+    <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90/</url>
+    <content><![CDATA[<p><img data-src="https://img-blog.csdnimg.cn/20200810204859835.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong><em>导读：</em></strong></p>
+<ul>
+<li>1.<a href="https://blog.csdn.net/zkzbhh/article/details/107921135">知识提取</a>：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921135</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>2.<a href="https://blog.csdn.net/zkzbhh/article/details/107921258">知识表示</a>：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR模型、TransD模型、TranSpare模型、TransA模型、TransG模型、KG2E模型。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921258</span></span><br></pre></td></tr></table></figure>
+<p><strong>本篇文章，我们介绍实体对齐的相关内容，包括实体消歧和共指消歧。</strong></p>
+<a id="more"></a>
+
+<p><strong><em>一、实体消歧</em></strong><br><strong>含义</strong>：实体消歧的本质在于一个词有很多可能的意思，也就是在不同的上下文中所表达的含义不太一样。</p>
+<p><strong>例子</strong>：<br><img data-src="https://img-blog.csdnimg.cn/20200810205414690.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>“我的手机是苹果”和”我喜欢吃苹果”这两个句子中的“苹果”代表的含义是不一样的。前者代表是手机、后者代表是水果。</p>
+<p><strong>具体实现</strong>：</p>
+<p>“美国一家高科技公司，经典的产品有Iphone手机”转换为向量 [公式] ；“水果的一种，一般产自于…”转换为向量 [公式] ；然后将“今天苹果发布了新的手机”中“苹果”的上下文“今天，发布了新的手机”转换为向量 [公式] ;我们只要将 [公式] 分别与 [公式] 和 [公式] 计算相似度，然后对比 [公式] 和 [公式] ;相似度高的，我们则将其看作“苹果”的真实语义。</p>
+<p><strong><em>二、共指消歧</em></strong></p>
+<p>共指消解，也叫指代消解。很难因为自然语言充满歧义，因此必须使用多种信号和知识来消除歧义。需要基于对周围世界的了解才能明白这些指代，而这种知识很难编码到计算机中。举个例子：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">乔布斯改变了我们听音乐、购买音乐、打电话、使用手机、看电影等各方面的体验。当他去世时，奥巴马称他为最伟大的创新者。</span><br></pre></td></tr></table></figure>
+<p>上面这句话中的他指代的是乔布斯。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">乔布斯改变了我们听音乐、购买音乐、打电话、使用手机、看电影等各方面的体验。当他听到这个消息，奥巴马致电慰问他的妻子。</span><br></pre></td></tr></table></figure>
+<p>那这段话中的他指代的是奥巴马。</p>
+<p>指代消解主要有两个步骤。第一步是指代识别（mention detection），即找出句子中所有的指代，这一步相对简单。第二步才是进行真正的指代消解（coreference resolution），这一步比较难。</p>
+<p><strong>1.指代识别</strong></p>
+<p>指代识别阶段尽量保召回率，保留所有找到的可能是指代的词，都参与后期的指代消解。如果一个指代没有找到它的共同指代（coreference），则说明这个指代是孤立的（singleton mention），有可能是指代识别阶段找到的不是指代的词，直接舍弃。</p>
+<p><strong>2.指代消解</strong></p>
+<p>指代消解发展至今，经历了四种不同的方法，分别是Rule-based、Mention pair、Mention Ranking。</p>
+<p><strong>Rule-based方法</strong>：1976年，Hobbs提出了基于规则的朴素算法，被后人称为Hobbs算法。该方法有9个步骤，包含了很多规则，非常繁琐。Hobbs算法虽然是基于规则的，但在当时取得了不错的效果，现在也常常作为该领域的baseline模型。但是因为该方法是基于规则的，有很多指代消解没法解决。</p>
+<p><strong>Mention pair方法</strong>：该方法把指代消解问题转化为一个二分类问题。从左到右遍历句子，每找到一个指代，就把它和前面找到的每个指代作为一个pair，问分类器这个pair是否指代同一个实体，如果是的话，就把它们连起来。二分类的损失就是交叉熵。很简单的一个模型。</p>
+<p><strong>Mention Ranking</strong>：每个指代同时和前面所有指代打分，用softmax归一化，找出概率最大的先行词，添加一条连边。注意需要添加一个NA节点，因为有的指代可能第一次出现，前面没有先行词，或者这个指代根本就不是一个真正的指代。</p>
+<p>前面的内容都是假设我们计算好了任意两个指代是coreference的概率，那么，如何来计算这个概率呢？主要有三种方法，分别是Non-neural statistical classifier、Simple neural network和More advanced model using LSTMs, attention。</p>
+<p><strong>A. Non-neural statistical classifie</strong>r。统计机器学习方法，抽取每个指代的各种特征，然后用机器学习分类器来计算两个指代是coreference的概率。这里面的特征包括人称、性别一致性，语义相容性等等。</p>
+<p><strong>B. Neural Coref Model</strong>。输入是候选先行词和当前指代词的词向量，还需要加入一些额外的特征（Additional Feature），也就是上面统计机器学习方法里用到的一些特征。中间是FFNN，即全连接网络，最后输出两个指代是coreference的概率。</p>
+<p><strong>C. End-to-end Model</strong>。end2end模型是目前指代消解的SOTA模型，它把指代识别和指代消解两个任务融合到一起，用一个模型来解决。</p>
+]]></content>
+      <categories>
+        <category>知识图谱</category>
+      </categories>
+      <tags>
+        <tag>知识图谱 实体对齐</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【知识图谱系列合集】二、知识表示</title>
     <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%BA%8C%E3%80%81%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA/</url>
     <content><![CDATA[<p><img data-src="https://img-blog.csdnimg.cn/20200810202240689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="知识图谱构建流程"><br>将结构化、半结构化和非结构化数据中的实体、关系和属性进行提取。之后就要进行知识表示。本文主要介绍知识表示的概念、常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型和Trans系列模型。</p>
@@ -183,86 +229,6 @@
       </tags>
   </entry>
   <entry>
-    <title>【知识图谱系列合集】三、实体对齐</title>
-    <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90/</url>
-    <content><![CDATA[<p><img data-src="https://img-blog.csdnimg.cn/20200810204859835.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong><em>导读：</em></strong></p>
-<ul>
-<li>1.<a href="https://blog.csdn.net/zkzbhh/article/details/107921135">知识提取</a>：从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921135</span></span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>2.<a href="https://blog.csdn.net/zkzbhh/article/details/107921258">知识表示</a>：介绍了知识表示学习的常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型。翻译模型（Trans模型）,TransH模型、TransR模型、TransD模型、TranSpare模型、TransA模型、TransG模型、KG2E模型。</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">https:<span class="comment">//blog.csdn.net/zkzbhh/article/details/107921258</span></span><br></pre></td></tr></table></figure>
-<p><strong>本篇文章，我们介绍实体对齐的相关内容，包括实体消歧和共指消歧。</strong></p>
-<a id="more"></a>
-
-<p><strong><em>一、实体消歧</em></strong><br><strong>含义</strong>：实体消歧的本质在于一个词有很多可能的意思，也就是在不同的上下文中所表达的含义不太一样。</p>
-<p><strong>例子</strong>：<br><img data-src="https://img-blog.csdnimg.cn/20200810205414690.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>“我的手机是苹果”和”我喜欢吃苹果”这两个句子中的“苹果”代表的含义是不一样的。前者代表是手机、后者代表是水果。</p>
-<p><strong>具体实现</strong>：</p>
-<p>“美国一家高科技公司，经典的产品有Iphone手机”转换为向量 [公式] ；“水果的一种，一般产自于…”转换为向量 [公式] ；然后将“今天苹果发布了新的手机”中“苹果”的上下文“今天，发布了新的手机”转换为向量 [公式] ;我们只要将 [公式] 分别与 [公式] 和 [公式] 计算相似度，然后对比 [公式] 和 [公式] ;相似度高的，我们则将其看作“苹果”的真实语义。</p>
-<p><strong><em>二、共指消歧</em></strong></p>
-<p>共指消解，也叫指代消解。很难因为自然语言充满歧义，因此必须使用多种信号和知识来消除歧义。需要基于对周围世界的了解才能明白这些指代，而这种知识很难编码到计算机中。举个例子：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">乔布斯改变了我们听音乐、购买音乐、打电话、使用手机、看电影等各方面的体验。当他去世时，奥巴马称他为最伟大的创新者。</span><br></pre></td></tr></table></figure>
-<p>上面这句话中的他指代的是乔布斯。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">乔布斯改变了我们听音乐、购买音乐、打电话、使用手机、看电影等各方面的体验。当他听到这个消息，奥巴马致电慰问他的妻子。</span><br></pre></td></tr></table></figure>
-<p>那这段话中的他指代的是奥巴马。</p>
-<p>指代消解主要有两个步骤。第一步是指代识别（mention detection），即找出句子中所有的指代，这一步相对简单。第二步才是进行真正的指代消解（coreference resolution），这一步比较难。</p>
-<p><strong>1.指代识别</strong></p>
-<p>指代识别阶段尽量保召回率，保留所有找到的可能是指代的词，都参与后期的指代消解。如果一个指代没有找到它的共同指代（coreference），则说明这个指代是孤立的（singleton mention），有可能是指代识别阶段找到的不是指代的词，直接舍弃。</p>
-<p><strong>2.指代消解</strong></p>
-<p>指代消解发展至今，经历了四种不同的方法，分别是Rule-based、Mention pair、Mention Ranking。</p>
-<p><strong>Rule-based方法</strong>：1976年，Hobbs提出了基于规则的朴素算法，被后人称为Hobbs算法。该方法有9个步骤，包含了很多规则，非常繁琐。Hobbs算法虽然是基于规则的，但在当时取得了不错的效果，现在也常常作为该领域的baseline模型。但是因为该方法是基于规则的，有很多指代消解没法解决。</p>
-<p><strong>Mention pair方法</strong>：该方法把指代消解问题转化为一个二分类问题。从左到右遍历句子，每找到一个指代，就把它和前面找到的每个指代作为一个pair，问分类器这个pair是否指代同一个实体，如果是的话，就把它们连起来。二分类的损失就是交叉熵。很简单的一个模型。</p>
-<p><strong>Mention Ranking</strong>：每个指代同时和前面所有指代打分，用softmax归一化，找出概率最大的先行词，添加一条连边。注意需要添加一个NA节点，因为有的指代可能第一次出现，前面没有先行词，或者这个指代根本就不是一个真正的指代。</p>
-<p>前面的内容都是假设我们计算好了任意两个指代是coreference的概率，那么，如何来计算这个概率呢？主要有三种方法，分别是Non-neural statistical classifier、Simple neural network和More advanced model using LSTMs, attention。</p>
-<p><strong>A. Non-neural statistical classifie</strong>r。统计机器学习方法，抽取每个指代的各种特征，然后用机器学习分类器来计算两个指代是coreference的概率。这里面的特征包括人称、性别一致性，语义相容性等等。</p>
-<p><strong>B. Neural Coref Model</strong>。输入是候选先行词和当前指代词的词向量，还需要加入一些额外的特征（Additional Feature），也就是上面统计机器学习方法里用到的一些特征。中间是FFNN，即全连接网络，最后输出两个指代是coreference的概率。</p>
-<p><strong>C. End-to-end Model</strong>。end2end模型是目前指代消解的SOTA模型，它把指代识别和指代消解两个任务融合到一起，用一个模型来解决。</p>
-]]></content>
-      <categories>
-        <category>知识图谱</category>
-      </categories>
-      <tags>
-        <tag>知识图谱 实体对齐</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>命令集合</title>
-    <url>/2020/08/14/%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p><strong>生成阅读全文，在markdowm文本中插入：</strong></p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- more --&gt;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>初始化并安装所需组件：</strong></p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo init      # 初始化</span><br><span class="line">npm install    # 安装组件</span><br></pre></td></tr></table></figure>
-
-<p>完成后依次输入下面命令，<strong>启动本地服务器进行预览</strong>：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo g   # 生成页面</span><br><span class="line">hexo s   # 启动预览</span><br></pre></td></tr></table></figure>
-
-<p>首先<strong>安装 hexo-deployer-git</strong>：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
-<p>然后<strong>修改 _config.yml</strong> 文件末尾的 Deployment 部分，修改成如下：</p>
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:用户名/用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-<p>清楚缓存等文件并重新发布网站：</p>
-<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo</span> clean   <span class="comment"># 清除缓存文件等</span></span><br><span class="line">hexo g       <span class="comment"># 生成页面</span></span><br><span class="line">hexo s       <span class="comment"># 启动预览</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo deploy #部署发布</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>方法技巧</category>
-      </categories>
-      <tags>
-        <tag>方法技巧</tag>
-        <tag>命令</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>工业机理</title>
     <url>/2020/08/17/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86/</url>
     <content><![CDATA[<h4 id="工业机理模型可以实现四类功能"><a href="#工业机理模型可以实现四类功能" class="headerlink" title="工业机理模型可以实现四类功能"></a>工业机理模型可以实现四类功能</h4><ol>
@@ -307,6 +273,40 @@
       <tags>
         <tag>知识图谱</tag>
         <tag>工业机理</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>命令集合</title>
+    <url>/2020/08/14/%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p><strong>生成阅读全文，在markdowm文本中插入：</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- more --&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>初始化并安装所需组件：</strong></p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo init      # 初始化</span><br><span class="line">npm install    # 安装组件</span><br></pre></td></tr></table></figure>
+
+<p>完成后依次输入下面命令，<strong>启动本地服务器进行预览</strong>：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo g   # 生成页面</span><br><span class="line">hexo s   # 启动预览</span><br></pre></td></tr></table></figure>
+
+<p>首先<strong>安装 hexo-deployer-git</strong>：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>然后<strong>修改 _config.yml</strong> 文件末尾的 Deployment 部分，修改成如下：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@github.com:用户名/用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>清楚缓存等文件并重新发布网站：</p>
+<figure class="highlight nginx"><table><tr><td class="code"><pre><span class="line"><span class="attribute">hexo</span> clean   <span class="comment"># 清除缓存文件等</span></span><br><span class="line">hexo g       <span class="comment"># 生成页面</span></span><br><span class="line">hexo s       <span class="comment"># 启动预览</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">hexo deploy #部署发布</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>方法技巧</category>
+      </categories>
+      <tags>
+        <tag>方法技巧</tag>
+        <tag>命令</tag>
       </tags>
   </entry>
 </search>

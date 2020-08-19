@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Kaikai&#39;s Blogs</title>
+  <title>zhangkai&#39;s Blogs</title>
   
   <subtitle>越努力越幸运</subtitle>
   <link href="kaikaihit.github.io/atom.xml" rel="self"/>
@@ -49,7 +49,7 @@
     <link href="kaikaihit.github.io/2020/08/17/BOM%E7%AE%80%E4%BB%8B/"/>
     <id>kaikaihit.github.io/2020/08/17/BOM%E7%AE%80%E4%BB%8B/</id>
     <published>2020-08-17T01:51:40.000Z</published>
-    <updated>2020-08-17T03:29:40.015Z</updated>
+    <updated>2020-08-19T07:01:24.169Z</updated>
     
     <content type="html"><![CDATA[<p>BOM（Bill of Material）物料清单，也就是以数据格式来描述产品结构的文件，是计算机可以识别的产品结构数据文件，也是ERP的主导文件。BOM使系统识别产品结构，也是联系与沟通企业各项业务的纽带。</p><p>物料清单(BOM)是指生产或组装最小批量的某个产品所需物料的需求清单，包含物料、单位用量、损耗率等信息，其中最小批量没有指明默认值就是数量1。</p><p>物料清单(BOM)也是计算生产一批产品所需物料的毛需求的前置基础资料,单位用量乘以生产数量就是所需某个物料的毛需求数量。</p><p>物料清单(BOM)也是接单时核算产品预估成本的重要依据,单项物料成本用单位用量乘以市场购买价得到，然后累计各单项物料成本，就是生产一个产品的材料成本。</p><a id="more"></a><p><strong>成套设备</strong>：在生产企业一般不用装配工序连接，但用于完成相互联系的使用功能的两个或两个以上的产品的总和；</p><p><strong>零件</strong>：不采用装配工序制成的单一成品；</p><p><strong>部件</strong>：由若干个部分（零件、分部件），以可拆成或不可拆的形式组成的成品；分部件可以按照其从属产品关系划分为1级分部件，2级分部件。</p><p><strong>总成</strong>：能够执行一定独立功能的由若干个部门以可拆成或不可拆的形式组成的复杂成品，例如发动机总成，车桥总成，前轴总成等；由零件和部件组成；也可能叫组件、整件、装置、全件等说法。复杂产品可能还有分总成。</p><p><strong>模块</strong>：具有相对独立功能和通用接口的单元。类似总成，但可能比较简单。</p><p><strong>专用件（基本件）</strong>：本产品专用的零部件。不过在实际中往往借用关系比较多，专用件的实际含义是首次应用在本产品上的零部件。</p><p><strong>借用件</strong>：在本产品中采用已有产品的组成部分，这些组成部分叫借用件。</p><p><strong>通用件</strong>：在不同类型或同类型不同规格的产品中具有互换性的零部件。</p><p><strong>标准件</strong>：经过优选、简化、统一并给予标准代号的零部件。</p><p><strong>替换件</strong>：本产品必须要有的组成部分，一般数量都不变化，例如汽车的发动机。可以有多种选装规格。</p><p><strong>选装件</strong>：本产品不一定要有的组成部分，可以有多个选装规格。</p><h5 id="为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。"><a href="#为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。" class="headerlink" title="为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。"></a>为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。</h5><p><img data-src="https://img-blog.csdnimg.cn/20200817112853508.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><p><img data-src="https://img-blog.csdnimg.cn/20200817112906774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p><p>参考：</p><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http<span class="variable">s:</span>//www.zhihu.<span class="keyword">com</span>/<span class="built_in">search</span>?<span class="built_in">type</span>=content&amp;q=BOM</span><br></pre></td></tr></table></figure>]]></content>
     
@@ -64,9 +64,9 @@
     <category term="工业机理模型" scheme="kaikaihit.github.io/categories/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86%E6%A8%A1%E5%9E%8B/"/>
     
     
-    <category term="知识图谱" scheme="kaikaihit.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
-    
     <category term="BOM" scheme="kaikaihit.github.io/tags/BOM/"/>
+    
+    <category term="知识图谱" scheme="kaikaihit.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
     
     <category term="工业机理模型" scheme="kaikaihit.github.io/tags/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86%E6%A8%A1%E5%9E%8B/"/>
     

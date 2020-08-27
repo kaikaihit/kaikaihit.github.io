@@ -36,6 +36,51 @@
       </tags>
   </entry>
   <entry>
+    <title>Java SE基础|面向对象</title>
+    <url>/2020/08/27/Java-SE%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h1 id="三、面向对象"><a href="#三、面向对象" class="headerlink" title="三、面向对象"></a>三、面向对象</h1><h2 id="1-HashCode-方法和equals-方法有什么联系？"><a href="#1-HashCode-方法和equals-方法有什么联系？" class="headerlink" title="1.HashCode()方法和equals()方法有什么联系？"></a>1.HashCode()方法和equals()方法有什么联系？</h2><p>1.相等（相同）的对象必须具有相等的哈希码（或者散列码）。</p>
+<p>2.如果两个对象的hashCode相同，它们并不一定相同。</p>
+<h2 id="2-构造函数、析构函数和函数的重载？"><a href="#2-构造函数、析构函数和函数的重载？" class="headerlink" title="2.构造函数、析构函数和函数的重载？"></a>2.构造函数、析构函数和函数的重载？</h2><p>构造函数：当新对象被创建的时候，构造函数会被调用。每一个类都有构造函数。</p>
+<p>析构函数：当新对象结束生命周期时，系统自动调用。</p>
+<p>函数的重载：函数的参数类型，参数个数不同。才能构成函数的重载。</p>
+<p>Java中构造函数重载和方法重载很相似。可以为一个类创建多个构造函数。每一个构造函数必须有它自己唯一的参数列表。</p>
+<p>你不自己写构造函数的情况下，Java不会创建默认的复制构造函数。</p>
+<a id="more"></a>
+
+<h2 id="3-方法重写overriding和方法重载overloading的区别"><a href="#3-方法重写overriding和方法重载overloading的区别" class="headerlink" title="3.方法重写overriding和方法重载overloading的区别"></a>3.方法重写overriding和方法重载overloading的区别</h2><p><strong>重写：</strong></p>
+<p>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。<strong>即外壳不变，核心重写！</strong></p>
+<p>1）参数列表必须完全与被重写的方法相同，否则不能称其为重写而是重载。</p>
+<p>2）返回的类型必须一直与被重写的方法的返回类型相同，否则不能称其为重写而是重载。</p>
+<p>3）访问修饰符的限制一定要大于被重写方法的访问修饰符（public&gt;protected&gt;default&gt;private）</p>
+<p>4）重写方法一定不能抛出新的检查异常或者比被重写方法申明更加宽泛的检查型异常。例如：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20200827165324423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="访问权限关键词"></p>
+<p><strong>重载：</strong></p>
+<p>重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。</p>
+<p>1）必须具有不同的参数列表；</p>
+<p>2）可以有不同的返回类型，只要参数列表不同就可以了；</p>
+<p>3）可以有不同的访问修饰符；</p>
+<p>4）可以抛出不同的异常；</p>
+<h2 id="4-Query接口的list方法和iterate方法有什么区别？"><a href="#4-Query接口的list方法和iterate方法有什么区别？" class="headerlink" title="4.Query接口的list方法和iterate方法有什么区别？"></a>4.Query接口的list方法和iterate方法有什么区别？</h2><p>考察：接口</p>
+<p>①list()方法无法利用一级缓存和二级缓存（对缓存只写不读），它只能在开启查询缓存的前提下使用查询缓存；iterate()方法可以充分利用缓存，如果目标数据只读或者读取频繁，使用iterate()方法可以减少性能开销。<br>② list()方法不会引起N+1查询问题，而iterate()方法可能引起N+1查询问题</p>
+<h2 id="5-面向对象的“六原则一法则”"><a href="#5-面向对象的“六原则一法则”" class="headerlink" title="5.面向对象的“六原则一法则”"></a>5.面向对象的“六原则一法则”</h2><p>考察：Java对象</p>
+<p>1.单一职责原则：一个类只做它该做的事情</p>
+<p>2.依赖倒转原则：面向接口编程。</p>
+<p>3.开闭原则：软件实体应当对扩展开放，对修改关闭。</p>
+<p>4.里氏替换原则：任何时候都可以用子类型替换掉父类型。</p>
+<p>5.接口隔离原则：接口要小而专，绝不能大而全。</p>
+<p>6.合成聚合复用原则：优先使用聚合或合成关系复用代码。</p>
+<p>迪米特法则：迪米特法则又叫最少知识原则，一个对象应当对其他对象有尽可能少的了解</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【知识图谱系列合集】一、知识提取</title>
     <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%80%E3%80%81%E7%9F%A5%E8%AF%86%E6%8F%90%E5%8F%96/</url>
     <content><![CDATA[<p><img data-src="https://img-blog.csdnimg.cn/20200810201749355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="知识图谱构建流程"><br>数据主要有三类：结构化数据、半结构化数据和非结构化数据。<br>知识提取的目的：通过自动化或者半自动化的技术抽取出可用的知识单元，知识单元包括实体、属性和关系，并以此为基础，形成一系列高质量的事实表达，为上层模式层的构建奠定基础。<br>**<em>本文主要讲述知识图谱构建过程中的知识提取，实体抽取、属性抽取和关系抽取。**</em></p>
@@ -318,7 +363,7 @@
   <entry>
     <title>Java SE基础|Java基础和关键字</title>
     <url>/2020/08/26/Java-SE%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94Java%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%B3%E9%94%AE%E5%AD%97/</url>
-    <content><![CDATA[<p><img data-src="https://uploadfiles.nowcoder.com/images/20180914/826546_1536916757441_FF474C03D9D513A3519773CB35561940" alt="img"></p>
+    <content><![CDATA[<p><img data-src="https://uploadfiles.nowcoder.com/images/20180914/826546_1536916757441_FF474C03D9D513A3519773CB35561940" alt="Java基础"></p>
 <h1 id="一、Java基础"><a href="#一、Java基础" class="headerlink" title="一、Java基础"></a>一、Java基础</h1><h2 id="1-Java特性"><a href="#1-Java特性" class="headerlink" title="1.Java特性"></a>1.Java特性</h2><p>Java做为一门“全面”面向对象的编程语言，提供了面向对象的<strong>四种基本性质：抽象性、封装性、继承性和多态性</strong>。 面向对象主要有四大特性：<strong>封装、抽象、继承和多态</strong>。</p>
 <p>Java支持8种数据类型：</p>
 <p>byte—————&gt;Byte<br>short—————&gt;Short<br>int——————&gt;Integer<br>long——————&gt;Long<br>float——————&gt;Float<br>double——————&gt;Double<br>boolean——————&gt;Boolean<br>char——————&gt;Character</p>
@@ -326,15 +371,15 @@
 
 
 
-<h2 id="2-Java如何支持正则表达式"><a href="#2-Java如何支持正则表达式" class="headerlink" title="2.Java如何支持正则表达式"></a>2.Java如何支持正则表达式</h2><p>Java中的String类提供了支持正则表达式操作的方法，包括：matches()、replaceAll()、replaceFirst()、split()。此外，Java中可以用Pattern类表示正则表达式对象，它提供了丰富的API进行各种正则表达式操作</p>
+<h2 id="2-Java如何支持正则表达式"><a href="#2-Java如何支持正则表达式" class="headerlink" title="2.Java如何支持正则表达式"></a>2.Java如何支持正则表达式</h2><p>Java中的String类提供了支持正则表达式操作的方法，包括：matches()、replaceAll()、replaceFirst()、split()。此外，Java中可以用Pattern类表示正则表达式对象，它提供了丰富的API进行各种正则表达式操作。</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RegExpTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String str = <span class="string">&quot;成都市(成华区)(武侯区)(高新区)&quot;</span>;</span><br><span class="line">        Pattern p = Pattern.compile(<span class="string">&quot;.*?(?=\\()&quot;</span>);</span><br><span class="line">        Matcher m = p.matcher(str);</span><br><span class="line">        <span class="keyword">if</span>(m.find()) &#123;</span><br><span class="line">            System.out.println(m.group());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
 <p>返回结果是：成都市</p>
-<p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20200826144339149.png" alt="image-20200826144339149"></p>
-<p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20200826144400058.png" alt="image-20200826144400058"></p>
-<p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20200826144416706.png" alt="image-20200826144416706"></p>
+<p><img data-src="https://img-blog.csdnimg.cn/20200827164545555.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="正则表达式匹配规则(1)"></p>
+<p><img data-src="https://img-blog.csdnimg.cn/20200827164616859.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="正则表达式匹配规则(2)"></p>
+<p><img data-src="https://img-blog.csdnimg.cn/20200827164632485.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="正则表达式匹配规则(3)"></p>
 <h2 id="3-正则表达式及其用途"><a href="#3-正则表达式及其用途" class="headerlink" title="3.正则表达式及其用途"></a>3.正则表达式及其用途</h2><p>在编写处理字符串的程序时，经常会有查找符合某些复杂规则的字符串的需要。正则表达式就是用于描述这些规则的工具。换句话说，正则表达式就是记录文本规则的代码。计算机处理的信息更多的时候不是数值而是字符串，正则表达式就是在进行字符串匹配和处理的时候最为强大的工具，绝大多数语言都提供了对正则表达式的支持。</p>
 <h2 id="4-Java和JavaScript"><a href="#4-Java和JavaScript" class="headerlink" title="4.Java和JavaScript"></a>4.Java和JavaScript</h2><p>JavaScript 与Java是两个公司开发的不同的两个产品。Java 是原Sun Microsystems公司推出的面向对象的程序设计语言，特别适合于互联网应用程序开发；而JavaScript是Netscape公司的产品，为了扩展Netscape浏览器的功能而开发的一种可以嵌入Web页面中运行的基于对象和事件驱动的解释性语言.</p>
 <p>一、基于对象和面向对象</p>
@@ -515,49 +560,6 @@
 <p>goto 保留关键字，但无任何作用。结构化程序设计完全不需要 goto 语句即可完成各种流程，而 goto 语句的使用往往会使程序的可读性降低，所以 Java 不允许 goto 跳转。</p>
 <p><strong>2.const静态</strong></p>
 <p>const 保留字，是一个类型修饰符，使用const声明的对象不能更新。与final某些类似。</p>
-]]></content>
-      <categories>
-        <category>Java面试宝典</category>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Java基础</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java SE基础|面向对象</title>
-    <url>/2020/08/27/Java-SE%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h1 id="三、面向对象"><a href="#三、面向对象" class="headerlink" title="三、面向对象"></a>三、面向对象</h1><h2 id="1-HashCode-方法和equals-方法有什么联系？"><a href="#1-HashCode-方法和equals-方法有什么联系？" class="headerlink" title="1.HashCode()方法和equals()方法有什么联系？"></a>1.HashCode()方法和equals()方法有什么联系？</h2><p>1.相等（相同）的对象必须具有相等的哈希码（或者散列码）。</p>
-<p>2.如果两个对象的hashCode相同，它们并不一定相同。</p>
-<h2 id="2-构造函数、析构函数和函数的重载？"><a href="#2-构造函数、析构函数和函数的重载？" class="headerlink" title="2.构造函数、析构函数和函数的重载？"></a>2.构造函数、析构函数和函数的重载？</h2><p>构造函数：当新对象被创建的时候，构造函数会被调用。每一个类都有构造函数。</p>
-<p>析构函数：当新对象结束生命周期时，系统自动调用。</p>
-<p>函数的重载：函数的参数类型，参数个数不同。才能构成函数的重载。</p>
-<p>Java中构造函数重载和方法重载很相似。可以为一个类创建多个构造函数。每一个构造函数必须有它自己唯一的参数列表。</p>
-<p>你不自己写构造函数的情况下，Java不会创建默认的复制构造函数。</p>
-<h2 id="3-方法重写overriding和方法重载overloading的区别"><a href="#3-方法重写overriding和方法重载overloading的区别" class="headerlink" title="3.方法重写overriding和方法重载overloading的区别"></a>3.方法重写overriding和方法重载overloading的区别</h2><p><strong>重写：</strong></p>
-<p>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。<strong>即外壳不变，核心重写！</strong></p>
-<p>1）参数列表必须完全与被重写的方法相同，否则不能称其为重写而是重载。</p>
-<p>2）返回的类型必须一直与被重写的方法的返回类型相同，否则不能称其为重写而是重载。</p>
-<p>3）访问修饰符的限制一定要大于被重写方法的访问修饰符（public&gt;protected&gt;default&gt;private）</p>
-<p>4）重写方法一定不能抛出新的检查异常或者比被重写方法申明更加宽泛的检查型异常。例如：</p>
-<p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20200826185120931.png" alt="image-20200826185120931"></p>
-<p><strong>重载：</strong></p>
-<p>重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。</p>
-<p>1）必须具有不同的参数列表；</p>
-<p>2）可以有不同的返回类型，只要参数列表不同就可以了；</p>
-<p>3）可以有不同的访问修饰符；</p>
-<p>4）可以抛出不同的异常；</p>
-<h2 id="4-Query接口的list方法和iterate方法有什么区别？"><a href="#4-Query接口的list方法和iterate方法有什么区别？" class="headerlink" title="4.Query接口的list方法和iterate方法有什么区别？"></a>4.Query接口的list方法和iterate方法有什么区别？</h2><p>考察：接口</p>
-<p>①list()方法无法利用一级缓存和二级缓存（对缓存只写不读），它只能在开启查询缓存的前提下使用查询缓存；iterate()方法可以充分利用缓存，如果目标数据只读或者读取频繁，使用iterate()方法可以减少性能开销。<br>② list()方法不会引起N+1查询问题，而iterate()方法可能引起N+1查询问题</p>
-<h2 id="5-面向对象的“六原则一法则”"><a href="#5-面向对象的“六原则一法则”" class="headerlink" title="5.面向对象的“六原则一法则”"></a>5.面向对象的“六原则一法则”</h2><p>考察：Java对象</p>
-<p>1.单一职责原则：一个类只做它该做的事情</p>
-<p>2.依赖倒转原则：面向接口编程。</p>
-<p>3.开闭原则：软件实体应当对扩展开放，对修改关闭。</p>
-<p>4.里氏替换原则：任何时候都可以用子类型替换掉父类型。</p>
-<p>5.接口隔离原则：接口要小而专，绝不能大而全。</p>
-<p>6.合成聚合复用原则：优先使用聚合或合成关系复用代码。</p>
-<p>迪米特法则：迪米特法则又叫最少知识原则，一个对象应当对其他对象有尽可能少的了解</p>
 ]]></content>
       <categories>
         <category>Java面试宝典</category>

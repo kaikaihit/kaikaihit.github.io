@@ -38,16 +38,16 @@
   <entry>
     <title>Java SE基础|面向对象</title>
     <url>/2020/08/27/Java-SE%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h1 id="三、面向对象"><a href="#三、面向对象" class="headerlink" title="三、面向对象"></a>三、面向对象</h1><h2 id="1-HashCode-方法和equals-方法有什么联系？"><a href="#1-HashCode-方法和equals-方法有什么联系？" class="headerlink" title="1.HashCode()方法和equals()方法有什么联系？"></a>1.HashCode()方法和equals()方法有什么联系？</h2><p>1.相等（相同）的对象必须具有相等的哈希码（或者散列码）。</p>
+    <content><![CDATA[<h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="HashCode-方法和equals-方法有什么联系？"><a href="#HashCode-方法和equals-方法有什么联系？" class="headerlink" title="HashCode()方法和equals()方法有什么联系？"></a>HashCode()方法和equals()方法有什么联系？</h2><p>1.相等（相同）的对象必须具有相等的哈希码（或者散列码）。</p>
 <p>2.如果两个对象的hashCode相同，它们并不一定相同。</p>
-<h2 id="2-构造函数、析构函数和函数的重载？"><a href="#2-构造函数、析构函数和函数的重载？" class="headerlink" title="2.构造函数、析构函数和函数的重载？"></a>2.构造函数、析构函数和函数的重载？</h2><p>构造函数：当新对象被创建的时候，构造函数会被调用。每一个类都有构造函数。</p>
+<h2 id="构造函数、析构函数和函数的重载？"><a href="#构造函数、析构函数和函数的重载？" class="headerlink" title="构造函数、析构函数和函数的重载？"></a>构造函数、析构函数和函数的重载？</h2><p>构造函数：当新对象被创建的时候，构造函数会被调用。每一个类都有构造函数。</p>
 <p>析构函数：当新对象结束生命周期时，系统自动调用。</p>
 <p>函数的重载：函数的参数类型，参数个数不同。才能构成函数的重载。</p>
 <p>Java中构造函数重载和方法重载很相似。可以为一个类创建多个构造函数。每一个构造函数必须有它自己唯一的参数列表。</p>
 <p>你不自己写构造函数的情况下，Java不会创建默认的复制构造函数。</p>
 <a id="more"></a>
 
-<h2 id="3-方法重写overriding和方法重载overloading的区别"><a href="#3-方法重写overriding和方法重载overloading的区别" class="headerlink" title="3.方法重写overriding和方法重载overloading的区别"></a>3.方法重写overriding和方法重载overloading的区别</h2><p><strong>重写：</strong></p>
+<h2 id="方法重写overriding和方法重载overloading的区别"><a href="#方法重写overriding和方法重载overloading的区别" class="headerlink" title="方法重写overriding和方法重载overloading的区别"></a>方法重写overriding和方法重载overloading的区别</h2><p><strong>重写：</strong></p>
 <p>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。<strong>即外壳不变，核心重写！</strong></p>
 <p>1）参数列表必须完全与被重写的方法相同，否则不能称其为重写而是重载。</p>
 <p>2）返回的类型必须一直与被重写的方法的返回类型相同，否则不能称其为重写而是重载。</p>
@@ -60,9 +60,9 @@
 <p>2）可以有不同的返回类型，只要参数列表不同就可以了；</p>
 <p>3）可以有不同的访问修饰符；</p>
 <p>4）可以抛出不同的异常；</p>
-<h2 id="4-Query接口的list方法和iterate方法有什么区别？"><a href="#4-Query接口的list方法和iterate方法有什么区别？" class="headerlink" title="4.Query接口的list方法和iterate方法有什么区别？"></a>4.Query接口的list方法和iterate方法有什么区别？</h2><p>考察：接口</p>
+<h2 id="Query接口的list方法和iterate方法有什么区别？"><a href="#Query接口的list方法和iterate方法有什么区别？" class="headerlink" title="Query接口的list方法和iterate方法有什么区别？"></a>Query接口的list方法和iterate方法有什么区别？</h2><p>考察：接口</p>
 <p>①list()方法无法利用一级缓存和二级缓存（对缓存只写不读），它只能在开启查询缓存的前提下使用查询缓存；iterate()方法可以充分利用缓存，如果目标数据只读或者读取频繁，使用iterate()方法可以减少性能开销。<br>② list()方法不会引起N+1查询问题，而iterate()方法可能引起N+1查询问题</p>
-<h2 id="5-面向对象的“六原则一法则”"><a href="#5-面向对象的“六原则一法则”" class="headerlink" title="5.面向对象的“六原则一法则”"></a>5.面向对象的“六原则一法则”</h2><p>考察：Java对象</p>
+<h2 id="面向对象的“六原则一法则”"><a href="#面向对象的“六原则一法则”" class="headerlink" title="面向对象的“六原则一法则”"></a>面向对象的“六原则一法则”</h2><p>考察：Java对象</p>
 <p>1.单一职责原则：一个类只做它该做的事情</p>
 <p>2.依赖倒转原则：面向接口编程。</p>
 <p>3.开闭原则：软件实体应当对扩展开放，对修改关闭。</p>
@@ -70,6 +70,63 @@
 <p>5.接口隔离原则：接口要小而专，绝不能大而全。</p>
 <p>6.合成聚合复用原则：优先使用聚合或合成关系复用代码。</p>
 <p>迪米特法则：迪米特法则又叫最少知识原则，一个对象应当对其他对象有尽可能少的了解</p>
+<h2 id="面向对象的特征有哪些方面？"><a href="#面向对象的特征有哪些方面？" class="headerlink" title="面向对象的特征有哪些方面？"></a>面向对象的特征有哪些方面？</h2><p>1.抽象</p>
+<p>抽象就是忽略一个主题中与当前目标无关的那些方面，以便更充分地注意与当前目标有关的方面。抽象并不打算了解全部问题，而只<br>是选择其中的一部分，暂时不用部分细节。抽象包括两个方面，一是过程抽象，二是数据抽象。</p>
+<p>2.继承</p>
+<p>继承是一种联结类的层次模型，并且允许和鼓励类的重用，它提供了一种明确表述共性的方法。但Java只支持单继承，即一个类只有一个父类。但Java的接口支持多继承，即一个子接口可以有多个父接口。</p>
+<p>3.封装</p>
+<p>封装是把过程和数据包围起来，对数据的访问只能通过已定义的界面。</p>
+<p>4.多态</p>
+<p>多态性是指允许不同类的对象对同一消息作出响应。多态性包括参数化多态性和包含多态性。多态性语言具有灵活、抽象、行为共享<br>、代码共享的优势，很好的解决了应用程序函数同名问题。</p>
+<h2 id="Comparable和Comparator接口的作用以及它们的区别。"><a href="#Comparable和Comparator接口的作用以及它们的区别。" class="headerlink" title="Comparable和Comparator接口的作用以及它们的区别。"></a>Comparable和Comparator接口的作用以及它们的区别。</h2><p>Comparable提供了compareTo()方法，这个方法可以个给两个对象排序。具体来说，它返回负数，0，正数来表明输入对象小于，等于，大于已经存在的对象。</p>
+<p>Comparatort提供了compare()和equals()两个方法。compare()方法用来给两个输入参数排序，返回负数，0，正数表明第一个参数是小于，等于，大于第二个参数。equals()方法需要一个对象作为参数，它用来决定输入参数是否和comparator相等。</p>
+<h2 id="接口和抽象类的区别"><a href="#接口和抽象类的区别" class="headerlink" title="接口和抽象类的区别"></a>接口和抽象类的区别</h2><p>接口中所有的方法隐含的都是抽象的。而抽象类则可以同时包含抽象和非抽象的方法。<br>类可以实现很多个接口，但是只能继承一个抽象类<br>类可以不实现抽象类和接口声明的所有方法，当然，在这种情况下，类也必须得声明成是抽象的。<br>抽象类可以在不提供接口方法实现的情况下实现接口。<br>Java接口中声明的变量默认都是final的。抽象类可以包含非final的变量。<br>Java接口中的成员函数默认是public的。抽象类的成员函数可以是private，protected或者是public。<br>接口是绝对抽象的，不可以被实例化。抽象类也不可以被实例化，但是，如果它包含main方法的话是可以被调用的。</p>
+<h2 id="extends和super泛型限定符"><a href="#extends和super泛型限定符" class="headerlink" title="extends和super泛型限定符"></a>extends和super泛型限定符</h2><p>泛型：参数化类型，定义方法时有形参，调用此方法时传递实参。</p>
+<p>（1）泛型中上界和下界的定义</p>
+<p>上界&lt;? extend Fruit&gt;</p>
+<p>下界&lt;? super Apple&gt;</p>
+<p>（2）上界和下界的特点</p>
+<p>上界的list只能get，不能add（确切地说不能add出除null之外的对象，包括Object）</p>
+<p>下界的list只能add，不能get</p>
+<h2 id="类加载机制、双亲委派模型"><a href="#类加载机制、双亲委派模型" class="headerlink" title="类加载机制、双亲委派模型"></a>类加载机制、双亲委派模型</h2><p>类加载机制：某个特定的类加载器在接到加载类的请求时，首先将加载任务委托给父类加载器，依次递归，如果父类加载器可以完成类加载任务，就成功返回；只有父类加载器无法完成此加载任务时，才自己去加载。</p>
+<p>双亲委派模型：</p>
+<ol>
+<li>可以避免重复加载，父类已经加载了，子类就不需要再次加载</li>
+<li>更加安全，很好的解决了各个类加载器的基础类的统一问题，如果不使用该种方式，那么用户可以随意定义类加载器来加载核心api，会带来相关隐患。</li>
+</ol>
+<h2 id="String、StringBuffer和StringBuilder"><a href="#String、StringBuffer和StringBuilder" class="headerlink" title="String、StringBuffer和StringBuilder"></a>String、StringBuffer和StringBuilder</h2><p>StringBuffer线程安全，StringBuilder线程不安全，底层实现上的话，StringBuffer其实就是比StringBuilder多了Synchronized修饰符。</p>
+<p>String：适用于少量的字符串操作。<br>StringBuilder：适用于单线程下在字符串缓冲区进行大量操作。<br>StringBuffer：适用于多线程下在字符串缓冲区进行大量操作。</p>
+<h2 id="请说明”static”关键字是什么意思？Java中是否可以覆盖-override-一个private或者是static的方法？"><a href="#请说明”static”关键字是什么意思？Java中是否可以覆盖-override-一个private或者是static的方法？" class="headerlink" title="请说明”static”关键字是什么意思？Java中是否可以覆盖(override)一个private或者是static的方法？"></a>请说明”static”关键字是什么意思？Java中是否可以覆盖(override)一个private或者是static的方法？</h2><p>“static”关键字表明一个成员变量或者是成员方法可以在没有所属的类的实例变量的情况下被访问。<br>Java中static方法不能被覆盖，因为方法覆盖是基于运行时动态绑定的，而static方法是编译时静态绑定的。static方法跟类的任何实例都不相关，所以概念上不适用。</p>
+<h2 id="请说明重载和重写的区别，相同参数不同返回值能重载吗？"><a href="#请说明重载和重写的区别，相同参数不同返回值能重载吗？" class="headerlink" title="请说明重载和重写的区别，相同参数不同返回值能重载吗？"></a>请说明重载和重写的区别，相同参数不同返回值能重载吗？</h2><p>重载(Overloading)</p>
+<p>（1） 方法重载是让类以统一的方式处理不同类型数据的一种手段。多个同名函数同时存在，具有不同的参数个数/类型。</p>
+<p>重载Overloading是一个类中多态性的一种表现。</p>
+<p>（2） Java的方法重载，就是在类中可以创建多个方法，它们具有相同的名字，但具有不同的参数和不同的定义。</p>
+<p>调用方法时通过传递给它们的不同参数个数和参数类型来决定具体使用哪个方法, 这就是多态性。</p>
+<p>（3） 重载的时候，方法名要一样，但是参数类型和个数不一样，返回值类型可以相同也可以不相同。无法以返回型别作为重载函数的区分标准。</p>
+<p>重写（Overriding）</p>
+<p>（1） 父类与子类之间的多态性，对父类的函数进行重新定义。如果在子类中定义某方法与其父类有相同的名称和参数，我们说该方法被重写 (Overriding)。在Java中，子类可继承父类中的方法，而不需要重新编写相同的方法。</p>
+<p>但有时子类并不想原封不动地继承父类的方法，而是想作一定的修改，这就需要采用方法的重写。</p>
+<p>方法重写又称方法覆盖。</p>
+<p>（2）若子类中的方法与父类中的某一方法具有相同的方法名、返回类型和参数表，则新方法将覆盖原有的方法。</p>
+<p>如需父类中原有的方法，可使用super关键字，该关键字引用了当前类的父类。</p>
+<p>（3）子类函数的访问修饰权限不能少于父类的。</p>
+<h2 id="Object类的方法"><a href="#Object类的方法" class="headerlink" title="Object类的方法"></a>Object类的方法</h2><p>Object()默认构造方法。</p>
+<p>clone() 创建并返回此对象的一个副本。</p>
+<p>equals(Object obj) 指示某个其他对象是否与此对象“相等”。</p>
+<p>finalize()当垃圾回收器确定不存在对该对象的更多引用时，由对象的垃圾回收器调用此方法。</p>
+<p>getClass()返回一个对象的运行时类。</p>
+<p>hashCode()返回该对象的哈希码值。</p>
+<p>notify()唤醒在此对象监视器上等待的单个线程。 </p>
+<p>notifyAll()唤醒在此对象监视器上等待的所有线程。</p>
+<p>toString()返回该对象的字符串表示。</p>
+<p>wait()导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 方法。</p>
+<p>wait(long timeout)导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或者超过指定的时间量。wait(long timeout, int nanos) 导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或者其他某个线程中断当前线程，或者已超过某个实际时间量。</p>
+<h2 id="wait方法和sleep-方法"><a href="#wait方法和sleep-方法" class="headerlink" title="wait方法和sleep()方法"></a>wait方法和sleep()方法</h2><p>1.<strong>wait()方法</strong>则是指当前线程让自己暂时退让出同步资源锁，<strong>sleep()方法</strong>正在执行的线程主动让出CPU。</p>
+<p>2.<strong>sleep()方法</strong>可以在任何地方使用；<strong>wait()方法</strong>则只能在同步方法或同步块中使用</p>
+<p>3.**sleep()**是线程线程类（Thread）的方法，调用会暂停此线程指定的时间，但监控依然保持，不会释放对象锁，到时间自动恢复.**wait()**是Object的方法，调用会放弃对象锁，进入等待队列，待调用notify()/notifyAll()唤醒指定的线程或者所有线程，才会进入锁池，不再次获得对象锁才会进入运行状态。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Thread1</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (RegExpTest.class)&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;enter thread1 ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread1 is waiting&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">try</span>&#123;</span><br><span class="line">                    <span class="comment">//释放锁有两种方式：(1)程序自然离开监视器的范围，即离开synchronized关键字管辖的代码范围</span></span><br><span class="line">                    <span class="comment">//(2)在synchronized关键字管辖的代码内部调用监视器对象的wait()方法。这里使用wait方法</span></span><br><span class="line">                    RegExpTest.class.wait();</span><br><span class="line">                &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                System.out.println(<span class="string">&quot;thread1 is going on ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread1 is being over!&quot;</span>);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Thread2</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="comment">//notify方法并不释放锁，即使thread2调用了下面的sleep方法休息10ms，但thread1仍然不会执行</span></span><br><span class="line">            <span class="comment">//因为thread2没有释放锁，所以Thread1得不到锁而无法执行</span></span><br><span class="line">            <span class="keyword">synchronized</span>(RegExpTest.class)&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;enter thread2 ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 notify other thread can release wait status ...&quot;</span>);</span><br><span class="line">                RegExpTest.class.notify();</span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 is sleeping ten millisecond ...&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">try</span>&#123;</span><br><span class="line">                    Thread.sleep(<span class="number">10</span>);</span><br><span class="line">                &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 is going on ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 is being over!&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Thread1()).start();</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            Thread.sleep(<span class="number">10</span>);</span><br><span class="line">        &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Thread2()).start();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://img-blog.csdnimg.cn/20200828105942972.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 ]]></content>
       <categories>
         <category>Java面试宝典</category>
@@ -568,6 +625,341 @@
       <tags>
         <tag>Java</tag>
         <tag>Java基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java EE基础|Hibernate</title>
+    <url>/2020/08/30/Java-EE%E5%9F%BA%E7%A1%80-Hibernate/</url>
+    <content><![CDATA[<h2 id="实体对象的三种形式以及转换关系"><a href="#实体对象的三种形式以及转换关系" class="headerlink" title="实体对象的三种形式以及转换关系"></a>实体对象的三种形式以及转换关系</h2><p>瞬时态、持久态、游状态</p>
+<p>瞬时态：new一个对象，这个对象处于瞬时态。</p>
+<p>持久态：实例在数据库中有对应的记录。Session进行了Save、saveOrUpdate()、persist()、merge()方法把瞬时态转成持久态。</p>
+<p>游离态：对象不在持久化管理之内，所以处于游离态。游离态的对象与临时状态对象是十分相似的，只是它还含有持久化标识。Session进行了close()、clear()、evict()或flush()后，由持久态变成游离态。</p>
+<h2 id="锁的机制的作用"><a href="#锁的机制的作用" class="headerlink" title="锁的机制的作用"></a>锁的机制的作用</h2><p>有些业务逻辑在执行过程中要求对数据进行排他性的访问，需要通过一些机制保证在此过程中数据被锁住不会被外接修改，这就是锁机制。</p>
+<p>Hibernate支持悲观锁和乐观锁两种锁机制。</p>
+<p>悲观锁，在数据处理过程中极有可能存在修改数据的并发事务，于是将处理的数据设置为锁定状态。</p>
+<p>乐观锁，对并发事务持乐观态度，通过更加宽松的锁机制来解决由于悲观锁排他性的数据访问对系统性能造成的严重影响</p>
+<p>Hibernate中通过Session的get()和load()方法从数据库中加载对象时可以通过参数指定使用悲观锁；而乐观锁可以通过给实体类加整型的版本字段再通过XML或@Version注解进行配置。</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>Hibernate</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>Hibernate</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java EE基础|Spring</title>
+    <url>/2020/08/30/Java-EE%E5%9F%BA%E7%A1%80-Spring/</url>
+    <content><![CDATA[<h2 id="Spring的自动装配"><a href="#Spring的自动装配" class="headerlink" title="Spring的自动装配"></a>Spring的自动装配</h2><p>- no：不进行自动装配，手动设置Bean的依赖关系。<br>- byName：根据Bean的名字进行自动装配。<br>- byType：根据Bean的类型进行自动装配。<br>- constructor：类似于byType，不过是应用于构造器的参数，如果正好有一个Bean与构造器的参数类型相同则可以自动装配，否则会导致错误。<br>- autodetect：如果有默认的构造器，则通过constructor的方式进行自动装配，否则使用byType的方式进行自动装配。</p>
+<a id="more"></a>
+
+<h2 id="Spring中Bean的作用域"><a href="#Spring中Bean的作用域" class="headerlink" title="Spring中Bean的作用域"></a>Spring中Bean的作用域</h2><p>Spring2.X针对WebApplicationContext新增了3个作用域。分别是request（每次HTTP请求都会创建一个新的Bean）、session（同一个HttpSession共享一个Bean，不同的HttpSession使用不同的Bean）和globalSession（同一个全局Session共享一个Bean）。</p>
+<h2 id="IOC和DI"><a href="#IOC和DI" class="headerlink" title="IOC和DI"></a>IOC和DI</h2><p><strong>IOC控制反转</strong></p>
+<p>Inversion of Control。控制反转是把传统上由程序代码直接操作的对象交给容器，通过容器来实现对象组件的装配和管理。控制反转就是对组件对象控制权的转移，从程序代码本身转移到外部容器，由容器来创建对象并管理对象之间的依赖关系。</p>
+<p><strong>DI依赖注入</strong></p>
+<p>Dependency Injection。依赖注入的基本原则是应用组件不应该负责查找资源或者其他依赖的协作对象。配置对象的工作应该由<strong>容器负责</strong></p>
+<h2 id="BeanFactory和ApplicationContext的区别"><a href="#BeanFactory和ApplicationContext的区别" class="headerlink" title="BeanFactory和ApplicationContext的区别"></a>BeanFactory和ApplicationContext的区别</h2><p><strong>BeanFactory：</strong></p>
+<p>是spring比较原始的Factory。无法支持spring插件，例如AOP、Web等功能。</p>
+<p>多用于移动设备的开发。</p>
+<p><strong>ApplicationContext：</strong></p>
+<p>是BeanFactory的子接口，因为古老的BeanFactory无法满足不断更新的spring需求，于是ApplicationContext就代替了BeanFactory的工作。</p>
+<h2 id="springIOC原理"><a href="#springIOC原理" class="headerlink" title="springIOC原理"></a>springIOC原理</h2><p>IOC控制反转：是spring的核心，贯穿始终，对于spring框架来说，由spring负责控制对象的生命周期和对象间的关系。</p>
+<p>实现IOC的步骤：</p>
+<p>定义用来描述bean的配置的Java类</p>
+<p>解析bean的配置，将bean的配置信息转换为上面的BeanDefinition对象保存在内存中，spring中采用HashMap进行对象存储，其中会用到一些xml解析技术。</p>
+<p>遍历存放BeanDefinition的HashMap对象，逐条取出BeanDefinition对象，获取bean的配置信息，利用Java反射机制实例化对象，将实例化的对象保存在另外一个Map中即可。</p>
+<h2 id="依赖注入的方式"><a href="#依赖注入的方式" class="headerlink" title="依赖注入的方式"></a>依赖注入的方式</h2><p>1.Set注入</p>
+<p>这是最简单的注入方式，假设有一个SpringAction，类中需要实例化一个SpringDao对象，那么就可以定义一个private的SpringDao成员变量，然后创建SpringDao的set方法（这是ioc的注入入口）。</p>
+<p>2.构造器注入</p>
+<p>通过将@Autowired注解放在构造器上来完成构造器注入，默认构造器参数通过类型自动装配</p>
+<p>3.接口注入</p>
+<h2 id="autowired-和resource区别"><a href="#autowired-和resource区别" class="headerlink" title="autowired 和resource区别"></a>autowired 和resource区别</h2><p>共同点：都可以写在字段和setter方法上。两者如果都写在字段上，就不需要再写setter方法。</p>
+<p>不同点：</p>
+<p><strong>@Autowired</strong></p>
+<p>@Autowired为Spring提供的注解，需要导入包org.springframework.beans.factory.annotation.Autowired;只按照byType注入。</p>
+<p>@Autowired注解是<strong>按照类型（byType）装配依赖对象</strong>，默认情况下它要求依赖对象必须存在，如果允许null值，可以设置它的required属性为false。如果我们想使用按照名称（byName）来装配，可以结合@Qualifier注解一起使用。</p>
+<p><strong>@Resource</strong></p>
+<p>@Resource默认按照ByName自动注入，由J2EE提供，需要导入包javax.annotation.Resource。@Resource有两个重要的属性：name和type，而Spring将@Resource注解的name属性解析为bean的名字，而type属性则解析为bean的类型。所以，如果使用name属性，则使用byName的自动注入策略，而使用type属性时则使用byType自动注入策略。如果既不制定name也不制定type属性，这时将通过反射机制使用byName自动注入策略。</p>
+<h2 id="Bean的生命周期"><a href="#Bean的生命周期" class="headerlink" title="Bean的生命周期"></a>Bean的生命周期</h2><p>创建，准备，使用，销毁</p>
+<p><img data-src="https://images0.cnblogs.com/i/580631/201405/181453414212066.png" alt="img"></p>
+<p><img data-src="https://images0.cnblogs.com/i/580631/201405/181454040628981.png" alt="img"></p>
+<h2 id="IOC和AOP是什么"><a href="#IOC和AOP是什么" class="headerlink" title="IOC和AOP是什么"></a>IOC和AOP是什么</h2><p><strong>IOC</strong>是控制反转，与依赖注入DI是一个概念。依赖注入的三种方式：接口注入、构造器注入和Setter注入</p>
+<p>IOC的目的：</p>
+<p>​    （1）脱开、降低类之间的耦合；</p>
+<p>​    （2）倡导面向接口编程、实施依赖倒换原则； </p>
+<p>​    （3）提高系统可插入、可测试、可修改等特性。</p>
+<p><strong>AOP</strong>是面向切面编程：</p>
+<p>​    传统的方式是OOP。Object Oriented Programming面向对象编程，引入封装、继承和多态。允许开发者定义纵向的关系，但是会使很多代码重复，不利于各个模块的重用。</p>
+<h2 id="Spring支持的事务管理"><a href="#Spring支持的事务管理" class="headerlink" title="Spring支持的事务管理"></a>Spring支持的事务管理</h2><p>Spring支持编程式事务管理和声明式事务管理</p>
+<p>事务分为全局事务和局部事务。</p>
+<p><strong>全局事务由应用服务器管理</strong>，需要底层服务器JTA支持（如WebLogic、WildFly等）。</p>
+<p>局部事务和底层采用的持久化方案有关，例如：使用JDBC进行持久化时，需要使用Connetion对象来操作事务；而采用Hibernate进行持久化时，需要使用Session对象来操作事务。</p>
+<h2 id="AOP中的连接点（Joinpoint）、切点（Pointcut）、增强（Advice）、引介（Introduction）、织入（Weaving）、切面（Aspect）"><a href="#AOP中的连接点（Joinpoint）、切点（Pointcut）、增强（Advice）、引介（Introduction）、织入（Weaving）、切面（Aspect）" class="headerlink" title="AOP中的连接点（Joinpoint）、切点（Pointcut）、增强（Advice）、引介（Introduction）、织入（Weaving）、切面（Aspect）"></a>AOP中的连接点（Joinpoint）、切点（Pointcut）、增强（Advice）、引介（Introduction）、织入（Weaving）、切面（Aspect）</h2><p>AOP，指面向切面编程。作为面向对象的一种不愁，用于处理系统中分布于各个模块的横切关注点，比如事务管理、日志、缓存等。实现的关键在于AOP框架自动创建的AOP代理，AOP代理分为静态代理和动态代理，静态代理的代表为AspectJ；而动态代理则以Spring AOP为代表。</p>
+<p>连接点：程序执行的某个特定位置。</p>
+<p>切点：一个切点可以匹配多个连接点</p>
+<p>增强：增强是织入到目标类连接点上的一段程序代码</p>
+<p>引介：是一种特殊的增强。</p>
+<p>织入：将增强添加到目标类具体连接点上的过程。编译器织入、装载器织入和运行时织入。</p>
+<p>切面：切面由切点和增强（引介）组成的。包括了对横切关注功能的定义，也包括了对连接点的定义。</p>
+<h2 id="AOP的应用场景"><a href="#AOP的应用场景" class="headerlink" title="AOP的应用场景"></a>AOP的应用场景</h2><p>Authentication 权限 ，Caching 缓存 ，Context passing 内容传递 ，Error handling 错误处理 ，Lazy loading 懒加载 ，Debugging 调试 ，logging, tracing, profiling and monitoring 记录跟踪　优化　校准，Performance optimization 性能优化 ，Persistence 持久化 ，Resource pooling 资源池 ，Synchronization 同步，Transactions 事务。</p>
+<h2 id="Spring框架为企业级开发带来的好处"><a href="#Spring框架为企业级开发带来的好处" class="headerlink" title="Spring框架为企业级开发带来的好处"></a>Spring框架为企业级开发带来的好处</h2><p>非侵入式：支持基于POJO（不继承其它类，也不实现其它接口的Java基础类）的编程模式，不强制性的要求实现Spring框架中的接口或继承Spring框架中的类。</p>
+<p>IOC控制反转</p>
+<p>AOP面向切面编程</p>
+<p>MVC框架，为Web表示层提供更好的解决方案。</p>
+<p>事物管理：Spring以宽广的胸怀接纳多种持久化技术，并为其提供了声明式的实务管理，在不需要任何代码的情况下就能完成事务管理。</p>
+<h2 id="Struts拦截器和Spring-AOP有什么区别"><a href="#Struts拦截器和Spring-AOP有什么区别" class="headerlink" title="Struts拦截器和Spring AOP有什么区别"></a>Struts拦截器和Spring AOP有什么区别</h2><p>拦截器是AOP的一种实现，struts2 拦截器采用xwork2的interceptor。而spring的AOP基于IoC基础,其底层采用动态代理与CGLIB代理两种方式结合的实现方式</p>
+<h2 id="简单介绍一下Spring"><a href="#简单介绍一下Spring" class="headerlink" title="简单介绍一下Spring"></a>简单介绍一下Spring</h2><p>Spring是一个轻量级框架，可以一站式构建你的企业级应用。</p>
+<p>Spring的模块大概分为6个。分别是：</p>
+<p>1、Core Container（Spring的核心）【重要】</p>
+<p>2、AOP（面向切面变成）【重要】</p>
+<p>3、Messaging（消息发送的支持）</p>
+<p>4、Data Access/Integration（数据访问和集成）</p>
+<p>5、Web（主要是SpringWeb内容，包括MVC）【重要】</p>
+<p>6、Test（Spring测试支持，包含JUint等测试单元的支持） </p>
+<p>7、Instrumentation（设备支持，比如Tomcat的支持）</p>
+<h2 id="持久层要考虑的问题有哪些，有哪些持久层框架"><a href="#持久层要考虑的问题有哪些，有哪些持久层框架" class="headerlink" title="持久层要考虑的问题有哪些，有哪些持久层框架"></a>持久层要考虑的问题有哪些，有哪些持久层框架</h2><p><strong>持久层设计的目标包括：</strong><br>- 数据存储逻辑的分离，提供抽象化的数据访问接口。<br>- 数据访问底层实现的分离，可以在不修改代码的情况下切换底层实现。<br>- 资源管理和调度的分离，在数据访问层实现统一的资源调度（如缓存机制）。<br>- 数据抽象，提供更面向对象的数据操作。</p>
+<p><strong>持久层框架有：</strong><br>- Hibernate<br>- MyBatis<br>- TopLink<br>- Guzz<br>- jOOQ<br>- Spring Data<br>- ActiveJDBC</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>Spring</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>Spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java SE基础|GC</title>
+    <url>/2020/08/29/Java-SE%E5%9F%BA%E7%A1%80-GC/</url>
+    <content><![CDATA[<h2 id="垃圾回收的优点以及原理。"><a href="#垃圾回收的优点以及原理。" class="headerlink" title="垃圾回收的优点以及原理。"></a>垃圾回收的优点以及原理。</h2><p><strong>优点：</strong></p>
+<p>1.java中的重大特点就是引用了垃圾回收机制，使得java程序员在编写程序的时候不用考虑内存管理。</p>
+<p>2.有垃圾回收机制，java中的对象不再有“作用域的概念，只有对象的引用才有”作用域“。</p>
+<p>3.垃圾回收机制有效的防止内存泄露，有效的使用可以使用的内存。</p>
+<p><strong>工作原理：</strong></p>
+<p>当创建对象时，GC就开始监视这个对象的地址、大小以及使用情况。通常，GC采用有向图的方式记录和管理heap（堆）中的素有对象。通过这种方式确定哪些对象时“可达的”，哪些是“不可达的”。</p>
+<p>垃圾回收机制通常是作为一个单独的低级别的线程运行，不可预知的情况下对内存堆中已经死亡的或者长时间没有使用的对象进行清理，我们虽然可以调用System.gc()让垃圾回收器运行，但依旧无法保证GC一定会执行。</p>
+<p>GC，Gabage Collection，可以自动监测对象是否超过作用域从而达到自动回收内存的目的，Java语言没有提供释放已分配内存的显示操作方法。</p>
+<h2 id="JVM怎么确定哪些对象应该进行回收？"><a href="#JVM怎么确定哪些对象应该进行回收？" class="headerlink" title="JVM怎么确定哪些对象应该进行回收？"></a>JVM怎么确定哪些对象应该进行回收？</h2><p>JVM 的垃圾回收器主要关注的是堆上创建的实例对象，在每次对这些对象进行回收前，需要确定哪些对象是可以去进行回收的。主要由下面两种方法。</p>
+<p><strong>1.引用计数算法</strong></p>
+<p>给对象添加一个引用计数器，当有一个地方引用它，计数器值加1；当引用失效时，计数器值减1。任何时候计数器值为0表示这个对象可以被回收了。</p>
+<p>优点：</p>
+<p>判断效率高，实现简单。</p>
+<p>缺点：</p>
+<p>难以解决对象之间相互循序引用的问题。</p>
+<p><strong>2.可达性分析算法</strong></p>
+<p>可作为GC Roots的对象有：</p>
+<ol>
+<li>虚拟机栈中的引用的对象</li>
+<li>方法区的静态变量和常量引用的对象</li>
+<li>本地方法栈中JNI引用的对象。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>GC</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>GC</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java SE基础|IO和NIOAIO</title>
+    <url>/2020/08/29/Java-SE%E5%9F%BA%E7%A1%80-IO%E5%92%8CNIOAIO/</url>
+    <content><![CDATA[<h2 id="JAVA中有几种类型的流"><a href="#JAVA中有几种类型的流" class="headerlink" title="JAVA中有几种类型的流"></a>JAVA中有几种类型的流</h2><p>字节流，字符流</p>
+<p>字节流继承于InputStream和OutputStream</p>
+<p>字符流继承于InputStreamReader和OutputStreamWriter.</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>IO</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>IO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java SE基础|线程</title>
+    <url>/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-%E7%BA%BF%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="线程的基本状态以及状态之间的关系"><a href="#线程的基本状态以及状态之间的关系" class="headerlink" title="线程的基本状态以及状态之间的关系"></a>线程的基本状态以及状态之间的关系</h2><p>运行态：Running</p>
+<p>就绪态：Runnable，万事俱备，只欠CPU</p>
+<p>阻塞状态：Blocked。调用wait()方法进入等待池，也可能是执行同步方法或同步代码块进入等锁池，或者是调用了sleep()方法或join()方法等待休眠或其他线程结束，或是因为发生了I/O中断。</p>
+<h2 id="进程、线程和协程的区别"><a href="#进程、线程和协程的区别" class="headerlink" title="进程、线程和协程的区别"></a>进程、线程和协程的区别</h2><p>进程是系统进行资源分配和调用的基本单位，每一个进程都有它自己的内存空间和系统资源。</p>
+<p>线程是进程的执行单位或者执行路线，进程也是CPU调度的基本单位。</p>
+<p>协程是用户态的轻量级线程。</p>
+<p>先有进程，然后进程可以创建线程，线程是依附在进程里面的， 线程里面可以包含多个协程 进程之间不共享全局变量，线程之间共享全局变量，但是要注意资源竞争的问题<br>多进程开发比单进程多线程开发稳定性要强，但是多进程开发比多线程开发资源开销要大<br>多线程开发线程之间执行是无序的，协程之间执行按照一定顺序交替执行<br>协程以后主要用在网络爬虫和网络请求，开辟一个协程大概需要5k空间，开辟一个线程需要512k空间， 开辟一个进程占用资源最多</p>
+<h2 id="举例说明同步和异步"><a href="#举例说明同步和异步" class="headerlink" title="举例说明同步和异步"></a>举例说明同步和异步</h2><p>如果系统中存在临界资源（资源数量少于竞争资源的线程数量的资源），例如正在写的数据以后可能被另一个线程读到，或者正在读的数据可能已经被另一个线程写过了，那么这些数据就必须进行同步存取（数据库操作中的排他锁就是最好的例子）。当应用程序在对象上调用了一个需要花费很长时间来执行的方法，并且不希望让程序等待方法的返回时，就应该使用异步编程，在很多情况下采用异步途径往往更有效率。事实上，所谓的同步就是指阻塞式操作，而异步就是非阻塞式操作。</p>
+<h2 id="线程同步的方法"><a href="#线程同步的方法" class="headerlink" title="线程同步的方法"></a>线程同步的方法</h2><p>wait():使一个线程处于等待状态，并且释放所持有的对象的lock。<br>sleep():使一个正在运行的线程处于睡眠状态，是一个静态方法，调用此方法要捕捉InterruptedException异常。<br>notify():唤醒一个处于等待状态的线程，注意的是在调用此方法的时候，并不能确切的唤醒某一个等待状态的线程，而是由JVM确定唤醒哪个线程，而且不是按优先级。<br>Allnotity():唤醒所有处入等待状态的线程，注意并不是给所有唤醒线程一个对象的锁，而是让它们竞争</p>
+<h2 id="线程从创建到死亡的几种状态都有哪些"><a href="#线程从创建到死亡的几种状态都有哪些" class="headerlink" title="线程从创建到死亡的几种状态都有哪些"></a>线程从创建到死亡的几种状态都有哪些</h2><p><img data-src="https://uploadfiles.nowcoder.com/images/20190908/93694598_1567901669525_2E1604194BEFDDB0EE43167B50B364AB" alt="img"></p>
+<h2 id="线程池的优势"><a href="#线程池的优势" class="headerlink" title="线程池的优势"></a>线程池的优势</h2><p>第一：降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。</p>
+<p>第二：提高响应速度。当任务到达时，任务可以不需要等到线程创建就能执行。</p>
+<p>第三：提高线程的可管理性，线程是稀缺资源，如果无限制地创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一分配、调优和监控。</p>
+<h2 id="AQS的理解"><a href="#AQS的理解" class="headerlink" title="AQS的理解"></a>AQS的理解</h2><p>AbstractQueuedSynchronizer简称AQS。是实现锁的框架。</p>
+<p>实现的关键是：先进先出的队列、state状态。</p>
+<h2 id="生产者消费者模式"><a href="#生产者消费者模式" class="headerlink" title="生产者消费者模式"></a>生产者消费者模式</h2><p>支持并发、解耦</p>
+<p>生产者消费者在同一时间段内共用同一存储空间，生产者向空间里生产数据，而消费者取走数据。</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>Java线程</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java EE基础|Struts</title>
+    <url>/2020/08/30/Java-EE%E5%9F%BA%E7%A1%80-Struts/</url>
+    <content><![CDATA[<h2 id="STRUTS的应用场景"><a href="#STRUTS的应用场景" class="headerlink" title="STRUTS的应用场景"></a>STRUTS的应用场景</h2><p>Struts是采用Java Servlet/JavaServer Pages技术，开发Web应用程序的开放源码的framework。采用Struts开发出基于MVC（Model、View和Controller）设计模式的应用架构。有如下功能：</p>
+<p>包含一个controller servlet，能将用户的请求发送到相应的Action对象。</p>
+<p>JSP自由Tag库，并且在controller servlet中提供关联支持，帮助开发员创建交互式表单应用。</p>
+<p>提供一系列实用对象：XML处理、通过Java reflection APIs自动处理JavaBeans属性、国际化的提示和消息。</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>Struts</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>Struts</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java SE基础|JVM</title>
+    <url>/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-JVM/</url>
+    <content><![CDATA[<h2 id="JVM加载class文件的原理"><a href="#JVM加载class文件的原理" class="headerlink" title="JVM加载class文件的原理"></a>JVM加载class文件的原理</h2><p>JVM中类的装载是由ClassLoader和它的子类来实现的，Java ClassLoader是一个重要的Java运行时系统组件。它负责在运行时查找和装入类文件的类。</p>
+<p>类装载方式，有两种。</p>
+<p>隐式装载：程序在运行过程中当碰到通过new等方式生成对象时，隐式调用类装载器加载对应的类到jvm中。</p>
+<p>显示装载：通过class.forname()等方法，显示加载需要的类，隐式加载与显式加载的区别：两者本质是一样的。</p>
+<p>Java类的加载是动态的，它并不会一次性将所有类全部加载后再运行，而是保证程序运行的基础类(像是基类)完全加载到jvm中，至于其他类，则在需要的时候才加载。这当然就是为了节省内存开销。</p>
+<h2 id="Java虚拟机"><a href="#Java虚拟机" class="headerlink" title="Java虚拟机"></a>Java虚拟机</h2><p>可执行Java字节码的虚拟机进程。Java源文件被编译成能被Java虚拟机执行的字节码文件。</p>
+<p>Java被设计成允许应用程序可以运行在任意的平台，而不需要程序员为每一个平台单独重写或者重写编译。Java虚拟机让这个变为可能。</p>
+<p>（1）堆内存分配</p>
+<p>JVM初始内存由-Xms指定，默认是物理内存的1/64；JVM最大分配内存由-Xms指定，默认是物理内存的1/4。默认空余堆内存小 于40%时，JVM就会增大堆直到-Xmx的最大限制；空余堆内存大于70%时，JVM会减少堆直到-Xms的最小限制。因此服务器一般设置-Xms、 -Xmx相等以避免在每次GC后调整堆的大小</p>
+<p>（2）非堆内存分配</p>
+<p>JVM使用-XX:PermSize设置非堆内存初始值，默认是物理内存的1/64；由XX:MaxPermSize设置最大非堆内存的大小，默认是物理内存的1/4。</p>
+<p>（3）VM最大内存</p>
+<p>JVM内存限制于实际的最大物理内存，结社物理内存无限大的话，JVM内存的最大值跟操作系统有很大的关系。32位处理器虽然可控内存空间有4GB。但是具体的操作系统会给一个限制，这个限制一般是2GB~3GB（一般来说Windows系统下为1.5G-2G，Linux系 统下为2G-3G），而64bit以上的处理器就不会有限制了。</p>
+<p>（4）几个不同公司不同版本JVM最大堆内存</p>
+<p><img data-src="https://uploadfiles.nowcoder.com/images/20180926/308572_1537966762062_914FBB519FF1ACBAF602B2DCBD5184D6" alt="img"></p>
+<h2 id="哪些可作为Root对象"><a href="#哪些可作为Root对象" class="headerlink" title="哪些可作为Root对象"></a>哪些可作为Root对象</h2><p>\1. 虚拟机栈中的引用对象<br>\2. 本地方法栈中JNI引用对象<br>\3. 方法区中类静态属性引用的对象<br>\4. 方法区中常量引用对象（如字符串常量池）<br>\5. 被同步锁持有的对象<br>\6. 内部引用（如基本数据类型对应的class对象、常驻的异常对象NullPointerException等、系统类加载器）</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>JVM</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>JVM</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java SE基础|集合</title>
+    <url>/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88/</url>
+    <content><![CDATA[<h2 id="List、Map、Set的区别"><a href="#List、Map、Set的区别" class="headerlink" title="List、Map、Set的区别"></a>List、Map、Set的区别</h2><p>list：有序访问、索引访问，可以重复<br>set(HashSet、LinkedHashSet 或者 TreeSet)：去重<br>map：键值存储</p>
+<p><img data-src="https://uploadfiles.nowcoder.com/images/20200215/1034884_1581738199162_50125D538C24748FCB1032CB38EEE0A9" alt="img"></p>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/5959612-31df64b17fb83cd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1018/format/webp" alt="img"></p>
+<a id="more"></a>
+
+<p>List：</p>
+<blockquote>
+<p>1.可以允许重复的对象。<br>2.可以插入多个null元素。<br>3.是一个有序容器，保持了每个元素的插入顺序，输出的顺序就是插入的顺序。<br>4.常用的实现类有 ArrayList、LinkedList 和 Vector。ArrayList 最为流行，它提供了使用索引的随意访问，而 LinkedList 则对于经常需要从 List 中添加或删除元素的场合更为合适。</p>
+</blockquote>
+<p>Set：</p>
+<blockquote>
+<p>1 .不允许重复对象</p>
+<p>2.无序容器，你无法保证每个元素的存储顺序，TreeSet通过 Comparator  或者 Comparable 维护了一个排序顺序。</p>
+<p>3.只允许一个 null 元素</p>
+<p>4.Set 接口最流行的几个实现类是 HashSet、LinkedHashSet 以及 TreeSet。最流行的是基于 HashMap 实现的 HashSet；TreeSet 还实现了 SortedSet 接口，因此 TreeSet 是一个根据其 compare() 和 compareTo() 的定义进行排序的有序容器。</p>
+</blockquote>
+<p><img data-src="https://upload-images.jianshu.io/upload_images/5959612-bb4adde83f977ed8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/660/format/webp" alt="img"></p>
+<p>Map：</p>
+<blockquote>
+<p>1.Map不是collection的子接口或者实现类。Map是一个接口。</p>
+<p>2.Map 的 每个 Entry 都持有两个对象，也就是一个键一个值，Map 可能会持有相同的值对象但键对象必须是唯一的。</p>
+<p>3.TreeMap 也通过 Comparator  或者 Comparable 维护了一个排序顺序。</p>
+<p>4.Map 里你可以拥有随意个 null 值但最多只能有一个 null 键。</p>
+<p>5.Map 接口最流行的几个实现类是 HashMap、LinkedHashMap、Hashtable 和 TreeMap。（HashMap、TreeMap最常用）</p>
+</blockquote>
+<h2 id="HashMap和Hashtable的区别"><a href="#HashMap和Hashtable的区别" class="headerlink" title="HashMap和Hashtable的区别"></a>HashMap和Hashtable的区别</h2><p>HashMap允许键和值是null，而Hashtable不允许键或者值是null。<br>Hashtable是同步的，而HashMap不是。因此，HashMap更适合于单线程环境，而Hashtable适合于多线程环境。<br>HashMap提供了可供应用迭代的键的集合，因此，HashMap是快速失败的。另一方面，Hashtable提供了对键的列举(Enumeration)。<br>一般认为Hashtable是一个遗留的类。</p>
+<h2 id="快速失败-fail-fast-和安全失败-fail-safe-的区别"><a href="#快速失败-fail-fast-和安全失败-fail-safe-的区别" class="headerlink" title="快速失败(fail-fast)和安全失败(fail-safe)的区别"></a>快速失败(fail-fast)和安全失败(fail-safe)的区别</h2><p>Iterator的安全失败是基于对底层集合做拷贝，它不受源集合上修改的影响。</p>
+<p>java.util包下面的所有的集合类都是快速失败的，而java.util.concurrent包下面的所有的类都是安全失败的</p>
+<p>快速失败的迭代器会抛出ConcurrentModificationException异常，而安全失败的迭代器永远不会抛出这样的异常。</p>
+<h2 id="Iterator和ListIterator的区别"><a href="#Iterator和ListIterator的区别" class="headerlink" title="Iterator和ListIterator的区别"></a>Iterator和ListIterator的区别</h2><p>Iterator和ListIterator的区别是：<br>Iterator可用来遍历Set和List集合，但是ListIterator只能用来遍历List。<br>Iterator对集合只能是前向遍历，ListIterator既可以前向也可以后向。<br>ListIterator实现了Iterator接口，并包含其他的功能，比如：<strong>增加元素，替换元素，获取前一个和后一个元素的索引</strong>，等等。</p>
+<h2 id="什么是迭代器"><a href="#什么是迭代器" class="headerlink" title="什么是迭代器"></a>什么是迭代器</h2><p>Iterator提供了统一遍历操作集合元素的统一接口, Collection接口实现Iterable接口。</p>
+<p>Java集合类框架的基本接口有哪些？</p>
+<p>Collection：代表一组对象，每一个对象都是它的子元素。<br>Set：不包含重复元素的Collection。<br>List：有顺序的collection，并且可以包含重复元素。<br>Map：可以把键(key)映射到值(value)的对象，键不能重复。</p>
+<h2 id="TreeMap的底层实现"><a href="#TreeMap的底层实现" class="headerlink" title="TreeMap的底层实现"></a>TreeMap的底层实现</h2><p>TreeMap 的实现就是红黑树数据结构，也就说是一棵自平衡的排序二叉树，这样就可以保证当需要快速检索指定节点。</p>
+<p>红黑树的插入、删除、遍历时间复杂度都为O(lgN)，所以性能上低于哈希表。但是哈希表无法提供键值对的有序输出，红黑树因为是排序插入的，可以按照键的值的大小有序输出。</p>
+<p>红黑树性质：</p>
+<p>性质1：每个节点要么是红色，要么是黑色。</p>
+<p>性质2：根节点永远是黑色的。</p>
+<p>性质3：所有的叶节点都是空节点（即 null），并且是黑色的。</p>
+<p>性质4：每个红色节点的两个子节点都是黑色。（从每个叶子到根的路径上不会有两个连续的红色节点）</p>
+<p>性质5：从任一节点到其子树中每个叶子节点的路径都包含相同数量的黑色节点。</p>
+<h2 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h2><p>红黑树是一种含有红黑结点并能自平衡的二叉查找树。</p>
+<p>性质1：每个节点要么是黑色，要么是红色。</p>
+<p>性质2：根节点是黑色。</p>
+<p>性质3：每个叶子节点（NIL）是黑色。</p>
+<p>性质4：每个红色结点的两个子结点一定都是黑色。</p>
+<p><strong>性质5：任意一结点到每个叶子结点的路径都包含数量相同的黑结点。</strong></p>
+<p>三种操作：左旋、右旋和变色。</p>
+<ul>
+<li><strong>左旋</strong>：以某个结点作为支点(旋转结点)，其右子结点变为旋转结点的父结点，右子结点的左子结点变为旋转结点的右子结点，左子结点保持不变。如图3。</li>
+<li><strong>右旋</strong>：以某个结点作为支点(旋转结点)，其左子结点变为旋转结点的父结点，左子结点的右子结点变为旋转结点的左子结点，右子结点保持不变。如图4。</li>
+<li><strong>变色</strong>：结点的颜色由红变黑或由黑变红。</li>
+</ul>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>集合</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java Web基础</title>
+    <url>/2020/08/30/Java-Web%E5%9F%BA%E7%A1%80/</url>
+    <content><![CDATA[<h2 id="JAVA应用服务器"><a href="#JAVA应用服务器" class="headerlink" title="JAVA应用服务器"></a>JAVA应用服务器</h2><p>BEA WebLogic Server，</p>
+<p>IBM WebSphere Application Server，</p>
+<p>Oracle9i Application Server</p>
+<p>jBoss，</p>
+<p>Tomcat</p>
+<a id="more"></a>
+
+<h2 id="Assert断言"><a href="#Assert断言" class="headerlink" title="Assert断言"></a>Assert断言</h2><p>常见的调试方式，很多开发语言支持这种机制。一般来说，assertion用于保证程序最基本、关键的正确性。assertion检查通常在开发和测试时开启。为了提高性能，在软件发布后，assertion检查通常是关闭的。</p>
+<h2 id="1分钟之内只能处理1000个请求，怎么实现？"><a href="#1分钟之内只能处理1000个请求，怎么实现？" class="headerlink" title="1分钟之内只能处理1000个请求，怎么实现？"></a>1分钟之内只能处理1000个请求，怎么实现？</h2><p>实现方法：计数器、滑动窗口、漏桶法和令牌桶</p>
+<p>a) 对所有用户访问的次数计数。 定义一个计时器，单位为一分钟。 如果超出次数，就拒绝该请求。 一分钟后， 次数刷新值为0。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> Map&lt;String, List&gt; map = <span class="keyword">new</span> ConcurrentHashMap&lt;&gt;();</span><br></pre></td></tr></table></figure>
+
+<p>在单位计数中判断List中数量是否超出限制即可。</p>
+<p>b) 使用aop实现请求的限制， 在需要限制的请求方法上加上aop逻辑。</p>
+<h2 id="JSP中的静态包含和动态包含的有哪些区别"><a href="#JSP中的静态包含和动态包含的有哪些区别" class="headerlink" title="JSP中的静态包含和动态包含的有哪些区别"></a>JSP中的静态包含和动态包含的有哪些区别</h2><p>静态包含是通过JSP的include指令包含页面。</p>
+<p>动态包含是通过JSP标准动作<a href="jsp:forward">jsp:forward</a>包含页面</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>Java Web</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>Web</tag>
       </tags>
   </entry>
 </search>

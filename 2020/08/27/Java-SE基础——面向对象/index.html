@@ -25,16 +25,17 @@
     var CONFIG = {"hostname":"kaikaihit.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="三、面向对象1.HashCode()方法和equals()方法有什么联系？1.相等（相同）的对象必须具有相等的哈希码（或者散列码）。 2.如果两个对象的hashCode相同，它们并不一定相同。 2.构造函数、析构函数和函数的重载？构造函数：当新对象被创建的时候，构造函数会被调用。每一个类都有构造函数。 析构函数：当新对象结束生命周期时，系统自动调用。 函数的重载：函数的参数类型，参数个数不同。才能">
+  <meta name="description" content="面向对象HashCode()方法和equals()方法有什么联系？1.相等（相同）的对象必须具有相等的哈希码（或者散列码）。 2.如果两个对象的hashCode相同，它们并不一定相同。 构造函数、析构函数和函数的重载？构造函数：当新对象被创建的时候，构造函数会被调用。每一个类都有构造函数。 析构函数：当新对象结束生命周期时，系统自动调用。 函数的重载：函数的参数类型，参数个数不同。才能构成函数的重">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java SE基础|面向对象">
 <meta property="og:url" content="kaikaihit.github.io/2020/08/27/Java-SE%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/index.html">
 <meta property="og:site_name" content="zhangkai&#39;s Blogs">
-<meta property="og:description" content="三、面向对象1.HashCode()方法和equals()方法有什么联系？1.相等（相同）的对象必须具有相等的哈希码（或者散列码）。 2.如果两个对象的hashCode相同，它们并不一定相同。 2.构造函数、析构函数和函数的重载？构造函数：当新对象被创建的时候，构造函数会被调用。每一个类都有构造函数。 析构函数：当新对象结束生命周期时，系统自动调用。 函数的重载：函数的参数类型，参数个数不同。才能">
+<meta property="og:description" content="面向对象HashCode()方法和equals()方法有什么联系？1.相等（相同）的对象必须具有相等的哈希码（或者散列码）。 2.如果两个对象的hashCode相同，它们并不一定相同。 构造函数、析构函数和函数的重载？构造函数：当新对象被创建的时候，构造函数会被调用。每一个类都有构造函数。 析构函数：当新对象结束生命周期时，系统自动调用。 函数的重载：函数的参数类型，参数个数不同。才能构成函数的重">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20200827165324423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20200828105942972.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center">
 <meta property="article:published_time" content="2020-08-27T08:37:20.000Z">
-<meta property="article:modified_time" content="2020-08-27T08:53:59.839Z">
+<meta property="article:modified_time" content="2020-08-28T03:00:18.615Z">
 <meta property="article:author" content="kaikai">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Java基础">
@@ -227,7 +228,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">三、面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-HashCode-%E6%96%B9%E6%B3%95%E5%92%8Cequals-%E6%96%B9%E6%B3%95%E6%9C%89%E4%BB%80%E4%B9%88%E8%81%94%E7%B3%BB%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">1.HashCode()方法和equals()方法有什么联系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E3%80%81%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E9%87%8D%E8%BD%BD%EF%BC%9F"><span class="nav-number">1.2.</span> <span class="nav-text">2.构造函数、析构函数和函数的重载？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99overriding%E5%92%8C%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BDoverloading%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.3.</span> <span class="nav-text">3.方法重写overriding和方法重载overloading的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Query%E6%8E%A5%E5%8F%A3%E7%9A%84list%E6%96%B9%E6%B3%95%E5%92%8Citerate%E6%96%B9%E6%B3%95%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">1.4.</span> <span class="nav-text">4.Query接口的list方法和iterate方法有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E2%80%9C%E5%85%AD%E5%8E%9F%E5%88%99%E4%B8%80%E6%B3%95%E5%88%99%E2%80%9D"><span class="nav-number">1.5.</span> <span class="nav-text">5.面向对象的“六原则一法则”</span></a></li></ol></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HashCode-%E6%96%B9%E6%B3%95%E5%92%8Cequals-%E6%96%B9%E6%B3%95%E6%9C%89%E4%BB%80%E4%B9%88%E8%81%94%E7%B3%BB%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">HashCode()方法和equals()方法有什么联系？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E3%80%81%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0%E5%92%8C%E5%87%BD%E6%95%B0%E7%9A%84%E9%87%8D%E8%BD%BD%EF%BC%9F"><span class="nav-number">1.2.</span> <span class="nav-text">构造函数、析构函数和函数的重载？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%B3%95%E9%87%8D%E5%86%99overriding%E5%92%8C%E6%96%B9%E6%B3%95%E9%87%8D%E8%BD%BDoverloading%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.3.</span> <span class="nav-text">方法重写overriding和方法重载overloading的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Query%E6%8E%A5%E5%8F%A3%E7%9A%84list%E6%96%B9%E6%B3%95%E5%92%8Citerate%E6%96%B9%E6%B3%95%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%EF%BC%9F"><span class="nav-number">1.4.</span> <span class="nav-text">Query接口的list方法和iterate方法有什么区别？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E2%80%9C%E5%85%AD%E5%8E%9F%E5%88%99%E4%B8%80%E6%B3%95%E5%88%99%E2%80%9D"><span class="nav-number">1.5.</span> <span class="nav-text">面向对象的“六原则一法则”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E5%BE%81%E6%9C%89%E5%93%AA%E4%BA%9B%E6%96%B9%E9%9D%A2%EF%BC%9F"><span class="nav-number">1.6.</span> <span class="nav-text">面向对象的特征有哪些方面？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Comparable%E5%92%8CComparator%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%BD%9C%E7%94%A8%E4%BB%A5%E5%8F%8A%E5%AE%83%E4%BB%AC%E7%9A%84%E5%8C%BA%E5%88%AB%E3%80%82"><span class="nav-number">1.7.</span> <span class="nav-text">Comparable和Comparator接口的作用以及它们的区别。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">1.8.</span> <span class="nav-text">接口和抽象类的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#extends%E5%92%8Csuper%E6%B3%9B%E5%9E%8B%E9%99%90%E5%AE%9A%E7%AC%A6"><span class="nav-number">1.9.</span> <span class="nav-text">extends和super泛型限定符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6%E3%80%81%E5%8F%8C%E4%BA%B2%E5%A7%94%E6%B4%BE%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.10.</span> <span class="nav-text">类加载机制、双亲委派模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#String%E3%80%81StringBuffer%E5%92%8CStringBuilder"><span class="nav-number">1.11.</span> <span class="nav-text">String、StringBuffer和StringBuilder</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%B7%E8%AF%B4%E6%98%8E%E2%80%9Dstatic%E2%80%9D%E5%85%B3%E9%94%AE%E5%AD%97%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D%EF%BC%9FJava%E4%B8%AD%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E8%A6%86%E7%9B%96-override-%E4%B8%80%E4%B8%AAprivate%E6%88%96%E8%80%85%E6%98%AFstatic%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%9F"><span class="nav-number">1.12.</span> <span class="nav-text">请说明”static”关键字是什么意思？Java中是否可以覆盖(override)一个private或者是static的方法？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AF%B7%E8%AF%B4%E6%98%8E%E9%87%8D%E8%BD%BD%E5%92%8C%E9%87%8D%E5%86%99%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%8C%E7%9B%B8%E5%90%8C%E5%8F%82%E6%95%B0%E4%B8%8D%E5%90%8C%E8%BF%94%E5%9B%9E%E5%80%BC%E8%83%BD%E9%87%8D%E8%BD%BD%E5%90%97%EF%BC%9F"><span class="nav-number">1.13.</span> <span class="nav-text">请说明重载和重写的区别，相同参数不同返回值能重载吗？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object%E7%B1%BB%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-number">1.14.</span> <span class="nav-text">Object类的方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#wait%E6%96%B9%E6%B3%95%E5%92%8Csleep-%E6%96%B9%E6%B3%95"><span class="nav-number">1.15.</span> <span class="nav-text">wait方法和sleep()方法</span></a></li></ol></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -243,20 +244,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">18</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-count">13</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -324,7 +325,7 @@
         <h5 class="widget-title" style="font-size:20px;text-align:center;color:#87CEFA;margin:20px 0 0px;text-shadow: 1px 1px black,-1px -1px black,1px -1px black,-1px 1px black;">Tag Cloud</h5>
         <div id="myCanvasContainer" class="widget tagcloud" style="font-size:20px;">
           <canvas width="220" height="200" id="resCanvas" style="width=100%">
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM/" rel="tag">BOM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86/" rel="tag">工业机理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86%E6%A8%A1%E5%9E%8B/" rel="tag">工业机理模型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E6%8A%80%E5%B7%A7/" rel="tag">方法技巧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" rel="tag">知识图谱</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1-%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90/" rel="tag">知识图谱 实体对齐</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1-%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8/" rel="tag">知识图谱 知识存储</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA/" rel="tag">知识表示</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM/" rel="tag">BOM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GC/" rel="tag">GC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/" rel="tag">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IO/" rel="tag">IO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM/" rel="tag">JVM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Struts/" rel="tag">Struts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86/" rel="tag">工业机理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86%E6%A8%A1%E5%9E%8B/" rel="tag">工业机理模型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E6%8A%80%E5%B7%A7/" rel="tag">方法技巧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" rel="tag">知识图谱</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1-%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90/" rel="tag">知识图谱 实体对齐</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1-%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8/" rel="tag">知识图谱 知识存储</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA/" rel="tag">知识表示</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E7%A8%8B/" rel="tag">线程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9B%86%E5%90%88/" rel="tag">集合</a><span class="tag-list-count">1</span></li></ul>
           </canvas>
         </div>
       </div>
@@ -386,10 +387,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-08-27 16:37:20 / 修改时间：16:53:59" itemprop="dateCreated datePublished" datetime="2020-08-27T16:37:20+08:00">2020-08-27</time>
+              <time title="创建时间：2020-08-27 16:37:20" itemprop="dateCreated datePublished" datetime="2020-08-27T16:37:20+08:00">2020-08-27</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-28 11:00:18" itemprop="dateModified" datetime="2020-08-28T11:00:18+08:00">2020-08-28</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -431,14 +438,14 @@
                 <i class="far fa-file-word"></i>
               </span>
               <span class="post-meta-item-text">本文字数：</span>
-              <span>1.1k</span>
+              <span>5.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
               <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>5 分钟</span>
             </span>
 
         </div>
@@ -448,16 +455,16 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h1 id="三、面向对象"><a href="#三、面向对象" class="headerlink" title="三、面向对象"></a>三、面向对象</h1><h2 id="1-HashCode-方法和equals-方法有什么联系？"><a href="#1-HashCode-方法和equals-方法有什么联系？" class="headerlink" title="1.HashCode()方法和equals()方法有什么联系？"></a>1.HashCode()方法和equals()方法有什么联系？</h2><p>1.相等（相同）的对象必须具有相等的哈希码（或者散列码）。</p>
+        <h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="HashCode-方法和equals-方法有什么联系？"><a href="#HashCode-方法和equals-方法有什么联系？" class="headerlink" title="HashCode()方法和equals()方法有什么联系？"></a>HashCode()方法和equals()方法有什么联系？</h2><p>1.相等（相同）的对象必须具有相等的哈希码（或者散列码）。</p>
 <p>2.如果两个对象的hashCode相同，它们并不一定相同。</p>
-<h2 id="2-构造函数、析构函数和函数的重载？"><a href="#2-构造函数、析构函数和函数的重载？" class="headerlink" title="2.构造函数、析构函数和函数的重载？"></a>2.构造函数、析构函数和函数的重载？</h2><p>构造函数：当新对象被创建的时候，构造函数会被调用。每一个类都有构造函数。</p>
+<h2 id="构造函数、析构函数和函数的重载？"><a href="#构造函数、析构函数和函数的重载？" class="headerlink" title="构造函数、析构函数和函数的重载？"></a>构造函数、析构函数和函数的重载？</h2><p>构造函数：当新对象被创建的时候，构造函数会被调用。每一个类都有构造函数。</p>
 <p>析构函数：当新对象结束生命周期时，系统自动调用。</p>
 <p>函数的重载：函数的参数类型，参数个数不同。才能构成函数的重载。</p>
 <p>Java中构造函数重载和方法重载很相似。可以为一个类创建多个构造函数。每一个构造函数必须有它自己唯一的参数列表。</p>
 <p>你不自己写构造函数的情况下，Java不会创建默认的复制构造函数。</p>
 <a id="more"></a>
 
-<h2 id="3-方法重写overriding和方法重载overloading的区别"><a href="#3-方法重写overriding和方法重载overloading的区别" class="headerlink" title="3.方法重写overriding和方法重载overloading的区别"></a>3.方法重写overriding和方法重载overloading的区别</h2><p><strong>重写：</strong></p>
+<h2 id="方法重写overriding和方法重载overloading的区别"><a href="#方法重写overriding和方法重载overloading的区别" class="headerlink" title="方法重写overriding和方法重载overloading的区别"></a>方法重写overriding和方法重载overloading的区别</h2><p><strong>重写：</strong></p>
 <p>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。<strong>即外壳不变，核心重写！</strong></p>
 <p>1）参数列表必须完全与被重写的方法相同，否则不能称其为重写而是重载。</p>
 <p>2）返回的类型必须一直与被重写的方法的返回类型相同，否则不能称其为重写而是重载。</p>
@@ -470,9 +477,9 @@
 <p>2）可以有不同的返回类型，只要参数列表不同就可以了；</p>
 <p>3）可以有不同的访问修饰符；</p>
 <p>4）可以抛出不同的异常；</p>
-<h2 id="4-Query接口的list方法和iterate方法有什么区别？"><a href="#4-Query接口的list方法和iterate方法有什么区别？" class="headerlink" title="4.Query接口的list方法和iterate方法有什么区别？"></a>4.Query接口的list方法和iterate方法有什么区别？</h2><p>考察：接口</p>
+<h2 id="Query接口的list方法和iterate方法有什么区别？"><a href="#Query接口的list方法和iterate方法有什么区别？" class="headerlink" title="Query接口的list方法和iterate方法有什么区别？"></a>Query接口的list方法和iterate方法有什么区别？</h2><p>考察：接口</p>
 <p>①list()方法无法利用一级缓存和二级缓存（对缓存只写不读），它只能在开启查询缓存的前提下使用查询缓存；iterate()方法可以充分利用缓存，如果目标数据只读或者读取频繁，使用iterate()方法可以减少性能开销。<br>② list()方法不会引起N+1查询问题，而iterate()方法可能引起N+1查询问题</p>
-<h2 id="5-面向对象的“六原则一法则”"><a href="#5-面向对象的“六原则一法则”" class="headerlink" title="5.面向对象的“六原则一法则”"></a>5.面向对象的“六原则一法则”</h2><p>考察：Java对象</p>
+<h2 id="面向对象的“六原则一法则”"><a href="#面向对象的“六原则一法则”" class="headerlink" title="面向对象的“六原则一法则”"></a>面向对象的“六原则一法则”</h2><p>考察：Java对象</p>
 <p>1.单一职责原则：一个类只做它该做的事情</p>
 <p>2.依赖倒转原则：面向接口编程。</p>
 <p>3.开闭原则：软件实体应当对扩展开放，对修改关闭。</p>
@@ -480,6 +487,63 @@
 <p>5.接口隔离原则：接口要小而专，绝不能大而全。</p>
 <p>6.合成聚合复用原则：优先使用聚合或合成关系复用代码。</p>
 <p>迪米特法则：迪米特法则又叫最少知识原则，一个对象应当对其他对象有尽可能少的了解</p>
+<h2 id="面向对象的特征有哪些方面？"><a href="#面向对象的特征有哪些方面？" class="headerlink" title="面向对象的特征有哪些方面？"></a>面向对象的特征有哪些方面？</h2><p>1.抽象</p>
+<p>抽象就是忽略一个主题中与当前目标无关的那些方面，以便更充分地注意与当前目标有关的方面。抽象并不打算了解全部问题，而只<br>是选择其中的一部分，暂时不用部分细节。抽象包括两个方面，一是过程抽象，二是数据抽象。</p>
+<p>2.继承</p>
+<p>继承是一种联结类的层次模型，并且允许和鼓励类的重用，它提供了一种明确表述共性的方法。但Java只支持单继承，即一个类只有一个父类。但Java的接口支持多继承，即一个子接口可以有多个父接口。</p>
+<p>3.封装</p>
+<p>封装是把过程和数据包围起来，对数据的访问只能通过已定义的界面。</p>
+<p>4.多态</p>
+<p>多态性是指允许不同类的对象对同一消息作出响应。多态性包括参数化多态性和包含多态性。多态性语言具有灵活、抽象、行为共享<br>、代码共享的优势，很好的解决了应用程序函数同名问题。</p>
+<h2 id="Comparable和Comparator接口的作用以及它们的区别。"><a href="#Comparable和Comparator接口的作用以及它们的区别。" class="headerlink" title="Comparable和Comparator接口的作用以及它们的区别。"></a>Comparable和Comparator接口的作用以及它们的区别。</h2><p>Comparable提供了compareTo()方法，这个方法可以个给两个对象排序。具体来说，它返回负数，0，正数来表明输入对象小于，等于，大于已经存在的对象。</p>
+<p>Comparatort提供了compare()和equals()两个方法。compare()方法用来给两个输入参数排序，返回负数，0，正数表明第一个参数是小于，等于，大于第二个参数。equals()方法需要一个对象作为参数，它用来决定输入参数是否和comparator相等。</p>
+<h2 id="接口和抽象类的区别"><a href="#接口和抽象类的区别" class="headerlink" title="接口和抽象类的区别"></a>接口和抽象类的区别</h2><p>接口中所有的方法隐含的都是抽象的。而抽象类则可以同时包含抽象和非抽象的方法。<br>类可以实现很多个接口，但是只能继承一个抽象类<br>类可以不实现抽象类和接口声明的所有方法，当然，在这种情况下，类也必须得声明成是抽象的。<br>抽象类可以在不提供接口方法实现的情况下实现接口。<br>Java接口中声明的变量默认都是final的。抽象类可以包含非final的变量。<br>Java接口中的成员函数默认是public的。抽象类的成员函数可以是private，protected或者是public。<br>接口是绝对抽象的，不可以被实例化。抽象类也不可以被实例化，但是，如果它包含main方法的话是可以被调用的。</p>
+<h2 id="extends和super泛型限定符"><a href="#extends和super泛型限定符" class="headerlink" title="extends和super泛型限定符"></a>extends和super泛型限定符</h2><p>泛型：参数化类型，定义方法时有形参，调用此方法时传递实参。</p>
+<p>（1）泛型中上界和下界的定义</p>
+<p>上界&lt;? extend Fruit&gt;</p>
+<p>下界&lt;? super Apple&gt;</p>
+<p>（2）上界和下界的特点</p>
+<p>上界的list只能get，不能add（确切地说不能add出除null之外的对象，包括Object）</p>
+<p>下界的list只能add，不能get</p>
+<h2 id="类加载机制、双亲委派模型"><a href="#类加载机制、双亲委派模型" class="headerlink" title="类加载机制、双亲委派模型"></a>类加载机制、双亲委派模型</h2><p>类加载机制：某个特定的类加载器在接到加载类的请求时，首先将加载任务委托给父类加载器，依次递归，如果父类加载器可以完成类加载任务，就成功返回；只有父类加载器无法完成此加载任务时，才自己去加载。</p>
+<p>双亲委派模型：</p>
+<ol>
+<li>可以避免重复加载，父类已经加载了，子类就不需要再次加载</li>
+<li>更加安全，很好的解决了各个类加载器的基础类的统一问题，如果不使用该种方式，那么用户可以随意定义类加载器来加载核心api，会带来相关隐患。</li>
+</ol>
+<h2 id="String、StringBuffer和StringBuilder"><a href="#String、StringBuffer和StringBuilder" class="headerlink" title="String、StringBuffer和StringBuilder"></a>String、StringBuffer和StringBuilder</h2><p>StringBuffer线程安全，StringBuilder线程不安全，底层实现上的话，StringBuffer其实就是比StringBuilder多了Synchronized修饰符。</p>
+<p>String：适用于少量的字符串操作。<br>StringBuilder：适用于单线程下在字符串缓冲区进行大量操作。<br>StringBuffer：适用于多线程下在字符串缓冲区进行大量操作。</p>
+<h2 id="请说明”static”关键字是什么意思？Java中是否可以覆盖-override-一个private或者是static的方法？"><a href="#请说明”static”关键字是什么意思？Java中是否可以覆盖-override-一个private或者是static的方法？" class="headerlink" title="请说明”static”关键字是什么意思？Java中是否可以覆盖(override)一个private或者是static的方法？"></a>请说明”static”关键字是什么意思？Java中是否可以覆盖(override)一个private或者是static的方法？</h2><p>“static”关键字表明一个成员变量或者是成员方法可以在没有所属的类的实例变量的情况下被访问。<br>Java中static方法不能被覆盖，因为方法覆盖是基于运行时动态绑定的，而static方法是编译时静态绑定的。static方法跟类的任何实例都不相关，所以概念上不适用。</p>
+<h2 id="请说明重载和重写的区别，相同参数不同返回值能重载吗？"><a href="#请说明重载和重写的区别，相同参数不同返回值能重载吗？" class="headerlink" title="请说明重载和重写的区别，相同参数不同返回值能重载吗？"></a>请说明重载和重写的区别，相同参数不同返回值能重载吗？</h2><p>重载(Overloading)</p>
+<p>（1） 方法重载是让类以统一的方式处理不同类型数据的一种手段。多个同名函数同时存在，具有不同的参数个数/类型。</p>
+<p>重载Overloading是一个类中多态性的一种表现。</p>
+<p>（2） Java的方法重载，就是在类中可以创建多个方法，它们具有相同的名字，但具有不同的参数和不同的定义。</p>
+<p>调用方法时通过传递给它们的不同参数个数和参数类型来决定具体使用哪个方法, 这就是多态性。</p>
+<p>（3） 重载的时候，方法名要一样，但是参数类型和个数不一样，返回值类型可以相同也可以不相同。无法以返回型别作为重载函数的区分标准。</p>
+<p>重写（Overriding）</p>
+<p>（1） 父类与子类之间的多态性，对父类的函数进行重新定义。如果在子类中定义某方法与其父类有相同的名称和参数，我们说该方法被重写 (Overriding)。在Java中，子类可继承父类中的方法，而不需要重新编写相同的方法。</p>
+<p>但有时子类并不想原封不动地继承父类的方法，而是想作一定的修改，这就需要采用方法的重写。</p>
+<p>方法重写又称方法覆盖。</p>
+<p>（2）若子类中的方法与父类中的某一方法具有相同的方法名、返回类型和参数表，则新方法将覆盖原有的方法。</p>
+<p>如需父类中原有的方法，可使用super关键字，该关键字引用了当前类的父类。</p>
+<p>（3）子类函数的访问修饰权限不能少于父类的。</p>
+<h2 id="Object类的方法"><a href="#Object类的方法" class="headerlink" title="Object类的方法"></a>Object类的方法</h2><p>Object()默认构造方法。</p>
+<p>clone() 创建并返回此对象的一个副本。</p>
+<p>equals(Object obj) 指示某个其他对象是否与此对象“相等”。</p>
+<p>finalize()当垃圾回收器确定不存在对该对象的更多引用时，由对象的垃圾回收器调用此方法。</p>
+<p>getClass()返回一个对象的运行时类。</p>
+<p>hashCode()返回该对象的哈希码值。</p>
+<p>notify()唤醒在此对象监视器上等待的单个线程。 </p>
+<p>notifyAll()唤醒在此对象监视器上等待的所有线程。</p>
+<p>toString()返回该对象的字符串表示。</p>
+<p>wait()导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 方法。</p>
+<p>wait(long timeout)导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或者超过指定的时间量。wait(long timeout, int nanos) 导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或者其他某个线程中断当前线程，或者已超过某个实际时间量。</p>
+<h2 id="wait方法和sleep-方法"><a href="#wait方法和sleep-方法" class="headerlink" title="wait方法和sleep()方法"></a>wait方法和sleep()方法</h2><p>1.<strong>wait()方法</strong>则是指当前线程让自己暂时退让出同步资源锁，<strong>sleep()方法</strong>正在执行的线程主动让出CPU。</p>
+<p>2.<strong>sleep()方法</strong>可以在任何地方使用；<strong>wait()方法</strong>则只能在同步方法或同步块中使用</p>
+<p>3.**sleep()**是线程线程类（Thread）的方法，调用会暂停此线程指定的时间，但监控依然保持，不会释放对象锁，到时间自动恢复.**wait()**是Object的方法，调用会放弃对象锁，进入等待队列，待调用notify()/notifyAll()唤醒指定的线程或者所有线程，才会进入锁池，不再次获得对象锁才会进入运行状态。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Thread1</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (RegExpTest.class)&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;enter thread1 ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread1 is waiting&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">try</span>&#123;</span><br><span class="line">                    <span class="comment">//释放锁有两种方式：(1)程序自然离开监视器的范围，即离开synchronized关键字管辖的代码范围</span></span><br><span class="line">                    <span class="comment">//(2)在synchronized关键字管辖的代码内部调用监视器对象的wait()方法。这里使用wait方法</span></span><br><span class="line">                    RegExpTest.class.wait();</span><br><span class="line">                &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                System.out.println(<span class="string">&quot;thread1 is going on ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread1 is being over!&quot;</span>);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Thread2</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="comment">//notify方法并不释放锁，即使thread2调用了下面的sleep方法休息10ms，但thread1仍然不会执行</span></span><br><span class="line">            <span class="comment">//因为thread2没有释放锁，所以Thread1得不到锁而无法执行</span></span><br><span class="line">            <span class="keyword">synchronized</span>(RegExpTest.class)&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;enter thread2 ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 notify other thread can release wait status ...&quot;</span>);</span><br><span class="line">                RegExpTest.class.notify();</span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 is sleeping ten millisecond ...&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">try</span>&#123;</span><br><span class="line">                    Thread.sleep(<span class="number">10</span>);</span><br><span class="line">                &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 is going on ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 is being over!&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Thread1()).start();</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            Thread.sleep(<span class="number">10</span>);</span><br><span class="line">        &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Thread2()).start();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://img-blog.csdnimg.cn/20200828105942972.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 
     </div>
 
@@ -537,6 +601,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88/" rel="next" title="Java SE基础|集合">
+                  Java SE基础|集合 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
       </footer>
@@ -597,14 +664,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">25k</span>
+    <span title="站点总字数">39k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">22 分钟</span>
+    <span title="站点阅读时长">36 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

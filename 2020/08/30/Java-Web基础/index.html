@@ -33,7 +33,7 @@
 <meta property="og:description" content="JAVA应用服务器BEA WebLogic Server， IBM WebSphere Application Server， Oracle9i Application Server jBoss， Tomcat">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-08-30T11:14:15.000Z">
-<meta property="article:modified_time" content="2020-08-30T14:12:10.799Z">
+<meta property="article:modified_time" content="2020-08-31T01:43:51.623Z">
 <meta property="article:author" content="kaikai">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="Java基础">
@@ -226,7 +226,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">JAVA应用服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Assert%E6%96%AD%E8%A8%80"><span class="nav-number">2.</span> <span class="nav-text">Assert断言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E5%88%86%E9%92%9F%E4%B9%8B%E5%86%85%E5%8F%AA%E8%83%BD%E5%A4%84%E7%90%861000%E4%B8%AA%E8%AF%B7%E6%B1%82%EF%BC%8C%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">1分钟之内只能处理1000个请求，怎么实现？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP%E4%B8%AD%E7%9A%84%E9%9D%99%E6%80%81%E5%8C%85%E5%90%AB%E5%92%8C%E5%8A%A8%E6%80%81%E5%8C%85%E5%90%AB%E7%9A%84%E6%9C%89%E5%93%AA%E4%BA%9B%E5%8C%BA%E5%88%AB"><span class="nav-number">4.</span> <span class="nav-text">JSP中的静态包含和动态包含的有哪些区别</span></a></li></ol></div>
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#JAVA%E5%BA%94%E7%94%A8%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">JAVA应用服务器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Assert%E6%96%AD%E8%A8%80"><span class="nav-number">2.</span> <span class="nav-text">Assert断言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E5%88%86%E9%92%9F%E4%B9%8B%E5%86%85%E5%8F%AA%E8%83%BD%E5%A4%84%E7%90%861000%E4%B8%AA%E8%AF%B7%E6%B1%82%EF%BC%8C%E6%80%8E%E4%B9%88%E5%AE%9E%E7%8E%B0%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">1分钟之内只能处理1000个请求，怎么实现？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP%E4%B8%AD%E7%9A%84%E9%9D%99%E6%80%81%E5%8C%85%E5%90%AB%E5%92%8C%E5%8A%A8%E6%80%81%E5%8C%85%E5%90%AB%E7%9A%84%E6%9C%89%E5%93%AA%E4%BA%9B%E5%8C%BA%E5%88%AB"><span class="nav-number">4.</span> <span class="nav-text">JSP中的静态包含和动态包含的有哪些区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%AF%AD%E8%A8%80%EF%BC%88EL%EF%BC%89%E7%9A%84%E9%9A%90%E5%BC%8F%E5%AF%B9%E8%B1%A1%E4%BB%A5%E5%8F%8A%E8%AF%A5%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">5.</span> <span class="nav-text">表达式语言（EL）的隐式对象以及该对象的作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#JSP%E7%9A%84%E5%86%85%E7%BD%AE%E5%AF%B9%E8%B1%A1"><span class="nav-number">6.</span> <span class="nav-text">JSP的内置对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web-xml%E6%96%87%E4%BB%B6"><span class="nav-number">7.</span> <span class="nav-text">web.xml文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%91%E5%90%AC%E5%99%A8"><span class="nav-number">8.</span> <span class="nav-text">监听器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%87%E6%BB%A4%E5%99%A8"><span class="nav-number">9.</span> <span class="nav-text">过滤器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Servlet%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"><span class="nav-number">10.</span> <span class="nav-text">Servlet的生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%EF%BC%88%E8%BD%AC%E5%8F%91%EF%BC%89forward%E4%B8%8E%EF%BC%88%E9%87%8D%E5%AE%9A%E5%90%91%EF%BC%89redirect%E5%8C%BA%E5%88%AB"><span class="nav-number">11.</span> <span class="nav-text">（转发）forward与（重定向）redirect区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis%E7%9A%84List%E8%83%BD%E5%9C%A8%E4%BB%80%E4%B9%88%E5%9C%BA%E6%99%AF%E4%B8%8B%E4%BD%BF%E7%94%A8"><span class="nav-number">12.</span> <span class="nav-text">redis的List能在什么场景下使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AOF%E5%92%8CRDB"><span class="nav-number">13.</span> <span class="nav-text">AOF和RDB</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%93%E5%AD%98%E7%9A%84%E4%BC%98%E7%82%B9"><span class="nav-number">14.</span> <span class="nav-text">缓存的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis-%E8%AF%BB%E5%86%99%E9%80%9F%E7%8E%87%E5%BF%AB%E3%80%81%E6%80%A7%E8%83%BD%E5%A5%BD"><span class="nav-number">15.</span> <span class="nav-text">redis 读写速率快、性能好</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis%E7%9A%84%E4%B8%BB%E4%BB%8E%E5%A4%8D%E5%88%B6"><span class="nav-number">16.</span> <span class="nav-text">redis的主从复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DAO%E6%A8%A1%E5%BC%8F"><span class="nav-number">17.</span> <span class="nav-text">DAO模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC%E5%90%84%E4%B8%AA%E9%83%A8%E5%88%86%E9%9C%80%E8%A6%81%E7%9A%84%E6%8A%80%E6%9C%AF"><span class="nav-number">18.</span> <span class="nav-text">MVC各个部分需要的技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#get%E5%92%8Cpost%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">19.</span> <span class="nav-text">get和post的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#J2EE%E4%B8%AD%E5%B8%B8%E7%94%A8%E7%9A%84%E5%90%8D%E8%AF%8D%E8%BF%9B%E8%A1%8C%E8%A7%A3%E9%87%8A"><span class="nav-number">20.</span> <span class="nav-text">J2EE中常用的名词进行解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%AB%99%E5%9C%A8%E6%9E%B6%E6%9E%84%E4%B8%8A%E5%BA%94%E5%BD%93%E8%80%83%E8%99%91%E5%93%AA%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="nav-number">21.</span> <span class="nav-text">网站在架构上应当考虑哪些问题</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -242,20 +242,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">26</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">28</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -323,7 +323,7 @@
         <h5 class="widget-title" style="font-size:20px;text-align:center;color:#87CEFA;margin:20px 0 0px;text-shadow: 1px 1px black,-1px -1px black,1px -1px black,-1px 1px black;">Tag Cloud</h5>
         <div id="myCanvasContainer" class="widget tagcloud" style="font-size:20px;">
           <canvas width="220" height="200" id="resCanvas" style="width=100%">
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM/" rel="tag">BOM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GC/" rel="tag">GC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/" rel="tag">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IO/" rel="tag">IO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM/" rel="tag">JVM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a><span class="tag-list-count">11</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Struts/" rel="tag">Struts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86/" rel="tag">工业机理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86%E6%A8%A1%E5%9E%8B/" rel="tag">工业机理模型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E6%8A%80%E5%B7%A7/" rel="tag">方法技巧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" rel="tag">知识图谱</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1-%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90/" rel="tag">知识图谱 实体对齐</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1-%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8/" rel="tag">知识图谱 知识存储</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA/" rel="tag">知识表示</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E7%A8%8B/" rel="tag">线程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9B%86%E5%90%88/" rel="tag">集合</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BOM/" rel="tag">BOM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GC/" rel="tag">GC</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hibernate/" rel="tag">Hibernate</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IO/" rel="tag">IO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JVM/" rel="tag">JVM</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a><span class="tag-list-count">16</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Struts/" rel="tag">Struts</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/" rel="tag">Web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%91%BD%E4%BB%A4/" rel="tag">命令</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A0%86%E4%B8%8E%E6%A0%88/" rel="tag">堆与栈</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86/" rel="tag">工业机理</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86%E6%A8%A1%E5%9E%8B/" rel="tag">工业机理模型</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%8E%92%E5%BA%8F/" rel="tag">排序</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag">操作系统</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%96%B9%E6%B3%95%E6%8A%80%E5%B7%A7/" rel="tag">方法技巧</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%A0%91/" rel="tag">树</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" rel="tag">知识图谱</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1-%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90/" rel="tag">知识图谱 实体对齐</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1-%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8/" rel="tag">知识图谱 知识存储</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA/" rel="tag">知识表示</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BA%BF%E7%A8%8B/" rel="tag">线程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag">计算机网络</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%93%BE%E8%A1%A8/" rel="tag">链表</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9B%86%E5%90%88/" rel="tag">集合</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/" rel="tag">高级算法</a><span class="tag-list-count">1</span></li></ul>
           </canvas>
         </div>
       </div>
@@ -385,10 +385,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-08-30 19:14:15 / 修改时间：22:12:10" itemprop="dateCreated datePublished" datetime="2020-08-30T19:14:15+08:00">2020-08-30</time>
+              <time title="创建时间：2020-08-30 19:14:15" itemprop="dateCreated datePublished" datetime="2020-08-30T19:14:15+08:00">2020-08-30</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-31 09:43:51" itemprop="dateModified" datetime="2020-08-31T09:43:51+08:00">2020-08-31</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -430,14 +436,14 @@
                 <i class="far fa-file-word"></i>
               </span>
               <span class="post-meta-item-text">本文字数：</span>
-              <span>506</span>
+              <span>3.8k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
               <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>3 分钟</span>
             </span>
 
         </div>
@@ -463,6 +469,80 @@
 <p>b) 使用aop实现请求的限制， 在需要限制的请求方法上加上aop逻辑。</p>
 <h2 id="JSP中的静态包含和动态包含的有哪些区别"><a href="#JSP中的静态包含和动态包含的有哪些区别" class="headerlink" title="JSP中的静态包含和动态包含的有哪些区别"></a>JSP中的静态包含和动态包含的有哪些区别</h2><p>静态包含是通过JSP的include指令包含页面。</p>
 <p>动态包含是通过JSP标准动作<a href="jsp:forward">jsp:forward</a>包含页面</p>
+<p>&lt;%– 静态包含 –%&gt;<br>&lt;%@ include file=”…” %&gt;<br>&lt;%– 动态包含 –%&gt;<br>&lt;jsp:include page=”…”&gt;<br>&lt;jsp:param name=”…” value=”…” /&gt;<br></jsp:include></p>
+<h2 id="表达式语言（EL）的隐式对象以及该对象的作用"><a href="#表达式语言（EL）的隐式对象以及该对象的作用" class="headerlink" title="表达式语言（EL）的隐式对象以及该对象的作用"></a>表达式语言（EL）的隐式对象以及该对象的作用</h2><p>EL的隐式对象包括：pageContext、initParam（访问上下文参数）、param（访问请求参数）、paramValues、header（访问请求头）、headerValues、cookie（访问cookie）、applicationScope（访问application作用域）、sessionScope（访问session作用域）、requestScope（访问request作用域）、pageScope（访问page作用域）</p>
+<h2 id="JSP的内置对象"><a href="#JSP的内置对象" class="headerlink" title="JSP的内置对象"></a>JSP的内置对象</h2><p>request：封装客户端的请求，其中包含来自GET或POST请求的参数；<br>response：封装服务器对客户端的响应；<br>pageContext：通过该对象可以获取其他对象；<br>session：封装用户会话的对象；<br>application：封装服务器运行环境的对象；<br>out：输出服务器响应的输出流对象；<br>config：Web应用的配置对象；<br>page：JSP页面本身（相当于Java程序中的this）；<br>exception：封装页面抛出异常的对象。</p>
+<h2 id="web-xml文件"><a href="#web-xml文件" class="headerlink" title="web.xml文件"></a>web.xml文件</h2><p>web.xml用于配置Web应用的相关信息</p>
+<p>监听器、过滤器、Servlet、相关参数、会话超时时间、安全验证方式、错误页面等。</p>
+<h2 id="监听器"><a href="#监听器" class="headerlink" title="监听器"></a>监听器</h2><p>Java Web开发中的监听器（listener）就是application、session、request三个对象创建、销毁或者往其中添加修改删除属性时自动执行代码的功能组件。</p>
+<p>①ServletContextListener：对Servlet上下文的创建和销毁进行监听。<br>②ServletContextAttributeListener：监听Servlet上下文属性的添加、删除和替换。<br>③HttpSessionListener：对Session的创建和销毁进行监听。</p>
+<p>④HttpSessionAttributeListener：对Session对象中属性的添加、删除和替换进行监听。<br>⑤ServletRequestListener：对请求对象的初始化和销毁进行监听。<br>⑥ServletRequestAttributeListener：对请求对象属性的添加、删除和替换进行监听。</p>
+<p>Session销毁：</p>
+<p>1.session超时，从web.xml文件中通过<session-config>/<session-timeout>标签配置超时时间。</p>
+<p>2.通过调用session对象的invalidate()方法使session失效。</p>
+<h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><p>过滤器是一个驻留在服务器端的Web组件，它可以截取客户端和服务器之间的请求与响应信息，并对这些信息进行过滤。</p>
+<h2 id="Servlet的生命周期"><a href="#Servlet的生命周期" class="headerlink" title="Servlet的生命周期"></a>Servlet的生命周期</h2><p>Servlet 生命周期可被定义为从创建直到毁灭的整个过程。以下是 Servlet 遵循的过程：</p>
+<p>Servlet 通过调用 init () 方法进行初始化。</p>
+<p>Servlet 调用 service() 方法来处理客户端的请求。</p>
+<p>Servlet 通过调用 destroy() 方法终止（结束）。</p>
+<p>最后，Servlet 是由 JVM 的垃圾回收器进行垃圾回收的。</p>
+<p>Servlet单实例，减少了产生servlet的开销；</p>
+<h2 id="（转发）forward与（重定向）redirect区别"><a href="#（转发）forward与（重定向）redirect区别" class="headerlink" title="（转发）forward与（重定向）redirect区别"></a>（转发）forward与（重定向）redirect区别</h2><p>forward是转发，redirect是重定向</p>
+<p><strong>1.地址栏显示不同</strong></p>
+<p>forward是服务器请求，地址栏还是原来的地址</p>
+<p>redirect是服务端根据逻辑，发送一个状态码，地址栏显示的是新的URL</p>
+<p><strong>2.数据共享不同</strong></p>
+<p>forward，转发页面和转发到的页面可以共享request里面的数据。</p>
+<p>redirect，不能共享数据。</p>
+<p><strong>3.运用场景不同</strong></p>
+<p>forward：用于用户登录，根据角色转发到相应的模块。</p>
+<p>redirect：用于用户注销登录时返回主页面和跳转到其它的网站等。</p>
+<p><strong>4.效率不同</strong></p>
+<p>forward：高</p>
+<p>redirect：低</p>
+<p>redirect的状态码是302</p>
+<h2 id="redis的List能在什么场景下使用"><a href="#redis的List能在什么场景下使用" class="headerlink" title="redis的List能在什么场景下使用"></a>redis的List能在什么场景下使用</h2><p>Redis中的list的数据结构是双向链表，可以非常便捷的应用于消息队列（生产者/消费者模型）。消息的生产者只需要通过ipush将消息放入list，消费者便可以通过rpop取出该消息，并且可以保证消息的有序性。</p>
+<h2 id="AOF和RDB"><a href="#AOF和RDB" class="headerlink" title="AOF和RDB"></a>AOF和RDB</h2><p>RDB 持久化可以在指定的时间间隔内生成数据集的时间点快照。</p>
+<p>AOF 持久化记录服务器执行的所有写操作命令，并在服务器启动时，通过重新执行这些命令来还原数据集。AOF文件中的命令全部以Redis协议的格式来存放。</p>
+<h2 id="缓存的优点"><a href="#缓存的优点" class="headerlink" title="缓存的优点"></a>缓存的优点</h2><p>1.减少对数据库的读操作，数据库压力降低。</p>
+<p>2.加快了响应速度。</p>
+<h2 id="redis-读写速率快、性能好"><a href="#redis-读写速率快、性能好" class="headerlink" title="redis 读写速率快、性能好"></a>redis 读写速率快、性能好</h2><p>Redis是纯内存数据库，相对于读写磁盘，Hash查找可以达到每秒百万次的数量级。</p>
+<h2 id="redis的主从复制"><a href="#redis的主从复制" class="headerlink" title="redis的主从复制"></a>redis的主从复制</h2><p>第一阶段：与master建立连接</p>
+<p>第二阶段：向master发起同步请求（SYNC）</p>
+<p>第三阶段：接受master发来的RDB数据</p>
+<p>第四阶段：载入RDB文件</p>
+<h2 id="DAO模式"><a href="#DAO模式" class="headerlink" title="DAO模式"></a>DAO模式</h2><p>DAO（Data Access Object）顾名思义是一个为数据库或其他持久化机制提供了抽象接口的对象，在不暴露底层持久化方案实现细节的前提下提供了各种数据访问操作。</p>
+<p>DAO模式实际上包含了两个模式，一是Data Accessor（数据访问器），二是Data Object（数据对象）。前者要解决如何访问数据的问题，而后者要解决的是如何用对象封装数据。</p>
+<h2 id="MVC各个部分需要的技术"><a href="#MVC各个部分需要的技术" class="headerlink" title="MVC各个部分需要的技术"></a>MVC各个部分需要的技术</h2><p>Model-View-Controller</p>
+<p>Model：实现系统中的业务逻辑</p>
+<p>View：用于与用户的交互。</p>
+<p>Controller：是model与View之间沟通的桥梁。提供应用的处理过程。</p>
+<h2 id="get和post的区别"><a href="#get和post的区别" class="headerlink" title="get和post的区别"></a>get和post的区别</h2><p>1.get请求用来从服务器上获得资源，而post用来向服务器提交数据。</p>
+<p>2.get时参数会显示在地址栏上，post的地址栏不会显示。</p>
+<p>3.get传输收到url的限制，1024字节；而post可以传输大量的数据，上传文件通常使用post方式。</p>
+<h2 id="J2EE中常用的名词进行解释"><a href="#J2EE中常用的名词进行解释" class="headerlink" title="J2EE中常用的名词进行解释"></a>J2EE中常用的名词进行解释</h2><p><strong>web 容器：</strong>给处于其中的应用程序组件（JSP，SERVLET）提供一个环境，使JSP,SERVLET直接和容器中的环境变量接接口互，不必关注其它系统问题</p>
+<p><strong>Web container：</strong>实现J2EE体系结构中Web组件协议的容器。</p>
+<p><strong>EJB容器：</strong>Enterprise java bean 容器。更具有行业领域特色。</p>
+<p><strong>JNDI：</strong>（Java Naming &amp; Directory Interface）JAVA命名目录服务</p>
+<p><strong>JMS：</strong>（Java Message Service）JAVA消息服务</p>
+<p><strong>JTA：</strong>（Java Transaction API）JAVA事务服务</p>
+<p><strong>JAF：</strong>（Java Action FrameWork）JAVA安全认证框架</p>
+<p><strong>RMI/IIOP:</strong> （Remote Method Invocation /internet对象请求中介协议）他们主要用于通过远程调用服务</p>
+<h2 id="网站在架构上应当考虑哪些问题"><a href="#网站在架构上应当考虑哪些问题" class="headerlink" title="网站在架构上应当考虑哪些问题"></a>网站在架构上应当考虑哪些问题</h2><p><strong>1.分层</strong></p>
+<p>分层是处理任何复杂系统最常见的手段之一，将系统横向切分成若干个层面，每个层面只承担单一的职责，然后通过下层为上层提供的基础设施和服务以及上层对下层的调用来形成一个完整的复杂的系统</p>
+<p><strong>2.分割</strong></p>
+<p>分割是对软件的纵向切分</p>
+<p><strong>3.分布式</strong></p>
+<p>网站的静态资源（JavaScript、CSS、图片等）也可以采用独立分布式部署并采用独立的域名，这样可以减轻应用服务器的负载压力，也使得浏览器对资源的加载更快</p>
+<p><strong>4.集群</strong></p>
+<p>集群使得有更多的服务器提供相同的服务，可以更好的提供对并发的支持</p>
+<p><strong>5.缓存</strong></p>
+<p>缓存就是用空间换取时间的技术，将数据尽可能放在距离计算最近的位置。使用缓存是网站优化的第一定律。</p>
+<p>CDN/反向代理/热点数据</p>
+<p><strong>6.异步</strong></p>
+<p>异步是实现软件实体之间解耦合的又一重要手段。是典型的生产者消费者模式。</p>
+<p><strong>7.冗余</strong></p>
+<p>各种服务器都要提供相应的冗余服务器以便在某台或某些服务器宕机时还能保证网站可以正常工作，同时也提供了灾难恢复的可能性。冗余是网站高可用性的重要保证。</p>
 
     </div>
 
@@ -521,6 +601,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%93%BE%E8%A1%A8/" rel="next" title="数据结构与算法|链表">
+                  数据结构与算法|链表 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
       </footer>
@@ -581,14 +664,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">39k</span>
+    <span title="站点总字数">54k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">36 分钟</span>
+    <span title="站点阅读时长">49 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

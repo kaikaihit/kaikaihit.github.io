@@ -951,6 +951,80 @@
 <p>b) 使用aop实现请求的限制， 在需要限制的请求方法上加上aop逻辑。</p>
 <h2 id="JSP中的静态包含和动态包含的有哪些区别"><a href="#JSP中的静态包含和动态包含的有哪些区别" class="headerlink" title="JSP中的静态包含和动态包含的有哪些区别"></a>JSP中的静态包含和动态包含的有哪些区别</h2><p>静态包含是通过JSP的include指令包含页面。</p>
 <p>动态包含是通过JSP标准动作<a href="jsp:forward">jsp:forward</a>包含页面</p>
+<p>&lt;%– 静态包含 –%&gt;<br>&lt;%@ include file=”…” %&gt;<br>&lt;%– 动态包含 –%&gt;<br>&lt;jsp:include page=”…”&gt;<br>&lt;jsp:param name=”…” value=”…” /&gt;<br></jsp:include></p>
+<h2 id="表达式语言（EL）的隐式对象以及该对象的作用"><a href="#表达式语言（EL）的隐式对象以及该对象的作用" class="headerlink" title="表达式语言（EL）的隐式对象以及该对象的作用"></a>表达式语言（EL）的隐式对象以及该对象的作用</h2><p>EL的隐式对象包括：pageContext、initParam（访问上下文参数）、param（访问请求参数）、paramValues、header（访问请求头）、headerValues、cookie（访问cookie）、applicationScope（访问application作用域）、sessionScope（访问session作用域）、requestScope（访问request作用域）、pageScope（访问page作用域）</p>
+<h2 id="JSP的内置对象"><a href="#JSP的内置对象" class="headerlink" title="JSP的内置对象"></a>JSP的内置对象</h2><p>request：封装客户端的请求，其中包含来自GET或POST请求的参数；<br>response：封装服务器对客户端的响应；<br>pageContext：通过该对象可以获取其他对象；<br>session：封装用户会话的对象；<br>application：封装服务器运行环境的对象；<br>out：输出服务器响应的输出流对象；<br>config：Web应用的配置对象；<br>page：JSP页面本身（相当于Java程序中的this）；<br>exception：封装页面抛出异常的对象。</p>
+<h2 id="web-xml文件"><a href="#web-xml文件" class="headerlink" title="web.xml文件"></a>web.xml文件</h2><p>web.xml用于配置Web应用的相关信息</p>
+<p>监听器、过滤器、Servlet、相关参数、会话超时时间、安全验证方式、错误页面等。</p>
+<h2 id="监听器"><a href="#监听器" class="headerlink" title="监听器"></a>监听器</h2><p>Java Web开发中的监听器（listener）就是application、session、request三个对象创建、销毁或者往其中添加修改删除属性时自动执行代码的功能组件。</p>
+<p>①ServletContextListener：对Servlet上下文的创建和销毁进行监听。<br>②ServletContextAttributeListener：监听Servlet上下文属性的添加、删除和替换。<br>③HttpSessionListener：对Session的创建和销毁进行监听。</p>
+<p>④HttpSessionAttributeListener：对Session对象中属性的添加、删除和替换进行监听。<br>⑤ServletRequestListener：对请求对象的初始化和销毁进行监听。<br>⑥ServletRequestAttributeListener：对请求对象属性的添加、删除和替换进行监听。</p>
+<p>Session销毁：</p>
+<p>1.session超时，从web.xml文件中通过<session-config>/<session-timeout>标签配置超时时间。</p>
+<p>2.通过调用session对象的invalidate()方法使session失效。</p>
+<h2 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h2><p>过滤器是一个驻留在服务器端的Web组件，它可以截取客户端和服务器之间的请求与响应信息，并对这些信息进行过滤。</p>
+<h2 id="Servlet的生命周期"><a href="#Servlet的生命周期" class="headerlink" title="Servlet的生命周期"></a>Servlet的生命周期</h2><p>Servlet 生命周期可被定义为从创建直到毁灭的整个过程。以下是 Servlet 遵循的过程：</p>
+<p>Servlet 通过调用 init () 方法进行初始化。</p>
+<p>Servlet 调用 service() 方法来处理客户端的请求。</p>
+<p>Servlet 通过调用 destroy() 方法终止（结束）。</p>
+<p>最后，Servlet 是由 JVM 的垃圾回收器进行垃圾回收的。</p>
+<p>Servlet单实例，减少了产生servlet的开销；</p>
+<h2 id="（转发）forward与（重定向）redirect区别"><a href="#（转发）forward与（重定向）redirect区别" class="headerlink" title="（转发）forward与（重定向）redirect区别"></a>（转发）forward与（重定向）redirect区别</h2><p>forward是转发，redirect是重定向</p>
+<p><strong>1.地址栏显示不同</strong></p>
+<p>forward是服务器请求，地址栏还是原来的地址</p>
+<p>redirect是服务端根据逻辑，发送一个状态码，地址栏显示的是新的URL</p>
+<p><strong>2.数据共享不同</strong></p>
+<p>forward，转发页面和转发到的页面可以共享request里面的数据。</p>
+<p>redirect，不能共享数据。</p>
+<p><strong>3.运用场景不同</strong></p>
+<p>forward：用于用户登录，根据角色转发到相应的模块。</p>
+<p>redirect：用于用户注销登录时返回主页面和跳转到其它的网站等。</p>
+<p><strong>4.效率不同</strong></p>
+<p>forward：高</p>
+<p>redirect：低</p>
+<p>redirect的状态码是302</p>
+<h2 id="redis的List能在什么场景下使用"><a href="#redis的List能在什么场景下使用" class="headerlink" title="redis的List能在什么场景下使用"></a>redis的List能在什么场景下使用</h2><p>Redis中的list的数据结构是双向链表，可以非常便捷的应用于消息队列（生产者/消费者模型）。消息的生产者只需要通过ipush将消息放入list，消费者便可以通过rpop取出该消息，并且可以保证消息的有序性。</p>
+<h2 id="AOF和RDB"><a href="#AOF和RDB" class="headerlink" title="AOF和RDB"></a>AOF和RDB</h2><p>RDB 持久化可以在指定的时间间隔内生成数据集的时间点快照。</p>
+<p>AOF 持久化记录服务器执行的所有写操作命令，并在服务器启动时，通过重新执行这些命令来还原数据集。AOF文件中的命令全部以Redis协议的格式来存放。</p>
+<h2 id="缓存的优点"><a href="#缓存的优点" class="headerlink" title="缓存的优点"></a>缓存的优点</h2><p>1.减少对数据库的读操作，数据库压力降低。</p>
+<p>2.加快了响应速度。</p>
+<h2 id="redis-读写速率快、性能好"><a href="#redis-读写速率快、性能好" class="headerlink" title="redis 读写速率快、性能好"></a>redis 读写速率快、性能好</h2><p>Redis是纯内存数据库，相对于读写磁盘，Hash查找可以达到每秒百万次的数量级。</p>
+<h2 id="redis的主从复制"><a href="#redis的主从复制" class="headerlink" title="redis的主从复制"></a>redis的主从复制</h2><p>第一阶段：与master建立连接</p>
+<p>第二阶段：向master发起同步请求（SYNC）</p>
+<p>第三阶段：接受master发来的RDB数据</p>
+<p>第四阶段：载入RDB文件</p>
+<h2 id="DAO模式"><a href="#DAO模式" class="headerlink" title="DAO模式"></a>DAO模式</h2><p>DAO（Data Access Object）顾名思义是一个为数据库或其他持久化机制提供了抽象接口的对象，在不暴露底层持久化方案实现细节的前提下提供了各种数据访问操作。</p>
+<p>DAO模式实际上包含了两个模式，一是Data Accessor（数据访问器），二是Data Object（数据对象）。前者要解决如何访问数据的问题，而后者要解决的是如何用对象封装数据。</p>
+<h2 id="MVC各个部分需要的技术"><a href="#MVC各个部分需要的技术" class="headerlink" title="MVC各个部分需要的技术"></a>MVC各个部分需要的技术</h2><p>Model-View-Controller</p>
+<p>Model：实现系统中的业务逻辑</p>
+<p>View：用于与用户的交互。</p>
+<p>Controller：是model与View之间沟通的桥梁。提供应用的处理过程。</p>
+<h2 id="get和post的区别"><a href="#get和post的区别" class="headerlink" title="get和post的区别"></a>get和post的区别</h2><p>1.get请求用来从服务器上获得资源，而post用来向服务器提交数据。</p>
+<p>2.get时参数会显示在地址栏上，post的地址栏不会显示。</p>
+<p>3.get传输收到url的限制，1024字节；而post可以传输大量的数据，上传文件通常使用post方式。</p>
+<h2 id="J2EE中常用的名词进行解释"><a href="#J2EE中常用的名词进行解释" class="headerlink" title="J2EE中常用的名词进行解释"></a>J2EE中常用的名词进行解释</h2><p><strong>web 容器：</strong>给处于其中的应用程序组件（JSP，SERVLET）提供一个环境，使JSP,SERVLET直接和容器中的环境变量接接口互，不必关注其它系统问题</p>
+<p><strong>Web container：</strong>实现J2EE体系结构中Web组件协议的容器。</p>
+<p><strong>EJB容器：</strong>Enterprise java bean 容器。更具有行业领域特色。</p>
+<p><strong>JNDI：</strong>（Java Naming &amp; Directory Interface）JAVA命名目录服务</p>
+<p><strong>JMS：</strong>（Java Message Service）JAVA消息服务</p>
+<p><strong>JTA：</strong>（Java Transaction API）JAVA事务服务</p>
+<p><strong>JAF：</strong>（Java Action FrameWork）JAVA安全认证框架</p>
+<p><strong>RMI/IIOP:</strong> （Remote Method Invocation /internet对象请求中介协议）他们主要用于通过远程调用服务</p>
+<h2 id="网站在架构上应当考虑哪些问题"><a href="#网站在架构上应当考虑哪些问题" class="headerlink" title="网站在架构上应当考虑哪些问题"></a>网站在架构上应当考虑哪些问题</h2><p><strong>1.分层</strong></p>
+<p>分层是处理任何复杂系统最常见的手段之一，将系统横向切分成若干个层面，每个层面只承担单一的职责，然后通过下层为上层提供的基础设施和服务以及上层对下层的调用来形成一个完整的复杂的系统</p>
+<p><strong>2.分割</strong></p>
+<p>分割是对软件的纵向切分</p>
+<p><strong>3.分布式</strong></p>
+<p>网站的静态资源（JavaScript、CSS、图片等）也可以采用独立分布式部署并采用独立的域名，这样可以减轻应用服务器的负载压力，也使得浏览器对资源的加载更快</p>
+<p><strong>4.集群</strong></p>
+<p>集群使得有更多的服务器提供相同的服务，可以更好的提供对并发的支持</p>
+<p><strong>5.缓存</strong></p>
+<p>缓存就是用空间换取时间的技术，将数据尽可能放在距离计算最近的位置。使用缓存是网站优化的第一定律。</p>
+<p>CDN/反向代理/热点数据</p>
+<p><strong>6.异步</strong></p>
+<p>异步是实现软件实体之间解耦合的又一重要手段。是典型的生产者消费者模式。</p>
+<p><strong>7.冗余</strong></p>
+<p>各种服务器都要提供相应的冗余服务器以便在某台或某些服务器宕机时还能保证网站可以正常工作，同时也提供了灾难恢复的可能性。冗余是网站高可用性的重要保证。</p>
 ]]></content>
       <categories>
         <category>Java面试宝典</category>
@@ -960,6 +1034,357 @@
         <tag>Java</tag>
         <tag>Java基础</tag>
         <tag>Web</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>操作系统</title>
+    <url>/2020/08/31/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<h2 id="线程与进程的区别"><a href="#线程与进程的区别" class="headerlink" title="线程与进程的区别"></a>线程与进程的区别</h2><p>一个程序至少有一个进程，一个进程至少有一个线程。</p>
+<ol>
+<li><p>简而言之,一个程序至少有一个进程,一个进程至少有一个线程.</p>
+</li>
+<li><p>线程的划分尺度小于进程，使得多线程程序的并发性高。</p>
+</li>
+<li><p>另外，进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大地提高了程序的运行效率。</p>
+</li>
+<li><p>线程在执行过程中与进程还是有区别的。每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。</p>
+</li>
+<li><p>从逻辑角度来看，多线程的意义在于一个应用程序中，有多个执行部分可以同时执行。但操作系统并没有将多个线程看做多个独立的应用，来实现进程的调度和管理以及资源分配。这就是进程和线程的重要区别。</p>
+</li>
+</ol>
+<h2 id="如何杀死一个进程"><a href="#如何杀死一个进程" class="headerlink" title="如何杀死一个进程"></a>如何杀死一个进程</h2><p>kill pid</p>
+<h2 id="socket编程的三种通信模型，BIO，NIO，AIO"><a href="#socket编程的三种通信模型，BIO，NIO，AIO" class="headerlink" title="socket编程的三种通信模型，BIO，NIO，AIO"></a>socket编程的三种通信模型，BIO，NIO，AIO</h2><p>阻塞，非阻塞，io多路复用，epoll支持文件符数目没有限制，fd集合只会从用户进程拷贝到内核一次，自己维护一个事件队列，不用每次遍历fd集合发现是否有就绪状态。</p>
+<h2 id="操作系统里的内存碎片，有什么解决办法"><a href="#操作系统里的内存碎片，有什么解决办法" class="headerlink" title="操作系统里的内存碎片，有什么解决办法"></a>操作系统里的内存碎片，有什么解决办法</h2><p>内存碎片分为：内部碎片和外部碎片。</p>
+<p>内部碎片就是已经被分配出去（能明确指出属于哪个进程）却不能被利用的内存空间；</p>
+<p>外部碎片指的是还没有被分配出去（不属于任何进程），但由于太小了无法分配给申请内存空间的新进程的内存空闲区域。</p>
+<h2 id="页面存储"><a href="#页面存储" class="headerlink" title="页面存储"></a>页面存储</h2><p>主存被等分成大小相等的片，称为主存块，又称为实页。</p>
+<p>当一个用户程序装入内存时，以页面为单位进行分配。页面的大小是为2n ,通常为1KB、2KB、2n KB等</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法|堆与栈</title>
+    <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%A0%86%E4%B8%8E%E6%A0%88/</url>
+    <content><![CDATA[<h2 id="内存中的栈-stack-、堆-heap-和静态区-static-area-的用法"><a href="#内存中的栈-stack-、堆-heap-和静态区-static-area-的用法" class="headerlink" title="内存中的栈(stack)、堆(heap) 和静态区(static area) 的用法"></a>内存中的栈(stack)、堆(heap) 和静态区(static area) 的用法</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String str = <span class="keyword">new</span> String(<span class="string">&quot;hello&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+<p>上面的语句中变量str放在栈上，用new创建出来的字符串对象放在堆上，而”hello”这个字面量放在静态区。</p>
+<a id="more"></a>
+
+
+
+<h2 id="heap和stack有什么区别"><a href="#heap和stack有什么区别" class="headerlink" title="heap和stack有什么区别"></a>heap和stack有什么区别</h2><p><strong>heap堆</strong></p>
+<p>是一个运行时数据区，类的对象从中分配空间。当new等指令建立，不需要代码显示的释放，由垃圾回收来负责。</p>
+<p>优点：可以动态地分配内存大小，垃圾收集器会自动回收垃圾数据。</p>
+<p>缺点：由于其优点，所以存取速度较慢。</p>
+<p><strong>stack栈</strong></p>
+<p>数据项插入和删除都只能在称为栈顶的一端完成，先进先出。栈中存放一些基本类型的变量和对象句柄。</p>
+<p>优点：读取数据比堆块，仅次于寄存器，栈数据可以共享。</p>
+<p>缺点：缺乏灵活性，存在栈中的数据大小与生存期必须是确定的。</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>堆与栈</category>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>堆与栈</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法|排序</title>
+    <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<p><img data-src="https://uploadfiles.nowcoder.com/images/20180927/308572_1538031578438_AEAC18AEF8824A88CF86B273C90F0BCC" alt="img"></p>
+<a id="more"></a>
+
+<h2 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h2><p>快排：快速排序有两个方向，左边的i下标一直往右走（当条件a[i] &lt;= a[center_index]时），其中center_index是中枢元素的数组下标，一般取为数组第0个元素。</p>
+<p>而右边的j下标一直往左走（当a[j] &gt; a[center_index]时）。</p>
+<p>如果i和j都走不动了，i &lt;= j, 交换a[i]和a[j],重复上面的过程，直到i&gt;j。交换a[j]和a[center_index]，完成一趟快速排序。</p>
+<h2 id="堆排序的原理"><a href="#堆排序的原理" class="headerlink" title="堆排序的原理"></a>堆排序的原理</h2><p>堆排序就是把最大堆堆顶的最大数取出，将剩余的堆继续调整为最大堆，再次将堆顶的最大数取出，这个过程持续到剩余数只有一个时结束。在堆中定义以下几种操作：</p>
+<p>（1）最大堆调整（Max-Heapify）：将堆的末端子节点作调整，使得子节点永远小于父节点。</p>
+<p>（2）创建最大堆（Build-Max-Heap）：将堆所有数据重新排序，使其成为最大堆。</p>
+<p>（3）堆排序（Heap-Sort）：移除位在第一个数据的根节点，并做最大堆调整的递归运算</p>
+<p><img data-src="https://uploadfiles.nowcoder.com/images/20180927/308572_1538031730696_9D37F61D193E7D36552FD03117135AE8" alt="img"></p>
+<h2 id="归并排序的原理"><a href="#归并排序的原理" class="headerlink" title="归并排序的原理"></a>归并排序的原理</h2><p>建立在归并操作上的一种有效的排序算法。采用分治法。</p>
+<h2 id="冒泡排序的原理"><a href="#冒泡排序的原理" class="headerlink" title="冒泡排序的原理"></a>冒泡排序的原理</h2><p>循环比较相邻的两个数，较大的数放在后面</p>
+<p><strong>冒泡排序代码：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] mppx(<span class="keyword">int</span>[] nums)&#123;</span><br><span class="line">        <span class="keyword">int</span> length=nums.length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;length-i-<span class="number">1</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[j+<span class="number">1</span>]&lt;nums[j])&#123;</span><br><span class="line">                    <span class="keyword">int</span> temp=nums[j+<span class="number">1</span>];</span><br><span class="line">                    nums[j+<span class="number">1</span>]=nums[j];</span><br><span class="line">                    nums[j]=temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>测试代码：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> n=sc.nextInt();</span><br><span class="line">    <span class="keyword">int</span>[] array=<span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.length;i++)&#123;</span><br><span class="line">        array[i]=sc.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line">    array=mppx(array);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.length;i++)&#123;</span><br><span class="line">        System.out.print(array[i]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://img-blog.csdnimg.cn/20200831151301748.png#pic_center" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>排序</category>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>排序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法|树</title>
+    <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%A0%91/</url>
+    <content><![CDATA[<p>链表和数组是线性存储结构。树结构是非线性存储结构。存储的是具有“一对多”关系的数据元素的集合。、</p>
+<p><img data-src="http://data.biancheng.net/uploads/allimg/170830/2-1FS0094003158.png" alt="img"></p>
+<pre><code>                                                                              (A)                                                                     (B) </code></pre>
+<a id="more"></a>
+
+<p>（A）是使用树结构存储的集合{A,B,C,D,E,F,G, H,I,J,K,L,M}，对于数据A来说，和数据B、C、D有关系，对于数据B来说，和数据E、F有关系。这就是一对多的关系。</p>
+<p>（B）很像实际生活中的树倒过来，所以称之为“树形存储结构”。</p>
+<h2 id="树的结点"><a href="#树的结点" class="headerlink" title="树的结点"></a>树的结点</h2><p>结点：使用树结构存储的每一个数据元素都被称为“结点”</p>
+<p>父结点：A是BCD的父节点</p>
+<p>子结点：BCD是A的子节点</p>
+<p>兄弟结点：KL是兄弟结点，EF是兄弟结点，HIJ是兄弟结点，BCD是兄弟结点</p>
+<p>（树）根结点：（A）中的A元素是根结点</p>
+<p>叶（子）结点：没有任何子结点的结点成为叶子结点，（A）中的KLFGIJM是叶结点。</p>
+<h2 id="子树和空树"><a href="#子树和空树" class="headerlink" title="子树和空树"></a>子树和空树</h2><p>子树：单个结点也是一棵树，只不过根结点就是它本身。图 1（A）中，结点 K、L、F 等都是树，且都是整棵树的子树。</p>
+<p>空树：空树中没有结点。</p>
+<h2 id="结点的度和层次"><a href="#结点的度和层次" class="headerlink" title="结点的度和层次"></a>结点的度和层次</h2><p>结点的度：对于一个结点，拥有的子树数（结点有多少分支）称为结点的度。</p>
+<p>​                    一棵树的度是树内各结点的度的最大值，（A）树的度是3</p>
+<p>结点的层次：一棵树的深度（高度）是树中结点所在的最大的层次，（A）树的深度是4.</p>
+<h2 id="有序树和无序树"><a href="#有序树和无序树" class="headerlink" title="有序树和无序树"></a>有序树和无序树</h2><p>如果树中结点的子树从左到右看，谁在左边，谁在右边，是有规定的，这棵树称为有序树；反之称为无序树。</p>
+<p>在有序树中，一个结点最左边的子树称为”第一个孩子”，最右边的称为”最后一个孩子”。</p>
+<p>在（A）中，如果本身是一颗有序树，则以结点B为根结点的子树为整棵树的第一个孩子，以结点D为根结点的子树为整棵树的最后一个孩子。</p>
+<h2 id="森林"><a href="#森林" class="headerlink" title="森林"></a>森林</h2><p>由 m（m &gt;= 0）个互不相交的树组成的集合被称为森林。图 1（A）中，分别以 B、C、D 为根结点的三棵子树就可以称为森林。</p>
+<h2 id="树的表示方法"><a href="#树的表示方法" class="headerlink" title="树的表示方法"></a>树的表示方法</h2><p>嵌套集合、凹入表示法、广义表。</p>
+<hr>
+<h2 id="二叉树和二叉树的性质"><a href="#二叉树和二叉树的性质" class="headerlink" title="二叉树和二叉树的性质"></a>二叉树和二叉树的性质</h2><p><strong>二叉树：</strong></p>
+<p>1.本身是有序树。</p>
+<p>2.树中包含的各个结点的度不能超过2，即只能是0，1或者2.</p>
+<p><img data-src="http://data.biancheng.net/uploads/allimg/181226/2-1Q226195I0M1.gif" alt="二叉树示意图"></p>
+<p>图a)是一颗二叉树，图b)不是。</p>
+<p><strong>性质：</strong><br>$$<br>1.二叉树中，第 i 层最多有2^i-1 个结点。<br>$$</p>
+<p>$$<br>2.如果二叉树的深度为 K，那么此二叉树最多有 2^K-1个结点。<br>$$</p>
+<p>$$<br>3.二叉树中，终端结点数（叶子结点数）为 n_0，度为 2 的结点数为 n_2，则 n_0=n_2+1。<br>$$</p>
+<h2 id="满二叉树"><a href="#满二叉树" class="headerlink" title="满二叉树"></a>满二叉树</h2><p>如果二叉树中除了叶子结点，每个结点的度都为 2，则此二叉树称为满二叉树。</p>
+<p><img data-src="http://data.biancheng.net/uploads/allimg/181226/2-1Q226195949495.gif" alt="满二叉树示意图"></p>
+<p><strong>性质：</strong><br>$$<br>具有 n 个节点的满二叉树的深度为 log_2(n+1)。<br>$$</p>
+<h2 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h2><p>如果二叉树中除去最后一层节点为满二叉树，且最后一层的结点依次从左到右分布，则此二叉树被称为完全二叉树。</p>
+<p><img data-src="http://data.biancheng.net/uploads/allimg/181226/2-1Q22620003J18.gif" alt="完全二叉树示意图"></p>
+<h2 id="二叉树的顺序存储结构"><a href="#二叉树的顺序存储结构" class="headerlink" title="二叉树的顺序存储结构"></a>二叉树的顺序存储结构</h2><p><strong>二叉树转完全二叉树</strong></p>
+<p><img data-src="http://data.biancheng.net/uploads/allimg/170830/2-1FS01056261L.png" alt="img"></p>
+<p>图 1 中，左侧是普通二叉树，右侧是转化后的完全（满）二叉树。</p>
+<p>完全二叉树的顺序存储，仅需从根节点开始，按照层次依次将树中节点存储到数组即可。</p>
+<p>由普通二叉树转换来的完全二叉树。</p>
+<p><img data-src="http://data.biancheng.net/uploads/allimg/170830/2-1FS0105A9146.png" alt="img"></p>
+<h2 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h2><p>先序遍历</p>
+<ol>
+<li>访问根结点；</li>
+<li>访问当前结点的左子树；</li>
+<li>若当前结点无左子树，则访问当前节点的右子树。</li>
+</ol>
+<p>中序遍历</p>
+<ol>
+<li>访问当前结点的左子树；</li>
+<li>访问根结点；</li>
+<li>访问当前结点的右子树。</li>
+</ol>
+<p>后续遍历</p>
+<ol>
+<li>访问当前结点的左子树；</li>
+<li>访问当前结点的右子树；</li>
+<li>访问当前结点的根结点。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>树</category>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>树</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法|链表</title>
+    <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%93%BE%E8%A1%A8/</url>
+    <content><![CDATA[<h2 id="链表的优缺点"><a href="#链表的优缺点" class="headerlink" title="链表的优缺点"></a>链表的优缺点</h2><p>1.增加/删除/修改速度比数组快。</p>
+<p>2.查找速度慢，查找时，需要循环链表访问。</p>
+<p>3.如果进行<strong>频繁</strong>插入和删除操作，会导致速度很慢。</p>
+<a id="more"></a>
+
+
+
+<h2 id="链表实现代码"><a href="#链表实现代码" class="headerlink" title="链表实现代码"></a>链表实现代码</h2><p><strong>导包：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.*;</span><br></pre></td></tr></table></figure>
+
+<p><strong>定义节点类：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ListNode</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    ListNode next;</span><br><span class="line">    <span class="comment">//无参构造方法</span></span><br><span class="line">    ListNode()&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//带val的构造方法</span></span><br><span class="line">    ListNode(<span class="keyword">int</span> val)&#123;</span><br><span class="line">        <span class="keyword">this</span>.val=val;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>打印链表：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">display</span><span class="params">(ListNode pHead)</span></span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(pHead!=<span class="keyword">null</span>)&#123;</span><br><span class="line">        System.out.print(pHead.val+<span class="string">&quot; &quot;</span>);</span><br><span class="line">        pHead=pHead.next;</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>删除节点：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteNode</span><span class="params">(ListNode pHead,<span class="keyword">int</span> pos)</span></span>&#123;</span><br><span class="line">     ListNode p = pHead;</span><br><span class="line">     <span class="keyword">if</span>(pos&lt;<span class="number">0</span>)&#123;</span><br><span class="line">         System.out.println(<span class="string">&quot;删除失败&quot;</span>);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">if</span>(pos==<span class="number">0</span>)&#123;<span class="comment">//删除头结点</span></span><br><span class="line">         p=p.next;</span><br><span class="line">         <span class="keyword">return</span> p;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">while</span>((--pos)&gt;<span class="number">0</span>&amp;&amp;p!=<span class="keyword">null</span>)&#123;</span><br><span class="line">         p=p.next;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">if</span>(p==<span class="keyword">null</span>)&#123;</span><br><span class="line">         System.out.println(<span class="string">&quot;删除失败&quot;</span>);</span><br><span class="line">         <span class="keyword">return</span> pHead;</span><br><span class="line">     &#125;</span><br><span class="line">     p.next=p.next.next;</span><br><span class="line">     <span class="keyword">return</span> pHead;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>增加节点：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">addNode</span><span class="params">(ListNode pHead,<span class="keyword">int</span> pos,<span class="keyword">int</span> value)</span></span>&#123;</span><br><span class="line">     ListNode q = <span class="keyword">new</span> ListNode(value);</span><br><span class="line">     <span class="keyword">if</span>(pos&lt;<span class="number">0</span>)&#123;</span><br><span class="line">         System.out.println(<span class="string">&quot;插入失败&quot;</span>);</span><br><span class="line">         <span class="keyword">return</span> pHead;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">if</span>(pos==<span class="number">0</span>)&#123;<span class="comment">//在头结点前插入</span></span><br><span class="line">         q.next=pHead;</span><br><span class="line">         <span class="keyword">return</span> q;</span><br><span class="line">     &#125;</span><br><span class="line">     ListNode p = pHead;</span><br><span class="line">     <span class="keyword">while</span>((--pos)&gt;<span class="number">0</span>&amp;&amp;p!=<span class="keyword">null</span>)&#123;</span><br><span class="line">             p=p.next;</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">if</span>(p==<span class="keyword">null</span>)&#123;</span><br><span class="line">         System.out.println(<span class="string">&quot;插入失败！&quot;</span>);</span><br><span class="line">         <span class="keyword">return</span> pHead;</span><br><span class="line">     &#125;</span><br><span class="line">     q.next=p.next;</span><br><span class="line">     p.next=q;</span><br><span class="line">     <span class="keyword">return</span> pHead;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="comment">//创建链表</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">createListNode</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;请输入节点值以-1结束&quot;</span>);</span><br><span class="line">        Scanner scan = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        ListNode pHead= <span class="keyword">new</span> ListNode();</span><br><span class="line">        <span class="keyword">int</span> temp;</span><br><span class="line">        <span class="keyword">if</span>((temp=scan.nextInt())==-<span class="number">1</span>)&#123;<span class="comment">//头结点</span></span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            pHead.val=temp;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode p =pHead;</span><br><span class="line">        <span class="keyword">while</span>((temp=scan.nextInt())!=-<span class="number">1</span>)&#123;</span><br><span class="line">            ListNode q = <span class="keyword">new</span> ListNode(temp);</span><br><span class="line">            p.next=q;</span><br><span class="line">            p=p.next;</span><br><span class="line">        &#125;</span><br><span class="line">        p.next=<span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">return</span> pHead;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//打印链表</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">display</span><span class="params">(ListNode pHead)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(pHead!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.print(pHead.val+<span class="string">&quot; &quot;</span>);</span><br><span class="line">            pHead=pHead.next;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//在某位置增加一个节点，pos=0表示在头结点前插入</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">addNode</span><span class="params">(ListNode pHead,<span class="keyword">int</span> pos,<span class="keyword">int</span> value)</span></span>&#123;</span><br><span class="line">        ListNode q = <span class="keyword">new</span> ListNode(value);</span><br><span class="line">        <span class="keyword">if</span>(pos&lt;<span class="number">0</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;插入失败&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> pHead;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(pos==<span class="number">0</span>)&#123;<span class="comment">//在头结点前插入</span></span><br><span class="line">            q.next=pHead;</span><br><span class="line">            <span class="keyword">return</span> q;</span><br><span class="line">        &#125;</span><br><span class="line">        ListNode p = pHead;</span><br><span class="line">        <span class="keyword">while</span>((--pos)&gt;<span class="number">0</span>&amp;&amp;p!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            p=p.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(p==<span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;插入失败！&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> pHead;</span><br><span class="line">        &#125;</span><br><span class="line">        q.next=p.next;</span><br><span class="line">        p.next=q;</span><br><span class="line">        <span class="keyword">return</span> pHead;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//删除某个节点,pos=0,表示删除头结点</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteNode</span><span class="params">(ListNode pHead,<span class="keyword">int</span> pos)</span></span>&#123;</span><br><span class="line">        ListNode p = pHead;</span><br><span class="line">        <span class="keyword">if</span>(pos&lt;<span class="number">0</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;删除失败&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(pos==<span class="number">0</span>)&#123;<span class="comment">//删除头结点</span></span><br><span class="line">            p=p.next;</span><br><span class="line">            <span class="keyword">return</span> p;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span>((--pos)&gt;<span class="number">0</span>&amp;&amp;p!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            p=p.next;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(p==<span class="keyword">null</span>)&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;删除失败&quot;</span>);</span><br><span class="line">            <span class="keyword">return</span> pHead;</span><br><span class="line">        &#125;</span><br><span class="line">        p.next=p.next.next;</span><br><span class="line">        <span class="keyword">return</span> pHead;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//删除排序后的重复节点(重复节点只留一个)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteReNode</span><span class="params">(ListNode pHead)</span></span>&#123;</span><br><span class="line">        ListNode p = pHead;</span><br><span class="line">        <span class="keyword">while</span>(p!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(p.next!=<span class="keyword">null</span>&amp;&amp;p.val==p.next.val)&#123;</span><br><span class="line">                p.next=p.next.next;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                p=p.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> pHead;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//删除排序后的重复节点(重复节点都删除)</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteReNodeAll</span><span class="params">(ListNode pHead)</span></span>&#123;</span><br><span class="line">        ListNode p = pHead;<span class="comment">//链表遍历指针</span></span><br><span class="line">        ListNode newHead=<span class="keyword">new</span> ListNode();<span class="comment">//用于存放不重复节点</span></span><br><span class="line">        ListNode q=newHead;<span class="comment">//新链表的构建指针</span></span><br><span class="line">        ListNode pre=p;</span><br><span class="line">        <span class="keyword">while</span>(p!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(p.next!=<span class="keyword">null</span>&amp;&amp;p.val==p.next.val)&#123;<span class="comment">//如果当前节点后下一个节点相同，则p往后移</span></span><br><span class="line">                p=p.next;</span><br><span class="line"></span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(p.next!=<span class="keyword">null</span>)&#123;<span class="comment">//如果当前节点的值和后一节点的值不同，则当前节点是有可能不是重复节点，判断pre是否等于p</span></span><br><span class="line">                <span class="keyword">if</span>(pre==p)&#123;<span class="comment">//如果pre==p,说明p当前节点不是重复节点，则将该节点加入newHead中</span></span><br><span class="line">                    q.next=<span class="keyword">new</span> ListNode(p.val);</span><br><span class="line">                    q=q.next;</span><br><span class="line">                &#125;</span><br><span class="line">                pre=p.next;</span><br><span class="line">                p=p.next;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;<span class="comment">//如果p.next为null</span></span><br><span class="line">                <span class="keyword">if</span>(p==pre)&#123;</span><br><span class="line">                    q.next=<span class="keyword">new</span> ListNode(pre.val);</span><br><span class="line">                    q=q.next;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        q=<span class="keyword">null</span>;</span><br><span class="line">        <span class="keyword">return</span> newHead.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Main op = <span class="keyword">new</span> Main();</span><br><span class="line">        ListNode pHead =  <span class="keyword">new</span> ListNode();</span><br><span class="line">        System.out.println(<span class="string">&quot;创建链表&quot;</span>);</span><br><span class="line">        pHead=op.createListNode();</span><br><span class="line">        op.display(pHead);</span><br><span class="line">        System.out.println(<span class="string">&quot;链表pos处增加节点&quot;</span>);</span><br><span class="line">        pHead=op.addNode(pHead, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">        op.display(pHead);</span><br><span class="line">        System.out.println(<span class="string">&quot;删除链表pos处节点&quot;</span>);</span><br><span class="line">        pHead=op.deleteNode(pHead, <span class="number">2</span>);</span><br><span class="line">        op.display(pHead);</span><br><span class="line">        System.out.println(<span class="string">&quot;删除链表的重复值，但是保留一个&quot;</span>);</span><br><span class="line">        op.deleteReNode(pHead);</span><br><span class="line">        op.display(pHead);</span><br><span class="line">        System.out.println(<span class="string">&quot;删除链表的重复值&quot;</span>);</span><br><span class="line">        pHead=op.deleteReNodeAll(pHead);</span><br><span class="line">        op.display(pHead);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><img data-src="https://img-blog.csdnimg.cn/20200831103309462.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>链表</category>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>计算机网络</title>
+    <url>/2020/08/31/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
+    <content><![CDATA[<h2 id="OSI七层协议模型、TCP-IP四层模型和五层协议体系结构"><a href="#OSI七层协议模型、TCP-IP四层模型和五层协议体系结构" class="headerlink" title="OSI七层协议模型、TCP/IP四层模型和五层协议体系结构"></a>OSI七层协议模型、TCP/IP四层模型和五层协议体系结构</h2><p>OSI七层协议模型：物理层、数据链路层、网络层、运输层、会话层、表示层和应用层。</p>
+<p>TCP/IP是四层协议模型：网络接口层、<strong>网际层、运输层和应用层。</strong></p>
+<p>网络五层模型：物理层、数据链路层、网络层、运输层和应用层。</p>
+<p><strong>1、物理层</strong></p>
+<p>主要定义物理设备标准，例如网线的接口类型、光线的接口类型、各种传输介质的传输速率等。他的主要作用是传入比特流（就是由1、0转化为电流强弱来进行传输，到达目的地后再转化为1、0，也就是我们通常所说的数模转换与模数转换）。这一层的数据叫做比特流。</p>
+<p><strong>2、数据链路层</strong></p>
+<p>定义了如何让数据格式化进行传输，以及如何让控制对物理介质的访问。这一层通常还提供了错误检测和纠正，以保证数据的可靠传输。</p>
+<p><strong>3、网络层</strong></p>
+<p>在位于不同地理位置的网络中的两个主机之间提供连接和路径选择。Internet的发展使得从世界各站点访问信息的用户数大大增加，而网络层正是管理这种连接的层。</p>
+<p><strong>4、传输层（TCP/UDP）</strong></p>
+<p>定义了一些传输数据的协议和端口号（WWW端口80等），如：TCP（传输控制协议TCP，传输效率低，可靠性强，用于传输可靠性要求高，数据量大的数据）和UDP（用户数据报协议UDP，与TCP特性恰恰相反，用于传输可靠性要求不高、数据量小的数据，如QQ聊天数据就是通过这种方式传输的）。主要是将从下层的接收的数据进行分段和传输，到达目的地后再进行传输。常常把这一层数据叫做段。</p>
+<p><strong>5、会话层</strong></p>
+<p>通过运输层（端口号：传输端口与接收端口）建立数据传输的通路。主要在你的系统之间发起会话或者就受会话请求（设备之间需要相互认识可以是IP地址也可以是MAC地址或者主机名）。</p>
+<p><strong>6、表示层</strong></p>
+<p>可以确保一个系统的应用层所发送的信息可以被另一个系统的应用层读取。例如，PC程序与另一台程序计算机进行通信，其中一台计算机使用扩展二一十进制交换码（EBCDIC），而另一台则使用美国信息交换标准码（ASCII）来表示相同的字符。如有必要，表示层会通过使用一种通用格式来实现多种数据格式之间的转换。</p>
+<p><strong>7、应用层</strong></p>
+<p>是最靠近用户的OSI层。这一层为用户的应用程序（如：电子邮件、文件传输和仿真终端）提供网络服务。</p>
+<p>​    物理层：RJ45、CLOCK、IEEE802.3（中继器、集线器）</p>
+<p>​    数据链路层：PPP、FR、HDLC、VLAN、MAC（网桥、交换机）</p>
+<p>​    <strong>网络层：</strong>IP、ICMP、ARP、RARP、OSPF、IPX、RIP、IGRP（路由器）</p>
+<p>​    <strong>传输层：</strong>TCP、UDP、SPX</p>
+<p>​    会话层：NFS、SQL、NETBIOS、RPC</p>
+<p>​    表示层：JPEG、MPEG、ASII</p>
+<p>​    <strong>应用层：</strong>FTP、DNS、Telnet、SMTP、HTTP、WWW、NFS</p>
+<h2 id="三次握手，四次挥手"><a href="#三次握手，四次挥手" class="headerlink" title="三次握手，四次挥手"></a>三次握手，四次挥手</h2><p><strong>三次握手</strong></p>
+<p><strong>刚开始客户端处于 closed 的状态，服务端处于 listen 状态</strong></p>
+<p>1、第一次握手：客户端给服务端发一个 SYN 报文，并指明客户端的初始化序列号 <strong>ISN(c)**。此时客户端处于 **SYN_Send</strong> 状态。</p>
+<p>2、第二次握手：服务器收到客户端的 SYN 报文之后，会以自己的 SYN 报文作为应答，并且也是指定了自己的初始化序列号 ISN(s)，同时会把客户端的 ISN + 1 作为 ACK 的值，表示自己已经收到了客户端的 SYN，此时服务器处于 <strong>SYN_REVD</strong> 的状态。</p>
+<p>3、第三次握手：客户端收到 SYN 报文之后，会发送一个 ACK 报文，当然，也是一样把服务器的 ISN + 1 作为 ACK 的值，表示已经收到了服务端的 SYN 报文，此时客户端处于 <strong>establised</strong> 状态。</p>
+<p>4、服务器收到 ACK 报文之后，也处于 <strong>establised 状态</strong>，此时，双方就建立起了连接。</p>
+<p>第一次、第二次握手不可以携带数据，而第三次握手是可以携带数据</p>
+<p><strong>四次挥手</strong></p>
+<p>1、第一次挥手：客户端发送一个 FIN 报文，报文中会指定一个序列号。此时客户端处于<strong>FIN_WAIT1</strong>状态。</p>
+<p>2、第二次握手：服务端收到 FIN 之后，会发送 ACK 报文，且把客户端的序列号值 + 1 作为 ACK 报文的序列号值，表明已经收到客户端的报文了，此时服务端处于 <strong>CLOSE_WAIT</strong>状态。</p>
+<p>3、第三次挥手：如果服务端也想断开连接了，和客户端的第一次挥手一样，发给 FIN 报文，且指定一个序列号。此时服务端处于 <strong>LAST_ACK</strong> 的状态。</p>
+<p>4、第四次挥手：客户端收到 FIN 之后，一样发送一个 ACK 报文作为应答，且把服务端的序列号值 + 1 作为自己 ACK 报文的序列号值，此时客户端处于 <strong>TIME_WAIT</strong> 状态。需要过一阵子以确保服务端收到自己的 ACK 报文之后才会进入 CLOSED 状态</p>
+<p>5、服务端收到 ACK 报文之后，就处于关闭连接了，处于 CLOSED 状态。</p>
+<h2 id="Http1-1和1-0的区别"><a href="#Http1-1和1-0的区别" class="headerlink" title="Http1.1和1.0的区别"></a>Http1.1和1.0的区别</h2><p><strong>1.缓存处理</strong></p>
+<p>http1.0使用header里的if-Modified-Since，Expires来作为缓存的标准。</p>
+<p>http1.1引入更多的缓存控制策略Entity tag等。</p>
+<p><strong>2.带宽优化及网络连接的使用</strong></p>
+<p>http1.0存在浪费带宽的情况，客户端只是需要某个对象的一部分，而服务器却将整个对象送过来了，并且不支持断点续传功能。</p>
+<p>http1.1在请求头引入了range头域，它允许只请求资源的某个部分。</p>
+<p><strong>3.错误通知的处理</strong></p>
+<p>http1.1新增了24个状态码</p>
+<p><strong>4.长连接</strong></p>
+<p>http1.1支持长连接和请求的流水线处理。</p>
+<h2 id="http请求502和504的区别"><a href="#http请求502和504的区别" class="headerlink" title="http请求502和504的区别"></a>http请求502和504的区别</h2><p>502：作为网关或者代理工作的服务器尝试执行请求时，从上游服务器接收到无效的响应。</p>
+<p>504：作为网关或者代理工作的服务器尝试执行请求时，未能及时从上游服务器（URI标识出的服务器，例如HTTP、FTP、LDAP）或者辅助服务器（例如DNS）收到响应。</p>
+<h2 id="http和https的区别"><a href="#http和https的区别" class="headerlink" title="http和https的区别"></a>http和https的区别</h2><p>http是明文传输、https是加密的安全传输</p>
+<p>连接的端口不一样，http是80，https是443</p>
+<p>http连接很简单，没有状态；https是ssl加密的传输，身份认证的网络协议，相对http传输较安全。</p>
+<h2 id="浏览器从接收到一个URL，到最后展示出页面，经历了哪些过程"><a href="#浏览器从接收到一个URL，到最后展示出页面，经历了哪些过程" class="headerlink" title="浏览器从接收到一个URL，到最后展示出页面，经历了哪些过程"></a>浏览器从接收到一个URL，到最后展示出页面，经历了哪些过程</h2><p>1.DNS解析</p>
+<p>2.TCP连接 </p>
+<p>3.发送HTTP请求 </p>
+<p>4.服务器处理请求并返回HTTP报文 </p>
+<p>5.浏览器解析渲染页面</p>
+<h2 id="负载均衡-反向代理的优点"><a href="#负载均衡-反向代理的优点" class="headerlink" title="负载均衡 反向代理的优点"></a>负载均衡 反向代理的优点</h2><p>反向代理（Reverse Proxy）方式是指以代理服务器来接受internet上的连接请求，然后将请求转发给内部网络上的服务器，并将从服务器上得到的结果返回给internet上请求连接的客户端，此时代理服务器对外就表现为一个服务器。</p>
+<p>反向代理负载均衡技术是把将来自internet上的连接请求以反向代理的方式动态地转发给内部网络上的多台服务器进行处理，从而达到负载均衡的目的。</p>
+<p>拥塞控制</p>
+<p>滑动窗口</p>
+<p>tcp/udp区别</p>
+<p>DNS如何解析</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计模式</title>
+    <url>/2020/08/31/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<p>设计模式（Design Pattern）是前辈们对代码开发经验的总结，是解决特定问题的一系列套路。是一套用来提高代码可复用性、可维护性、可读性、稳健性以及安全性的解决方案。</p>
+<h2 id="设计模式的基本要素"><a href="#设计模式的基本要素" class="headerlink" title="设计模式的基本要素"></a>设计模式的基本要素</h2><p><strong>1.模型名称</strong></p>
+<p>每一个模式都有自己的名字，通常用一两个词来描述，可以根据模式的问题、特点、解决方案、功能和效果来命名。模式名称（PatternName）有助于我们理解和记忆该模式，也方便我们来讨论自己的设计。</p>
+<p><strong>2.问题</strong></p>
+<p>问题（Problem）描述了该模式的应用环境，即何时使用该模式。它解释了设计问题和问题存在的前因后果，以及必须满足的一系列先决条件。</p>
+<p><strong>3.解决方案</strong></p>
+<p>模式问题的解决方案（Solution）包括设计的组成成分、它们之间的相互关系及各自的职责和协作方式。因为模式就像一个模板，可应用于多种不同场合，所以解决方案并不描述一个特定而具体的设计或实现，而是提供设计问题的抽象描述和怎样用一个具有一般意义的元素组合（类或对象的组合）来解决这个问题。</p>
+<p><strong>4.效果</strong></p>
+<p>描述了模式的应用效果以及使用该模式应该权衡的问题，即模式的优缺点。主要是对时间和空间的衡量，以及该模式对系统的灵活性、扩充性、可移植性的影响，也考虑其实现问题。显式地列出这些效果（Consequence）对理解和评价这些模式有很大的帮助。</p>
+<h2 id="设计模式分类"><a href="#设计模式分类" class="headerlink" title="设计模式分类"></a>设计模式分类</h2><p>设计模式一共有<strong>23</strong>个，主要分为三大类。</p>
+<p>创建型模式，共5种：工厂方法模式、抽象工厂模式、单例模式、建造者模式、原型模式</p>
+<p>结构型模式，共7种：适配器模式、装饰器模式、代理模式、外观模式、桥接模式、组合模式、享元模式</p>
+<p>行为型模式，共11种：策略模式、模板方法模式、观察者模式、迭代子模式、责任链模式、命令模式、备忘录模式、状态模式、访问者模式、中介者模式、解释器模式。</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法|高级算法</title>
+    <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="id全局唯一且自增，如何实现"><a href="#id全局唯一且自增，如何实现" class="headerlink" title="id全局唯一且自增，如何实现"></a>id全局唯一且自增，如何实现</h2><p>如何在分布式集群中，生成全局唯一的ID</p>
+<p>方法一：UUID</p>
+<p>方法二：数据库自增主键</p>
+<p><strong>方法三：SnowFlake雪花算法</strong></p>
+<p>Twitter公司采用的一种算法，目的是在分布式系统中生成全局唯一且趋势递增的ID。</p>
+<p>雪花ID生成的是一个64位的二进制正整数，然后转换成10进制的数。64位二进制数由如下部分组成：</p>
+<p><img data-src="https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGovUVwFkfA0yRdCYoer9mqxdkKsBd5aD96r6ygicrXlKjwmsIBCZpF4rrkUM7FR1U1zZdL4yjEF1Fw/640?wx_fmt=png" alt="640?wx_fmt=png"></p>
+<p><strong>1位标识符</strong>：始终是0，由于long基本类型在Java中是带符号的，最高位是符号位，正数是0，负数是1，所以id一般是正数，最高位是0。</p>
+<p><strong>41位时间戳</strong>：41位时间截不是存储当前时间的时间截，而是存储时间截的差值（当前时间截 - 开始时间截 )得到的值，这里的的开始时间截，一般是我们的id生成器开始使用的时间，由我们程序来指定的。</p>
+<p><strong>10位机器标识码</strong>：可以部署在1024个节点，如果机器分机房（IDC）部署，这10位可以由 5位机房ID + 5位机器ID 组成。</p>
+<p><strong>12位序列</strong>：毫秒内的计数，12位的计数顺序号支持每个节点每毫秒(同一机器，同一时间截)产生4096个ID序号</p>
+<p>优点：</p>
+<p>1.生成ID不依赖于DB，完全在内存中生成，高性能高可用。</p>
+<p>2.ID呈趋势递增，后续插入索引树的时候性能较好。</p>
+<p>缺点：</p>
+<p>依赖于系统时钟的一致性。如果某台机器的系统时钟回拨，有可能造成id冲突，或者id乱序。</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>高级算法</category>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>高级算法</tag>
       </tags>
   </entry>
 </search>

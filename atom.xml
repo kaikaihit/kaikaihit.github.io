@@ -6,7 +6,7 @@
   <link href="kaikaihit.github.io/atom.xml" rel="self"/>
   
   <link href="kaikaihit.github.io/"/>
-  <updated>2020-09-07T07:01:58.997Z</updated>
+  <updated>2020-09-09T00:25:16.491Z</updated>
   <id>kaikaihit.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>知识图谱</title>
+    <link href="kaikaihit.github.io/2020/09/08/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+    <id>kaikaihit.github.io/2020/09/08/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/</id>
+    <published>2020-09-08T06:42:42.000Z</published>
+    <updated>2020-09-09T00:25:16.491Z</updated>
+    
+    <content type="html"><![CDATA[<p><img data-src="https://www.zuozuovera.com/usr/uploads/2017/11/994330753.png" alt="知识图谱.png"></p><p><img data-src="https://www.zuozuovera.com/usr/uploads/2017/03/2017-03-20_231425.png" alt="img"></p><p><img data-src="https://pic4.zhimg.com/v2-a6e61bbaf7f67c30d9329d28c7872c34_r.jpg" alt="preview"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;img data-src=&quot;https://www.zuozuovera.com/usr/uploads/2017/11/994330753.png&quot; alt=&quot;知识图谱.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&quot;https://www.zuozuovera</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>操作系统</title>
@@ -591,34 +612,6 @@
     <category term="Java" scheme="kaikaihit.github.io/tags/Java/"/>
     
     <category term="Java基础" scheme="kaikaihit.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>工业机理</title>
-    <link href="kaikaihit.github.io/2020/08/17/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86/"/>
-    <id>kaikaihit.github.io/2020/08/17/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86/</id>
-    <published>2020-08-17T01:56:59.000Z</published>
-    <updated>2020-08-17T03:30:04.223Z</updated>
-    
-    <content type="html"><![CDATA[<h4 id="工业机理模型可以实现四类功能"><a href="#工业机理模型可以实现四类功能" class="headerlink" title="工业机理模型可以实现四类功能"></a>工业机理模型可以实现四类功能</h4><ol><li><strong>描述</strong>，描述设备、工艺发生了什么；</li><li><strong>诊断</strong>，发生了什么问题、什么地方发生了问题；</li><li><strong>预测</strong>，如果不处理设备将有什么问题，能耗会有什么问题，质量会有什么问题；</li><li><strong>决策</strong>、最后怎么办，是对那个环节进行维修，那个环节进行优化，或者保养，增加或者减少物料的输入等等，给操作手、给总工、给管理层提供一个解决方案。</li></ol><a id="more"></a><h4 id="机理模型落地，会有四个阶段："><a href="#机理模型落地，会有四个阶段：" class="headerlink" title="机理模型落地，会有四个阶段："></a>机理模型落地，会有四个阶段：</h4><ol><li><strong>理论推理</strong>，把工业中的热平衡、物质平衡等通过抽象的方法形成理论模型；</li><li><strong>实验验证</strong>，对理论模型进行实验验证，仿真验证的过程；</li><li><strong>模拟择优</strong>，在虚拟世界里面去完成，通过大数据模拟选择最优的结果；</li><li>大数据分析通过模拟＋大数据发现新的规律。</li></ol><h4 id="机理模型分类"><a href="#机理模型分类" class="headerlink" title="机理模型分类"></a><strong>机理模型分类</strong></h4><p>1.机理模型（白箱）：存在物理关系，通过物理或数学公式来概化表达的模型。这类模型存在在各行各业。根据对象、生产过程的内部机制或者物质流的传递机理建立起来的精确数学模型。它是基于质量平衡方程、能量平衡方程、动量平衡方程、相平衡方程以及某些物性方程、化学反应定律、电路基本定律等而获得对象或过程的数学模型。机理模型的优点是参数具有非常明确的物理意义。</p><p>2.非机理模型（黑箱或灰箱）：人工智能，以神经网络为代表，当然也有决策树、遗传算法以及支持向量机等等</p><hr><p>以后的趋势必然是机器学习与传统数学模型融合。</p><p><strong>人工智能</strong>——&gt;深度学习——&gt;<strong>神经网络(模型)**——&gt;计算机视觉——&gt;**工业界</strong>（自动驾驶、安防、医疗）</p><p><a href="https://cloud.tencent.com/developer/news/25568">https://cloud.tencent.com/developer/news/25568</a></p><p>例如：SVM与传统的内涝数学模型有机结合在一起</p><p>基于物理过程的数学模型已经广泛应用于城市内涝模拟中，但是数值模型在应用到实时内涝预报中，最大的瓶颈既是需要大量的计算资源和模拟时间，虽然有各种各样的简化模型技术被提出来，但是这些技术往往只能应用在满足一定前提条件的项目中</p><p><strong>首先，数据在哪里？</strong></p><p>▲一类是管理数据：结构化的SQL数据为主，如产品属性、工艺、生产、采购、订单、服务等数据，这类数据一般来自企业的ERP、SCM、PLM甚至MES等系统，数据量本身不大，却具有很大的挖掘价值；</p><p>▲另一类则是机器运行和IoT的数据：以非结构化、流式数据居多，如设备工况（压力、温度、振动、应力等）、音视频、日志文本等数据，这类数据一般采集自设备PLC、SCADA以及部分外装传感器，数据量很大，采集频率高，需要结合边缘计算在本地做一些预处理。</p><p>总的来讲，由于场景的割裂和分散，工业数据本身具有量大、多源、异构、实时性要求高等特点，而且随着未来280亿设备逐步接入，这些特性将会进一步加强，这是做工业大数据服务的核心难点之一，和互联网大数据不仅量级不同，结构不同，应用也完全不同。</p><p><strong>其次，基于这些工业数据，平台层应该提供哪些服务？</strong></p><p>▲完整的协议解析：数据采集首先要完成工业协议的打通。以应用层协议为例，EtherNet/IP和PROFINET的市场占有率最大，其次是EtherCAT、Modbus-TCP和EtherNetPOWERLINK；</p><p>▲标准化的数据整合：采集上来的数据要做统一的主数据管理，第一步是建立标准。一般来讲，我们先要用ISO或其他业内标准，制定统一的编码、结构、流转方式和属性，确保数据的一致性，这一点非常重要。</p><p>在项目实施的历程中，逐步积累行业知识库、合适的算法组件以及相关机理模型，这一点也很重要，这是从数据标准进化到业务标准化的关键一步，是为实现真正的产品层面的微服务化打下基础。</p><p>强大的PaaS支持：工业数据本身的特殊性导致平台必须要有强大的中层支撑能力。我们以时序数据库为例，它是设备工况和传感器数据的典型品种。这类数据频率高、量大，用传统关系型数据库处理，需要每次把所有值拉出来计算，吞吐量极大，性能很差。所以，一个高压缩、高性能的时序数据库，就是平台层必备的能力之一。</p><p><strong>最后，我们应该做哪些应用？</strong></p><p>▲设备级：质量控制。在工业智能时代，如果我们能够采集到合适的实时数据，结合该设备所适用的机理模型，就有可能用机器学习的方法挖掘出产品质量与关键数据之间的关联或因果关系，也就有可能实现实时在线的质量控制和故障预警，如果数据频率能对工艺流程形成完美包络，我们还有可能实现最大限度的效率提升。</p><p>▲厂级：计划排产。工业智能的最终目的是要实现大规模的个性化定制，即C2M。这一问题的目标是实现当时当地的产能最优，约束条件来自企业的产线设备、人员、产品属性、供应链数据等等，通过历史数据的学习和训练，不难形成一个较好的预测模型。</p><p>这一模型能根据产线和工厂的实时数据动态分析，动态调整，以帮助企业实现准确把控，最大化经济效益。</p>]]></content>
-    
-    
-    <summary type="html">&lt;h4 id=&quot;工业机理模型可以实现四类功能&quot;&gt;&lt;a href=&quot;#工业机理模型可以实现四类功能&quot; class=&quot;headerlink&quot; title=&quot;工业机理模型可以实现四类功能&quot;&gt;&lt;/a&gt;工业机理模型可以实现四类功能&lt;/h4&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;描述&lt;/strong&gt;，描述设备、工艺发生了什么；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;诊断&lt;/strong&gt;，发生了什么问题、什么地方发生了问题；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;预测&lt;/strong&gt;，如果不处理设备将有什么问题，能耗会有什么问题，质量会有什么问题；&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;决策&lt;/strong&gt;、最后怎么办，是对那个环节进行维修，那个环节进行优化，或者保养，增加或者减少物料的输入等等，给操作手、给总工、给管理层提供一个解决方案。&lt;/li&gt;
-&lt;/ol&gt;</summary>
-    
-    
-    
-    <category term="工业机理模型" scheme="kaikaihit.github.io/categories/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86%E6%A8%A1%E5%9E%8B/"/>
-    
-    
-    <category term="知识图谱" scheme="kaikaihit.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
-    
-    <category term="工业机理" scheme="kaikaihit.github.io/tags/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86/"/>
     
   </entry>
   

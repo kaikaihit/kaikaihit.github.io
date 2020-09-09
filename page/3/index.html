@@ -236,7 +236,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -306,7 +306,16 @@
           <a href="https://dblp.uni-trier.de/db/conf/IEEEscc/" title="https:&#x2F;&#x2F;dblp.uni-trier.de&#x2F;db&#x2F;conf&#x2F;IEEEscc&#x2F;" rel="noopener" target="_blank">SCC</a>
         </li>
         <li class="links-of-blogroll-item">
+          <a href="https://www.cnki.net/" title="https:&#x2F;&#x2F;www.cnki.net&#x2F;" rel="noopener" target="_blank">cnki</a>
+        </li>
+        <li class="links-of-blogroll-item">
           <a href="https://sci-hub.tw/" title="https:&#x2F;&#x2F;sci-hub.tw&#x2F;" rel="noopener" target="_blank">SCI-hub</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://scholar.google.com.hk/" title="https:&#x2F;&#x2F;scholar.google.com.hk&#x2F;" rel="noopener" target="_blank">Google Scholar</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://translate.google.cn/" title="https:&#x2F;&#x2F;translate.google.cn&#x2F;" rel="noopener" target="_blank">Google Translate</a>
         </li>
     </ul>
   </div>
@@ -352,6 +361,110 @@
       
 
       
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="kaikaihit.github.io/2020/08/30/Java-EE%E5%9F%BA%E7%A1%80-Struts/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="kaikai">
+      <meta itemprop="description" content="不断的奋斗就是走上成功之路">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhangkai's Blogs">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/30/Java-EE%E5%9F%BA%E7%A1%80-Struts/" class="post-title-link" itemprop="url">Java EE基础|Struts</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-08-30 18:37:23 / 修改时间：19:14:17" itemprop="dateCreated datePublished" datetime="2020-08-30T18:37:23+08:00">2020-08-30</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/" itemprop="url" rel="index"><span itemprop="name">Java面试宝典</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/Struts/" itemprop="url" rel="index"><span itemprop="name">Struts</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/08/30/Java-EE%E5%9F%BA%E7%A1%80-Struts/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/30/Java-EE%E5%9F%BA%E7%A1%80-Struts/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span class="post-meta-item-text">本文字数：</span>
+              <span>289</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="STRUTS的应用场景"><a href="#STRUTS的应用场景" class="headerlink" title="STRUTS的应用场景"></a>STRUTS的应用场景</h2><p>Struts是采用Java Servlet/JavaServer Pages技术，开发Web应用程序的开放源码的framework。采用Struts开发出基于MVC（Model、View和Controller）设计模式的应用架构。有如下功能：</p>
+<p>包含一个controller servlet，能将用户的请求发送到相应的Action对象。</p>
+<p>JSP自由Tag库，并且在controller servlet中提供关联支持，帮助开发员创建交互式表单应用。</p>
+<p>提供一系列实用对象：XML处理、通过Java reflection APIs自动处理JavaBeans属性、国际化的提示和消息。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -785,128 +898,6 @@
 <li>方法区的静态变量和常量引用的对象</li>
 <li>本地方法栈中JNI引用的对象。</li>
 </ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="kaikaihit.github.io/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-JVM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="kaikai">
-      <meta itemprop="description" content="不断的奋斗就是走上成功之路">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhangkai's Blogs">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-JVM/" class="post-title-link" itemprop="url">Java SE基础|JVM</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-28 20:20:14" itemprop="dateCreated datePublished" datetime="2020-08-28T20:20:14+08:00">2020-08-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-29 16:18:47" itemprop="dateModified" datetime="2020-08-29T16:18:47+08:00">2020-08-29</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/" itemprop="url" rel="index"><span itemprop="name">Java面试宝典</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/JVM/" itemprop="url" rel="index"><span itemprop="name">JVM</span></a>
-                </span>
-            </span>
-
-          
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-JVM/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-JVM/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span class="post-meta-item-text">本文字数：</span>
-              <span>1k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="JVM加载class文件的原理"><a href="#JVM加载class文件的原理" class="headerlink" title="JVM加载class文件的原理"></a>JVM加载class文件的原理</h2><p>JVM中类的装载是由ClassLoader和它的子类来实现的，Java ClassLoader是一个重要的Java运行时系统组件。它负责在运行时查找和装入类文件的类。</p>
-<p>类装载方式，有两种。</p>
-<p>隐式装载：程序在运行过程中当碰到通过new等方式生成对象时，隐式调用类装载器加载对应的类到jvm中。</p>
-<p>显示装载：通过class.forname()等方法，显示加载需要的类，隐式加载与显式加载的区别：两者本质是一样的。</p>
-<p>Java类的加载是动态的，它并不会一次性将所有类全部加载后再运行，而是保证程序运行的基础类(像是基类)完全加载到jvm中，至于其他类，则在需要的时候才加载。这当然就是为了节省内存开销。</p>
-<h2 id="Java虚拟机"><a href="#Java虚拟机" class="headerlink" title="Java虚拟机"></a>Java虚拟机</h2><p>可执行Java字节码的虚拟机进程。Java源文件被编译成能被Java虚拟机执行的字节码文件。</p>
-<p>Java被设计成允许应用程序可以运行在任意的平台，而不需要程序员为每一个平台单独重写或者重写编译。Java虚拟机让这个变为可能。</p>
-<p>（1）堆内存分配</p>
-<p>JVM初始内存由-Xms指定，默认是物理内存的1/64；JVM最大分配内存由-Xms指定，默认是物理内存的1/4。默认空余堆内存小 于40%时，JVM就会增大堆直到-Xmx的最大限制；空余堆内存大于70%时，JVM会减少堆直到-Xms的最小限制。因此服务器一般设置-Xms、 -Xmx相等以避免在每次GC后调整堆的大小</p>
-<p>（2）非堆内存分配</p>
-<p>JVM使用-XX:PermSize设置非堆内存初始值，默认是物理内存的1/64；由XX:MaxPermSize设置最大非堆内存的大小，默认是物理内存的1/4。</p>
-<p>（3）VM最大内存</p>
-<p>JVM内存限制于实际的最大物理内存，结社物理内存无限大的话，JVM内存的最大值跟操作系统有很大的关系。32位处理器虽然可控内存空间有4GB。但是具体的操作系统会给一个限制，这个限制一般是2GB~3GB（一般来说Windows系统下为1.5G-2G，Linux系 统下为2G-3G），而64bit以上的处理器就不会有限制了。</p>
-<p>（4）几个不同公司不同版本JVM最大堆内存</p>
-<p><img data-src="https://uploadfiles.nowcoder.com/images/20180926/308572_1537966762062_914FBB519FF1ACBAF602B2DCBD5184D6" alt="img"></p>
-<h2 id="哪些可作为Root对象"><a href="#哪些可作为Root对象" class="headerlink" title="哪些可作为Root对象"></a>哪些可作为Root对象</h2><p>\1. 虚拟机栈中的引用对象<br>\2. 本地方法栈中JNI引用对象<br>\3. 方法区中类静态属性引用的对象<br>\4. 方法区中常量引用对象（如字符串常量池）<br>\5. 被同步锁持有的对象<br>\6. 内部引用（如基本数据类型对应的class对象、常驻的异常对象NullPointerException等、系统类加载器）</p>
 
       
     </div>

@@ -25,25 +25,18 @@
     var CONFIG = {"hostname":"kaikaihit.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="id全局唯一且自增，如何实现如何在分布式集群中，生成全局唯一的ID 方法一：UUID 方法二：数据库自增主键 方法三：SnowFlake雪花算法 Twitter公司采用的一种算法，目的是在分布式系统中生成全局唯一且趋势递增的ID。 雪花ID生成的是一个64位的二进制正整数，然后转换成10进制的数。64位二进制数由如下部分组成：">
-<meta property="og:type" content="article">
-<meta property="og:title" content="数据结构与算法|高级算法">
-<meta property="og:url" content="kaikaihit.github.io/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/index.html">
+  <meta name="description" content="不断的奋斗就是走上成功之路">
+<meta property="og:type" content="website">
+<meta property="og:title" content="zhangkai&#39;s Blogs">
+<meta property="og:url" content="kaikaihit.github.io/archives/2020/09/index.html">
 <meta property="og:site_name" content="zhangkai&#39;s Blogs">
-<meta property="og:description" content="id全局唯一且自增，如何实现如何在分布式集群中，生成全局唯一的ID 方法一：UUID 方法二：数据库自增主键 方法三：SnowFlake雪花算法 Twitter公司采用的一种算法，目的是在分布式系统中生成全局唯一且趋势递增的ID。 雪花ID生成的是一个64位的二进制正整数，然后转换成10进制的数。64位二进制数由如下部分组成：">
+<meta property="og:description" content="不断的奋斗就是走上成功之路">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGovUVwFkfA0yRdCYoer9mqxdkKsBd5aD96r6ygicrXlKjwmsIBCZpF4rrkUM7FR1U1zZdL4yjEF1Fw/640?wx_fmt=png">
-<meta property="article:published_time" content="2020-08-31T07:37:02.000Z">
-<meta property="article:modified_time" content="2020-09-07T07:02:59.163Z">
 <meta property="article:author" content="kaikai">
-<meta property="article:tag" content="Java">
-<meta property="article:tag" content="Java基础">
-<meta property="article:tag" content="高级算法">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGovUVwFkfA0yRdCYoer9mqxdkKsBd5aD96r6ygicrXlKjwmsIBCZpF4rrkUM7FR1U1zZdL4yjEF1Fw/640?wx_fmt=png">
 
 
-<link rel="canonical" href="kaikaihit.github.io/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/">
+<link rel="canonical" href="kaikaihit.github.io/archives/2020/09/">
 
 
 <script class="page-configurations">
@@ -51,12 +44,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : true,
+    isPost : false,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>数据结构与算法|高级算法 | zhangkai's Blogs</title>
+  <title>归档 | zhangkai's Blogs</title>
   
 
 
@@ -216,7 +209,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -228,7 +221,6 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
-          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#id%E5%85%A8%E5%B1%80%E5%94%AF%E4%B8%80%E4%B8%94%E8%87%AA%E5%A2%9E%EF%BC%8C%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.</span> <span class="nav-text">id全局唯一且自增，如何实现</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -365,204 +357,57 @@
 </noscript>
 
 
-    <div class="main-inner post posts-expand">
+    <div class="main-inner archive posts-collapse">
       
 
       
 
-    
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="kaikaihit.github.io/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="kaikai">
-      <meta itemprop="description" content="不断的奋斗就是走上成功之路">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="zhangkai's Blogs">
-    </span>
-
-    
-    
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          数据结构与算法|高级算法
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-08-31 15:37:02" itemprop="dateCreated datePublished" datetime="2020-08-31T15:37:02+08:00">2020-08-31</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-07 15:02:59" itemprop="dateModified" datetime="2020-09-07T15:02:59+08:00">2020-09-07</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/" itemprop="url" rel="index"><span itemprop="name">Java面试宝典</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">高级算法</span></a>
-                </span>
-                  ，
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" itemprop="url" rel="index"><span itemprop="name">数据结构与算法</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="far fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
   
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-              <span class="post-meta-item-text">本文字数：</span>
-              <span>536</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-              <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
+  <div class="post-block">
+    <div class="post-content">
+      <div class="collection-title">
+        <span class="collection-header">嗯..! 目前共计 27 篇日志。 继续努力。</span>
+      </div>
 
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-        <h2 id="id全局唯一且自增，如何实现"><a href="#id全局唯一且自增，如何实现" class="headerlink" title="id全局唯一且自增，如何实现"></a>id全局唯一且自增，如何实现</h2><p>如何在分布式集群中，生成全局唯一的ID</p>
-<p>方法一：UUID</p>
-<p>方法二：数据库自增主键</p>
-<p><strong>方法三：SnowFlake雪花算法</strong></p>
-<p>Twitter公司采用的一种算法，目的是在分布式系统中生成全局唯一且趋势递增的ID。</p>
-<p>雪花ID生成的是一个64位的二进制正整数，然后转换成10进制的数。64位二进制数由如下部分组成：</p>
-<p><img data-src="https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGovUVwFkfA0yRdCYoer9mqxdkKsBd5aD96r6ygicrXlKjwmsIBCZpF4rrkUM7FR1U1zZdL4yjEF1Fw/640?wx_fmt=png" alt="640?wx_fmt=png"></p>
-<a id="more"></a>
-
-<p><strong>1位标识符</strong>：始终是0，由于long基本类型在Java中是带符号的，最高位是符号位，正数是0，负数是1，所以id一般是正数，最高位是0。</p>
-<p><strong>41位时间戳</strong>：41位时间截不是存储当前时间的时间截，而是存储时间截的差值（当前时间截 - 开始时间截 )得到的值，这里的的开始时间截，一般是我们的id生成器开始使用的时间，由我们程序来指定的。</p>
-<p><strong>10位机器标识码</strong>：可以部署在1024个节点，如果机器分机房（IDC）部署，这10位可以由 5位机房ID + 5位机器ID 组成。</p>
-<p><strong>12位序列</strong>：毫秒内的计数，12位的计数顺序号支持每个节点每毫秒(同一机器，同一时间截)产生4096个ID序号</p>
-<p>优点：</p>
-<p>1.生成ID不依赖于DB，完全在内存中生成，高性能高可用。</p>
-<p>2.ID呈趋势递增，后续插入索引树的时候性能较好。</p>
-<p>缺点：</p>
-<p>依赖于系统时钟的一致性。如果某台机器的系统时钟回拨，有可能造成id冲突，或者id乱序。</p>
-
+      
+    <div class="collection-year">
+      <span class="collection-header">2020</span>
     </div>
 
-    
-    
-    
-        <div class="reward-container">
-  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
-  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
-    赞赏
-  </button>
-  <div class="post-reward">
-      <div>
-        <img src="/images/wechatpay.png" alt="kaikai 微信">
-        <span>微信</span>
-      </div>
-      <div>
-        <img src="/images/alipay.png" alt="kaikai 支付宝">
-        <span>支付宝</span>
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta">
+        <time itemprop="dateCreated"
+              datetime="2020-09-08T14:42:42+08:00"
+              content="2020-09-08">
+          09-08
+        </time>
       </div>
 
-  </div>
-</div>
+      <div class="post-title">
+          <a class="post-title-link" href="/2020/09/08/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/" itemprop="url">
+            <span itemprop="name">知识图谱</span>
+          </a>
+      </div>
 
-        
-
-<div>
-<ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者： </strong>kaikai
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="/kaikaihit.github.io/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/" title="数据结构与算法|高级算法">kaikaihit.github.io/2020/08/31/数据结构与算法-高级算法/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
-  </li>
-</ul>
-</div>
-
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Java/" rel="tag"># Java</a>
-              <a href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag"># Java基础</a>
-              <a href="/tags/%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/" rel="tag"># 高级算法</a>
-          </div>
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-item">
-                <a href="/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%A0%86%E4%B8%8E%E6%A0%88/" rel="prev" title="数据结构与算法|堆与栈">
-                  <i class="fa fa-chevron-left"></i> 数据结构与算法|堆与栈
-                </a>
-            </div>
-            <div class="post-nav-item">
-                <a href="/2020/08/31/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="next" title="设计模式">
-                  设计模式 <i class="fa fa-chevron-right"></i>
-                </a>
-            </div>
-          </div>
-      </footer>
-    
+      
+    </header>
   </article>
+
+
+    </div>
+  </div>
   
   
+  
+
   
 
 
 
       
-    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {

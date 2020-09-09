@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Java EE基础|Struts</title>
+    <url>/2020/08/30/Java-EE%E5%9F%BA%E7%A1%80-Struts/</url>
+    <content><![CDATA[<h2 id="STRUTS的应用场景"><a href="#STRUTS的应用场景" class="headerlink" title="STRUTS的应用场景"></a>STRUTS的应用场景</h2><p>Struts是采用Java Servlet/JavaServer Pages技术，开发Web应用程序的开放源码的framework。采用Struts开发出基于MVC（Model、View和Controller）设计模式的应用架构。有如下功能：</p>
+<p>包含一个controller servlet，能将用户的请求发送到相应的Action对象。</p>
+<p>JSP自由Tag库，并且在controller servlet中提供关联支持，帮助开发员创建交互式表单应用。</p>
+<p>提供一系列实用对象：XML处理、通过Java reflection APIs自动处理JavaBeans属性、国际化的提示和消息。</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>Struts</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Struts</tag>
+        <tag>Java基础</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>BOM简介</title>
     <url>/2020/08/17/BOM%E7%AE%80%E4%BB%8B/</url>
     <content><![CDATA[<p>BOM（Bill of Material）物料清单，也就是以数据格式来描述产品结构的文件，是计算机可以识别的产品结构数据文件，也是ERP的主导文件。BOM使系统识别产品结构，也是联系与沟通企业各项业务的纽带。</p>
@@ -54,8 +72,8 @@
       </categories>
       <tags>
         <tag>Java</tag>
-        <tag>Hibernate</tag>
         <tag>Java基础</tag>
+        <tag>Hibernate</tag>
       </tags>
   </entry>
   <entry>
@@ -178,24 +196,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Java EE基础|Struts</title>
-    <url>/2020/08/30/Java-EE%E5%9F%BA%E7%A1%80-Struts/</url>
-    <content><![CDATA[<h2 id="STRUTS的应用场景"><a href="#STRUTS的应用场景" class="headerlink" title="STRUTS的应用场景"></a>STRUTS的应用场景</h2><p>Struts是采用Java Servlet/JavaServer Pages技术，开发Web应用程序的开放源码的framework。采用Struts开发出基于MVC（Model、View和Controller）设计模式的应用架构。有如下功能：</p>
-<p>包含一个controller servlet，能将用户的请求发送到相应的Action对象。</p>
-<p>JSP自由Tag库，并且在controller servlet中提供关联支持，帮助开发员创建交互式表单应用。</p>
-<p>提供一系列实用对象：XML处理、通过Java reflection APIs自动处理JavaBeans属性、国际化的提示和消息。</p>
-]]></content>
-      <categories>
-        <category>Java面试宝典</category>
-        <category>Struts</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Java基础</tag>
-        <tag>Struts</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java SE基础|IO和NIOAIO</title>
     <url>/2020/08/29/Java-SE%E5%9F%BA%E7%A1%80-IO%E5%92%8CNIOAIO/</url>
     <content><![CDATA[<h2 id="JAVA中有几种类型的流"><a href="#JAVA中有几种类型的流" class="headerlink" title="JAVA中有几种类型的流"></a>JAVA中有几种类型的流</h2><p>字节流，字符流</p>
@@ -210,36 +210,6 @@
         <tag>Java</tag>
         <tag>Java基础</tag>
         <tag>IO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java SE基础|JVM</title>
-    <url>/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-JVM/</url>
-    <content><![CDATA[<h2 id="JVM加载class文件的原理"><a href="#JVM加载class文件的原理" class="headerlink" title="JVM加载class文件的原理"></a>JVM加载class文件的原理</h2><p>JVM中类的装载是由ClassLoader和它的子类来实现的，Java ClassLoader是一个重要的Java运行时系统组件。它负责在运行时查找和装入类文件的类。</p>
-<p>类装载方式，有两种。</p>
-<p>隐式装载：程序在运行过程中当碰到通过new等方式生成对象时，隐式调用类装载器加载对应的类到jvm中。</p>
-<p>显示装载：通过class.forname()等方法，显示加载需要的类，隐式加载与显式加载的区别：两者本质是一样的。</p>
-<p>Java类的加载是动态的，它并不会一次性将所有类全部加载后再运行，而是保证程序运行的基础类(像是基类)完全加载到jvm中，至于其他类，则在需要的时候才加载。这当然就是为了节省内存开销。</p>
-<h2 id="Java虚拟机"><a href="#Java虚拟机" class="headerlink" title="Java虚拟机"></a>Java虚拟机</h2><p>可执行Java字节码的虚拟机进程。Java源文件被编译成能被Java虚拟机执行的字节码文件。</p>
-<p>Java被设计成允许应用程序可以运行在任意的平台，而不需要程序员为每一个平台单独重写或者重写编译。Java虚拟机让这个变为可能。</p>
-<p>（1）堆内存分配</p>
-<p>JVM初始内存由-Xms指定，默认是物理内存的1/64；JVM最大分配内存由-Xms指定，默认是物理内存的1/4。默认空余堆内存小 于40%时，JVM就会增大堆直到-Xmx的最大限制；空余堆内存大于70%时，JVM会减少堆直到-Xms的最小限制。因此服务器一般设置-Xms、 -Xmx相等以避免在每次GC后调整堆的大小</p>
-<p>（2）非堆内存分配</p>
-<p>JVM使用-XX:PermSize设置非堆内存初始值，默认是物理内存的1/64；由XX:MaxPermSize设置最大非堆内存的大小，默认是物理内存的1/4。</p>
-<p>（3）VM最大内存</p>
-<p>JVM内存限制于实际的最大物理内存，结社物理内存无限大的话，JVM内存的最大值跟操作系统有很大的关系。32位处理器虽然可控内存空间有4GB。但是具体的操作系统会给一个限制，这个限制一般是2GB~3GB（一般来说Windows系统下为1.5G-2G，Linux系 统下为2G-3G），而64bit以上的处理器就不会有限制了。</p>
-<p>（4）几个不同公司不同版本JVM最大堆内存</p>
-<p><img data-src="https://uploadfiles.nowcoder.com/images/20180926/308572_1537966762062_914FBB519FF1ACBAF602B2DCBD5184D6" alt="img"></p>
-<h2 id="哪些可作为Root对象"><a href="#哪些可作为Root对象" class="headerlink" title="哪些可作为Root对象"></a>哪些可作为Root对象</h2><p>\1. 虚拟机栈中的引用对象<br>\2. 本地方法栈中JNI引用对象<br>\3. 方法区中类静态属性引用的对象<br>\4. 方法区中常量引用对象（如字符串常量池）<br>\5. 被同步锁持有的对象<br>\6. 内部引用（如基本数据类型对应的class对象、常驻的异常对象NullPointerException等、系统类加载器）</p>
-]]></content>
-      <categories>
-        <category>Java面试宝典</category>
-        <category>JVM</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Java基础</tag>
-        <tag>JVM</tag>
       </tags>
   </entry>
   <entry>
@@ -271,6 +241,36 @@
         <tag>Java</tag>
         <tag>Java基础</tag>
         <tag>线程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java SE基础|JVM</title>
+    <url>/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-JVM/</url>
+    <content><![CDATA[<h2 id="JVM加载class文件的原理"><a href="#JVM加载class文件的原理" class="headerlink" title="JVM加载class文件的原理"></a>JVM加载class文件的原理</h2><p>JVM中类的装载是由ClassLoader和它的子类来实现的，Java ClassLoader是一个重要的Java运行时系统组件。它负责在运行时查找和装入类文件的类。</p>
+<p>类装载方式，有两种。</p>
+<p>隐式装载：程序在运行过程中当碰到通过new等方式生成对象时，隐式调用类装载器加载对应的类到jvm中。</p>
+<p>显示装载：通过class.forname()等方法，显示加载需要的类，隐式加载与显式加载的区别：两者本质是一样的。</p>
+<p>Java类的加载是动态的，它并不会一次性将所有类全部加载后再运行，而是保证程序运行的基础类(像是基类)完全加载到jvm中，至于其他类，则在需要的时候才加载。这当然就是为了节省内存开销。</p>
+<h2 id="Java虚拟机"><a href="#Java虚拟机" class="headerlink" title="Java虚拟机"></a>Java虚拟机</h2><p>可执行Java字节码的虚拟机进程。Java源文件被编译成能被Java虚拟机执行的字节码文件。</p>
+<p>Java被设计成允许应用程序可以运行在任意的平台，而不需要程序员为每一个平台单独重写或者重写编译。Java虚拟机让这个变为可能。</p>
+<p>（1）堆内存分配</p>
+<p>JVM初始内存由-Xms指定，默认是物理内存的1/64；JVM最大分配内存由-Xms指定，默认是物理内存的1/4。默认空余堆内存小 于40%时，JVM就会增大堆直到-Xmx的最大限制；空余堆内存大于70%时，JVM会减少堆直到-Xms的最小限制。因此服务器一般设置-Xms、 -Xmx相等以避免在每次GC后调整堆的大小</p>
+<p>（2）非堆内存分配</p>
+<p>JVM使用-XX:PermSize设置非堆内存初始值，默认是物理内存的1/64；由XX:MaxPermSize设置最大非堆内存的大小，默认是物理内存的1/4。</p>
+<p>（3）VM最大内存</p>
+<p>JVM内存限制于实际的最大物理内存，结社物理内存无限大的话，JVM内存的最大值跟操作系统有很大的关系。32位处理器虽然可控内存空间有4GB。但是具体的操作系统会给一个限制，这个限制一般是2GB~3GB（一般来说Windows系统下为1.5G-2G，Linux系 统下为2G-3G），而64bit以上的处理器就不会有限制了。</p>
+<p>（4）几个不同公司不同版本JVM最大堆内存</p>
+<p><img data-src="https://uploadfiles.nowcoder.com/images/20180926/308572_1537966762062_914FBB519FF1ACBAF602B2DCBD5184D6" alt="img"></p>
+<h2 id="哪些可作为Root对象"><a href="#哪些可作为Root对象" class="headerlink" title="哪些可作为Root对象"></a>哪些可作为Root对象</h2><p>\1. 虚拟机栈中的引用对象<br>\2. 本地方法栈中JNI引用对象<br>\3. 方法区中类静态属性引用的对象<br>\4. 方法区中常量引用对象（如字符串常量池）<br>\5. 被同步锁持有的对象<br>\6. 内部引用（如基本数据类型对应的class对象、常驻的异常对象NullPointerException等、系统类加载器）</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>JVM</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>JVM</tag>
       </tags>
   </entry>
   <entry>
@@ -627,53 +627,6 @@
       </tags>
   </entry>
   <entry>
-    <title>工业机理</title>
-    <url>/2020/08/17/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86/</url>
-    <content><![CDATA[<h4 id="工业机理模型可以实现四类功能"><a href="#工业机理模型可以实现四类功能" class="headerlink" title="工业机理模型可以实现四类功能"></a>工业机理模型可以实现四类功能</h4><ol>
-<li><strong>描述</strong>，描述设备、工艺发生了什么；</li>
-<li><strong>诊断</strong>，发生了什么问题、什么地方发生了问题；</li>
-<li><strong>预测</strong>，如果不处理设备将有什么问题，能耗会有什么问题，质量会有什么问题；</li>
-<li><strong>决策</strong>、最后怎么办，是对那个环节进行维修，那个环节进行优化，或者保养，增加或者减少物料的输入等等，给操作手、给总工、给管理层提供一个解决方案。</li>
-</ol>
-<a id="more"></a>
-
-<h4 id="机理模型落地，会有四个阶段："><a href="#机理模型落地，会有四个阶段：" class="headerlink" title="机理模型落地，会有四个阶段："></a>机理模型落地，会有四个阶段：</h4><ol>
-<li><strong>理论推理</strong>，把工业中的热平衡、物质平衡等通过抽象的方法形成理论模型；</li>
-<li><strong>实验验证</strong>，对理论模型进行实验验证，仿真验证的过程；</li>
-<li><strong>模拟择优</strong>，在虚拟世界里面去完成，通过大数据模拟选择最优的结果；</li>
-<li>大数据分析通过模拟＋大数据发现新的规律。</li>
-</ol>
-<h4 id="机理模型分类"><a href="#机理模型分类" class="headerlink" title="机理模型分类"></a><strong>机理模型分类</strong></h4><p>1.机理模型（白箱）：存在物理关系，通过物理或数学公式来概化表达的模型。这类模型存在在各行各业。根据对象、生产过程的内部机制或者物质流的传递机理建立起来的精确数学模型。它是基于质量平衡方程、能量平衡方程、动量平衡方程、相平衡方程以及某些物性方程、化学反应定律、电路基本定律等而获得对象或过程的数学模型。机理模型的优点是参数具有非常明确的物理意义。</p>
-<p>2.非机理模型（黑箱或灰箱）：人工智能，以神经网络为代表，当然也有决策树、遗传算法以及支持向量机等等</p>
-<hr>
-<p>以后的趋势必然是机器学习与传统数学模型融合。</p>
-<p><strong>人工智能</strong>——&gt;深度学习——&gt;<strong>神经网络(模型)**——&gt;计算机视觉——&gt;**工业界</strong>（自动驾驶、安防、医疗）</p>
-<p><a href="https://cloud.tencent.com/developer/news/25568">https://cloud.tencent.com/developer/news/25568</a></p>
-<p>例如：SVM与传统的内涝数学模型有机结合在一起</p>
-<p>基于物理过程的数学模型已经广泛应用于城市内涝模拟中，但是数值模型在应用到实时内涝预报中，最大的瓶颈既是需要大量的计算资源和模拟时间，虽然有各种各样的简化模型技术被提出来，但是这些技术往往只能应用在满足一定前提条件的项目中</p>
-<p><strong>首先，数据在哪里？</strong></p>
-<p>▲一类是管理数据：结构化的SQL数据为主，如产品属性、工艺、生产、采购、订单、服务等数据，这类数据一般来自企业的ERP、SCM、PLM甚至MES等系统，数据量本身不大，却具有很大的挖掘价值；</p>
-<p>▲另一类则是机器运行和IoT的数据：以非结构化、流式数据居多，如设备工况（压力、温度、振动、应力等）、音视频、日志文本等数据，这类数据一般采集自设备PLC、SCADA以及部分外装传感器，数据量很大，采集频率高，需要结合边缘计算在本地做一些预处理。</p>
-<p>总的来讲，由于场景的割裂和分散，工业数据本身具有量大、多源、异构、实时性要求高等特点，而且随着未来280亿设备逐步接入，这些特性将会进一步加强，这是做工业大数据服务的核心难点之一，和互联网大数据不仅量级不同，结构不同，应用也完全不同。</p>
-<p><strong>其次，基于这些工业数据，平台层应该提供哪些服务？</strong></p>
-<p>▲完整的协议解析：数据采集首先要完成工业协议的打通。以应用层协议为例，EtherNet/IP和PROFINET的市场占有率最大，其次是EtherCAT、Modbus-TCP和EtherNetPOWERLINK；</p>
-<p>▲标准化的数据整合：采集上来的数据要做统一的主数据管理，第一步是建立标准。一般来讲，我们先要用ISO或其他业内标准，制定统一的编码、结构、流转方式和属性，确保数据的一致性，这一点非常重要。</p>
-<p>在项目实施的历程中，逐步积累行业知识库、合适的算法组件以及相关机理模型，这一点也很重要，这是从数据标准进化到业务标准化的关键一步，是为实现真正的产品层面的微服务化打下基础。</p>
-<p>强大的PaaS支持：工业数据本身的特殊性导致平台必须要有强大的中层支撑能力。我们以时序数据库为例，它是设备工况和传感器数据的典型品种。这类数据频率高、量大，用传统关系型数据库处理，需要每次把所有值拉出来计算，吞吐量极大，性能很差。所以，一个高压缩、高性能的时序数据库，就是平台层必备的能力之一。</p>
-<p><strong>最后，我们应该做哪些应用？</strong></p>
-<p>▲设备级：质量控制。在工业智能时代，如果我们能够采集到合适的实时数据，结合该设备所适用的机理模型，就有可能用机器学习的方法挖掘出产品质量与关键数据之间的关联或因果关系，也就有可能实现实时在线的质量控制和故障预警，如果数据频率能对工艺流程形成完美包络，我们还有可能实现最大限度的效率提升。</p>
-<p>▲厂级：计划排产。工业智能的最终目的是要实现大规模的个性化定制，即C2M。这一问题的目标是实现当时当地的产能最优，约束条件来自企业的产线设备、人员、产品属性、供应链数据等等，通过历史数据的学习和训练，不难形成一个较好的预测模型。</p>
-<p>这一模型能根据产线和工厂的实时数据动态分析，动态调整，以帮助企业实现准确把控，最大化经济效益。</p>
-]]></content>
-      <categories>
-        <category>工业机理模型</category>
-      </categories>
-      <tags>
-        <tag>知识图谱</tag>
-        <tag>工业机理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【知识图谱系列合集】二、知识表示</title>
     <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%BA%8C%E3%80%81%E7%9F%A5%E8%AF%86%E8%A1%A8%E7%A4%BA/</url>
     <content><![CDATA[<p><img data-src="https://img-blog.csdnimg.cn/20200810202240689.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="知识图谱构建流程"><br>将结构化、半结构化和非结构化数据中的实体、关系和属性进行提取。之后就要进行知识表示。本文主要介绍知识表示的概念、常见的代表模型：距离模型、单层神经网络模型、能量模型、双线性模型、张量神经网络模型、矩阵分解模型和Trans系列模型。</p>
@@ -787,6 +740,53 @@
       </tags>
   </entry>
   <entry>
+    <title>工业机理</title>
+    <url>/2020/08/17/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86/</url>
+    <content><![CDATA[<h4 id="工业机理模型可以实现四类功能"><a href="#工业机理模型可以实现四类功能" class="headerlink" title="工业机理模型可以实现四类功能"></a>工业机理模型可以实现四类功能</h4><ol>
+<li><strong>描述</strong>，描述设备、工艺发生了什么；</li>
+<li><strong>诊断</strong>，发生了什么问题、什么地方发生了问题；</li>
+<li><strong>预测</strong>，如果不处理设备将有什么问题，能耗会有什么问题，质量会有什么问题；</li>
+<li><strong>决策</strong>、最后怎么办，是对那个环节进行维修，那个环节进行优化，或者保养，增加或者减少物料的输入等等，给操作手、给总工、给管理层提供一个解决方案。</li>
+</ol>
+<a id="more"></a>
+
+<h4 id="机理模型落地，会有四个阶段："><a href="#机理模型落地，会有四个阶段：" class="headerlink" title="机理模型落地，会有四个阶段："></a>机理模型落地，会有四个阶段：</h4><ol>
+<li><strong>理论推理</strong>，把工业中的热平衡、物质平衡等通过抽象的方法形成理论模型；</li>
+<li><strong>实验验证</strong>，对理论模型进行实验验证，仿真验证的过程；</li>
+<li><strong>模拟择优</strong>，在虚拟世界里面去完成，通过大数据模拟选择最优的结果；</li>
+<li>大数据分析通过模拟＋大数据发现新的规律。</li>
+</ol>
+<h4 id="机理模型分类"><a href="#机理模型分类" class="headerlink" title="机理模型分类"></a><strong>机理模型分类</strong></h4><p>1.机理模型（白箱）：存在物理关系，通过物理或数学公式来概化表达的模型。这类模型存在在各行各业。根据对象、生产过程的内部机制或者物质流的传递机理建立起来的精确数学模型。它是基于质量平衡方程、能量平衡方程、动量平衡方程、相平衡方程以及某些物性方程、化学反应定律、电路基本定律等而获得对象或过程的数学模型。机理模型的优点是参数具有非常明确的物理意义。</p>
+<p>2.非机理模型（黑箱或灰箱）：人工智能，以神经网络为代表，当然也有决策树、遗传算法以及支持向量机等等</p>
+<hr>
+<p>以后的趋势必然是机器学习与传统数学模型融合。</p>
+<p><strong>人工智能</strong>——&gt;深度学习——&gt;<strong>神经网络(模型)**——&gt;计算机视觉——&gt;**工业界</strong>（自动驾驶、安防、医疗）</p>
+<p><a href="https://cloud.tencent.com/developer/news/25568">https://cloud.tencent.com/developer/news/25568</a></p>
+<p>例如：SVM与传统的内涝数学模型有机结合在一起</p>
+<p>基于物理过程的数学模型已经广泛应用于城市内涝模拟中，但是数值模型在应用到实时内涝预报中，最大的瓶颈既是需要大量的计算资源和模拟时间，虽然有各种各样的简化模型技术被提出来，但是这些技术往往只能应用在满足一定前提条件的项目中</p>
+<p><strong>首先，数据在哪里？</strong></p>
+<p>▲一类是管理数据：结构化的SQL数据为主，如产品属性、工艺、生产、采购、订单、服务等数据，这类数据一般来自企业的ERP、SCM、PLM甚至MES等系统，数据量本身不大，却具有很大的挖掘价值；</p>
+<p>▲另一类则是机器运行和IoT的数据：以非结构化、流式数据居多，如设备工况（压力、温度、振动、应力等）、音视频、日志文本等数据，这类数据一般采集自设备PLC、SCADA以及部分外装传感器，数据量很大，采集频率高，需要结合边缘计算在本地做一些预处理。</p>
+<p>总的来讲，由于场景的割裂和分散，工业数据本身具有量大、多源、异构、实时性要求高等特点，而且随着未来280亿设备逐步接入，这些特性将会进一步加强，这是做工业大数据服务的核心难点之一，和互联网大数据不仅量级不同，结构不同，应用也完全不同。</p>
+<p><strong>其次，基于这些工业数据，平台层应该提供哪些服务？</strong></p>
+<p>▲完整的协议解析：数据采集首先要完成工业协议的打通。以应用层协议为例，EtherNet/IP和PROFINET的市场占有率最大，其次是EtherCAT、Modbus-TCP和EtherNetPOWERLINK；</p>
+<p>▲标准化的数据整合：采集上来的数据要做统一的主数据管理，第一步是建立标准。一般来讲，我们先要用ISO或其他业内标准，制定统一的编码、结构、流转方式和属性，确保数据的一致性，这一点非常重要。</p>
+<p>在项目实施的历程中，逐步积累行业知识库、合适的算法组件以及相关机理模型，这一点也很重要，这是从数据标准进化到业务标准化的关键一步，是为实现真正的产品层面的微服务化打下基础。</p>
+<p>强大的PaaS支持：工业数据本身的特殊性导致平台必须要有强大的中层支撑能力。我们以时序数据库为例，它是设备工况和传感器数据的典型品种。这类数据频率高、量大，用传统关系型数据库处理，需要每次把所有值拉出来计算，吞吐量极大，性能很差。所以，一个高压缩、高性能的时序数据库，就是平台层必备的能力之一。</p>
+<p><strong>最后，我们应该做哪些应用？</strong></p>
+<p>▲设备级：质量控制。在工业智能时代，如果我们能够采集到合适的实时数据，结合该设备所适用的机理模型，就有可能用机器学习的方法挖掘出产品质量与关键数据之间的关联或因果关系，也就有可能实现实时在线的质量控制和故障预警，如果数据频率能对工艺流程形成完美包络，我们还有可能实现最大限度的效率提升。</p>
+<p>▲厂级：计划排产。工业智能的最终目的是要实现大规模的个性化定制，即C2M。这一问题的目标是实现当时当地的产能最优，约束条件来自企业的产线设备、人员、产品属性、供应链数据等等，通过历史数据的学习和训练，不难形成一个较好的预测模型。</p>
+<p>这一模型能根据产线和工厂的实时数据动态分析，动态调整，以帮助企业实现准确把控，最大化经济效益。</p>
+]]></content>
+      <categories>
+        <category>工业机理模型</category>
+      </categories>
+      <tags>
+        <tag>知识图谱</tag>
+        <tag>工业机理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>命令集合</title>
     <url>/2020/08/14/%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4/</url>
     <content><![CDATA[<p><strong>生成阅读全文，在markdowm文本中插入：</strong></p>
@@ -824,6 +824,108 @@
       <tags>
         <tag>方法技巧</tag>
         <tag>命令</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>操作系统</title>
+    <url>/2020/08/31/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<h2 id="线程与进程的区别"><a href="#线程与进程的区别" class="headerlink" title="线程与进程的区别"></a>线程与进程的区别</h2><p>一个程序至少有一个进程，一个进程至少有一个线程。</p>
+<ol>
+<li><p>简而言之,一个程序至少有一个进程,一个进程至少有一个线程.</p>
+</li>
+<li><p>线程的划分尺度小于进程，使得多线程程序的并发性高。</p>
+</li>
+<li><p>另外，进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大地提高了程序的运行效率。</p>
+</li>
+<li><p>线程在执行过程中与进程还是有区别的。每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。</p>
+</li>
+<li><p>从逻辑角度来看，多线程的意义在于一个应用程序中，有多个执行部分可以同时执行。但操作系统并没有将多个线程看做多个独立的应用，来实现进程的调度和管理以及资源分配。这就是进程和线程的重要区别。</p>
+</li>
+</ol>
+<a id="more"></a>
+
+<h2 id="如何杀死一个进程"><a href="#如何杀死一个进程" class="headerlink" title="如何杀死一个进程"></a>如何杀死一个进程</h2><p>kill pid</p>
+<h2 id="socket编程的三种通信模型，BIO，NIO，AIO"><a href="#socket编程的三种通信模型，BIO，NIO，AIO" class="headerlink" title="socket编程的三种通信模型，BIO，NIO，AIO"></a>socket编程的三种通信模型，BIO，NIO，AIO</h2><p>阻塞，非阻塞，io多路复用，epoll支持文件符数目没有限制，fd集合只会从用户进程拷贝到内核一次，自己维护一个事件队列，不用每次遍历fd集合发现是否有就绪状态。</p>
+<h2 id="操作系统里的内存碎片，有什么解决办法"><a href="#操作系统里的内存碎片，有什么解决办法" class="headerlink" title="操作系统里的内存碎片，有什么解决办法"></a>操作系统里的内存碎片，有什么解决办法</h2><p>内存碎片分为：内部碎片和外部碎片。</p>
+<p>内部碎片就是已经被分配出去（能明确指出属于哪个进程）却不能被利用的内存空间；</p>
+<p>外部碎片指的是还没有被分配出去（不属于任何进程），但由于太小了无法分配给申请内存空间的新进程的内存空闲区域。</p>
+<h2 id="页面存储"><a href="#页面存储" class="headerlink" title="页面存储"></a>页面存储</h2><p>主存被等分成大小相等的片，称为主存块，又称为实页。</p>
+<p>当一个用户程序装入内存时，以页面为单位进行分配。页面的大小是为2n ,通常为1KB、2KB、2n KB等</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>操作系统</category>
+      </categories>
+      <tags>
+        <tag>操作系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法|排序</title>
+    <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F/</url>
+    <content><![CDATA[<p><img data-src="https://uploadfiles.nowcoder.com/images/20180927/308572_1538031578438_AEAC18AEF8824A88CF86B273C90F0BCC" alt="img"></p>
+<a id="more"></a>
+
+<h2 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h2><p>快排：快速排序有两个方向，左边的i下标一直往右走（当条件a[i] &lt;= a[center_index]时），其中center_index是中枢元素的数组下标，一般取为数组第0个元素。</p>
+<p>而右边的j下标一直往左走（当a[j] &gt; a[center_index]时）。</p>
+<p>如果i和j都走不动了，i &lt;= j, 交换a[i]和a[j],重复上面的过程，直到i&gt;j。交换a[j]和a[center_index]，完成一趟快速排序。</p>
+<h2 id="堆排序的原理"><a href="#堆排序的原理" class="headerlink" title="堆排序的原理"></a>堆排序的原理</h2><p>堆排序就是把最大堆堆顶的最大数取出，将剩余的堆继续调整为最大堆，再次将堆顶的最大数取出，这个过程持续到剩余数只有一个时结束。在堆中定义以下几种操作：</p>
+<p>（1）最大堆调整（Max-Heapify）：将堆的末端子节点作调整，使得子节点永远小于父节点。</p>
+<p>（2）创建最大堆（Build-Max-Heap）：将堆所有数据重新排序，使其成为最大堆。</p>
+<p>（3）堆排序（Heap-Sort）：移除位在第一个数据的根节点，并做最大堆调整的递归运算</p>
+<p><img data-src="https://uploadfiles.nowcoder.com/images/20180927/308572_1538031730696_9D37F61D193E7D36552FD03117135AE8" alt="img"></p>
+<h2 id="归并排序的原理"><a href="#归并排序的原理" class="headerlink" title="归并排序的原理"></a>归并排序的原理</h2><p>建立在归并操作上的一种有效的排序算法。采用分治法。</p>
+<h2 id="冒泡排序的原理"><a href="#冒泡排序的原理" class="headerlink" title="冒泡排序的原理"></a>冒泡排序的原理</h2><p>循环比较相邻的两个数，较大的数放在后面</p>
+<p><strong>冒泡排序代码：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] mppx(<span class="keyword">int</span>[] nums)&#123;</span><br><span class="line">        <span class="keyword">int</span> length=nums.length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;length-i-<span class="number">1</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[j+<span class="number">1</span>]&lt;nums[j])&#123;</span><br><span class="line">                    <span class="keyword">int</span> temp=nums[j+<span class="number">1</span>];</span><br><span class="line">                    nums[j+<span class="number">1</span>]=nums[j];</span><br><span class="line">                    nums[j]=temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>测试代码：</strong></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> n=sc.nextInt();</span><br><span class="line">    <span class="keyword">int</span>[] array=<span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.length;i++)&#123;</span><br><span class="line">        array[i]=sc.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line">    array=mppx(array);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.length;i++)&#123;</span><br><span class="line">        System.out.print(array[i]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://img-blog.csdnimg.cn/20200831151301748.png#pic_center" alt="在这里插入图片描述"></p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>排序</category>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>排序</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法|堆与栈</title>
+    <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%A0%86%E4%B8%8E%E6%A0%88/</url>
+    <content><![CDATA[<h2 id="内存中的栈-stack-、堆-heap-和静态区-static-area-的用法"><a href="#内存中的栈-stack-、堆-heap-和静态区-static-area-的用法" class="headerlink" title="内存中的栈(stack)、堆(heap) 和静态区(static area) 的用法"></a>内存中的栈(stack)、堆(heap) 和静态区(static area) 的用法</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String str = <span class="keyword">new</span> String(<span class="string">&quot;hello&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+
+<p>上面的语句中变量str放在栈上，用new创建出来的字符串对象放在堆上，而”hello”这个字面量放在静态区。</p>
+<a id="more"></a>
+
+
+
+<h2 id="heap和stack有什么区别"><a href="#heap和stack有什么区别" class="headerlink" title="heap和stack有什么区别"></a>heap和stack有什么区别</h2><p><strong>heap堆</strong></p>
+<p>是一个运行时数据区，类的对象从中分配空间。当new等指令建立，不需要代码显示的释放，由垃圾回收来负责。</p>
+<p>优点：可以动态地分配内存大小，垃圾收集器会自动回收垃圾数据。</p>
+<p>缺点：由于其优点，所以存取速度较慢。</p>
+<p><strong>stack栈</strong></p>
+<p>数据项插入和删除都只能在称为栈顶的一端完成，先进先出。栈中存放一些基本类型的变量和对象句柄。</p>
+<p>优点：读取数据比堆块，仅次于寄存器，栈数据可以共享。</p>
+<p>缺点：缺乏灵活性，存在栈中的数据大小与生存期必须是确定的。</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>堆与栈</category>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>堆与栈</tag>
       </tags>
   </entry>
   <entry>
@@ -903,149 +1005,6 @@
       </tags>
   </entry>
   <entry>
-    <title>操作系统</title>
-    <url>/2020/08/31/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
-    <content><![CDATA[<h2 id="线程与进程的区别"><a href="#线程与进程的区别" class="headerlink" title="线程与进程的区别"></a>线程与进程的区别</h2><p>一个程序至少有一个进程，一个进程至少有一个线程。</p>
-<ol>
-<li><p>简而言之,一个程序至少有一个进程,一个进程至少有一个线程.</p>
-</li>
-<li><p>线程的划分尺度小于进程，使得多线程程序的并发性高。</p>
-</li>
-<li><p>另外，进程在执行过程中拥有独立的内存单元，而多个线程共享内存，从而极大地提高了程序的运行效率。</p>
-</li>
-<li><p>线程在执行过程中与进程还是有区别的。每个独立的线程有一个程序运行的入口、顺序执行序列和程序的出口。但是线程不能够独立执行，必须依存在应用程序中，由应用程序提供多个线程执行控制。</p>
-</li>
-<li><p>从逻辑角度来看，多线程的意义在于一个应用程序中，有多个执行部分可以同时执行。但操作系统并没有将多个线程看做多个独立的应用，来实现进程的调度和管理以及资源分配。这就是进程和线程的重要区别。</p>
-</li>
-</ol>
-<a id="more"></a>
-
-<h2 id="如何杀死一个进程"><a href="#如何杀死一个进程" class="headerlink" title="如何杀死一个进程"></a>如何杀死一个进程</h2><p>kill pid</p>
-<h2 id="socket编程的三种通信模型，BIO，NIO，AIO"><a href="#socket编程的三种通信模型，BIO，NIO，AIO" class="headerlink" title="socket编程的三种通信模型，BIO，NIO，AIO"></a>socket编程的三种通信模型，BIO，NIO，AIO</h2><p>阻塞，非阻塞，io多路复用，epoll支持文件符数目没有限制，fd集合只会从用户进程拷贝到内核一次，自己维护一个事件队列，不用每次遍历fd集合发现是否有就绪状态。</p>
-<h2 id="操作系统里的内存碎片，有什么解决办法"><a href="#操作系统里的内存碎片，有什么解决办法" class="headerlink" title="操作系统里的内存碎片，有什么解决办法"></a>操作系统里的内存碎片，有什么解决办法</h2><p>内存碎片分为：内部碎片和外部碎片。</p>
-<p>内部碎片就是已经被分配出去（能明确指出属于哪个进程）却不能被利用的内存空间；</p>
-<p>外部碎片指的是还没有被分配出去（不属于任何进程），但由于太小了无法分配给申请内存空间的新进程的内存空闲区域。</p>
-<h2 id="页面存储"><a href="#页面存储" class="headerlink" title="页面存储"></a>页面存储</h2><p>主存被等分成大小相等的片，称为主存块，又称为实页。</p>
-<p>当一个用户程序装入内存时，以页面为单位进行分配。页面的大小是为2n ,通常为1KB、2KB、2n KB等</p>
-]]></content>
-      <categories>
-        <category>Java面试宝典</category>
-        <category>操作系统</category>
-      </categories>
-      <tags>
-        <tag>操作系统</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构与算法|堆与栈</title>
-    <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%A0%86%E4%B8%8E%E6%A0%88/</url>
-    <content><![CDATA[<h2 id="内存中的栈-stack-、堆-heap-和静态区-static-area-的用法"><a href="#内存中的栈-stack-、堆-heap-和静态区-static-area-的用法" class="headerlink" title="内存中的栈(stack)、堆(heap) 和静态区(static area) 的用法"></a>内存中的栈(stack)、堆(heap) 和静态区(static area) 的用法</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">String str = <span class="keyword">new</span> String(<span class="string">&quot;hello&quot;</span>);</span><br></pre></td></tr></table></figure>
-
-
-<p>上面的语句中变量str放在栈上，用new创建出来的字符串对象放在堆上，而”hello”这个字面量放在静态区。</p>
-<a id="more"></a>
-
-
-
-<h2 id="heap和stack有什么区别"><a href="#heap和stack有什么区别" class="headerlink" title="heap和stack有什么区别"></a>heap和stack有什么区别</h2><p><strong>heap堆</strong></p>
-<p>是一个运行时数据区，类的对象从中分配空间。当new等指令建立，不需要代码显示的释放，由垃圾回收来负责。</p>
-<p>优点：可以动态地分配内存大小，垃圾收集器会自动回收垃圾数据。</p>
-<p>缺点：由于其优点，所以存取速度较慢。</p>
-<p><strong>stack栈</strong></p>
-<p>数据项插入和删除都只能在称为栈顶的一端完成，先进先出。栈中存放一些基本类型的变量和对象句柄。</p>
-<p>优点：读取数据比堆块，仅次于寄存器，栈数据可以共享。</p>
-<p>缺点：缺乏灵活性，存在栈中的数据大小与生存期必须是确定的。</p>
-]]></content>
-      <categories>
-        <category>Java面试宝典</category>
-        <category>堆与栈</category>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Java基础</tag>
-        <tag>堆与栈</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构与算法|排序</title>
-    <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F/</url>
-    <content><![CDATA[<p><img data-src="https://uploadfiles.nowcoder.com/images/20180927/308572_1538031578438_AEAC18AEF8824A88CF86B273C90F0BCC" alt="img"></p>
-<a id="more"></a>
-
-<h2 id="快排"><a href="#快排" class="headerlink" title="快排"></a>快排</h2><p>快排：快速排序有两个方向，左边的i下标一直往右走（当条件a[i] &lt;= a[center_index]时），其中center_index是中枢元素的数组下标，一般取为数组第0个元素。</p>
-<p>而右边的j下标一直往左走（当a[j] &gt; a[center_index]时）。</p>
-<p>如果i和j都走不动了，i &lt;= j, 交换a[i]和a[j],重复上面的过程，直到i&gt;j。交换a[j]和a[center_index]，完成一趟快速排序。</p>
-<h2 id="堆排序的原理"><a href="#堆排序的原理" class="headerlink" title="堆排序的原理"></a>堆排序的原理</h2><p>堆排序就是把最大堆堆顶的最大数取出，将剩余的堆继续调整为最大堆，再次将堆顶的最大数取出，这个过程持续到剩余数只有一个时结束。在堆中定义以下几种操作：</p>
-<p>（1）最大堆调整（Max-Heapify）：将堆的末端子节点作调整，使得子节点永远小于父节点。</p>
-<p>（2）创建最大堆（Build-Max-Heap）：将堆所有数据重新排序，使其成为最大堆。</p>
-<p>（3）堆排序（Heap-Sort）：移除位在第一个数据的根节点，并做最大堆调整的递归运算</p>
-<p><img data-src="https://uploadfiles.nowcoder.com/images/20180927/308572_1538031730696_9D37F61D193E7D36552FD03117135AE8" alt="img"></p>
-<h2 id="归并排序的原理"><a href="#归并排序的原理" class="headerlink" title="归并排序的原理"></a>归并排序的原理</h2><p>建立在归并操作上的一种有效的排序算法。采用分治法。</p>
-<h2 id="冒泡排序的原理"><a href="#冒泡排序的原理" class="headerlink" title="冒泡排序的原理"></a>冒泡排序的原理</h2><p>循环比较相邻的两个数，较大的数放在后面</p>
-<p><strong>冒泡排序代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span>[] mppx(<span class="keyword">int</span>[] nums)&#123;</span><br><span class="line">        <span class="keyword">int</span> length=nums.length;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;length;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;length-i-<span class="number">1</span>;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(nums[j+<span class="number">1</span>]&lt;nums[j])&#123;</span><br><span class="line">                    <span class="keyword">int</span> temp=nums[j+<span class="number">1</span>];</span><br><span class="line">                    nums[j+<span class="number">1</span>]=nums[j];</span><br><span class="line">                    nums[j]=temp;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> nums;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>测试代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">    Scanner sc=<span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">    <span class="keyword">int</span> n=sc.nextInt();</span><br><span class="line">    <span class="keyword">int</span>[] array=<span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.length;i++)&#123;</span><br><span class="line">        array[i]=sc.nextInt();</span><br><span class="line">    &#125;</span><br><span class="line">    array=mppx(array);</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;array.length;i++)&#123;</span><br><span class="line">        System.out.print(array[i]+<span class="string">&quot; &quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://img-blog.csdnimg.cn/20200831151301748.png#pic_center" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>Java面试宝典</category>
-        <category>排序</category>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Java基础</tag>
-        <tag>排序</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>数据结构与算法|高级算法</title>
-    <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="id全局唯一且自增，如何实现"><a href="#id全局唯一且自增，如何实现" class="headerlink" title="id全局唯一且自增，如何实现"></a>id全局唯一且自增，如何实现</h2><p>如何在分布式集群中，生成全局唯一的ID</p>
-<p>方法一：UUID</p>
-<p>方法二：数据库自增主键</p>
-<p><strong>方法三：SnowFlake雪花算法</strong></p>
-<p>Twitter公司采用的一种算法，目的是在分布式系统中生成全局唯一且趋势递增的ID。</p>
-<p>雪花ID生成的是一个64位的二进制正整数，然后转换成10进制的数。64位二进制数由如下部分组成：</p>
-<p><img data-src="https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGovUVwFkfA0yRdCYoer9mqxdkKsBd5aD96r6ygicrXlKjwmsIBCZpF4rrkUM7FR1U1zZdL4yjEF1Fw/640?wx_fmt=png" alt="640?wx_fmt=png"></p>
-<a id="more"></a>
-
-<p><strong>1位标识符</strong>：始终是0，由于long基本类型在Java中是带符号的，最高位是符号位，正数是0，负数是1，所以id一般是正数，最高位是0。</p>
-<p><strong>41位时间戳</strong>：41位时间截不是存储当前时间的时间截，而是存储时间截的差值（当前时间截 - 开始时间截 )得到的值，这里的的开始时间截，一般是我们的id生成器开始使用的时间，由我们程序来指定的。</p>
-<p><strong>10位机器标识码</strong>：可以部署在1024个节点，如果机器分机房（IDC）部署，这10位可以由 5位机房ID + 5位机器ID 组成。</p>
-<p><strong>12位序列</strong>：毫秒内的计数，12位的计数顺序号支持每个节点每毫秒(同一机器，同一时间截)产生4096个ID序号</p>
-<p>优点：</p>
-<p>1.生成ID不依赖于DB，完全在内存中生成，高性能高可用。</p>
-<p>2.ID呈趋势递增，后续插入索引树的时候性能较好。</p>
-<p>缺点：</p>
-<p>依赖于系统时钟的一致性。如果某台机器的系统时钟回拨，有可能造成id冲突，或者id乱序。</p>
-]]></content>
-      <categories>
-        <category>Java面试宝典</category>
-        <category>高级算法</category>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Java基础</tag>
-        <tag>高级算法</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>知识图谱</title>
-    <url>/2020/09/08/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/</url>
-    <content><![CDATA[<p><img data-src="https://www.zuozuovera.com/usr/uploads/2017/11/994330753.png" alt="知识图谱.png"></p>
-<p><img data-src="https://www.zuozuovera.com/usr/uploads/2017/03/2017-03-20_231425.png" alt="img"></p>
-<p><img data-src="https://pic4.zhimg.com/v2-a6e61bbaf7f67c30d9329d28c7872c34_r.jpg" alt="preview"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>数据结构与算法|链表</title>
     <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%93%BE%E8%A1%A8/</url>
     <content><![CDATA[<h2 id="链表的优缺点"><a href="#链表的优缺点" class="headerlink" title="链表的优缺点"></a>链表的优缺点</h2><p>1.增加/删除/修改速度比数组快。</p>
@@ -1088,6 +1047,47 @@
         <tag>Java基础</tag>
         <tag>链表</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>数据结构与算法|高级算法</title>
+    <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="id全局唯一且自增，如何实现"><a href="#id全局唯一且自增，如何实现" class="headerlink" title="id全局唯一且自增，如何实现"></a>id全局唯一且自增，如何实现</h2><p>如何在分布式集群中，生成全局唯一的ID</p>
+<p>方法一：UUID</p>
+<p>方法二：数据库自增主键</p>
+<p><strong>方法三：SnowFlake雪花算法</strong></p>
+<p>Twitter公司采用的一种算法，目的是在分布式系统中生成全局唯一且趋势递增的ID。</p>
+<p>雪花ID生成的是一个64位的二进制正整数，然后转换成10进制的数。64位二进制数由如下部分组成：</p>
+<p><img data-src="https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGovUVwFkfA0yRdCYoer9mqxdkKsBd5aD96r6ygicrXlKjwmsIBCZpF4rrkUM7FR1U1zZdL4yjEF1Fw/640?wx_fmt=png" alt="640?wx_fmt=png"></p>
+<a id="more"></a>
+
+<p><strong>1位标识符</strong>：始终是0，由于long基本类型在Java中是带符号的，最高位是符号位，正数是0，负数是1，所以id一般是正数，最高位是0。</p>
+<p><strong>41位时间戳</strong>：41位时间截不是存储当前时间的时间截，而是存储时间截的差值（当前时间截 - 开始时间截 )得到的值，这里的的开始时间截，一般是我们的id生成器开始使用的时间，由我们程序来指定的。</p>
+<p><strong>10位机器标识码</strong>：可以部署在1024个节点，如果机器分机房（IDC）部署，这10位可以由 5位机房ID + 5位机器ID 组成。</p>
+<p><strong>12位序列</strong>：毫秒内的计数，12位的计数顺序号支持每个节点每毫秒(同一机器，同一时间截)产生4096个ID序号</p>
+<p>优点：</p>
+<p>1.生成ID不依赖于DB，完全在内存中生成，高性能高可用。</p>
+<p>2.ID呈趋势递增，后续插入索引树的时候性能较好。</p>
+<p>缺点：</p>
+<p>依赖于系统时钟的一致性。如果某台机器的系统时钟回拨，有可能造成id冲突，或者id乱序。</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>高级算法</category>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>高级算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>知识图谱</title>
+    <url>/2020/09/08/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/</url>
+    <content><![CDATA[<p><img data-src="https://www.zuozuovera.com/usr/uploads/2017/11/994330753.png" alt="知识图谱.png"></p>
+<p><img data-src="https://www.zuozuovera.com/usr/uploads/2017/03/2017-03-20_231425.png" alt="img"></p>
+<p><img data-src="https://pic4.zhimg.com/v2-a6e61bbaf7f67c30d9329d28c7872c34_r.jpg" alt="preview"></p>
+]]></content>
   </entry>
   <entry>
     <title>计算机网络</title>
@@ -1191,6 +1191,355 @@
       </categories>
       <tags>
         <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>鲁绣本体建模</title>
+    <url>/2020/09/09/%E9%B2%81%E7%BB%A3%E6%9C%AC%E4%BD%93%E5%BB%BA%E6%A8%A1/</url>
+    <content><![CDATA[<h2 id="鲁绣分类（Lu-Embroidery）"><a href="#鲁绣分类（Lu-Embroidery）" class="headerlink" title="鲁绣分类（Lu Embroidery）"></a>鲁绣分类（Lu Embroidery）</h2><table>
+<thead>
+<tr>
+<th align="center">鲁绣品种</th>
+<th align="center">产地</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">雕平绣工艺</td>
+<td align="center">文登</td>
+</tr>
+<tr>
+<td align="center">满工扣锁</td>
+<td align="center">文登</td>
+</tr>
+<tr>
+<td align="center">扣眼</td>
+<td align="center">乳山</td>
+</tr>
+<tr>
+<td align="center">梭子花边</td>
+<td align="center">蓬莱</td>
+</tr>
+<tr>
+<td align="center">棒槌花边</td>
+<td align="center">栖霞</td>
+</tr>
+<tr>
+<td align="center">钩针</td>
+<td align="center">海阳</td>
+</tr>
+<tr>
+<td align="center">即墨花边</td>
+<td align="center">即墨</td>
+</tr>
+<tr>
+<td align="center">网扣</td>
+<td align="center">招远</td>
+</tr>
+<tr>
+<td align="center">花边</td>
+<td align="center">青州</td>
+</tr>
+<tr>
+<td align="center">发丝绣</td>
+<td align="center">济南</td>
+</tr>
+</tbody></table>
+<a id="more"></a>
+
+
+
+<h2 id="图案分类（Pattern）"><a href="#图案分类（Pattern）" class="headerlink" title="图案分类（Pattern）"></a>图案分类（Pattern）</h2><table>
+<thead>
+<tr>
+<th align="center">类别名称</th>
+<th align="center">包含图案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">植物类</td>
+<td align="center">梅、兰、菊、桃花、牡丹、荷花、花卉等花卉；竹子、松树、柳树、石榴、佛手、桃树</td>
+</tr>
+<tr>
+<td align="center">动物类</td>
+<td align="center">蝴蝶、蜻蜓等昆虫；凤凰、孔雀、鸳鸯、喜鹊等鸟类；熊猫、鹿、金鱼等动物在鲁绣上的运用</td>
+</tr>
+<tr>
+<td align="center">几何图案</td>
+<td align="center">运用点、线、面等元素组合成十字、方格、菱形等几何形，加之色彩的疏密组合表现，画面丰满、自由</td>
+</tr>
+<tr>
+<td align="center">文字图案</td>
+<td align="center">用字直抒胸臆</td>
+</tr>
+</tbody></table>
+<h2 id="组织形式（Form）"><a href="#组织形式（Form）" class="headerlink" title="组织形式（Form）"></a>组织形式（Form）</h2><table>
+<thead>
+<tr>
+<th align="center">Form_name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">单独纹样</td>
+</tr>
+<tr>
+<td align="center">适合图案</td>
+</tr>
+<tr>
+<td align="center">连续图案</td>
+</tr>
+<tr>
+<td align="center">综合图案</td>
+</tr>
+</tbody></table>
+<h2 id="布的种类（Cloth）"><a href="#布的种类（Cloth）" class="headerlink" title="布的种类（Cloth）"></a>布的种类（Cloth）</h2><table>
+<thead>
+<tr>
+<th align="center">name</th>
+<th align="center">description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">植物纤维布</td>
+<td align="center">植物纤维布是各种纯棉、麻和棉麻交织布。一般棉纱做台布用21支纱布幅36、54、72英寸。后来做床上用品使用30、40、60、支纱等交织和斜纹布，布幅都是90英寸以上，布料细腻柔软。鲁绣雕平绣工艺用料多一些。</td>
+</tr>
+<tr>
+<td align="center">动物纤维布</td>
+<td align="center">动物纤维布包括丝绸、软缎、乔其纱、羊绒、法兰绒、纯毛呢料等。蜀绣、苏绣平绣多一些。</td>
+</tr>
+<tr>
+<td align="center">化纤布</td>
+<td align="center">化纤布不像棉麻毛质材料耐高温，选着绣花时绣线最好不用棉、丝线刺绣。适合做机绣、丝带绣、金银线盘肠绣、主修、亮片绣等。</td>
+</tr>
+<tr>
+<td align="center">玻璃砂</td>
+<td align="center">玻璃纱适合发绣、丝线绣、乱针绣、双面绣等。</td>
+</tr>
+</tbody></table>
+<h2 id="绣线种类（Thread）"><a href="#绣线种类（Thread）" class="headerlink" title="绣线种类（Thread）"></a>绣线种类（Thread）</h2><table>
+<thead>
+<tr>
+<th align="center">绣线种类Thread</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">纯棉细线</td>
+<td align="center">用线通常40多个色系，每个色系6—9个色阶。40支纱2股，30支纱2股</td>
+</tr>
+<tr>
+<td align="center">纯棉粗线</td>
+<td align="center">通常为20或21支纱3股或4股。20/4、21/4有的是丝光了手绣线用作雕绣、平绣等。</td>
+</tr>
+<tr>
+<td align="center">合股线</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">麻线</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">真丝线</td>
+<td align="center">是中国南方独有的，只有中国才有。适合绣动物、花鸟效果极佳。</td>
+</tr>
+<tr>
+<td align="center">机绣线</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">毛线</td>
+<td align="center">一般用在钩针、毛线绣、织毛衣用。有细毛线、粗毛线。用于绣花一般底布要厚实一些为好</td>
+</tr>
+<tr>
+<td align="center">金银线</td>
+<td align="center">一般适合做盘金绣，金银线质地比较脆，他不适宜做复杂图案。</td>
+</tr>
+<tr>
+<td align="center">化纤线</td>
+<td align="center"></td>
+</tr>
+</tbody></table>
+<h2 id="绣花工具（Tool）"><a href="#绣花工具（Tool）" class="headerlink" title="绣花工具（Tool）"></a>绣花工具（Tool）</h2><table>
+<thead>
+<tr>
+<th align="center">绣花工具Tool</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">针</td>
+<td align="center">针鼻椭圆形，针尖越细越好</td>
+</tr>
+<tr>
+<td align="center">剪刀</td>
+<td align="center">弯头剪刀，直头剪刀</td>
+</tr>
+<tr>
+<td align="center">花绷子</td>
+<td align="center">方形、圆形；木制、竹制、塑料材质；大中小。圆形的花绷子有竹制和塑料的两种。</td>
+</tr>
+</tbody></table>
+<p>圆形大号竹制、圆形中号竹制、圆形小号竹制、圆形大号塑料、圆形中号塑料、圆形小号塑料</p>
+<p>方形大号木制、方形中号木制、方形小号木制、方形大号竹制、方形中号竹制、方形小号竹制</p>
+<p>方形大号塑料、方形中号塑料、方形小号塑料</p>
+<h2 id="刺绣针法（Stitch）"><a href="#刺绣针法（Stitch）" class="headerlink" title="刺绣针法（Stitch）"></a>刺绣针法（Stitch）</h2><table>
+<thead>
+<tr>
+<th align="center">所属大类</th>
+<th align="center">针法种类</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><strong>线性</strong></td>
+<td align="center">单针绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">双针绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">锁链绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">麦穗绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">盘金绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">绗针绣</td>
+</tr>
+<tr>
+<td align="center"><strong>花形</strong></td>
+<td align="center">平针绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">掺针绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">垫绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">雕绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">长短针绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">套针</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">结子花绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">影绣花</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">扒针绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">圈边绣</td>
+</tr>
+<tr>
+<td align="center"><strong>叶子</strong></td>
+<td align="center">单边水绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">双边水绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">松针绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">散套叶绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">编叶绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">树叶绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">水草绣</td>
+</tr>
+<tr>
+<td align="center"><strong>开光纹样和花蕊</strong></td>
+<td align="center">把锦绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">连锦绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">钱眼纹绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">席纹绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">瓦楞纹绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">纳底纹绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">打籽绣</td>
+</tr>
+<tr>
+<td align="center"><strong>大面积的针法</strong></td>
+<td align="center">直短针绣小乱针</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">直长针绣大乱针</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">直针绣长乱针</td>
+</tr>
+<tr>
+<td align="center"><strong>补绣</strong></td>
+<td align="center">绣补</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">扦补绣</td>
+</tr>
+<tr>
+<td align="center"></td>
+<td align="center">锁补绣</td>
+</tr>
+</tbody></table>
+<h2 id="三元组"><a href="#三元组" class="headerlink" title="三元组"></a>三元组</h2><p><img data-src="https://img-blog.csdnimg.cn/20200909163912239.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="Protege构建结果"><a href="#Protege构建结果" class="headerlink" title="Protégé构建结果"></a>Protégé构建结果</h2><p><img data-src="https://img-blog.csdnimg.cn/20200909163331396.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<h2 id="知识服务平台构建结果"><a href="#知识服务平台构建结果" class="headerlink" title="知识服务平台构建结果"></a>知识服务平台构建结果</h2><p><img data-src="https://img-blog.csdnimg.cn/20200909164509190.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+]]></content>
+      <tags>
+        <tag>本体建模</tag>
       </tags>
   </entry>
   <entry>

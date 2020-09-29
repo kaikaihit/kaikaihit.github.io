@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>BOM简介</title>
+    <url>/2020/08/17/BOM%E7%AE%80%E4%BB%8B/</url>
+    <content><![CDATA[<p>BOM（Bill of Material）物料清单，也就是以数据格式来描述产品结构的文件，是计算机可以识别的产品结构数据文件，也是ERP的主导文件。BOM使系统识别产品结构，也是联系与沟通企业各项业务的纽带。</p>
+<p>物料清单(BOM)是指生产或组装最小批量的某个产品所需物料的需求清单，包含物料、单位用量、损耗率等信息，其中最小批量没有指明默认值就是数量1。</p>
+<p>物料清单(BOM)也是计算生产一批产品所需物料的毛需求的前置基础资料,单位用量乘以生产数量就是所需某个物料的毛需求数量。</p>
+<p>物料清单(BOM)也是接单时核算产品预估成本的重要依据,单项物料成本用单位用量乘以市场购买价得到，然后累计各单项物料成本，就是生产一个产品的材料成本。</p>
+<a id="more"></a>
+
+<p><strong>成套设备</strong>：在生产企业一般不用装配工序连接，但用于完成相互联系的使用功能的两个或两个以上的产品的总和；</p>
+<p><strong>零件</strong>：不采用装配工序制成的单一成品；</p>
+<p><strong>部件</strong>：由若干个部分（零件、分部件），以可拆成或不可拆的形式组成的成品；分部件可以按照其从属产品关系划分为1级分部件，2级分部件。</p>
+<p><strong>总成</strong>：能够执行一定独立功能的由若干个部门以可拆成或不可拆的形式组成的复杂成品，例如发动机总成，车桥总成，前轴总成等；由零件和部件组成；也可能叫组件、整件、装置、全件等说法。复杂产品可能还有分总成。</p>
+<p><strong>模块</strong>：具有相对独立功能和通用接口的单元。类似总成，但可能比较简单。</p>
+<p><strong>专用件（基本件）</strong>：本产品专用的零部件。不过在实际中往往借用关系比较多，专用件的实际含义是首次应用在本产品上的零部件。</p>
+<p><strong>借用件</strong>：在本产品中采用已有产品的组成部分，这些组成部分叫借用件。</p>
+<p><strong>通用件</strong>：在不同类型或同类型不同规格的产品中具有互换性的零部件。</p>
+<p><strong>标准件</strong>：经过优选、简化、统一并给予标准代号的零部件。</p>
+<p><strong>替换件</strong>：本产品必须要有的组成部分，一般数量都不变化，例如汽车的发动机。可以有多种选装规格。</p>
+<p><strong>选装件</strong>：本产品不一定要有的组成部分，可以有多个选装规格。</p>
+<h5 id="为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。"><a href="#为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。" class="headerlink" title="为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。"></a>为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。</h5><p><img data-src="https://img-blog.csdnimg.cn/20200817112853508.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p><img data-src="https://img-blog.csdnimg.cn/20200817112906774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
+<p>参考：</p>
+<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">http<span class="variable">s:</span>//www.zhihu.<span class="keyword">com</span>/<span class="built_in">search</span>?<span class="built_in">type</span>=content&amp;q=BOM</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <categories>
+        <category>工业机理模型</category>
+      </categories>
+      <tags>
+        <tag>BOM</tag>
+        <tag>知识图谱</tag>
+        <tag>工业机理模型</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Java EE基础|Hibernate</title>
     <url>/2020/08/30/Java-EE%E5%9F%BA%E7%A1%80-Hibernate/</url>
     <content><![CDATA[<h2 id="实体对象的三种形式以及转换关系"><a href="#实体对象的三种形式以及转换关系" class="headerlink" title="实体对象的三种形式以及转换关系"></a>实体对象的三种形式以及转换关系</h2><p>瞬时态、持久态、游状态</p>
@@ -107,41 +142,6 @@
       </tags>
   </entry>
   <entry>
-    <title>BOM简介</title>
-    <url>/2020/08/17/BOM%E7%AE%80%E4%BB%8B/</url>
-    <content><![CDATA[<p>BOM（Bill of Material）物料清单，也就是以数据格式来描述产品结构的文件，是计算机可以识别的产品结构数据文件，也是ERP的主导文件。BOM使系统识别产品结构，也是联系与沟通企业各项业务的纽带。</p>
-<p>物料清单(BOM)是指生产或组装最小批量的某个产品所需物料的需求清单，包含物料、单位用量、损耗率等信息，其中最小批量没有指明默认值就是数量1。</p>
-<p>物料清单(BOM)也是计算生产一批产品所需物料的毛需求的前置基础资料,单位用量乘以生产数量就是所需某个物料的毛需求数量。</p>
-<p>物料清单(BOM)也是接单时核算产品预估成本的重要依据,单项物料成本用单位用量乘以市场购买价得到，然后累计各单项物料成本，就是生产一个产品的材料成本。</p>
-<a id="more"></a>
-
-<p><strong>成套设备</strong>：在生产企业一般不用装配工序连接，但用于完成相互联系的使用功能的两个或两个以上的产品的总和；</p>
-<p><strong>零件</strong>：不采用装配工序制成的单一成品；</p>
-<p><strong>部件</strong>：由若干个部分（零件、分部件），以可拆成或不可拆的形式组成的成品；分部件可以按照其从属产品关系划分为1级分部件，2级分部件。</p>
-<p><strong>总成</strong>：能够执行一定独立功能的由若干个部门以可拆成或不可拆的形式组成的复杂成品，例如发动机总成，车桥总成，前轴总成等；由零件和部件组成；也可能叫组件、整件、装置、全件等说法。复杂产品可能还有分总成。</p>
-<p><strong>模块</strong>：具有相对独立功能和通用接口的单元。类似总成，但可能比较简单。</p>
-<p><strong>专用件（基本件）</strong>：本产品专用的零部件。不过在实际中往往借用关系比较多，专用件的实际含义是首次应用在本产品上的零部件。</p>
-<p><strong>借用件</strong>：在本产品中采用已有产品的组成部分，这些组成部分叫借用件。</p>
-<p><strong>通用件</strong>：在不同类型或同类型不同规格的产品中具有互换性的零部件。</p>
-<p><strong>标准件</strong>：经过优选、简化、统一并给予标准代号的零部件。</p>
-<p><strong>替换件</strong>：本产品必须要有的组成部分，一般数量都不变化，例如汽车的发动机。可以有多种选装规格。</p>
-<p><strong>选装件</strong>：本产品不一定要有的组成部分，可以有多个选装规格。</p>
-<h5 id="为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。"><a href="#为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。" class="headerlink" title="为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。"></a>为了便于计算机识别，必须把用图示表达的产品结构转化成某种数据格式，这种以数据格式来描述产品结构的文件就是物料清单，即是BOM（产品结构表或产品结构树，配方表和要素表），定义产品的技术文件。</h5><p><img data-src="https://img-blog.csdnimg.cn/20200817112853508.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p><img data-src="https://img-blog.csdnimg.cn/20200817112906774.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-<p>参考：</p>
-<figure class="highlight vim"><table><tr><td class="code"><pre><span class="line">http<span class="variable">s:</span>//www.zhihu.<span class="keyword">com</span>/<span class="built_in">search</span>?<span class="built_in">type</span>=content&amp;q=BOM</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <categories>
-        <category>工业机理模型</category>
-      </categories>
-      <tags>
-        <tag>BOM</tag>
-        <tag>知识图谱</tag>
-        <tag>工业机理模型</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java EE基础|Struts</title>
     <url>/2020/08/30/Java-EE%E5%9F%BA%E7%A1%80-Struts/</url>
     <content><![CDATA[<h2 id="STRUTS的应用场景"><a href="#STRUTS的应用场景" class="headerlink" title="STRUTS的应用场景"></a>STRUTS的应用场景</h2><p>Struts是采用Java Servlet/JavaServer Pages技术，开发Web应用程序的开放源码的framework。采用Struts开发出基于MVC（Model、View和Controller）设计模式的应用架构。有如下功能：</p>
@@ -157,6 +157,23 @@
         <tag>Java</tag>
         <tag>Java基础</tag>
         <tag>Struts</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java SE基础|IO和NIOAIO</title>
+    <url>/2020/08/29/Java-SE%E5%9F%BA%E7%A1%80-IO%E5%92%8CNIOAIO/</url>
+    <content><![CDATA[<h2 id="JAVA中有几种类型的流"><a href="#JAVA中有几种类型的流" class="headerlink" title="JAVA中有几种类型的流"></a>JAVA中有几种类型的流</h2><p>字节流，字符流</p>
+<p>字节流继承于InputStream和OutputStream</p>
+<p>字符流继承于InputStreamReader和OutputStreamWriter.</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>IO</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>IO</tag>
       </tags>
   </entry>
   <entry>
@@ -193,23 +210,6 @@
         <tag>Java</tag>
         <tag>Java基础</tag>
         <tag>GC</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java SE基础|IO和NIOAIO</title>
-    <url>/2020/08/29/Java-SE%E5%9F%BA%E7%A1%80-IO%E5%92%8CNIOAIO/</url>
-    <content><![CDATA[<h2 id="JAVA中有几种类型的流"><a href="#JAVA中有几种类型的流" class="headerlink" title="JAVA中有几种类型的流"></a>JAVA中有几种类型的流</h2><p>字节流，字符流</p>
-<p>字节流继承于InputStream和OutputStream</p>
-<p>字符流继承于InputStreamReader和OutputStreamWriter.</p>
-]]></content>
-      <categories>
-        <category>Java面试宝典</category>
-        <category>IO</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Java基础</tag>
-        <tag>IO</tag>
       </tags>
   </entry>
   <entry>
@@ -341,37 +341,105 @@
       </tags>
   </entry>
   <entry>
-    <title>【知识图谱系列合集】一、知识提取</title>
-    <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%80%E3%80%81%E7%9F%A5%E8%AF%86%E6%8F%90%E5%8F%96/</url>
-    <content><![CDATA[<p><img data-src="https://img-blog.csdnimg.cn/20200810201749355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="知识图谱构建流程"><br>数据主要有三类：结构化数据、半结构化数据和非结构化数据。<br>知识提取的目的：通过自动化或者半自动化的技术抽取出可用的知识单元，知识单元包括实体、属性和关系，并以此为基础，形成一系列高质量的事实表达，为上层模式层的构建奠定基础。<br>**<em>本文主要讲述知识图谱构建过程中的知识提取，实体抽取、属性抽取和关系抽取。**</em></p>
+    <title>Java SE基础|面向对象</title>
+    <url>/2020/08/27/Java-SE%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
+    <content><![CDATA[<h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="HashCode-方法和equals-方法有什么联系？"><a href="#HashCode-方法和equals-方法有什么联系？" class="headerlink" title="HashCode()方法和equals()方法有什么联系？"></a>HashCode()方法和equals()方法有什么联系？</h2><p>1.相等（相同）的对象必须具有相等的哈希码（或者散列码）。</p>
+<p>2.如果两个对象的hashCode相同，它们并不一定相同。</p>
+<h2 id="构造函数、析构函数和函数的重载？"><a href="#构造函数、析构函数和函数的重载？" class="headerlink" title="构造函数、析构函数和函数的重载？"></a>构造函数、析构函数和函数的重载？</h2><p>构造函数：当新对象被创建的时候，构造函数会被调用。每一个类都有构造函数。</p>
+<p>析构函数：当新对象结束生命周期时，系统自动调用。</p>
+<p>函数的重载：函数的参数类型，参数个数不同。才能构成函数的重载。</p>
+<p>Java中构造函数重载和方法重载很相似。可以为一个类创建多个构造函数。每一个构造函数必须有它自己唯一的参数列表。</p>
+<p>你不自己写构造函数的情况下，Java不会创建默认的复制构造函数。</p>
 <a id="more"></a>
 
-<p><strong><em>1.实体抽取</em></strong><br>实体抽取也称为命名实体学习，指的是从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素，所以实体抽取是知识抽取中最重要且最基础的一步。实体抽取的方法可以分为以下四种。</p>
-<p><strong>1.1基于百科站点或垂直站点提取</strong><br>很常规基本的提取方法。<br>从百科类站点的标题和链接中提取实体名。优点是可以得到开放互联网中最常见的实体名，其缺点是对于中低频的覆盖率低。与一般性通用的网站相比，垂直类站点的实体提取可以获取特定领域的实体。例如从豆瓣各频道(音乐、读书、电影等)获取各种实体列表。这种方法主要是基于爬取技术来实现和获取。</p>
-<p><strong>1.2基于规则与词典的方法</strong><br>需要为目标实体编写模板，然后在原始语料中进行匹配。<br>早期的实体抽取是在限定文本领域、限定语义单元类型的条件下进行的，主要采用的是基于规则与词典的方法，例如使用已定义的规则，抽取出文本中的人名、地名、组织机构名、特定时间等实体。然而，基于规则模板的方法不仅需要依靠大量的专家来编写规则或模板，覆盖的领域范围有限，而且很难适应数据变化的新需求。</p>
-<p><strong>1.3基于统计机器学习的方法</strong><br>通过机器学习的方法对原始语料进行训练，然后再利用训练好的模型去识别实体。<br>鉴于基于规则与词典实体的局限性，为具更有可扩展性，相关研究人员将机器学习中的监督学习算法用于命名实体的抽取问题上。近年来随着深度学习的兴起应用，基于深度学习的命名实体识别得到广泛应用。</p>
-<p><strong>1.4面向开放域的抽取方法</strong><br>是面向海量的Web语料。<br>针对如何从少量实体实例中自动发现具有区分力的模式，进而扩展到海量文本去给实体做分类与聚类的问题。</p>
-<p><strong><em>2.属性和属性值抽取</em></strong><br>属性提取的任务是为每个本体语义类构造属性列表，而属性值提取则为一个语义类的实体附加属性值。属性和属性值的抽取能够形成完整的实体概念的知识图谱维度。常见的属性和属性值抽取方法包括从百科类站点中提取，从垂直网站中进行包装器归纳，从网页表格中提取，以及利用手工定义或自动生成的模式从句子和查询日志中提取。</p>
-<p>常见的语义类/ 实体的常见属性/ 属性值可以通过解析百科类站点中的半结构化信息（如维基百科的信息盒和百度百科的属性表格）而获得。尽管通过这种简单手段能够得到高质量的属性，但同时需要采用其它方法来增加覆盖率（即为语义类增加更多属性以及为更多的实体添加属性值）。</p>
-<p><strong><em>3.关系抽取</em></strong><br>关系抽取的目标是解决实体语义链接的问题。关系的基本信息包括参数类型、满足此关系的元组模式等。分为开放式实体关系抽取，基于联合推理的实体关系抽取等。</p>
-<p><strong>3.1开放式实体关系抽取</strong><br>开放式实体关系抽取可分为二元开放式关系抽取和n元开放式关系抽取。</p>
-<p>在二元开放式关系抽取中，早期的研究有KnowItAll与TextRunner系统，在准确率与召回率上表现一般。有文献提出了一种基于Wikipedia的OIE方法WOE，经自监督学习得到抽取器，准确率较TextRunner有明显的提高。针对WOE的缺点，有文献提出了第二代OIE ReVerb系统，以动词关系抽取为主。有文献提出了第三代OIE系统OLLIE(open language learning for information extraction)，尝试弥补并扩展OIE的模型及相应的系统，抽取结果的准确度得到了增强。</p>
-<p>然而，基于语义角色标注的OIE分析显示：英文语句中40%的实体关系是n元的[32]，如处理不当，可能会影响整体抽取的完整性。有文献提出了一种可抽取任意英文语句中n元实体关系的方法KPAKEN，弥补了ReVerb的不足。但是由于算法对语句深层语法特征的提取导致其效率显著下降，并不适用于大规模开放域语料的情况。</p>
-<p><strong>3.2基于联合推理的实体关系抽取</strong><br>联合推理的关系抽取中的典型方法是马尔可夫逻辑网，它是一种将马尔可夫网络与一阶逻辑相结合的统计关系学习框架，同时也是在OIE中融入推理的一种重要实体关系抽取模型。</p>
-<p>联合推理的关系抽取中的典型方法是马尔可夫逻辑网MLN，它是一种将马尔可夫网络与一阶逻辑相结合的统计关系学习框架，同时也是在OIE中融入推理的一种重要实体关系抽取模型。基于该模型，有文献提出了一种无监督学习模型StatSnowball，不同于传统的OIE，该方法可自动产生或选择模板生成抽取器。在StatSnowball的基础上，有文献提出了一种实体识别与关系抽取相结合的模型EntSum，主要由扩展的CRF命名实体识别模块与基于StatSnowball的关系抽取模块组成，在保证准确率的同时也提高了召回率。有文献提出了一种简易的Markov逻辑TML(tractable Markov logic)，TML将领域知识分解为若干部分，各部分主要来源于事物类的层次化结构，并依据此结构，将各大部分进一步分解为若干个子部分，以此类推。TML具有较强的表示能力，能够较为简洁地表示概念以及关系的本体结构。</p>
-<p><strong><em>4.语义类提取</em></strong><br>语义类抽取是指从文本中自动抽取信息来构造语义类并建立实体和语义类的关联, 作为实体层面上的规整和抽象。以下介绍有效的语义类抽取方法，包含三个模块：并列度相似计算、上下位关系提取以及语义类生成 。</p>
-<p><strong>4.1并列度相似计算</strong><br>当前主流的并列相似度计算方法有分布相似度法和模式匹配法。</p>
-<p>分布相似度方法：经常出现在类似的上下文环境中的两个词具有语义上的相似性。分布相似度方法的实现分三个步骤：第一步，定义上下文；第二步，把每个词表示成一个特征向量，向量每一维代表一个不同的上下文，向量的值表示本词相对于上下文的权重；第三步，计算两个特征向量之间的相似度，将其作为它们所代表的词之间的相似度。 、</p>
-<p>模式匹配法：基本思路是把一些模式作用于源数据，得到一些词和词之间共同出现的信息，然后把这些信息聚集起来生成单词之间的相似度。模式可以是手工定义的，也可以是根据一些种子数据而自动生成的。</p>
-<p>分布相似度法和模式匹配法都可以用来在数以百亿计的句子中或者数以十亿计的网页中抽取词的相似性信息。。</p>
-<p><strong>4.2上下位关系提取</strong><br>该模块从文档中抽取词的上下位关系信息，生成（下义词，上义词）数据对，例如（狗，动物）、（悉尼，城市）。这种方法的主要缺点包括：并不是所有的分类词条都代表上位词，例如百度百科中“狗”的开放分类“养殖”就不是其上位词；生成的关系图中没有权重信息，因此不能区分同一个实体所对应的不同上位词的重要性；覆盖率偏低，即很多上下位关系并没有包含在百科站点的分类信息中。</p>
-<p><strong>4.3语义类生成</strong><br>该模块包括聚类和语义类标定两个子模块。聚类的结果决定了要生成哪些语义类以及每个语义类包含哪些实体，而语义类标定的任务是给一个语义类附加一个或者多个上位词作为其成员的公共上位词。此模块依赖于并列相似性和上下位关系信息来进行聚类和标定。有些研究工作只根据上下位关系图来生成语义类，但经验表明并列相似性信息对于提高最终生成的语义类的精度和覆盖率都至关重要。</p>
+<h2 id="方法重写overriding和方法重载overloading的区别"><a href="#方法重写overriding和方法重载overloading的区别" class="headerlink" title="方法重写overriding和方法重载overloading的区别"></a>方法重写overriding和方法重载overloading的区别</h2><p><strong>重写：</strong></p>
+<p>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。<strong>即外壳不变，核心重写！</strong></p>
+<p>1）参数列表必须完全与被重写的方法相同，否则不能称其为重写而是重载。</p>
+<p>2）返回的类型必须一直与被重写的方法的返回类型相同，否则不能称其为重写而是重载。</p>
+<p>3）访问修饰符的限制一定要大于被重写方法的访问修饰符（public&gt;protected&gt;default&gt;private）</p>
+<p>4）重写方法一定不能抛出新的检查异常或者比被重写方法申明更加宽泛的检查型异常。例如：</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20200827165324423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="访问权限关键词"></p>
+<p><strong>重载：</strong></p>
+<p>重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。</p>
+<p>1）必须具有不同的参数列表；</p>
+<p>2）可以有不同的返回类型，只要参数列表不同就可以了；</p>
+<p>3）可以有不同的访问修饰符；</p>
+<p>4）可以抛出不同的异常；</p>
+<h2 id="Query接口的list方法和iterate方法有什么区别？"><a href="#Query接口的list方法和iterate方法有什么区别？" class="headerlink" title="Query接口的list方法和iterate方法有什么区别？"></a>Query接口的list方法和iterate方法有什么区别？</h2><p>考察：接口</p>
+<p>①list()方法无法利用一级缓存和二级缓存（对缓存只写不读），它只能在开启查询缓存的前提下使用查询缓存；iterate()方法可以充分利用缓存，如果目标数据只读或者读取频繁，使用iterate()方法可以减少性能开销。<br>② list()方法不会引起N+1查询问题，而iterate()方法可能引起N+1查询问题</p>
+<h2 id="面向对象的“六原则一法则”"><a href="#面向对象的“六原则一法则”" class="headerlink" title="面向对象的“六原则一法则”"></a>面向对象的“六原则一法则”</h2><p>考察：Java对象</p>
+<p>1.单一职责原则：一个类只做它该做的事情</p>
+<p>2.依赖倒转原则：面向接口编程。</p>
+<p>3.开闭原则：软件实体应当对扩展开放，对修改关闭。</p>
+<p>4.里氏替换原则：任何时候都可以用子类型替换掉父类型。</p>
+<p>5.接口隔离原则：接口要小而专，绝不能大而全。</p>
+<p>6.合成聚合复用原则：优先使用聚合或合成关系复用代码。</p>
+<p>迪米特法则：迪米特法则又叫最少知识原则，一个对象应当对其他对象有尽可能少的了解</p>
+<h2 id="面向对象的特征有哪些方面？"><a href="#面向对象的特征有哪些方面？" class="headerlink" title="面向对象的特征有哪些方面？"></a>面向对象的特征有哪些方面？</h2><p>1.抽象</p>
+<p>抽象就是忽略一个主题中与当前目标无关的那些方面，以便更充分地注意与当前目标有关的方面。抽象并不打算了解全部问题，而只<br>是选择其中的一部分，暂时不用部分细节。抽象包括两个方面，一是过程抽象，二是数据抽象。</p>
+<p>2.继承</p>
+<p>继承是一种联结类的层次模型，并且允许和鼓励类的重用，它提供了一种明确表述共性的方法。但Java只支持单继承，即一个类只有一个父类。但Java的接口支持多继承，即一个子接口可以有多个父接口。</p>
+<p>3.封装</p>
+<p>封装是把过程和数据包围起来，对数据的访问只能通过已定义的界面。</p>
+<p>4.多态</p>
+<p>多态性是指允许不同类的对象对同一消息作出响应。多态性包括参数化多态性和包含多态性。多态性语言具有灵活、抽象、行为共享<br>、代码共享的优势，很好的解决了应用程序函数同名问题。</p>
+<h2 id="Comparable和Comparator接口的作用以及它们的区别。"><a href="#Comparable和Comparator接口的作用以及它们的区别。" class="headerlink" title="Comparable和Comparator接口的作用以及它们的区别。"></a>Comparable和Comparator接口的作用以及它们的区别。</h2><p>Comparable提供了compareTo()方法，这个方法可以个给两个对象排序。具体来说，它返回负数，0，正数来表明输入对象小于，等于，大于已经存在的对象。</p>
+<p>Comparatort提供了compare()和equals()两个方法。compare()方法用来给两个输入参数排序，返回负数，0，正数表明第一个参数是小于，等于，大于第二个参数。equals()方法需要一个对象作为参数，它用来决定输入参数是否和comparator相等。</p>
+<h2 id="接口和抽象类的区别"><a href="#接口和抽象类的区别" class="headerlink" title="接口和抽象类的区别"></a>接口和抽象类的区别</h2><p>接口中所有的方法隐含的都是抽象的。而抽象类则可以同时包含抽象和非抽象的方法。<br>类可以实现很多个接口，但是只能继承一个抽象类<br>类可以不实现抽象类和接口声明的所有方法，当然，在这种情况下，类也必须得声明成是抽象的。<br>抽象类可以在不提供接口方法实现的情况下实现接口。<br>Java接口中声明的变量默认都是final的。抽象类可以包含非final的变量。<br>Java接口中的成员函数默认是public的。抽象类的成员函数可以是private，protected或者是public。<br>接口是绝对抽象的，不可以被实例化。抽象类也不可以被实例化，但是，如果它包含main方法的话是可以被调用的。</p>
+<h2 id="extends和super泛型限定符"><a href="#extends和super泛型限定符" class="headerlink" title="extends和super泛型限定符"></a>extends和super泛型限定符</h2><p>泛型：参数化类型，定义方法时有形参，调用此方法时传递实参。</p>
+<p>（1）泛型中上界和下界的定义</p>
+<p>上界&lt;? extend Fruit&gt;</p>
+<p>下界&lt;? super Apple&gt;</p>
+<p>（2）上界和下界的特点</p>
+<p>上界的list只能get，不能add（确切地说不能add出除null之外的对象，包括Object）</p>
+<p>下界的list只能add，不能get</p>
+<h2 id="类加载机制、双亲委派模型"><a href="#类加载机制、双亲委派模型" class="headerlink" title="类加载机制、双亲委派模型"></a>类加载机制、双亲委派模型</h2><p>类加载机制：某个特定的类加载器在接到加载类的请求时，首先将加载任务委托给父类加载器，依次递归，如果父类加载器可以完成类加载任务，就成功返回；只有父类加载器无法完成此加载任务时，才自己去加载。</p>
+<p>双亲委派模型：</p>
+<ol>
+<li>可以避免重复加载，父类已经加载了，子类就不需要再次加载</li>
+<li>更加安全，很好的解决了各个类加载器的基础类的统一问题，如果不使用该种方式，那么用户可以随意定义类加载器来加载核心api，会带来相关隐患。</li>
+</ol>
+<h2 id="String、StringBuffer和StringBuilder"><a href="#String、StringBuffer和StringBuilder" class="headerlink" title="String、StringBuffer和StringBuilder"></a>String、StringBuffer和StringBuilder</h2><p>StringBuffer线程安全，StringBuilder线程不安全，底层实现上的话，StringBuffer其实就是比StringBuilder多了Synchronized修饰符。</p>
+<p>String：适用于少量的字符串操作。<br>StringBuilder：适用于单线程下在字符串缓冲区进行大量操作。<br>StringBuffer：适用于多线程下在字符串缓冲区进行大量操作。</p>
+<h2 id="请说明”static”关键字是什么意思？Java中是否可以覆盖-override-一个private或者是static的方法？"><a href="#请说明”static”关键字是什么意思？Java中是否可以覆盖-override-一个private或者是static的方法？" class="headerlink" title="请说明”static”关键字是什么意思？Java中是否可以覆盖(override)一个private或者是static的方法？"></a>请说明”static”关键字是什么意思？Java中是否可以覆盖(override)一个private或者是static的方法？</h2><p>“static”关键字表明一个成员变量或者是成员方法可以在没有所属的类的实例变量的情况下被访问。<br>Java中static方法不能被覆盖，因为方法覆盖是基于运行时动态绑定的，而static方法是编译时静态绑定的。static方法跟类的任何实例都不相关，所以概念上不适用。</p>
+<h2 id="请说明重载和重写的区别，相同参数不同返回值能重载吗？"><a href="#请说明重载和重写的区别，相同参数不同返回值能重载吗？" class="headerlink" title="请说明重载和重写的区别，相同参数不同返回值能重载吗？"></a>请说明重载和重写的区别，相同参数不同返回值能重载吗？</h2><p>重载(Overloading)</p>
+<p>（1） 方法重载是让类以统一的方式处理不同类型数据的一种手段。多个同名函数同时存在，具有不同的参数个数/类型。</p>
+<p>重载Overloading是一个类中多态性的一种表现。</p>
+<p>（2） Java的方法重载，就是在类中可以创建多个方法，它们具有相同的名字，但具有不同的参数和不同的定义。</p>
+<p>调用方法时通过传递给它们的不同参数个数和参数类型来决定具体使用哪个方法, 这就是多态性。</p>
+<p>（3） 重载的时候，方法名要一样，但是参数类型和个数不一样，返回值类型可以相同也可以不相同。无法以返回型别作为重载函数的区分标准。</p>
+<p>重写（Overriding）</p>
+<p>（1） 父类与子类之间的多态性，对父类的函数进行重新定义。如果在子类中定义某方法与其父类有相同的名称和参数，我们说该方法被重写 (Overriding)。在Java中，子类可继承父类中的方法，而不需要重新编写相同的方法。</p>
+<p>但有时子类并不想原封不动地继承父类的方法，而是想作一定的修改，这就需要采用方法的重写。</p>
+<p>方法重写又称方法覆盖。</p>
+<p>（2）若子类中的方法与父类中的某一方法具有相同的方法名、返回类型和参数表，则新方法将覆盖原有的方法。</p>
+<p>如需父类中原有的方法，可使用super关键字，该关键字引用了当前类的父类。</p>
+<p>（3）子类函数的访问修饰权限不能少于父类的。</p>
+<h2 id="Object类的方法"><a href="#Object类的方法" class="headerlink" title="Object类的方法"></a>Object类的方法</h2><p>Object()默认构造方法。</p>
+<p>clone() 创建并返回此对象的一个副本。</p>
+<p>equals(Object obj) 指示某个其他对象是否与此对象“相等”。</p>
+<p>finalize()当垃圾回收器确定不存在对该对象的更多引用时，由对象的垃圾回收器调用此方法。</p>
+<p>getClass()返回一个对象的运行时类。</p>
+<p>hashCode()返回该对象的哈希码值。</p>
+<p>notify()唤醒在此对象监视器上等待的单个线程。 </p>
+<p>notifyAll()唤醒在此对象监视器上等待的所有线程。</p>
+<p>toString()返回该对象的字符串表示。</p>
+<p>wait()导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 方法。</p>
+<p>wait(long timeout)导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或者超过指定的时间量。wait(long timeout, int nanos) 导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或者其他某个线程中断当前线程，或者已超过某个实际时间量。</p>
+<h2 id="wait方法和sleep-方法"><a href="#wait方法和sleep-方法" class="headerlink" title="wait方法和sleep()方法"></a>wait方法和sleep()方法</h2><p>1.<strong>wait()方法</strong>则是指当前线程让自己暂时退让出同步资源锁，<strong>sleep()方法</strong>正在执行的线程主动让出CPU。</p>
+<p>2.<strong>sleep()方法</strong>可以在任何地方使用；<strong>wait()方法</strong>则只能在同步方法或同步块中使用</p>
+<p>3.**sleep()**是线程线程类（Thread）的方法，调用会暂停此线程指定的时间，但监控依然保持，不会释放对象锁，到时间自动恢复.**wait()**是Object的方法，调用会放弃对象锁，进入等待队列，待调用notify()/notifyAll()唤醒指定的线程或者所有线程，才会进入锁池，不再次获得对象锁才会进入运行状态。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Thread1</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (RegExpTest.class)&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;enter thread1 ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread1 is waiting&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">try</span>&#123;</span><br><span class="line">                    <span class="comment">//释放锁有两种方式：(1)程序自然离开监视器的范围，即离开synchronized关键字管辖的代码范围</span></span><br><span class="line">                    <span class="comment">//(2)在synchronized关键字管辖的代码内部调用监视器对象的wait()方法。这里使用wait方法</span></span><br><span class="line">                    RegExpTest.class.wait();</span><br><span class="line">                &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                System.out.println(<span class="string">&quot;thread1 is going on ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread1 is being over!&quot;</span>);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Thread2</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="comment">//notify方法并不释放锁，即使thread2调用了下面的sleep方法休息10ms，但thread1仍然不会执行</span></span><br><span class="line">            <span class="comment">//因为thread2没有释放锁，所以Thread1得不到锁而无法执行</span></span><br><span class="line">            <span class="keyword">synchronized</span>(RegExpTest.class)&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;enter thread2 ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 notify other thread can release wait status ...&quot;</span>);</span><br><span class="line">                RegExpTest.class.notify();</span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 is sleeping ten millisecond ...&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">try</span>&#123;</span><br><span class="line">                    Thread.sleep(<span class="number">10</span>);</span><br><span class="line">                &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 is going on ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 is being over!&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Thread1()).start();</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            Thread.sleep(<span class="number">10</span>);</span><br><span class="line">        &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Thread2()).start();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://img-blog.csdnimg.cn/20200828105942972.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
 ]]></content>
       <categories>
-        <category>知识图谱</category>
+        <category>Java面试宝典</category>
+        <category>Java</category>
       </categories>
       <tags>
-        <tag>知识图谱</tag>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
       </tags>
   </entry>
   <entry>
@@ -479,6 +547,40 @@
       </tags>
   </entry>
   <entry>
+    <title>【知识图谱系列合集】一、知识提取</title>
+    <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%80%E3%80%81%E7%9F%A5%E8%AF%86%E6%8F%90%E5%8F%96/</url>
+    <content><![CDATA[<p><img data-src="https://img-blog.csdnimg.cn/20200810201749355.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="知识图谱构建流程"><br>数据主要有三类：结构化数据、半结构化数据和非结构化数据。<br>知识提取的目的：通过自动化或者半自动化的技术抽取出可用的知识单元，知识单元包括实体、属性和关系，并以此为基础，形成一系列高质量的事实表达，为上层模式层的构建奠定基础。<br>**<em>本文主要讲述知识图谱构建过程中的知识提取，实体抽取、属性抽取和关系抽取。**</em></p>
+<a id="more"></a>
+
+<p><strong><em>1.实体抽取</em></strong><br>实体抽取也称为命名实体学习，指的是从原始数据语料中自动识别出命名实体。实体是知识图谱中最基本的元素，所以实体抽取是知识抽取中最重要且最基础的一步。实体抽取的方法可以分为以下四种。</p>
+<p><strong>1.1基于百科站点或垂直站点提取</strong><br>很常规基本的提取方法。<br>从百科类站点的标题和链接中提取实体名。优点是可以得到开放互联网中最常见的实体名，其缺点是对于中低频的覆盖率低。与一般性通用的网站相比，垂直类站点的实体提取可以获取特定领域的实体。例如从豆瓣各频道(音乐、读书、电影等)获取各种实体列表。这种方法主要是基于爬取技术来实现和获取。</p>
+<p><strong>1.2基于规则与词典的方法</strong><br>需要为目标实体编写模板，然后在原始语料中进行匹配。<br>早期的实体抽取是在限定文本领域、限定语义单元类型的条件下进行的，主要采用的是基于规则与词典的方法，例如使用已定义的规则，抽取出文本中的人名、地名、组织机构名、特定时间等实体。然而，基于规则模板的方法不仅需要依靠大量的专家来编写规则或模板，覆盖的领域范围有限，而且很难适应数据变化的新需求。</p>
+<p><strong>1.3基于统计机器学习的方法</strong><br>通过机器学习的方法对原始语料进行训练，然后再利用训练好的模型去识别实体。<br>鉴于基于规则与词典实体的局限性，为具更有可扩展性，相关研究人员将机器学习中的监督学习算法用于命名实体的抽取问题上。近年来随着深度学习的兴起应用，基于深度学习的命名实体识别得到广泛应用。</p>
+<p><strong>1.4面向开放域的抽取方法</strong><br>是面向海量的Web语料。<br>针对如何从少量实体实例中自动发现具有区分力的模式，进而扩展到海量文本去给实体做分类与聚类的问题。</p>
+<p><strong><em>2.属性和属性值抽取</em></strong><br>属性提取的任务是为每个本体语义类构造属性列表，而属性值提取则为一个语义类的实体附加属性值。属性和属性值的抽取能够形成完整的实体概念的知识图谱维度。常见的属性和属性值抽取方法包括从百科类站点中提取，从垂直网站中进行包装器归纳，从网页表格中提取，以及利用手工定义或自动生成的模式从句子和查询日志中提取。</p>
+<p>常见的语义类/ 实体的常见属性/ 属性值可以通过解析百科类站点中的半结构化信息（如维基百科的信息盒和百度百科的属性表格）而获得。尽管通过这种简单手段能够得到高质量的属性，但同时需要采用其它方法来增加覆盖率（即为语义类增加更多属性以及为更多的实体添加属性值）。</p>
+<p><strong><em>3.关系抽取</em></strong><br>关系抽取的目标是解决实体语义链接的问题。关系的基本信息包括参数类型、满足此关系的元组模式等。分为开放式实体关系抽取，基于联合推理的实体关系抽取等。</p>
+<p><strong>3.1开放式实体关系抽取</strong><br>开放式实体关系抽取可分为二元开放式关系抽取和n元开放式关系抽取。</p>
+<p>在二元开放式关系抽取中，早期的研究有KnowItAll与TextRunner系统，在准确率与召回率上表现一般。有文献提出了一种基于Wikipedia的OIE方法WOE，经自监督学习得到抽取器，准确率较TextRunner有明显的提高。针对WOE的缺点，有文献提出了第二代OIE ReVerb系统，以动词关系抽取为主。有文献提出了第三代OIE系统OLLIE(open language learning for information extraction)，尝试弥补并扩展OIE的模型及相应的系统，抽取结果的准确度得到了增强。</p>
+<p>然而，基于语义角色标注的OIE分析显示：英文语句中40%的实体关系是n元的[32]，如处理不当，可能会影响整体抽取的完整性。有文献提出了一种可抽取任意英文语句中n元实体关系的方法KPAKEN，弥补了ReVerb的不足。但是由于算法对语句深层语法特征的提取导致其效率显著下降，并不适用于大规模开放域语料的情况。</p>
+<p><strong>3.2基于联合推理的实体关系抽取</strong><br>联合推理的关系抽取中的典型方法是马尔可夫逻辑网，它是一种将马尔可夫网络与一阶逻辑相结合的统计关系学习框架，同时也是在OIE中融入推理的一种重要实体关系抽取模型。</p>
+<p>联合推理的关系抽取中的典型方法是马尔可夫逻辑网MLN，它是一种将马尔可夫网络与一阶逻辑相结合的统计关系学习框架，同时也是在OIE中融入推理的一种重要实体关系抽取模型。基于该模型，有文献提出了一种无监督学习模型StatSnowball，不同于传统的OIE，该方法可自动产生或选择模板生成抽取器。在StatSnowball的基础上，有文献提出了一种实体识别与关系抽取相结合的模型EntSum，主要由扩展的CRF命名实体识别模块与基于StatSnowball的关系抽取模块组成，在保证准确率的同时也提高了召回率。有文献提出了一种简易的Markov逻辑TML(tractable Markov logic)，TML将领域知识分解为若干部分，各部分主要来源于事物类的层次化结构，并依据此结构，将各大部分进一步分解为若干个子部分，以此类推。TML具有较强的表示能力，能够较为简洁地表示概念以及关系的本体结构。</p>
+<p><strong><em>4.语义类提取</em></strong><br>语义类抽取是指从文本中自动抽取信息来构造语义类并建立实体和语义类的关联, 作为实体层面上的规整和抽象。以下介绍有效的语义类抽取方法，包含三个模块：并列度相似计算、上下位关系提取以及语义类生成 。</p>
+<p><strong>4.1并列度相似计算</strong><br>当前主流的并列相似度计算方法有分布相似度法和模式匹配法。</p>
+<p>分布相似度方法：经常出现在类似的上下文环境中的两个词具有语义上的相似性。分布相似度方法的实现分三个步骤：第一步，定义上下文；第二步，把每个词表示成一个特征向量，向量每一维代表一个不同的上下文，向量的值表示本词相对于上下文的权重；第三步，计算两个特征向量之间的相似度，将其作为它们所代表的词之间的相似度。 、</p>
+<p>模式匹配法：基本思路是把一些模式作用于源数据，得到一些词和词之间共同出现的信息，然后把这些信息聚集起来生成单词之间的相似度。模式可以是手工定义的，也可以是根据一些种子数据而自动生成的。</p>
+<p>分布相似度法和模式匹配法都可以用来在数以百亿计的句子中或者数以十亿计的网页中抽取词的相似性信息。。</p>
+<p><strong>4.2上下位关系提取</strong><br>该模块从文档中抽取词的上下位关系信息，生成（下义词，上义词）数据对，例如（狗，动物）、（悉尼，城市）。这种方法的主要缺点包括：并不是所有的分类词条都代表上位词，例如百度百科中“狗”的开放分类“养殖”就不是其上位词；生成的关系图中没有权重信息，因此不能区分同一个实体所对应的不同上位词的重要性；覆盖率偏低，即很多上下位关系并没有包含在百科站点的分类信息中。</p>
+<p><strong>4.3语义类生成</strong><br>该模块包括聚类和语义类标定两个子模块。聚类的结果决定了要生成哪些语义类以及每个语义类包含哪些实体，而语义类标定的任务是给一个语义类附加一个或者多个上位词作为其成员的公共上位词。此模块依赖于并列相似性和上下位关系信息来进行聚类和标定。有些研究工作只根据上下位关系图来生成语义类，但经验表明并列相似性信息对于提高最终生成的语义类的精度和覆盖率都至关重要。</p>
+]]></content>
+      <categories>
+        <category>知识图谱</category>
+      </categories>
+      <tags>
+        <tag>知识图谱</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>【知识图谱系列合集】三、实体对齐</title>
     <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E4%B8%89%E3%80%81%E5%AE%9E%E4%BD%93%E5%AF%B9%E9%BD%90/</url>
     <content><![CDATA[<p><img data-src="https://img-blog.csdnimg.cn/20200810204859835.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong><em>导读：</em></strong></p>
@@ -522,108 +624,6 @@
       </categories>
       <tags>
         <tag>知识图谱 实体对齐</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java SE基础|面向对象</title>
-    <url>/2020/08/27/Java-SE%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</url>
-    <content><![CDATA[<h1 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h1><h2 id="HashCode-方法和equals-方法有什么联系？"><a href="#HashCode-方法和equals-方法有什么联系？" class="headerlink" title="HashCode()方法和equals()方法有什么联系？"></a>HashCode()方法和equals()方法有什么联系？</h2><p>1.相等（相同）的对象必须具有相等的哈希码（或者散列码）。</p>
-<p>2.如果两个对象的hashCode相同，它们并不一定相同。</p>
-<h2 id="构造函数、析构函数和函数的重载？"><a href="#构造函数、析构函数和函数的重载？" class="headerlink" title="构造函数、析构函数和函数的重载？"></a>构造函数、析构函数和函数的重载？</h2><p>构造函数：当新对象被创建的时候，构造函数会被调用。每一个类都有构造函数。</p>
-<p>析构函数：当新对象结束生命周期时，系统自动调用。</p>
-<p>函数的重载：函数的参数类型，参数个数不同。才能构成函数的重载。</p>
-<p>Java中构造函数重载和方法重载很相似。可以为一个类创建多个构造函数。每一个构造函数必须有它自己唯一的参数列表。</p>
-<p>你不自己写构造函数的情况下，Java不会创建默认的复制构造函数。</p>
-<a id="more"></a>
-
-<h2 id="方法重写overriding和方法重载overloading的区别"><a href="#方法重写overriding和方法重载overloading的区别" class="headerlink" title="方法重写overriding和方法重载overloading的区别"></a>方法重写overriding和方法重载overloading的区别</h2><p><strong>重写：</strong></p>
-<p>重写是子类对父类的允许访问的方法的实现过程进行重新编写, 返回值和形参都不能改变。<strong>即外壳不变，核心重写！</strong></p>
-<p>1）参数列表必须完全与被重写的方法相同，否则不能称其为重写而是重载。</p>
-<p>2）返回的类型必须一直与被重写的方法的返回类型相同，否则不能称其为重写而是重载。</p>
-<p>3）访问修饰符的限制一定要大于被重写方法的访问修饰符（public&gt;protected&gt;default&gt;private）</p>
-<p>4）重写方法一定不能抛出新的检查异常或者比被重写方法申明更加宽泛的检查型异常。例如：</p>
-<p><img data-src="https://img-blog.csdnimg.cn/20200827165324423.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="访问权限关键词"></p>
-<p><strong>重载：</strong></p>
-<p>重载(overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。</p>
-<p>1）必须具有不同的参数列表；</p>
-<p>2）可以有不同的返回类型，只要参数列表不同就可以了；</p>
-<p>3）可以有不同的访问修饰符；</p>
-<p>4）可以抛出不同的异常；</p>
-<h2 id="Query接口的list方法和iterate方法有什么区别？"><a href="#Query接口的list方法和iterate方法有什么区别？" class="headerlink" title="Query接口的list方法和iterate方法有什么区别？"></a>Query接口的list方法和iterate方法有什么区别？</h2><p>考察：接口</p>
-<p>①list()方法无法利用一级缓存和二级缓存（对缓存只写不读），它只能在开启查询缓存的前提下使用查询缓存；iterate()方法可以充分利用缓存，如果目标数据只读或者读取频繁，使用iterate()方法可以减少性能开销。<br>② list()方法不会引起N+1查询问题，而iterate()方法可能引起N+1查询问题</p>
-<h2 id="面向对象的“六原则一法则”"><a href="#面向对象的“六原则一法则”" class="headerlink" title="面向对象的“六原则一法则”"></a>面向对象的“六原则一法则”</h2><p>考察：Java对象</p>
-<p>1.单一职责原则：一个类只做它该做的事情</p>
-<p>2.依赖倒转原则：面向接口编程。</p>
-<p>3.开闭原则：软件实体应当对扩展开放，对修改关闭。</p>
-<p>4.里氏替换原则：任何时候都可以用子类型替换掉父类型。</p>
-<p>5.接口隔离原则：接口要小而专，绝不能大而全。</p>
-<p>6.合成聚合复用原则：优先使用聚合或合成关系复用代码。</p>
-<p>迪米特法则：迪米特法则又叫最少知识原则，一个对象应当对其他对象有尽可能少的了解</p>
-<h2 id="面向对象的特征有哪些方面？"><a href="#面向对象的特征有哪些方面？" class="headerlink" title="面向对象的特征有哪些方面？"></a>面向对象的特征有哪些方面？</h2><p>1.抽象</p>
-<p>抽象就是忽略一个主题中与当前目标无关的那些方面，以便更充分地注意与当前目标有关的方面。抽象并不打算了解全部问题，而只<br>是选择其中的一部分，暂时不用部分细节。抽象包括两个方面，一是过程抽象，二是数据抽象。</p>
-<p>2.继承</p>
-<p>继承是一种联结类的层次模型，并且允许和鼓励类的重用，它提供了一种明确表述共性的方法。但Java只支持单继承，即一个类只有一个父类。但Java的接口支持多继承，即一个子接口可以有多个父接口。</p>
-<p>3.封装</p>
-<p>封装是把过程和数据包围起来，对数据的访问只能通过已定义的界面。</p>
-<p>4.多态</p>
-<p>多态性是指允许不同类的对象对同一消息作出响应。多态性包括参数化多态性和包含多态性。多态性语言具有灵活、抽象、行为共享<br>、代码共享的优势，很好的解决了应用程序函数同名问题。</p>
-<h2 id="Comparable和Comparator接口的作用以及它们的区别。"><a href="#Comparable和Comparator接口的作用以及它们的区别。" class="headerlink" title="Comparable和Comparator接口的作用以及它们的区别。"></a>Comparable和Comparator接口的作用以及它们的区别。</h2><p>Comparable提供了compareTo()方法，这个方法可以个给两个对象排序。具体来说，它返回负数，0，正数来表明输入对象小于，等于，大于已经存在的对象。</p>
-<p>Comparatort提供了compare()和equals()两个方法。compare()方法用来给两个输入参数排序，返回负数，0，正数表明第一个参数是小于，等于，大于第二个参数。equals()方法需要一个对象作为参数，它用来决定输入参数是否和comparator相等。</p>
-<h2 id="接口和抽象类的区别"><a href="#接口和抽象类的区别" class="headerlink" title="接口和抽象类的区别"></a>接口和抽象类的区别</h2><p>接口中所有的方法隐含的都是抽象的。而抽象类则可以同时包含抽象和非抽象的方法。<br>类可以实现很多个接口，但是只能继承一个抽象类<br>类可以不实现抽象类和接口声明的所有方法，当然，在这种情况下，类也必须得声明成是抽象的。<br>抽象类可以在不提供接口方法实现的情况下实现接口。<br>Java接口中声明的变量默认都是final的。抽象类可以包含非final的变量。<br>Java接口中的成员函数默认是public的。抽象类的成员函数可以是private，protected或者是public。<br>接口是绝对抽象的，不可以被实例化。抽象类也不可以被实例化，但是，如果它包含main方法的话是可以被调用的。</p>
-<h2 id="extends和super泛型限定符"><a href="#extends和super泛型限定符" class="headerlink" title="extends和super泛型限定符"></a>extends和super泛型限定符</h2><p>泛型：参数化类型，定义方法时有形参，调用此方法时传递实参。</p>
-<p>（1）泛型中上界和下界的定义</p>
-<p>上界&lt;? extend Fruit&gt;</p>
-<p>下界&lt;? super Apple&gt;</p>
-<p>（2）上界和下界的特点</p>
-<p>上界的list只能get，不能add（确切地说不能add出除null之外的对象，包括Object）</p>
-<p>下界的list只能add，不能get</p>
-<h2 id="类加载机制、双亲委派模型"><a href="#类加载机制、双亲委派模型" class="headerlink" title="类加载机制、双亲委派模型"></a>类加载机制、双亲委派模型</h2><p>类加载机制：某个特定的类加载器在接到加载类的请求时，首先将加载任务委托给父类加载器，依次递归，如果父类加载器可以完成类加载任务，就成功返回；只有父类加载器无法完成此加载任务时，才自己去加载。</p>
-<p>双亲委派模型：</p>
-<ol>
-<li>可以避免重复加载，父类已经加载了，子类就不需要再次加载</li>
-<li>更加安全，很好的解决了各个类加载器的基础类的统一问题，如果不使用该种方式，那么用户可以随意定义类加载器来加载核心api，会带来相关隐患。</li>
-</ol>
-<h2 id="String、StringBuffer和StringBuilder"><a href="#String、StringBuffer和StringBuilder" class="headerlink" title="String、StringBuffer和StringBuilder"></a>String、StringBuffer和StringBuilder</h2><p>StringBuffer线程安全，StringBuilder线程不安全，底层实现上的话，StringBuffer其实就是比StringBuilder多了Synchronized修饰符。</p>
-<p>String：适用于少量的字符串操作。<br>StringBuilder：适用于单线程下在字符串缓冲区进行大量操作。<br>StringBuffer：适用于多线程下在字符串缓冲区进行大量操作。</p>
-<h2 id="请说明”static”关键字是什么意思？Java中是否可以覆盖-override-一个private或者是static的方法？"><a href="#请说明”static”关键字是什么意思？Java中是否可以覆盖-override-一个private或者是static的方法？" class="headerlink" title="请说明”static”关键字是什么意思？Java中是否可以覆盖(override)一个private或者是static的方法？"></a>请说明”static”关键字是什么意思？Java中是否可以覆盖(override)一个private或者是static的方法？</h2><p>“static”关键字表明一个成员变量或者是成员方法可以在没有所属的类的实例变量的情况下被访问。<br>Java中static方法不能被覆盖，因为方法覆盖是基于运行时动态绑定的，而static方法是编译时静态绑定的。static方法跟类的任何实例都不相关，所以概念上不适用。</p>
-<h2 id="请说明重载和重写的区别，相同参数不同返回值能重载吗？"><a href="#请说明重载和重写的区别，相同参数不同返回值能重载吗？" class="headerlink" title="请说明重载和重写的区别，相同参数不同返回值能重载吗？"></a>请说明重载和重写的区别，相同参数不同返回值能重载吗？</h2><p>重载(Overloading)</p>
-<p>（1） 方法重载是让类以统一的方式处理不同类型数据的一种手段。多个同名函数同时存在，具有不同的参数个数/类型。</p>
-<p>重载Overloading是一个类中多态性的一种表现。</p>
-<p>（2） Java的方法重载，就是在类中可以创建多个方法，它们具有相同的名字，但具有不同的参数和不同的定义。</p>
-<p>调用方法时通过传递给它们的不同参数个数和参数类型来决定具体使用哪个方法, 这就是多态性。</p>
-<p>（3） 重载的时候，方法名要一样，但是参数类型和个数不一样，返回值类型可以相同也可以不相同。无法以返回型别作为重载函数的区分标准。</p>
-<p>重写（Overriding）</p>
-<p>（1） 父类与子类之间的多态性，对父类的函数进行重新定义。如果在子类中定义某方法与其父类有相同的名称和参数，我们说该方法被重写 (Overriding)。在Java中，子类可继承父类中的方法，而不需要重新编写相同的方法。</p>
-<p>但有时子类并不想原封不动地继承父类的方法，而是想作一定的修改，这就需要采用方法的重写。</p>
-<p>方法重写又称方法覆盖。</p>
-<p>（2）若子类中的方法与父类中的某一方法具有相同的方法名、返回类型和参数表，则新方法将覆盖原有的方法。</p>
-<p>如需父类中原有的方法，可使用super关键字，该关键字引用了当前类的父类。</p>
-<p>（3）子类函数的访问修饰权限不能少于父类的。</p>
-<h2 id="Object类的方法"><a href="#Object类的方法" class="headerlink" title="Object类的方法"></a>Object类的方法</h2><p>Object()默认构造方法。</p>
-<p>clone() 创建并返回此对象的一个副本。</p>
-<p>equals(Object obj) 指示某个其他对象是否与此对象“相等”。</p>
-<p>finalize()当垃圾回收器确定不存在对该对象的更多引用时，由对象的垃圾回收器调用此方法。</p>
-<p>getClass()返回一个对象的运行时类。</p>
-<p>hashCode()返回该对象的哈希码值。</p>
-<p>notify()唤醒在此对象监视器上等待的单个线程。 </p>
-<p>notifyAll()唤醒在此对象监视器上等待的所有线程。</p>
-<p>toString()返回该对象的字符串表示。</p>
-<p>wait()导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 方法。</p>
-<p>wait(long timeout)导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或者超过指定的时间量。wait(long timeout, int nanos) 导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或者其他某个线程中断当前线程，或者已超过某个实际时间量。</p>
-<h2 id="wait方法和sleep-方法"><a href="#wait方法和sleep-方法" class="headerlink" title="wait方法和sleep()方法"></a>wait方法和sleep()方法</h2><p>1.<strong>wait()方法</strong>则是指当前线程让自己暂时退让出同步资源锁，<strong>sleep()方法</strong>正在执行的线程主动让出CPU。</p>
-<p>2.<strong>sleep()方法</strong>可以在任何地方使用；<strong>wait()方法</strong>则只能在同步方法或同步块中使用</p>
-<p>3.**sleep()**是线程线程类（Thread）的方法，调用会暂停此线程指定的时间，但监控依然保持，不会释放对象锁，到时间自动恢复.**wait()**是Object的方法，调用会放弃对象锁，进入等待队列，待调用notify()/notifyAll()唤醒指定的线程或者所有线程，才会进入锁池，不再次获得对象锁才会进入运行状态。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Thread1</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (RegExpTest.class)&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;enter thread1 ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread1 is waiting&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">try</span>&#123;</span><br><span class="line">                    <span class="comment">//释放锁有两种方式：(1)程序自然离开监视器的范围，即离开synchronized关键字管辖的代码范围</span></span><br><span class="line">                    <span class="comment">//(2)在synchronized关键字管辖的代码内部调用监视器对象的wait()方法。这里使用wait方法</span></span><br><span class="line">                    RegExpTest.class.wait();</span><br><span class="line">                &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                System.out.println(<span class="string">&quot;thread1 is going on ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread1 is being over!&quot;</span>);</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Thread2</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span>&#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="comment">//notify方法并不释放锁，即使thread2调用了下面的sleep方法休息10ms，但thread1仍然不会执行</span></span><br><span class="line">            <span class="comment">//因为thread2没有释放锁，所以Thread1得不到锁而无法执行</span></span><br><span class="line">            <span class="keyword">synchronized</span>(RegExpTest.class)&#123;</span><br><span class="line">                System.out.println(<span class="string">&quot;enter thread2 ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 notify other thread can release wait status ...&quot;</span>);</span><br><span class="line">                RegExpTest.class.notify();</span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 is sleeping ten millisecond ...&quot;</span>);</span><br><span class="line"></span><br><span class="line">                <span class="keyword">try</span>&#123;</span><br><span class="line">                    Thread.sleep(<span class="number">10</span>);</span><br><span class="line">                &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line"></span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 is going on ...&quot;</span>);</span><br><span class="line">                System.out.println(<span class="string">&quot;thread2 is being over!&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Thread1()).start();</span><br><span class="line">        <span class="keyword">try</span>&#123;</span><br><span class="line">            Thread.sleep(<span class="number">10</span>);</span><br><span class="line">        &#125;<span class="keyword">catch</span>(InterruptedException e)&#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">new</span> Thread(<span class="keyword">new</span> Thread2()).start();</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p><img data-src="https://img-blog.csdnimg.cn/20200828105942972.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述"></p>
-]]></content>
-      <categories>
-        <category>Java面试宝典</category>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Java基础</tag>
       </tags>
   </entry>
   <entry>
@@ -687,53 +687,6 @@
       </tags>
   </entry>
   <entry>
-    <title>工业机理</title>
-    <url>/2020/08/17/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86/</url>
-    <content><![CDATA[<h4 id="工业机理模型可以实现四类功能"><a href="#工业机理模型可以实现四类功能" class="headerlink" title="工业机理模型可以实现四类功能"></a>工业机理模型可以实现四类功能</h4><ol>
-<li><strong>描述</strong>，描述设备、工艺发生了什么；</li>
-<li><strong>诊断</strong>，发生了什么问题、什么地方发生了问题；</li>
-<li><strong>预测</strong>，如果不处理设备将有什么问题，能耗会有什么问题，质量会有什么问题；</li>
-<li><strong>决策</strong>、最后怎么办，是对那个环节进行维修，那个环节进行优化，或者保养，增加或者减少物料的输入等等，给操作手、给总工、给管理层提供一个解决方案。</li>
-</ol>
-<a id="more"></a>
-
-<h4 id="机理模型落地，会有四个阶段："><a href="#机理模型落地，会有四个阶段：" class="headerlink" title="机理模型落地，会有四个阶段："></a>机理模型落地，会有四个阶段：</h4><ol>
-<li><strong>理论推理</strong>，把工业中的热平衡、物质平衡等通过抽象的方法形成理论模型；</li>
-<li><strong>实验验证</strong>，对理论模型进行实验验证，仿真验证的过程；</li>
-<li><strong>模拟择优</strong>，在虚拟世界里面去完成，通过大数据模拟选择最优的结果；</li>
-<li>大数据分析通过模拟＋大数据发现新的规律。</li>
-</ol>
-<h4 id="机理模型分类"><a href="#机理模型分类" class="headerlink" title="机理模型分类"></a><strong>机理模型分类</strong></h4><p>1.机理模型（白箱）：存在物理关系，通过物理或数学公式来概化表达的模型。这类模型存在在各行各业。根据对象、生产过程的内部机制或者物质流的传递机理建立起来的精确数学模型。它是基于质量平衡方程、能量平衡方程、动量平衡方程、相平衡方程以及某些物性方程、化学反应定律、电路基本定律等而获得对象或过程的数学模型。机理模型的优点是参数具有非常明确的物理意义。</p>
-<p>2.非机理模型（黑箱或灰箱）：人工智能，以神经网络为代表，当然也有决策树、遗传算法以及支持向量机等等</p>
-<hr>
-<p>以后的趋势必然是机器学习与传统数学模型融合。</p>
-<p><strong>人工智能</strong>——&gt;深度学习——&gt;<strong>神经网络(模型)**——&gt;计算机视觉——&gt;**工业界</strong>（自动驾驶、安防、医疗）</p>
-<p><a href="https://cloud.tencent.com/developer/news/25568">https://cloud.tencent.com/developer/news/25568</a></p>
-<p>例如：SVM与传统的内涝数学模型有机结合在一起</p>
-<p>基于物理过程的数学模型已经广泛应用于城市内涝模拟中，但是数值模型在应用到实时内涝预报中，最大的瓶颈既是需要大量的计算资源和模拟时间，虽然有各种各样的简化模型技术被提出来，但是这些技术往往只能应用在满足一定前提条件的项目中</p>
-<p><strong>首先，数据在哪里？</strong></p>
-<p>▲一类是管理数据：结构化的SQL数据为主，如产品属性、工艺、生产、采购、订单、服务等数据，这类数据一般来自企业的ERP、SCM、PLM甚至MES等系统，数据量本身不大，却具有很大的挖掘价值；</p>
-<p>▲另一类则是机器运行和IoT的数据：以非结构化、流式数据居多，如设备工况（压力、温度、振动、应力等）、音视频、日志文本等数据，这类数据一般采集自设备PLC、SCADA以及部分外装传感器，数据量很大，采集频率高，需要结合边缘计算在本地做一些预处理。</p>
-<p>总的来讲，由于场景的割裂和分散，工业数据本身具有量大、多源、异构、实时性要求高等特点，而且随着未来280亿设备逐步接入，这些特性将会进一步加强，这是做工业大数据服务的核心难点之一，和互联网大数据不仅量级不同，结构不同，应用也完全不同。</p>
-<p><strong>其次，基于这些工业数据，平台层应该提供哪些服务？</strong></p>
-<p>▲完整的协议解析：数据采集首先要完成工业协议的打通。以应用层协议为例，EtherNet/IP和PROFINET的市场占有率最大，其次是EtherCAT、Modbus-TCP和EtherNetPOWERLINK；</p>
-<p>▲标准化的数据整合：采集上来的数据要做统一的主数据管理，第一步是建立标准。一般来讲，我们先要用ISO或其他业内标准，制定统一的编码、结构、流转方式和属性，确保数据的一致性，这一点非常重要。</p>
-<p>在项目实施的历程中，逐步积累行业知识库、合适的算法组件以及相关机理模型，这一点也很重要，这是从数据标准进化到业务标准化的关键一步，是为实现真正的产品层面的微服务化打下基础。</p>
-<p>强大的PaaS支持：工业数据本身的特殊性导致平台必须要有强大的中层支撑能力。我们以时序数据库为例，它是设备工况和传感器数据的典型品种。这类数据频率高、量大，用传统关系型数据库处理，需要每次把所有值拉出来计算，吞吐量极大，性能很差。所以，一个高压缩、高性能的时序数据库，就是平台层必备的能力之一。</p>
-<p><strong>最后，我们应该做哪些应用？</strong></p>
-<p>▲设备级：质量控制。在工业智能时代，如果我们能够采集到合适的实时数据，结合该设备所适用的机理模型，就有可能用机器学习的方法挖掘出产品质量与关键数据之间的关联或因果关系，也就有可能实现实时在线的质量控制和故障预警，如果数据频率能对工艺流程形成完美包络，我们还有可能实现最大限度的效率提升。</p>
-<p>▲厂级：计划排产。工业智能的最终目的是要实现大规模的个性化定制，即C2M。这一问题的目标是实现当时当地的产能最优，约束条件来自企业的产线设备、人员、产品属性、供应链数据等等，通过历史数据的学习和训练，不难形成一个较好的预测模型。</p>
-<p>这一模型能根据产线和工厂的实时数据动态分析，动态调整，以帮助企业实现准确把控，最大化经济效益。</p>
-]]></content>
-      <categories>
-        <category>工业机理模型</category>
-      </categories>
-      <tags>
-        <tag>知识图谱</tag>
-        <tag>工业机理</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>【知识图谱系列合集】四、知识存储</title>
     <url>/2020/08/14/%E3%80%90%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E7%B3%BB%E5%88%97%E5%90%88%E9%9B%86%E3%80%91%E5%9B%9B%E3%80%81%E7%9F%A5%E8%AF%86%E5%AD%98%E5%82%A8/</url>
     <content><![CDATA[<p><img data-src="https://img-blog.csdnimg.cn/20200810210037352.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
@@ -784,6 +737,53 @@
       </categories>
       <tags>
         <tag>知识图谱 知识存储</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>工业机理</title>
+    <url>/2020/08/17/%E5%B7%A5%E4%B8%9A%E6%9C%BA%E7%90%86/</url>
+    <content><![CDATA[<h4 id="工业机理模型可以实现四类功能"><a href="#工业机理模型可以实现四类功能" class="headerlink" title="工业机理模型可以实现四类功能"></a>工业机理模型可以实现四类功能</h4><ol>
+<li><strong>描述</strong>，描述设备、工艺发生了什么；</li>
+<li><strong>诊断</strong>，发生了什么问题、什么地方发生了问题；</li>
+<li><strong>预测</strong>，如果不处理设备将有什么问题，能耗会有什么问题，质量会有什么问题；</li>
+<li><strong>决策</strong>、最后怎么办，是对那个环节进行维修，那个环节进行优化，或者保养，增加或者减少物料的输入等等，给操作手、给总工、给管理层提供一个解决方案。</li>
+</ol>
+<a id="more"></a>
+
+<h4 id="机理模型落地，会有四个阶段："><a href="#机理模型落地，会有四个阶段：" class="headerlink" title="机理模型落地，会有四个阶段："></a>机理模型落地，会有四个阶段：</h4><ol>
+<li><strong>理论推理</strong>，把工业中的热平衡、物质平衡等通过抽象的方法形成理论模型；</li>
+<li><strong>实验验证</strong>，对理论模型进行实验验证，仿真验证的过程；</li>
+<li><strong>模拟择优</strong>，在虚拟世界里面去完成，通过大数据模拟选择最优的结果；</li>
+<li>大数据分析通过模拟＋大数据发现新的规律。</li>
+</ol>
+<h4 id="机理模型分类"><a href="#机理模型分类" class="headerlink" title="机理模型分类"></a><strong>机理模型分类</strong></h4><p>1.机理模型（白箱）：存在物理关系，通过物理或数学公式来概化表达的模型。这类模型存在在各行各业。根据对象、生产过程的内部机制或者物质流的传递机理建立起来的精确数学模型。它是基于质量平衡方程、能量平衡方程、动量平衡方程、相平衡方程以及某些物性方程、化学反应定律、电路基本定律等而获得对象或过程的数学模型。机理模型的优点是参数具有非常明确的物理意义。</p>
+<p>2.非机理模型（黑箱或灰箱）：人工智能，以神经网络为代表，当然也有决策树、遗传算法以及支持向量机等等</p>
+<hr>
+<p>以后的趋势必然是机器学习与传统数学模型融合。</p>
+<p><strong>人工智能</strong>——&gt;深度学习——&gt;<strong>神经网络(模型)**——&gt;计算机视觉——&gt;**工业界</strong>（自动驾驶、安防、医疗）</p>
+<p><a href="https://cloud.tencent.com/developer/news/25568">https://cloud.tencent.com/developer/news/25568</a></p>
+<p>例如：SVM与传统的内涝数学模型有机结合在一起</p>
+<p>基于物理过程的数学模型已经广泛应用于城市内涝模拟中，但是数值模型在应用到实时内涝预报中，最大的瓶颈既是需要大量的计算资源和模拟时间，虽然有各种各样的简化模型技术被提出来，但是这些技术往往只能应用在满足一定前提条件的项目中</p>
+<p><strong>首先，数据在哪里？</strong></p>
+<p>▲一类是管理数据：结构化的SQL数据为主，如产品属性、工艺、生产、采购、订单、服务等数据，这类数据一般来自企业的ERP、SCM、PLM甚至MES等系统，数据量本身不大，却具有很大的挖掘价值；</p>
+<p>▲另一类则是机器运行和IoT的数据：以非结构化、流式数据居多，如设备工况（压力、温度、振动、应力等）、音视频、日志文本等数据，这类数据一般采集自设备PLC、SCADA以及部分外装传感器，数据量很大，采集频率高，需要结合边缘计算在本地做一些预处理。</p>
+<p>总的来讲，由于场景的割裂和分散，工业数据本身具有量大、多源、异构、实时性要求高等特点，而且随着未来280亿设备逐步接入，这些特性将会进一步加强，这是做工业大数据服务的核心难点之一，和互联网大数据不仅量级不同，结构不同，应用也完全不同。</p>
+<p><strong>其次，基于这些工业数据，平台层应该提供哪些服务？</strong></p>
+<p>▲完整的协议解析：数据采集首先要完成工业协议的打通。以应用层协议为例，EtherNet/IP和PROFINET的市场占有率最大，其次是EtherCAT、Modbus-TCP和EtherNetPOWERLINK；</p>
+<p>▲标准化的数据整合：采集上来的数据要做统一的主数据管理，第一步是建立标准。一般来讲，我们先要用ISO或其他业内标准，制定统一的编码、结构、流转方式和属性，确保数据的一致性，这一点非常重要。</p>
+<p>在项目实施的历程中，逐步积累行业知识库、合适的算法组件以及相关机理模型，这一点也很重要，这是从数据标准进化到业务标准化的关键一步，是为实现真正的产品层面的微服务化打下基础。</p>
+<p>强大的PaaS支持：工业数据本身的特殊性导致平台必须要有强大的中层支撑能力。我们以时序数据库为例，它是设备工况和传感器数据的典型品种。这类数据频率高、量大，用传统关系型数据库处理，需要每次把所有值拉出来计算，吞吐量极大，性能很差。所以，一个高压缩、高性能的时序数据库，就是平台层必备的能力之一。</p>
+<p><strong>最后，我们应该做哪些应用？</strong></p>
+<p>▲设备级：质量控制。在工业智能时代，如果我们能够采集到合适的实时数据，结合该设备所适用的机理模型，就有可能用机器学习的方法挖掘出产品质量与关键数据之间的关联或因果关系，也就有可能实现实时在线的质量控制和故障预警，如果数据频率能对工艺流程形成完美包络，我们还有可能实现最大限度的效率提升。</p>
+<p>▲厂级：计划排产。工业智能的最终目的是要实现大规模的个性化定制，即C2M。这一问题的目标是实现当时当地的产能最优，约束条件来自企业的产线设备、人员、产品属性、供应链数据等等，通过历史数据的学习和训练，不难形成一个较好的预测模型。</p>
+<p>这一模型能根据产线和工厂的实时数据动态分析，动态调整，以帮助企业实现准确把控，最大化经济效益。</p>
+]]></content>
+      <categories>
+        <category>工业机理模型</category>
+      </categories>
+      <tags>
+        <tag>知识图谱</tag>
+        <tag>工业机理</tag>
       </tags>
   </entry>
   <entry>
@@ -1005,6 +1005,39 @@
       </tags>
   </entry>
   <entry>
+    <title>数据结构与算法|高级算法</title>
+    <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="id全局唯一且自增，如何实现"><a href="#id全局唯一且自增，如何实现" class="headerlink" title="id全局唯一且自增，如何实现"></a>id全局唯一且自增，如何实现</h2><p>如何在分布式集群中，生成全局唯一的ID</p>
+<p>方法一：UUID</p>
+<p>方法二：数据库自增主键</p>
+<p><strong>方法三：SnowFlake雪花算法</strong></p>
+<p>Twitter公司采用的一种算法，目的是在分布式系统中生成全局唯一且趋势递增的ID。</p>
+<p>雪花ID生成的是一个64位的二进制正整数，然后转换成10进制的数。64位二进制数由如下部分组成：</p>
+<p><img data-src="https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGovUVwFkfA0yRdCYoer9mqxdkKsBd5aD96r6ygicrXlKjwmsIBCZpF4rrkUM7FR1U1zZdL4yjEF1Fw/640?wx_fmt=png" alt="640?wx_fmt=png"></p>
+<a id="more"></a>
+
+<p><strong>1位标识符</strong>：始终是0，由于long基本类型在Java中是带符号的，最高位是符号位，正数是0，负数是1，所以id一般是正数，最高位是0。</p>
+<p><strong>41位时间戳</strong>：41位时间截不是存储当前时间的时间截，而是存储时间截的差值（当前时间截 - 开始时间截 )得到的值，这里的的开始时间截，一般是我们的id生成器开始使用的时间，由我们程序来指定的。</p>
+<p><strong>10位机器标识码</strong>：可以部署在1024个节点，如果机器分机房（IDC）部署，这10位可以由 5位机房ID + 5位机器ID 组成。</p>
+<p><strong>12位序列</strong>：毫秒内的计数，12位的计数顺序号支持每个节点每毫秒(同一机器，同一时间截)产生4096个ID序号</p>
+<p>优点：</p>
+<p>1.生成ID不依赖于DB，完全在内存中生成，高性能高可用。</p>
+<p>2.ID呈趋势递增，后续插入索引树的时候性能较好。</p>
+<p>缺点：</p>
+<p>依赖于系统时钟的一致性。如果某台机器的系统时钟回拨，有可能造成id冲突，或者id乱序。</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>高级算法</category>
+        <category>数据结构与算法</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
+        <tag>高级算法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数据结构与算法|链表</title>
     <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%93%BE%E8%A1%A8/</url>
     <content><![CDATA[<h2 id="链表的优缺点"><a href="#链表的优缺点" class="headerlink" title="链表的优缺点"></a>链表的优缺点</h2><p>1.增加/删除/修改速度比数组快。</p>
@@ -1049,37 +1082,12 @@
       </tags>
   </entry>
   <entry>
-    <title>数据结构与算法|高级算法</title>
-    <url>/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95/</url>
-    <content><![CDATA[<h2 id="id全局唯一且自增，如何实现"><a href="#id全局唯一且自增，如何实现" class="headerlink" title="id全局唯一且自增，如何实现"></a>id全局唯一且自增，如何实现</h2><p>如何在分布式集群中，生成全局唯一的ID</p>
-<p>方法一：UUID</p>
-<p>方法二：数据库自增主键</p>
-<p><strong>方法三：SnowFlake雪花算法</strong></p>
-<p>Twitter公司采用的一种算法，目的是在分布式系统中生成全局唯一且趋势递增的ID。</p>
-<p>雪花ID生成的是一个64位的二进制正整数，然后转换成10进制的数。64位二进制数由如下部分组成：</p>
-<p><img data-src="https://ss.csdn.net/p?https://mmbiz.qpic.cn/mmbiz_png/NtO5sialJZGovUVwFkfA0yRdCYoer9mqxdkKsBd5aD96r6ygicrXlKjwmsIBCZpF4rrkUM7FR1U1zZdL4yjEF1Fw/640?wx_fmt=png" alt="640?wx_fmt=png"></p>
-<a id="more"></a>
-
-<p><strong>1位标识符</strong>：始终是0，由于long基本类型在Java中是带符号的，最高位是符号位，正数是0，负数是1，所以id一般是正数，最高位是0。</p>
-<p><strong>41位时间戳</strong>：41位时间截不是存储当前时间的时间截，而是存储时间截的差值（当前时间截 - 开始时间截 )得到的值，这里的的开始时间截，一般是我们的id生成器开始使用的时间，由我们程序来指定的。</p>
-<p><strong>10位机器标识码</strong>：可以部署在1024个节点，如果机器分机房（IDC）部署，这10位可以由 5位机房ID + 5位机器ID 组成。</p>
-<p><strong>12位序列</strong>：毫秒内的计数，12位的计数顺序号支持每个节点每毫秒(同一机器，同一时间截)产生4096个ID序号</p>
-<p>优点：</p>
-<p>1.生成ID不依赖于DB，完全在内存中生成，高性能高可用。</p>
-<p>2.ID呈趋势递增，后续插入索引树的时候性能较好。</p>
-<p>缺点：</p>
-<p>依赖于系统时钟的一致性。如果某台机器的系统时钟回拨，有可能造成id冲突，或者id乱序。</p>
+    <title>知识图谱</title>
+    <url>/2020/09/08/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/</url>
+    <content><![CDATA[<p><img data-src="https://www.zuozuovera.com/usr/uploads/2017/11/994330753.png" alt="知识图谱.png"></p>
+<p><img data-src="https://www.zuozuovera.com/usr/uploads/2017/03/2017-03-20_231425.png" alt="img"></p>
+<p><img data-src="https://pic4.zhimg.com/v2-a6e61bbaf7f67c30d9329d28c7872c34_r.jpg" alt="preview"></p>
 ]]></content>
-      <categories>
-        <category>Java面试宝典</category>
-        <category>高级算法</category>
-        <category>数据结构与算法</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Java基础</tag>
-        <tag>高级算法</tag>
-      </tags>
   </entry>
   <entry>
     <title>计算机网络</title>
@@ -1159,14 +1167,6 @@
       </tags>
   </entry>
   <entry>
-    <title>知识图谱</title>
-    <url>/2020/09/08/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/</url>
-    <content><![CDATA[<p><img data-src="https://www.zuozuovera.com/usr/uploads/2017/11/994330753.png" alt="知识图谱.png"></p>
-<p><img data-src="https://www.zuozuovera.com/usr/uploads/2017/03/2017-03-20_231425.png" alt="img"></p>
-<p><img data-src="https://pic4.zhimg.com/v2-a6e61bbaf7f67c30d9329d28c7872c34_r.jpg" alt="preview"></p>
-]]></content>
-  </entry>
-  <entry>
     <title>设计模式</title>
     <url>/2020/08/31/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<p>设计模式（Design Pattern）是前辈们对代码开发经验的总结，是解决特定问题的一系列套路。是一套用来提高代码可复用性、可维护性、可读性、稳健性以及安全性的解决方案。</p>
@@ -1191,216 +1191,6 @@
       </categories>
       <tags>
         <tag>设计模式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Java SE基础|Java基础和关键字</title>
-    <url>/2020/08/26/Java-SE%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94Java%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%B3%E9%94%AE%E5%AD%97/</url>
-    <content><![CDATA[<p><img data-src="https://uploadfiles.nowcoder.com/images/20180914/826546_1536916757441_FF474C03D9D513A3519773CB35561940" alt="Java基础"></p>
-<h1 id="一、Java基础"><a href="#一、Java基础" class="headerlink" title="一、Java基础"></a>一、Java基础</h1><h2 id="1-Java特性"><a href="#1-Java特性" class="headerlink" title="1.Java特性"></a>1.Java特性</h2><p>Java做为一门“全面”面向对象的编程语言，提供了面向对象的<strong>四种基本性质：抽象性、封装性、继承性和多态性</strong>。 面向对象主要有四大特性：<strong>封装、抽象、继承和多态</strong>。</p>
-<p>Java支持8种数据类型：</p>
-<p>byte—————&gt;Byte<br>short—————&gt;Short<br>int——————&gt;Integer<br>long——————&gt;Long<br>float——————&gt;Float<br>double——————&gt;Double<br>boolean——————&gt;Boolean<br>char——————&gt;Character</p>
-<a id="more"></a>
-
-
-
-<h2 id="2-Java如何支持正则表达式"><a href="#2-Java如何支持正则表达式" class="headerlink" title="2.Java如何支持正则表达式"></a>2.Java如何支持正则表达式</h2><p>Java中的String类提供了支持正则表达式操作的方法，包括：matches()、replaceAll()、replaceFirst()、split()。此外，Java中可以用Pattern类表示正则表达式对象，它提供了丰富的API进行各种正则表达式操作。</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RegExpTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String str = <span class="string">&quot;成都市(成华区)(武侯区)(高新区)&quot;</span>;</span><br><span class="line">        Pattern p = Pattern.compile(<span class="string">&quot;.*?(?=\\()&quot;</span>);</span><br><span class="line">        Matcher m = p.matcher(str);</span><br><span class="line">        <span class="keyword">if</span>(m.find()) &#123;</span><br><span class="line">            System.out.println(m.group());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>返回结果是：成都市</p>
-<p><img data-src="https://img-blog.csdnimg.cn/20200827164545555.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="正则表达式匹配规则(1)"></p>
-<p><img data-src="https://img-blog.csdnimg.cn/20200827164616859.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="正则表达式匹配规则(2)"></p>
-<p><img data-src="https://img-blog.csdnimg.cn/20200827164632485.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="正则表达式匹配规则(3)"></p>
-<h2 id="3-正则表达式及其用途"><a href="#3-正则表达式及其用途" class="headerlink" title="3.正则表达式及其用途"></a>3.正则表达式及其用途</h2><p>在编写处理字符串的程序时，经常会有查找符合某些复杂规则的字符串的需要。正则表达式就是用于描述这些规则的工具。换句话说，正则表达式就是记录文本规则的代码。计算机处理的信息更多的时候不是数值而是字符串，正则表达式就是在进行字符串匹配和处理的时候最为强大的工具，绝大多数语言都提供了对正则表达式的支持。</p>
-<h2 id="4-Java和JavaScript"><a href="#4-Java和JavaScript" class="headerlink" title="4.Java和JavaScript"></a>4.Java和JavaScript</h2><p>JavaScript 与Java是两个公司开发的不同的两个产品。Java 是原Sun Microsystems公司推出的面向对象的程序设计语言，特别适合于互联网应用程序开发；而JavaScript是Netscape公司的产品，为了扩展Netscape浏览器的功能而开发的一种可以嵌入Web页面中运行的基于对象和事件驱动的解释性语言.</p>
-<p>一、基于对象和面向对象</p>
-<p>Java是一种真正的面向对象的语言，即使是开发简单的程序，必须设计对象；JavaScript是种脚本语言，它可以用来制作与网络无关的，与用户交互作用的复杂软件。它是一种基于对象（Object-Based）和事件驱动（Event-Driven）的编程语言，因而它本身提供了非常丰富的内部对象供设计人员使用。</p>
-<p>二、解释和编译</p>
-<p>Java的源代码在执行之前，必须经过编译。JavaScript是一种解释性编程语言，其源代码不需经过编译，由浏览器解释执行。目前浏览器几乎都是用了JIT，即时编译。</p>
-<p>三、强类型变量和类型弱变量</p>
-<p>Java采用强类型变量检查，即所有变量在编译之前必须作声明；JavaScript中变量是弱类型的，甚至在使用变量前可以不作声明，<strong>JavaScript的解释器在运行时检查推断其数据类型</strong></p>
-<p>四、代码格式不同</p>
-<h2 id="5-Java如何跳出循环"><a href="#5-Java如何跳出循环" class="headerlink" title="5.Java如何跳出循环"></a>5.Java如何跳出循环</h2><p>考察循环</p>
-<p>在最外层循环前加一个标记如A，然后用break A;可以跳出多重循环。Java中支持带标签的break和continue语句。应该避免使用带标签的break和continue，因为它不会让你的程序变得更优雅，很多时候甚至有相反的作用。使用需<strong>谨慎</strong></p>
-<h2 id="6-amp-和-amp-amp-的区别"><a href="#6-amp-和-amp-amp-的区别" class="headerlink" title="6.&amp;和&amp;&amp;的区别"></a>6.&amp;和&amp;&amp;的区别</h2><p>考察运算符</p>
-<p>&amp;运算符有两种用法：(1)按位与；(2)逻辑与。</p>
-<p>&amp;&amp;运算符是短路与运算</p>
-<p>&amp;&amp;之所以称为短路运算是因为，如果&amp;&amp;左边的表达式的值是false，右边的表达式会被直接短路掉，不会进行运算。</p>
-<p>例如在验证用户登录时判定用户名不是null而且不是空字符串，应当写为：username != null &amp;&amp;!username.equals(“”)，<strong>二者的顺序不能交换</strong>，更不能用&amp;运算符，因为第一个条件如果不成立，根本不能进行字符串的equals比较，否则<strong>会产生NullPointerException异常。</strong></p>
-<h2 id="7-int和Integer有什么区别"><a href="#7-int和Integer有什么区别" class="headerlink" title="7.int和Integer有什么区别"></a>7.int和Integer有什么区别</h2><p>考察数据类型</p>
-<p><strong>Int是java的原始数据类型，Integer是java为int提供的封装类。</strong></p>
-<p>Java是一个近乎纯洁的面向对象编程语言，但是为了编程的方便还是引入了基本数据类型，<strong>但是为了能够将这些基本数据类型当成对象操作，Java为每一个基本数据类型都引入了对应的包装类型</strong>（wrapper class），int的包装类就是Integer，从Java 5开始引入了<strong>自动装箱/拆箱机制</strong>，使得二者可以相互转换。<br>Java 为每个原始类型提供了包装类型：<br>- 原始类型: boolean，char，byte，short，int，long，float，double<br>- 包装类型：Boolean，Character，Byte，Short，Integer，Long，Float，Double</p>
-<hr>
-<h2 id="8-Array和ArrayList的区别"><a href="#8-Array和ArrayList的区别" class="headerlink" title="8.Array和ArrayList的区别"></a>8.Array和ArrayList的区别</h2><p>Array可以包含基本类型和对象类型，ArrayList只能包含对象类型。<br>Array大小是固定的，ArrayList的大小是动态变化的。<br>ArrayList提供了更多的方法和特性，比如：addAll()，removeAll()，iterator()等等。</p>
-<h2 id="9-值传递和引用传递"><a href="#9-值传递和引用传递" class="headerlink" title="9.值传递和引用传递"></a>9.值传递和引用传递</h2><p>考察：Java引用传递</p>
-<p>值传递：传递的是该变量的一个副本,改变副本不影响原变量。</p>
-<p>引用传递：对于对象型变量而言的，传递的是该对象地址的一个副本，并不是原对象本身。<strong>对引用对象进行操作会同时改变原对象</strong></p>
-<p><strong>一般认为,java内的传递都是值传递.</strong></p>
-<h2 id="10-Lamda表达式是什么？优缺点。"><a href="#10-Lamda表达式是什么？优缺点。" class="headerlink" title="10.Lamda表达式是什么？优缺点。"></a>10.Lamda表达式是什么？优缺点。</h2><p>Lambda表达式是Java SE 8中一个重要的新特性，lambda表达式就和方法一样,它提供了一个正常的参数列表和一个使用这些参数的主体。</p>
-<p>Lambda表达式还增强了<strong>集合库</strong>。 Java SE 8添加了2个对集合数据进行批量操作的包: java.util.function 包以及 java.util.stream 包。 流(stream)就如同迭代器(iterator),但附加了许多额外的功能。 总的来说,lambda表达式和 stream 是自Java语言添加泛型(Generics)和注解(annotation)以来最大的变化</p>
-<p><strong>Lambda表达式的语法</strong><br>基本语法:<br><strong>(parameters) -&gt; expression</strong><br>或<br>**(parameters) -&gt;{ statements;** </p>
-<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">RegExpTest</span> &#123;</span></span><br><span class="line">    public <span class="keyword">static</span> <span class="literal">void</span> main(<span class="built_in">String</span>[] args) &#123;</span><br><span class="line">        <span class="built_in">String</span>[] atp = &#123;<span class="string">&quot;Rafael Nadal&quot;</span>, <span class="string">&quot;Novak Djokovic&quot;</span>,</span><br><span class="line">                <span class="string">&quot;Stanislas Wawrinka&quot;</span>,</span><br><span class="line">                <span class="string">&quot;David Ferrer&quot;</span>,<span class="string">&quot;Roger Federer&quot;</span>,</span><br><span class="line">                <span class="string">&quot;Andy Murray&quot;</span>,<span class="string">&quot;Tomas Berdych&quot;</span>,</span><br><span class="line">                <span class="string">&quot;Juan Martin Del Potro&quot;</span>&#125;;</span><br><span class="line">        List&lt;<span class="built_in">String</span>&gt; players= Arrays.asList(atp);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">String</span> player : players) &#123;</span><br><span class="line">            System.out.<span class="built_in">print</span>(player + <span class="string">&quot;; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        players.forEach<span class="function"><span class="params">((player) -&gt; System.out.<span class="built_in">print</span>(player + <span class="string">&quot;; &quot;</span>))</span>;</span></span><br><span class="line"><span class="function">    &#125;</span></span><br><span class="line"><span class="function">&#125;</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p>优点：1. 简洁。2. 非常容易并行计算。3. 可能代表未来的编程趋势。</p>
-<p>缺点：1. 若不用并行计算，很多时候计算速度没有比传统的 for 循环快。（并行计算有时需要预热才显示出效率优势）2. 不容易调试。3. 若其他程序员没有学过 lambda 表达式，代码不容易让其他语言的程序员看懂。</p>
-<h2 id="11-Map的分类"><a href="#11-Map的分类" class="headerlink" title="11.Map的分类"></a>11.Map的分类</h2><p>Map主要用于存储健值对，根据键得到值，因此不允许键重复(重复了覆盖了),但允许值重复。</p>
-<p>java.util.Map；有四个实现类</p>
-<p>HashMap Hashtable LinkedHashMap和TreeMap</p>
-<p><strong>HashMap</strong>是一个最常用的Map，根据键值可以直接获取它的值只允许一条记录的键为Null；允许多条记录的值为Null；不支持线程的同步。</p>
-<p><strong>Hashtable</strong>与 HashMap类似,它继承自Dictionary类，不同的是:它不允许记录的键或者值为空;它支持线程的同步，即任一时刻只有一个线程能写Hashtable,因此也导致了 Hashtable在写入时会比较慢。</p>
-<p><strong>LinkedHashMap</strong> 是HashMap的一个子类，保存了记录的插入顺序。</p>
-<p><strong>TreeMap</strong>实现SortMap接口，能够把它保存的记录根据键排序,默认是按键值的升序排序，也可以指定排序的比较器，当用Iterator 遍历TreeMap时，得到的记录是排过序的。</p>
-<hr>
-<h1 id="二、关键字"><a href="#二、关键字" class="headerlink" title="二、关键字"></a>二、关键字</h1><h2 id="1-访问控制"><a href="#1-访问控制" class="headerlink" title="1.访问控制"></a>1.访问控制</h2><p><strong>1.private私有的</strong></p>
-<p>private 关键字是访问控制修饰符，可以应用于类、方法或字段（在类中声明的变量）。在类的外部或者对于子类而言，它们是不可见的。</p>
-<p><strong>2.protected受保护的</strong></p>
-<p>protected 关键字是可以应用于类、方法或字段（在类中声明的变量）的访问控制修饰符。可以在声明 protected 类、方法或字段的类、同一个包中的其他任何类以及任何子类（无论子类是在哪个包中声明的）中引用这些类、方法或字段</p>
-<p><strong>3.public公有的</strong></p>
-<p>public 关键字是可以应用于类、方法或字段（在类中声明的变量）的访问控制修饰符。 可能只会在其他任何类或包中引用 public 类、方法或字段。</p>
-<p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20200826185120931.png" alt="image-20200826185120931"></p>
-<h2 id="2-类、方法和变量修饰符"><a href="#2-类、方法和变量修饰符" class="headerlink" title="2.类、方法和变量修饰符"></a>2.类、方法和变量修饰符</h2><p><strong>1.abstract声明抽象</strong></p>
-<p>abstract关键字可以修改类或方法。abstract类可以扩展（增加子类），但不能直接实例化。abstract方法不在声明它的类中实现，但必须在某个子类中重写。采用 abstract方法的类本来就是抽象类，并且必须声明为abstract。</p>
-<p><strong>2.class类</strong></p>
-<p>class 关键字用来声明新的 Java 类，该类是相关变量和/或方法的集合。类是面向对象的程序设计方法的基本构造单位。类通常代表某种实际实体。要使用类，通常使用 new 操作符将类的对象实例化，然后调用类的方法来访问类的功能。</p>
-<p><strong>3.extends继承、扩展</strong></p>
-<p>extends 关键字用在 class 或 interface 声明中，用于指示所声明的类或接口是其名称后跟有 extends 关键字的类或接口的子类。</p>
-<p>子类可以重写父类的任何非 final 方法。一个类只能扩展一个其他类。</p>
-<p><strong>4.final最终，不可改变</strong></p>
-<p>final关键字可以用来修饰类、方法和变量（包括成员变量和局部变量）。final方法在编译阶段绑定，称为静态绑定(static binding)。</p>
-<p><strong>5.implements实现</strong></p>
-<p>implements 关键字在 class 声明中使用，以指示所声明的类提供了在 implements 关键字后面的名称所指定的接口中所声明的所有方法的实现</p>
-<p><strong>6.interface接口</strong></p>
-<p>interface 关键字用来声明新的 Java 接口，接口是方法的集合</p>
-<p><strong>7.native本地</strong></p>
-<p>本地方法</p>
-<p>为了访问一个老的系统或者使用一个已有的库，而这个系统或这个库不是用JAVA编写的。</p>
-<p>为了加快程序的性能，而将一段时间敏感的代码作为本地方法实现。</p>
-<p><strong>8.new</strong></p>
-<p>new 关键字用于创建类的新实例。</p>
-<p>new 关键字后面的参数必须是类名，并且类名的后面必须是一组构造方法参数（必须带括号）。 参数集合必须与类的构造方法的签名匹配。</p>
-<p><strong>9.static静态</strong></p>
-<p>static可以用于修饰属性，可以修饰代码块，也可以用于修饰方法，还可以用于修饰类。</p>
-<p>1、static修饰属性：无论一个类生成了多少个对象，所有这些对象共同使用唯一一份静态的成员变量；一个对象对该静态成员变量进行了修改，其他对象的该静态成员变量的值也会随之发生变化。如果一个成员变量是static的，那么我们可以通过‘类名.成员变量名’的方式来使用它。</p>
-<p>2、static修饰方法：static修饰的方法叫做静态方法。对于静态方法来说，可以使用‘类名.方法名’的方式来访问。静态方法只能继承，不能重写（Override），因为重写是用于表现多态的，重写只能适用于实例方法，而静态方法是可以不生成实例直接用类名来调用，这就会与重写的定义所冲突，与多态所冲突，所以静态方法不能重写，只能是隐藏。</p>
-<p>3、static修饰代码块：静态代码块。静态代码块的作用也是完成一些初始化工作。<strong>首先执行静态代码块，然后执行构造方法。</strong>静态代码块在类被加载的时候执行，而构造方法是在生成对象的时候执行；要想调用某个类来生成对象，首先需要将类加载到Java虚拟机上（JVM），然后由JVM加载这个类来生成对象。</p>
-<p>4、static修饰类：这个有点特殊，首先，static是可以用来修饰类的，但是static是不允许用来修饰普通类，只能用来修饰内部类，被static所修饰的内部类可以用new关键字来直接创建一个实例，不需要先创建外部类实例。static内部类可以被其他类实例化和引用（即使它是顶级类）。</p>
-<p><strong>10.strictfp严格，精准</strong></p>
-<p>strictfp的意思是FP-strict，也就是说精确浮点的意思。在Java虚拟机进行浮点运算时，如果没有指定strictfp关键字时，Java的编译器以及运行环境在对浮点运算的表达式是采取一种近似于我行我素的行为来完成这些操作，以致于得到的结果往往无法令人满意。</p>
-<p><strong>11.synchronized线程、同步</strong></p>
-<p>synchronized 关键字可以应用于方法或语句块，并为一次只应由一个线程执行的关键代码段提供保护。</p>
-<p>synchronized 关键字可防止代码的关键代码段一次被多个线程执行。如果应用于静态方法，那么，当该方法一次由一个线程执行时，整个类将被锁定。如果应用于实例方法，那么，当该方法一次由一个线程访问时，该实例将被锁定。如果应用于对象或数组，当关联的代码块一次由一个线程执行时，对象或数组将被锁定。</p>
-<p><strong>12.transient短暂</strong></p>
-<p>transient 关键字可以应用于类的成员变量，以便指出该成员变量不应在包含它的类实例已序列化时被序列化。</p>
-<p><strong>13.volatitle易失</strong></p>
-<p>volatile 关键字用于表示可以被多个线程异步修改的成员变量。</p>
-<h2 id="3-程序控制语句"><a href="#3-程序控制语句" class="headerlink" title="3.程序控制语句"></a>3.程序控制语句</h2><p><strong>1.brask跳出，中断</strong></p>
-<p>break 关键字用于提前退出 for、while 或 do 循环，或者在 switch 语句中用来结束 case 块。</p>
-<p><strong>2.continue继续</strong></p>
-<p>continue 关键字用来跳转到 for、while 或 do 循环的下一个迭代。</p>
-<p>continue 总是跳到最深层 while、for 或 do 语句的下一个迭代。</p>
-<p><strong>3.return返回</strong></p>
-<p>return 关键字会导致方法返回到调用它的方法，从而传递与返回方法的返回类型匹配的值</p>
-<p><strong>4.do运行</strong></p>
-<p>do 关键字用于指定一个在每次迭代结束时检查其条件的循环。</p>
-<p>do 循环体至少执行一次。 条件表达式后面必须有分号。</p>
-<p><strong>5.while循环</strong></p>
-<p>while 关键字用于指定一个只要条件为真就会重复的循环。</p>
-<p><strong>6.if如果</strong></p>
-<p>if 关键字指示有条件地执行代码块。条件的计算结果必须是布尔值。</p>
-<p>if 语句可以有可选的 else 子句，该子句包含条件为 false 时将执行的代码。</p>
-<p>包含 boolean 操作数的表达式只能包含 boolean 操作数。</p>
-<p><strong>7.else否则</strong></p>
-<p>else 关键字总是在 if-else 语句中与 if 关键字结合使用。else 子句是可选的，如果 if 条件为 false，则执行该子句。</p>
-<p><strong>8.for循环</strong></p>
-<p>or 关键字用于指定一个在每次迭代结束前检查其条件的循环。</p>
-<p><strong>9.instanceof实例</strong></p>
-<p>instanceof 关键字用来确定对象所属的类。</p>
-<p><strong>10switch观察</strong></p>
-<p>switch 语句用于基于某个表达式选择执行多个代码块中的某一个。</p>
-<p>switch 条件的计算结果必须等于 byte、char、short 或 int。</p>
-<p>case 块没有隐式结束点。break 语句通常在每个 case 块末尾使用，用于退出 switch 语句。</p>
-<p><strong>11.case返回观察里的结果</strong></p>
-<p>case 用来标记 switch 语句中的每个分支。</p>
-<p>case 块没有隐式结束点。break 语句通常在每个 case 块末尾使用，用于退出 switch 语句。</p>
-<p>如果没有 break 语句，执行流将进入所有后面的 case 和/或 default 块。</p>
-<p><strong>12.default默认</strong></p>
-<p>default 关键字用来标记 switch 语句中的默认分支。</p>
-<p>default 块没有隐式结束点。break 语句通常在每个 case 或 default 块的末尾使用，以便在完成块时退出 switch 语句。</p>
-<p>如果没有 default 语句，其参数与任何 case 块都不匹配的 switch 语句将不执行任何操作。</p>
-<h2 id="4-错误处理"><a href="#4-错误处理" class="headerlink" title="4.错误处理"></a>4.错误处理</h2><p><strong>1.try捕获异常</strong></p>
-<p>try 关键字用于包含可能引发异常的语句块。</p>
-<p>每个 try 块都必须至少有一个 catch 或 finally 子句。</p>
-<p><strong>2.catch处理异常</strong></p>
-<p>catch 关键字用来在 try-catch 或 try-catch-finally 语句中定义异常处理块。</p>
-<p><strong>3.throw派出一个异常对象</strong></p>
-<p>throw 语句将 java.lang.Throwable 作为参数。Throwable 在调用栈中向上传播，直到被适当的 catch 块捕获。 引发非 RuntimeException 异常的任何方法还必须在方法声明中使用 throws 修饰符来声明它引发的异常。</p>
-<p><strong>4.throws 声明一个异常可能被抛出</strong></p>
-<p>throws 关键字可以应用于方法，以便指出方法引发了特定类型的异常。</p>
-<p>throws 关键字将逗号分隔的 java.lang.Throwables 列表作为参数。</p>
-<p><strong>5.finally</strong></p>
-<p>在异常处理机制当中，它的作用就像是人吃饭一样，必须得做的，不论有异常还是没有异常都要执行的代码就可以放到finally块当中去。finally块，必须要配合try块一起使用，不能单独使用，也不能直接和catch块一起使用。</p>
-<p>finally 关键字用来定义始终在 try-catch-finally 语句中执行的块。</p>
-<p>finally 块通常包含清理代码，用在部分执行 try 块后恢复正常运行</p>
-<h2 id="5-包相关"><a href="#5-包相关" class="headerlink" title="5.包相关"></a>5.包相关</h2><p><strong>1.import导入</strong></p>
-<p>import 关键字使一个包中的一个或所有类在当前 Java 源文件中可见。可以不使用完全限定的类名来引用导入的类。</p>
-<p>当多个包包含同名的类时，许多 Java 程序员只使用特定的 import 语句（没有“*”）来避免不确定性。</p>
-<p><strong>2.package包</strong></p>
-<p>package 关键字指定在 Java 源文件中声明的类所驻留的 Java 包。</p>
-<h2 id="6-基本类型"><a href="#6-基本类型" class="headerlink" title="6.基本类型"></a>6.基本类型</h2><p><strong>1.boolean布尔型</strong></p>
-<p>boolean 是 Java 原始类型。boolean 变量的值可以是 true 或 false。</p>
-<p><strong>2.byte字节型</strong></p>
-<p>byte 是 Java 原始类型。byte 可存储在 [-128, 127] 范围以内的整数值。</p>
-<p><strong>3.char字符型</strong></p>
-<p>char 是 Java 原始类型。char 变量可以存储一个 Unicode 字符。</p>
-<p><strong>4.double双精度</strong></p>
-<p>double 是 Java 原始类型。double 变量可以存储双精度浮点值。</p>
-<p>由于浮点数据类型是实际数值的近似值，因此，一般不要对浮点数值进行是否相等的比较。</p>
-<p><strong>5.float浮点</strong></p>
-<p>float 是 Java 原始类型。float 变量可以存储单精度浮点值。</p>
-<p>使用此关键字时应遵循下列规则：</p>
-<p>Java 中的浮点文字始终默认为双精度。要指定单精度文字值，应在数值后加上 f 或 F，如 0.01f。</p>
-<p><strong>6.int整形</strong></p>
-<p>int 是 Java 原始类型。int 变量可以存储 32 位的整数值。</p>
-<p><strong>7.long长整形</strong></p>
-<p>long 是 Java 原始类型。long 变量可以存储 64 位的带符号整数。</p>
-<p>Long 类是 long 原始类型的包装对象类。它定义代表此类型的值的范围的 MIN_VALUE 和 MAX_VALUE 常量。</p>
-<p>Java 中的所有整数值都是 32 位的 int 值，除非值后面有 l 或 L（如 235L），这表示该值应解释为 long。</p>
-<p><strong>8.short短整型</strong></p>
-<p>short 是 Java 原始类型。short 变量可以存储 16 位带符号的整数。</p>
-<p>Short 类是 short 原始类型的包装对象类。它定义代表此类型的值的范围的 MIN_VALUE 和 MAX_VALUE 常量。</p>
-<p>Java 中的所有整数值都是 32 位的 int 值，除非值后面有 l 或 L（如 235L），这表示该值应解释为 long。</p>
-<p><strong>9.null空</strong></p>
-<p>null 是 Java 的保留字，表示无值。</p>
-<p>将 null 赋给非原始变量相当于释放该变量先前所引用的对象。</p>
-<p>不能将 null 赋给原始类型（byte、short、int、long、char、float、double、boolean）变量。</p>
-<p><strong>10.true真</strong></p>
-<p>true 关键字表示 boolean 变量的两个合法值中的一个。</p>
-<p><strong>11.false假</strong></p>
-<p>false 关键字代表 boolean 变量的两个合法值之一。</p>
-<h2 id="7-变量引用"><a href="#7-变量引用" class="headerlink" title="7.变量引用"></a>7.变量引用</h2><p><strong>1.super父类，超类</strong></p>
-<p>super 关键字用于引用使用该关键字的类的超类。</p>
-<p>作为独立语句出现的 super 表示调用超类的构造方法。 super.() 表示调用超类的方法。只有在如下情况中才需要采用这种用法：要调用在该类中被重写的方法，以便指定应当调用在超类中的该方法。</p>
-<p><strong>2.this本类</strong></p>
-<p>this 关键字用于引用当前实例。 当引用可能不明确时，可以使用 this 关键字来引用当前的实例。</p>
-<p><strong>3.void无返回值</strong></p>
-<p>void 关键字表示 null 类型。 void 可以用作方法的返回类型，以指示该方法不返回值。</p>
-<h2 id="8-保留字"><a href="#8-保留字" class="headerlink" title="8.保留字"></a>8.保留字</h2><p>保留字是为java预留的关键字，他们虽然现在没有作为关键字，但在以后的升级版本中有可能作为关键字。</p>
-<p><strong>1.goto跳转</strong></p>
-<p>goto 保留关键字，但无任何作用。结构化程序设计完全不需要 goto 语句即可完成各种流程，而 goto 语句的使用往往会使程序的可读性降低，所以 Java 不允许 goto 跳转。</p>
-<p><strong>2.const静态</strong></p>
-<p>const 保留字，是一个类型修饰符，使用const声明的对象不能更新。与final某些类似。</p>
-]]></content>
-      <categories>
-        <category>Java面试宝典</category>
-        <category>Java</category>
-      </categories>
-      <tags>
-        <tag>Java</tag>
-        <tag>Java基础</tag>
       </tags>
   </entry>
   <entry>
@@ -1750,6 +1540,216 @@
 ]]></content>
       <tags>
         <tag>本体建模</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java SE基础|Java基础和关键字</title>
+    <url>/2020/08/26/Java-SE%E5%9F%BA%E7%A1%80%E2%80%94%E2%80%94Java%E5%9F%BA%E7%A1%80%E5%92%8C%E5%85%B3%E9%94%AE%E5%AD%97/</url>
+    <content><![CDATA[<p><img data-src="https://uploadfiles.nowcoder.com/images/20180914/826546_1536916757441_FF474C03D9D513A3519773CB35561940" alt="Java基础"></p>
+<h1 id="一、Java基础"><a href="#一、Java基础" class="headerlink" title="一、Java基础"></a>一、Java基础</h1><h2 id="1-Java特性"><a href="#1-Java特性" class="headerlink" title="1.Java特性"></a>1.Java特性</h2><p>Java做为一门“全面”面向对象的编程语言，提供了面向对象的<strong>四种基本性质：抽象性、封装性、继承性和多态性</strong>。 面向对象主要有四大特性：<strong>封装、抽象、继承和多态</strong>。</p>
+<p>Java支持8种数据类型：</p>
+<p>byte—————&gt;Byte<br>short—————&gt;Short<br>int——————&gt;Integer<br>long——————&gt;Long<br>float——————&gt;Float<br>double——————&gt;Double<br>boolean——————&gt;Boolean<br>char——————&gt;Character</p>
+<a id="more"></a>
+
+
+
+<h2 id="2-Java如何支持正则表达式"><a href="#2-Java如何支持正则表达式" class="headerlink" title="2.Java如何支持正则表达式"></a>2.Java如何支持正则表达式</h2><p>Java中的String类提供了支持正则表达式操作的方法，包括：matches()、replaceAll()、replaceFirst()、split()。此外，Java中可以用Pattern类表示正则表达式对象，它提供了丰富的API进行各种正则表达式操作。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.regex.Matcher;</span><br><span class="line"><span class="keyword">import</span> java.util.regex.Pattern;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">RegExpTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        String str = <span class="string">&quot;成都市(成华区)(武侯区)(高新区)&quot;</span>;</span><br><span class="line">        Pattern p = Pattern.compile(<span class="string">&quot;.*?(?=\\()&quot;</span>);</span><br><span class="line">        Matcher m = p.matcher(str);</span><br><span class="line">        <span class="keyword">if</span>(m.find()) &#123;</span><br><span class="line">            System.out.println(m.group());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>返回结果是：成都市</p>
+<p><img data-src="https://img-blog.csdnimg.cn/20200827164545555.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="正则表达式匹配规则(1)"></p>
+<p><img data-src="https://img-blog.csdnimg.cn/20200827164616859.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="正则表达式匹配规则(2)"></p>
+<p><img data-src="https://img-blog.csdnimg.cn/20200827164632485.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3premJoaA==,size_16,color_FFFFFF,t_70#pic_center" alt="正则表达式匹配规则(3)"></p>
+<h2 id="3-正则表达式及其用途"><a href="#3-正则表达式及其用途" class="headerlink" title="3.正则表达式及其用途"></a>3.正则表达式及其用途</h2><p>在编写处理字符串的程序时，经常会有查找符合某些复杂规则的字符串的需要。正则表达式就是用于描述这些规则的工具。换句话说，正则表达式就是记录文本规则的代码。计算机处理的信息更多的时候不是数值而是字符串，正则表达式就是在进行字符串匹配和处理的时候最为强大的工具，绝大多数语言都提供了对正则表达式的支持。</p>
+<h2 id="4-Java和JavaScript"><a href="#4-Java和JavaScript" class="headerlink" title="4.Java和JavaScript"></a>4.Java和JavaScript</h2><p>JavaScript 与Java是两个公司开发的不同的两个产品。Java 是原Sun Microsystems公司推出的面向对象的程序设计语言，特别适合于互联网应用程序开发；而JavaScript是Netscape公司的产品，为了扩展Netscape浏览器的功能而开发的一种可以嵌入Web页面中运行的基于对象和事件驱动的解释性语言.</p>
+<p>一、基于对象和面向对象</p>
+<p>Java是一种真正的面向对象的语言，即使是开发简单的程序，必须设计对象；JavaScript是种脚本语言，它可以用来制作与网络无关的，与用户交互作用的复杂软件。它是一种基于对象（Object-Based）和事件驱动（Event-Driven）的编程语言，因而它本身提供了非常丰富的内部对象供设计人员使用。</p>
+<p>二、解释和编译</p>
+<p>Java的源代码在执行之前，必须经过编译。JavaScript是一种解释性编程语言，其源代码不需经过编译，由浏览器解释执行。目前浏览器几乎都是用了JIT，即时编译。</p>
+<p>三、强类型变量和类型弱变量</p>
+<p>Java采用强类型变量检查，即所有变量在编译之前必须作声明；JavaScript中变量是弱类型的，甚至在使用变量前可以不作声明，<strong>JavaScript的解释器在运行时检查推断其数据类型</strong></p>
+<p>四、代码格式不同</p>
+<h2 id="5-Java如何跳出循环"><a href="#5-Java如何跳出循环" class="headerlink" title="5.Java如何跳出循环"></a>5.Java如何跳出循环</h2><p>考察循环</p>
+<p>在最外层循环前加一个标记如A，然后用break A;可以跳出多重循环。Java中支持带标签的break和continue语句。应该避免使用带标签的break和continue，因为它不会让你的程序变得更优雅，很多时候甚至有相反的作用。使用需<strong>谨慎</strong></p>
+<h2 id="6-amp-和-amp-amp-的区别"><a href="#6-amp-和-amp-amp-的区别" class="headerlink" title="6.&amp;和&amp;&amp;的区别"></a>6.&amp;和&amp;&amp;的区别</h2><p>考察运算符</p>
+<p>&amp;运算符有两种用法：(1)按位与；(2)逻辑与。</p>
+<p>&amp;&amp;运算符是短路与运算</p>
+<p>&amp;&amp;之所以称为短路运算是因为，如果&amp;&amp;左边的表达式的值是false，右边的表达式会被直接短路掉，不会进行运算。</p>
+<p>例如在验证用户登录时判定用户名不是null而且不是空字符串，应当写为：username != null &amp;&amp;!username.equals(“”)，<strong>二者的顺序不能交换</strong>，更不能用&amp;运算符，因为第一个条件如果不成立，根本不能进行字符串的equals比较，否则<strong>会产生NullPointerException异常。</strong></p>
+<h2 id="7-int和Integer有什么区别"><a href="#7-int和Integer有什么区别" class="headerlink" title="7.int和Integer有什么区别"></a>7.int和Integer有什么区别</h2><p>考察数据类型</p>
+<p><strong>Int是java的原始数据类型，Integer是java为int提供的封装类。</strong></p>
+<p>Java是一个近乎纯洁的面向对象编程语言，但是为了编程的方便还是引入了基本数据类型，<strong>但是为了能够将这些基本数据类型当成对象操作，Java为每一个基本数据类型都引入了对应的包装类型</strong>（wrapper class），int的包装类就是Integer，从Java 5开始引入了<strong>自动装箱/拆箱机制</strong>，使得二者可以相互转换。<br>Java 为每个原始类型提供了包装类型：<br>- 原始类型: boolean，char，byte，short，int，long，float，double<br>- 包装类型：Boolean，Character，Byte，Short，Integer，Long，Float，Double</p>
+<hr>
+<h2 id="8-Array和ArrayList的区别"><a href="#8-Array和ArrayList的区别" class="headerlink" title="8.Array和ArrayList的区别"></a>8.Array和ArrayList的区别</h2><p>Array可以包含基本类型和对象类型，ArrayList只能包含对象类型。<br>Array大小是固定的，ArrayList的大小是动态变化的。<br>ArrayList提供了更多的方法和特性，比如：addAll()，removeAll()，iterator()等等。</p>
+<h2 id="9-值传递和引用传递"><a href="#9-值传递和引用传递" class="headerlink" title="9.值传递和引用传递"></a>9.值传递和引用传递</h2><p>考察：Java引用传递</p>
+<p>值传递：传递的是该变量的一个副本,改变副本不影响原变量。</p>
+<p>引用传递：对于对象型变量而言的，传递的是该对象地址的一个副本，并不是原对象本身。<strong>对引用对象进行操作会同时改变原对象</strong></p>
+<p><strong>一般认为,java内的传递都是值传递.</strong></p>
+<h2 id="10-Lamda表达式是什么？优缺点。"><a href="#10-Lamda表达式是什么？优缺点。" class="headerlink" title="10.Lamda表达式是什么？优缺点。"></a>10.Lamda表达式是什么？优缺点。</h2><p>Lambda表达式是Java SE 8中一个重要的新特性，lambda表达式就和方法一样,它提供了一个正常的参数列表和一个使用这些参数的主体。</p>
+<p>Lambda表达式还增强了<strong>集合库</strong>。 Java SE 8添加了2个对集合数据进行批量操作的包: java.util.function 包以及 java.util.stream 包。 流(stream)就如同迭代器(iterator),但附加了许多额外的功能。 总的来说,lambda表达式和 stream 是自Java语言添加泛型(Generics)和注解(annotation)以来最大的变化</p>
+<p><strong>Lambda表达式的语法</strong><br>基本语法:<br><strong>(parameters) -&gt; expression</strong><br>或<br>**(parameters) -&gt;{ statements;** </p>
+<figure class="highlight livescript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Arrays;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">RegExpTest</span> &#123;</span></span><br><span class="line">    public <span class="keyword">static</span> <span class="literal">void</span> main(<span class="built_in">String</span>[] args) &#123;</span><br><span class="line">        <span class="built_in">String</span>[] atp = &#123;<span class="string">&quot;Rafael Nadal&quot;</span>, <span class="string">&quot;Novak Djokovic&quot;</span>,</span><br><span class="line">                <span class="string">&quot;Stanislas Wawrinka&quot;</span>,</span><br><span class="line">                <span class="string">&quot;David Ferrer&quot;</span>,<span class="string">&quot;Roger Federer&quot;</span>,</span><br><span class="line">                <span class="string">&quot;Andy Murray&quot;</span>,<span class="string">&quot;Tomas Berdych&quot;</span>,</span><br><span class="line">                <span class="string">&quot;Juan Martin Del Potro&quot;</span>&#125;;</span><br><span class="line">        List&lt;<span class="built_in">String</span>&gt; players= Arrays.asList(atp);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="built_in">String</span> player : players) &#123;</span><br><span class="line">            System.out.<span class="built_in">print</span>(player + <span class="string">&quot;; &quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        players.forEach<span class="function"><span class="params">((player) -&gt; System.out.<span class="built_in">print</span>(player + <span class="string">&quot;; &quot;</span>))</span>;</span></span><br><span class="line"><span class="function">    &#125;</span></span><br><span class="line"><span class="function">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>优点：1. 简洁。2. 非常容易并行计算。3. 可能代表未来的编程趋势。</p>
+<p>缺点：1. 若不用并行计算，很多时候计算速度没有比传统的 for 循环快。（并行计算有时需要预热才显示出效率优势）2. 不容易调试。3. 若其他程序员没有学过 lambda 表达式，代码不容易让其他语言的程序员看懂。</p>
+<h2 id="11-Map的分类"><a href="#11-Map的分类" class="headerlink" title="11.Map的分类"></a>11.Map的分类</h2><p>Map主要用于存储健值对，根据键得到值，因此不允许键重复(重复了覆盖了),但允许值重复。</p>
+<p>java.util.Map；有四个实现类</p>
+<p>HashMap Hashtable LinkedHashMap和TreeMap</p>
+<p><strong>HashMap</strong>是一个最常用的Map，根据键值可以直接获取它的值只允许一条记录的键为Null；允许多条记录的值为Null；不支持线程的同步。</p>
+<p><strong>Hashtable</strong>与 HashMap类似,它继承自Dictionary类，不同的是:它不允许记录的键或者值为空;它支持线程的同步，即任一时刻只有一个线程能写Hashtable,因此也导致了 Hashtable在写入时会比较慢。</p>
+<p><strong>LinkedHashMap</strong> 是HashMap的一个子类，保存了记录的插入顺序。</p>
+<p><strong>TreeMap</strong>实现SortMap接口，能够把它保存的记录根据键排序,默认是按键值的升序排序，也可以指定排序的比较器，当用Iterator 遍历TreeMap时，得到的记录是排过序的。</p>
+<hr>
+<h1 id="二、关键字"><a href="#二、关键字" class="headerlink" title="二、关键字"></a>二、关键字</h1><h2 id="1-访问控制"><a href="#1-访问控制" class="headerlink" title="1.访问控制"></a>1.访问控制</h2><p><strong>1.private私有的</strong></p>
+<p>private 关键字是访问控制修饰符，可以应用于类、方法或字段（在类中声明的变量）。在类的外部或者对于子类而言，它们是不可见的。</p>
+<p><strong>2.protected受保护的</strong></p>
+<p>protected 关键字是可以应用于类、方法或字段（在类中声明的变量）的访问控制修饰符。可以在声明 protected 类、方法或字段的类、同一个包中的其他任何类以及任何子类（无论子类是在哪个包中声明的）中引用这些类、方法或字段</p>
+<p><strong>3.public公有的</strong></p>
+<p>public 关键字是可以应用于类、方法或字段（在类中声明的变量）的访问控制修饰符。 可能只会在其他任何类或包中引用 public 类、方法或字段。</p>
+<p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20200826185120931.png" alt="image-20200826185120931"></p>
+<h2 id="2-类、方法和变量修饰符"><a href="#2-类、方法和变量修饰符" class="headerlink" title="2.类、方法和变量修饰符"></a>2.类、方法和变量修饰符</h2><p><strong>1.abstract声明抽象</strong></p>
+<p>abstract关键字可以修改类或方法。abstract类可以扩展（增加子类），但不能直接实例化。abstract方法不在声明它的类中实现，但必须在某个子类中重写。采用 abstract方法的类本来就是抽象类，并且必须声明为abstract。</p>
+<p><strong>2.class类</strong></p>
+<p>class 关键字用来声明新的 Java 类，该类是相关变量和/或方法的集合。类是面向对象的程序设计方法的基本构造单位。类通常代表某种实际实体。要使用类，通常使用 new 操作符将类的对象实例化，然后调用类的方法来访问类的功能。</p>
+<p><strong>3.extends继承、扩展</strong></p>
+<p>extends 关键字用在 class 或 interface 声明中，用于指示所声明的类或接口是其名称后跟有 extends 关键字的类或接口的子类。</p>
+<p>子类可以重写父类的任何非 final 方法。一个类只能扩展一个其他类。</p>
+<p><strong>4.final最终，不可改变</strong></p>
+<p>final关键字可以用来修饰类、方法和变量（包括成员变量和局部变量）。final方法在编译阶段绑定，称为静态绑定(static binding)。</p>
+<p><strong>5.implements实现</strong></p>
+<p>implements 关键字在 class 声明中使用，以指示所声明的类提供了在 implements 关键字后面的名称所指定的接口中所声明的所有方法的实现</p>
+<p><strong>6.interface接口</strong></p>
+<p>interface 关键字用来声明新的 Java 接口，接口是方法的集合</p>
+<p><strong>7.native本地</strong></p>
+<p>本地方法</p>
+<p>为了访问一个老的系统或者使用一个已有的库，而这个系统或这个库不是用JAVA编写的。</p>
+<p>为了加快程序的性能，而将一段时间敏感的代码作为本地方法实现。</p>
+<p><strong>8.new</strong></p>
+<p>new 关键字用于创建类的新实例。</p>
+<p>new 关键字后面的参数必须是类名，并且类名的后面必须是一组构造方法参数（必须带括号）。 参数集合必须与类的构造方法的签名匹配。</p>
+<p><strong>9.static静态</strong></p>
+<p>static可以用于修饰属性，可以修饰代码块，也可以用于修饰方法，还可以用于修饰类。</p>
+<p>1、static修饰属性：无论一个类生成了多少个对象，所有这些对象共同使用唯一一份静态的成员变量；一个对象对该静态成员变量进行了修改，其他对象的该静态成员变量的值也会随之发生变化。如果一个成员变量是static的，那么我们可以通过‘类名.成员变量名’的方式来使用它。</p>
+<p>2、static修饰方法：static修饰的方法叫做静态方法。对于静态方法来说，可以使用‘类名.方法名’的方式来访问。静态方法只能继承，不能重写（Override），因为重写是用于表现多态的，重写只能适用于实例方法，而静态方法是可以不生成实例直接用类名来调用，这就会与重写的定义所冲突，与多态所冲突，所以静态方法不能重写，只能是隐藏。</p>
+<p>3、static修饰代码块：静态代码块。静态代码块的作用也是完成一些初始化工作。<strong>首先执行静态代码块，然后执行构造方法。</strong>静态代码块在类被加载的时候执行，而构造方法是在生成对象的时候执行；要想调用某个类来生成对象，首先需要将类加载到Java虚拟机上（JVM），然后由JVM加载这个类来生成对象。</p>
+<p>4、static修饰类：这个有点特殊，首先，static是可以用来修饰类的，但是static是不允许用来修饰普通类，只能用来修饰内部类，被static所修饰的内部类可以用new关键字来直接创建一个实例，不需要先创建外部类实例。static内部类可以被其他类实例化和引用（即使它是顶级类）。</p>
+<p><strong>10.strictfp严格，精准</strong></p>
+<p>strictfp的意思是FP-strict，也就是说精确浮点的意思。在Java虚拟机进行浮点运算时，如果没有指定strictfp关键字时，Java的编译器以及运行环境在对浮点运算的表达式是采取一种近似于我行我素的行为来完成这些操作，以致于得到的结果往往无法令人满意。</p>
+<p><strong>11.synchronized线程、同步</strong></p>
+<p>synchronized 关键字可以应用于方法或语句块，并为一次只应由一个线程执行的关键代码段提供保护。</p>
+<p>synchronized 关键字可防止代码的关键代码段一次被多个线程执行。如果应用于静态方法，那么，当该方法一次由一个线程执行时，整个类将被锁定。如果应用于实例方法，那么，当该方法一次由一个线程访问时，该实例将被锁定。如果应用于对象或数组，当关联的代码块一次由一个线程执行时，对象或数组将被锁定。</p>
+<p><strong>12.transient短暂</strong></p>
+<p>transient 关键字可以应用于类的成员变量，以便指出该成员变量不应在包含它的类实例已序列化时被序列化。</p>
+<p><strong>13.volatitle易失</strong></p>
+<p>volatile 关键字用于表示可以被多个线程异步修改的成员变量。</p>
+<h2 id="3-程序控制语句"><a href="#3-程序控制语句" class="headerlink" title="3.程序控制语句"></a>3.程序控制语句</h2><p><strong>1.brask跳出，中断</strong></p>
+<p>break 关键字用于提前退出 for、while 或 do 循环，或者在 switch 语句中用来结束 case 块。</p>
+<p><strong>2.continue继续</strong></p>
+<p>continue 关键字用来跳转到 for、while 或 do 循环的下一个迭代。</p>
+<p>continue 总是跳到最深层 while、for 或 do 语句的下一个迭代。</p>
+<p><strong>3.return返回</strong></p>
+<p>return 关键字会导致方法返回到调用它的方法，从而传递与返回方法的返回类型匹配的值</p>
+<p><strong>4.do运行</strong></p>
+<p>do 关键字用于指定一个在每次迭代结束时检查其条件的循环。</p>
+<p>do 循环体至少执行一次。 条件表达式后面必须有分号。</p>
+<p><strong>5.while循环</strong></p>
+<p>while 关键字用于指定一个只要条件为真就会重复的循环。</p>
+<p><strong>6.if如果</strong></p>
+<p>if 关键字指示有条件地执行代码块。条件的计算结果必须是布尔值。</p>
+<p>if 语句可以有可选的 else 子句，该子句包含条件为 false 时将执行的代码。</p>
+<p>包含 boolean 操作数的表达式只能包含 boolean 操作数。</p>
+<p><strong>7.else否则</strong></p>
+<p>else 关键字总是在 if-else 语句中与 if 关键字结合使用。else 子句是可选的，如果 if 条件为 false，则执行该子句。</p>
+<p><strong>8.for循环</strong></p>
+<p>or 关键字用于指定一个在每次迭代结束前检查其条件的循环。</p>
+<p><strong>9.instanceof实例</strong></p>
+<p>instanceof 关键字用来确定对象所属的类。</p>
+<p><strong>10switch观察</strong></p>
+<p>switch 语句用于基于某个表达式选择执行多个代码块中的某一个。</p>
+<p>switch 条件的计算结果必须等于 byte、char、short 或 int。</p>
+<p>case 块没有隐式结束点。break 语句通常在每个 case 块末尾使用，用于退出 switch 语句。</p>
+<p><strong>11.case返回观察里的结果</strong></p>
+<p>case 用来标记 switch 语句中的每个分支。</p>
+<p>case 块没有隐式结束点。break 语句通常在每个 case 块末尾使用，用于退出 switch 语句。</p>
+<p>如果没有 break 语句，执行流将进入所有后面的 case 和/或 default 块。</p>
+<p><strong>12.default默认</strong></p>
+<p>default 关键字用来标记 switch 语句中的默认分支。</p>
+<p>default 块没有隐式结束点。break 语句通常在每个 case 或 default 块的末尾使用，以便在完成块时退出 switch 语句。</p>
+<p>如果没有 default 语句，其参数与任何 case 块都不匹配的 switch 语句将不执行任何操作。</p>
+<h2 id="4-错误处理"><a href="#4-错误处理" class="headerlink" title="4.错误处理"></a>4.错误处理</h2><p><strong>1.try捕获异常</strong></p>
+<p>try 关键字用于包含可能引发异常的语句块。</p>
+<p>每个 try 块都必须至少有一个 catch 或 finally 子句。</p>
+<p><strong>2.catch处理异常</strong></p>
+<p>catch 关键字用来在 try-catch 或 try-catch-finally 语句中定义异常处理块。</p>
+<p><strong>3.throw派出一个异常对象</strong></p>
+<p>throw 语句将 java.lang.Throwable 作为参数。Throwable 在调用栈中向上传播，直到被适当的 catch 块捕获。 引发非 RuntimeException 异常的任何方法还必须在方法声明中使用 throws 修饰符来声明它引发的异常。</p>
+<p><strong>4.throws 声明一个异常可能被抛出</strong></p>
+<p>throws 关键字可以应用于方法，以便指出方法引发了特定类型的异常。</p>
+<p>throws 关键字将逗号分隔的 java.lang.Throwables 列表作为参数。</p>
+<p><strong>5.finally</strong></p>
+<p>在异常处理机制当中，它的作用就像是人吃饭一样，必须得做的，不论有异常还是没有异常都要执行的代码就可以放到finally块当中去。finally块，必须要配合try块一起使用，不能单独使用，也不能直接和catch块一起使用。</p>
+<p>finally 关键字用来定义始终在 try-catch-finally 语句中执行的块。</p>
+<p>finally 块通常包含清理代码，用在部分执行 try 块后恢复正常运行</p>
+<h2 id="5-包相关"><a href="#5-包相关" class="headerlink" title="5.包相关"></a>5.包相关</h2><p><strong>1.import导入</strong></p>
+<p>import 关键字使一个包中的一个或所有类在当前 Java 源文件中可见。可以不使用完全限定的类名来引用导入的类。</p>
+<p>当多个包包含同名的类时，许多 Java 程序员只使用特定的 import 语句（没有“*”）来避免不确定性。</p>
+<p><strong>2.package包</strong></p>
+<p>package 关键字指定在 Java 源文件中声明的类所驻留的 Java 包。</p>
+<h2 id="6-基本类型"><a href="#6-基本类型" class="headerlink" title="6.基本类型"></a>6.基本类型</h2><p><strong>1.boolean布尔型</strong></p>
+<p>boolean 是 Java 原始类型。boolean 变量的值可以是 true 或 false。</p>
+<p><strong>2.byte字节型</strong></p>
+<p>byte 是 Java 原始类型。byte 可存储在 [-128, 127] 范围以内的整数值。</p>
+<p><strong>3.char字符型</strong></p>
+<p>char 是 Java 原始类型。char 变量可以存储一个 Unicode 字符。</p>
+<p><strong>4.double双精度</strong></p>
+<p>double 是 Java 原始类型。double 变量可以存储双精度浮点值。</p>
+<p>由于浮点数据类型是实际数值的近似值，因此，一般不要对浮点数值进行是否相等的比较。</p>
+<p><strong>5.float浮点</strong></p>
+<p>float 是 Java 原始类型。float 变量可以存储单精度浮点值。</p>
+<p>使用此关键字时应遵循下列规则：</p>
+<p>Java 中的浮点文字始终默认为双精度。要指定单精度文字值，应在数值后加上 f 或 F，如 0.01f。</p>
+<p><strong>6.int整形</strong></p>
+<p>int 是 Java 原始类型。int 变量可以存储 32 位的整数值。</p>
+<p><strong>7.long长整形</strong></p>
+<p>long 是 Java 原始类型。long 变量可以存储 64 位的带符号整数。</p>
+<p>Long 类是 long 原始类型的包装对象类。它定义代表此类型的值的范围的 MIN_VALUE 和 MAX_VALUE 常量。</p>
+<p>Java 中的所有整数值都是 32 位的 int 值，除非值后面有 l 或 L（如 235L），这表示该值应解释为 long。</p>
+<p><strong>8.short短整型</strong></p>
+<p>short 是 Java 原始类型。short 变量可以存储 16 位带符号的整数。</p>
+<p>Short 类是 short 原始类型的包装对象类。它定义代表此类型的值的范围的 MIN_VALUE 和 MAX_VALUE 常量。</p>
+<p>Java 中的所有整数值都是 32 位的 int 值，除非值后面有 l 或 L（如 235L），这表示该值应解释为 long。</p>
+<p><strong>9.null空</strong></p>
+<p>null 是 Java 的保留字，表示无值。</p>
+<p>将 null 赋给非原始变量相当于释放该变量先前所引用的对象。</p>
+<p>不能将 null 赋给原始类型（byte、short、int、long、char、float、double、boolean）变量。</p>
+<p><strong>10.true真</strong></p>
+<p>true 关键字表示 boolean 变量的两个合法值中的一个。</p>
+<p><strong>11.false假</strong></p>
+<p>false 关键字代表 boolean 变量的两个合法值之一。</p>
+<h2 id="7-变量引用"><a href="#7-变量引用" class="headerlink" title="7.变量引用"></a>7.变量引用</h2><p><strong>1.super父类，超类</strong></p>
+<p>super 关键字用于引用使用该关键字的类的超类。</p>
+<p>作为独立语句出现的 super 表示调用超类的构造方法。 super.() 表示调用超类的方法。只有在如下情况中才需要采用这种用法：要调用在该类中被重写的方法，以便指定应当调用在超类中的该方法。</p>
+<p><strong>2.this本类</strong></p>
+<p>this 关键字用于引用当前实例。 当引用可能不明确时，可以使用 this 关键字来引用当前的实例。</p>
+<p><strong>3.void无返回值</strong></p>
+<p>void 关键字表示 null 类型。 void 可以用作方法的返回类型，以指示该方法不返回值。</p>
+<h2 id="8-保留字"><a href="#8-保留字" class="headerlink" title="8.保留字"></a>8.保留字</h2><p>保留字是为java预留的关键字，他们虽然现在没有作为关键字，但在以后的升级版本中有可能作为关键字。</p>
+<p><strong>1.goto跳转</strong></p>
+<p>goto 保留关键字，但无任何作用。结构化程序设计完全不需要 goto 语句即可完成各种流程，而 goto 语句的使用往往会使程序的可读性降低，所以 Java 不允许 goto 跳转。</p>
+<p><strong>2.const静态</strong></p>
+<p>const 保留字，是一个类型修饰符，使用const声明的对象不能更新。与final某些类似。</p>
+]]></content>
+      <categories>
+        <category>Java面试宝典</category>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>Java基础</tag>
       </tags>
   </entry>
 </search>

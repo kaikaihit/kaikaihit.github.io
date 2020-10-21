@@ -25,18 +25,24 @@
     var CONFIG = {"hostname":"kaikaihit.github.io","root":"/","scheme":"Gemini","version":"8.0.0-rc.5","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":true,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"path":"search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="不断的奋斗就是走上成功之路">
-<meta property="og:type" content="website">
-<meta property="og:title" content="zhangkai&#39;s Blogs">
-<meta property="og:url" content="kaikaihit.github.io/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/%E5%A0%86%E4%B8%8E%E6%A0%88/index.html">
+  <meta name="description" content="Architecture of Knowledge Graph Construction TechniquesDBpedia, Google Vault, YAGO, and NELL two types of the approaches in the devlopment of KGs  top-down approach 自上而下，领域本体建模模式。 1）定义模式 2）知识实例添加到知识图谱">
+<meta property="og:type" content="article">
+<meta property="og:title" content="知识图谱构建论文总结">
+<meta property="og:url" content="kaikaihit.github.io/2020/10/15/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E6%9E%84%E5%BB%BA%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="zhangkai&#39;s Blogs">
-<meta property="og:description" content="不断的奋斗就是走上成功之路">
+<meta property="og:description" content="Architecture of Knowledge Graph Construction TechniquesDBpedia, Google Vault, YAGO, and NELL two types of the approaches in the devlopment of KGs  top-down approach 自上而下，领域本体建模模式。 1）定义模式 2）知识实例添加到知识图谱">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/hit_zhangkai/AppData/Roaming/Typora/typora-user-images/image-20201015162855846.png">
+<meta property="og:image" content="c:/Users/hit_zhangkai/AppData/Roaming/Typora/typora-user-images/image-20201020090423905.png">
+<meta property="og:image" content="c:/Users/hit_zhangkai/AppData/Roaming/Typora/typora-user-images/image-20201020090850301.png">
+<meta property="article:published_time" content="2020-10-15T01:56:55.000Z">
+<meta property="article:modified_time" content="2020-10-20T03:13:27.415Z">
 <meta property="article:author" content="kaikai">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/hit_zhangkai/AppData/Roaming/Typora/typora-user-images/image-20201015162855846.png">
 
 
-<link rel="canonical" href="kaikaihit.github.io/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/%E5%A0%86%E4%B8%8E%E6%A0%88/">
+<link rel="canonical" href="kaikaihit.github.io/2020/10/15/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E6%9E%84%E5%BB%BA%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/">
 
 
 <script class="page-configurations">
@@ -44,12 +50,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>分类: 堆与栈 | zhangkai's Blogs</title>
+  <title>知识图谱构建论文总结 | zhangkai's Blogs</title>
   
 
 
@@ -209,7 +215,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -221,6 +227,7 @@
 
       <!--noindex-->
       <section class="post-toc-wrap sidebar-panel">
+          <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Architecture-of-Knowledge-Graph-Construction-Techniques"><span class="nav-number">1.</span> <span class="nav-text">Architecture of Knowledge Graph Construction Techniques</span></a></li></ol></div>
       </section>
       <!--/noindex-->
 
@@ -375,58 +382,216 @@
 </noscript>
 
 
-    <div class="main-inner category posts-collapse">
+    <div class="main-inner post posts-expand">
       
 
       
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <h2 class="collection-header">堆与栈
-          <small>分类</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="kaikaihit.github.io/2020/10/15/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E6%9E%84%E5%BB%BA%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/">
 
-      
-    <div class="collection-year">
-      <span class="collection-header">2020</span>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="kaikai">
+      <meta itemprop="description" content="不断的奋斗就是走上成功之路">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zhangkai's Blogs">
+    </span>
+
+    
+    
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          知识图谱构建论文总结
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2020-10-15 09:56:55" itemprop="dateCreated datePublished" datetime="2020-10-15T09:56:55+08:00">2020-10-15</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-20 11:13:27" itemprop="dateModified" datetime="2020-10-20T11:13:27+08:00">2020-10-20</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="far fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2020/10/15/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E6%9E%84%E5%BB%BA%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2020/10/15/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E6%9E%84%E5%BB%BA%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+              <span class="post-meta-item-text">本文字数：</span>
+              <span>1.7k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+              <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>2 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="Architecture-of-Knowledge-Graph-Construction-Techniques"><a href="#Architecture-of-Knowledge-Graph-Construction-Techniques" class="headerlink" title="Architecture of Knowledge Graph Construction Techniques"></a>Architecture of Knowledge Graph Construction Techniques</h2><p>DBpedia, Google Vault, YAGO, and NELL</p>
+<p>two types of the approaches in the devlopment of KGs</p>
+<ul>
+<li><p>top-down approach</p>
+<p>自上而下，领域本体建模模式。</p>
+<p>1）定义模式</p>
+<p>2）知识实例添加到知识图谱中</p>
+</li>
+<li><p>bottom-up approach</p>
+<p>自下而上，知识实例，例如LOD：Linked Open Data </p>
+</li>
+</ul>
+<p><strong>知识图谱的构建流程：</strong></p>
+<p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201015162855846.png" alt="image-20201015162855846"></p>
+<p>The primary sources of knowledge acquisition include structured data, semi-structured data and unstructured data. Knowledge extraction consists of en- tity extraction, attribute extraction and relation extraction. Knowledge fusion is an iterative process, which need to constantly con- struct ontology and evaluate quality of ontology. Currently, knowl edge storage is usually based on NoSQL databases.<br>（知识获取的主要来源包括结构化数据，半结构化数据和非结构化数据。 知识提取包括实体提取，属性提取和关系提取。 知识融合是一个反复的过程，需要不断地构建本体并评估本体的质量。 当前，知识边缘存储通常基于NoSQL数据库。）</p>
+<p><strong>Knowledge extraction</strong></p>
+<p>data sources</p>
+<p>​    structured data</p>
+<p>​        relational databases</p>
+<p>​    semi-structured data</p>
+<p>​        HTML，XML，JSON</p>
+<p>​    unstruceured data</p>
+<p>​        text，image，documents</p>
+<p>types</p>
+<p>​    entity extraction：实体抽取；包含NER，</p>
+<p>​    relation extraction“：关系抽取</p>
+<p>​    attribute extraction：特殊的关系抽取</p>
+<p>apprpaches</p>
+<p>​    NLP，text mining，maching learning</p>
+<p>tools</p>
+<p><strong>data sources</strong></p>
+<p>知识提取：隐马尔可夫模型（HMM）；条件随机场模型（CRF）；K最近领居模型（KNN）；最大熵模型（MEM）；支持向量机（SVM）</p>
+<p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201020090423905.png" alt="image-20201020090423905"></p>
+<p><strong>Knowledge Fusion</strong><br>realize entity alignment and ontology construction（实现实体对齐和本体构建）</p>
+<p>1.实体对齐的过程</p>
+<p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201020090850301.png" alt="image-20201020090850301"></p>
+<p>entity alignment algorithm（实体对齐）：成对对齐，然后集合实体对齐</p>
+<p>Feature Matchin（特征匹配）：特征匹配源于由属性相似度函数和关系相似度函数组成的NLP应用。</p>
+<p>文本相似度函数：属性的匹配与比较</p>
+<p>结构相似函数：用于关系的匹配和比较</p>
+<p>实体对齐的过程通常依赖于外部信息，如维基百科链接或人工开发的语料库中的实体信息</p>
+<p><strong>本体构建和评估</strong></p>
+<p>知识融合的目的是建立本体和构造知识图谱。除了实体对齐和关系外，本体和知识图谱的创建还需要更多的工作。</p>
+<ol>
+<li>构建分类学和层次结构</li>
+<li>添加源数据和其它数据资源</li>
+<li>为了保证知识图谱的质量，使用像FOAF这样的通用本体和来自架构的源数据</li>
+</ol>
+<p>如果本体和知识图谱的质量评价不符合要求，知识图谱的构建和融合过程将迭代进行。</p>
+<p><strong>知识图谱的存储</strong></p>
+<p>存储在NoSQL数据库。RDF和图数据库。</p>
+<p>RDF是知识图谱的一种表现形式，使用三元组（主语，谓语和宾语）和IRI/uri（Uniform Resource Locator，统一资源定位符）来描述图的结构。</p>
+<p>例如，Jena+HBase、Hive+HBase、Cas-sandra+Sesame等混合存储方法已经在大量知识库中进行了测试和应用</p>
+<p>支持SPARQL查询的数据格式：JSON/JSON-LD/XML/RDF/N3/CSV/TSV/HTML等。输出格式是机器可读的，不是人可读的。</p>
+<p>IsaViz是一个可视化的RDF图形编辑器，它使用GraphStyleSheets来显示数据</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2020-08-31T15:16:29+08:00"
-              content="2020-08-31">
-          08-31
-        </time>
+    
+    
+    
+        <div class="reward-container">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="kaikai 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="kaikai 支付宝">
+        <span>支付宝</span>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2020/08/31/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%A0%86%E4%B8%8E%E6%A0%88/" itemprop="url">
-            <span itemprop="name">数据结构与算法|堆与栈</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-    </div>
   </div>
-  
-  
-  
+</div>
 
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>kaikai
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="/kaikaihit.github.io/2020/10/15/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E6%9E%84%E5%BB%BA%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/" title="知识图谱构建论文总结">kaikaihit.github.io/2020/10/15/知识图谱构建论文总结/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/09/09/%E9%B2%81%E7%BB%A3%E6%9C%AC%E4%BD%93%E5%BB%BA%E6%A8%A1/" rel="prev" title="鲁绣本体建模">
+                  <i class="fa fa-chevron-left"></i> 鲁绣本体建模
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
       
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {

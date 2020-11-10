@@ -6,7 +6,7 @@
   <link href="kaikaihit.github.io/atom.xml" rel="self"/>
   
   <link href="kaikaihit.github.io/"/>
-  <updated>2020-10-20T03:13:27.415Z</updated>
+  <updated>2020-11-10T02:08:32.185Z</updated>
   <id>kaikaihit.github.io/</id>
   
   <author>
@@ -17,13 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>渔具建模</title>
+    <link href="kaikaihit.github.io/2020/11/10/%E6%B8%94%E5%85%B7%E5%BB%BA%E6%A8%A1/"/>
+    <id>kaikaihit.github.io/2020/11/10/%E6%B8%94%E5%85%B7%E5%BB%BA%E6%A8%A1/</id>
+    <published>2020-11-10T02:05:37.000Z</published>
+    <updated>2020-11-10T02:08:32.185Z</updated>
+    
+    <content type="html"><![CDATA[<p>三层建模：抽象建模、实例建模和能力建模</p><p><strong>抽象建模</strong>：将渔具细分，分为鱼坠、鱼钩、鱼竿、鱼漂、钓饵和钓线。对上述六部分进行分类。</p><p><strong>实例建模：</strong>是抽象建模的一个（或多个）实例。</p><p><strong>能力建模：</strong>实例中各组件之间的能力要求等；渔具各组成成分之间的能力要求。</p><h2 id="抽象建模：分别对鱼坠、鱼钩、鱼竿、鱼漂、钓饵和钓线进行抽象"><a href="#抽象建模：分别对鱼坠、鱼钩、鱼竿、鱼漂、钓饵和钓线进行抽象" class="headerlink" title="抽象建模：分别对鱼坠、鱼钩、鱼竿、鱼漂、钓饵和钓线进行抽象"></a>抽象建模：分别对鱼坠、鱼钩、鱼竿、鱼漂、钓饵和钓线进行抽象</h2><p><strong>鱼竿：</strong></p><img data-src="https://i.loli.net/2020/11/09/iJ37YzasM2jBgUh.png" alt="image-20201109105559672" style="zoom: 80%;" /><p><strong>鱼钩：</strong></p><p><img data-src="https://i.loli.net/2020/11/09/qFiw9CHu7IyQlZJ.png" alt="image-20201109152657168"></p><p><strong>鱼坠：</strong></p><p><img data-src="https://i.loli.net/2020/11/09/VgfLOxWu4XKpNwy.png" alt="image-20201109153027067"></p><p><strong>鱼漂：</strong></p><p><img data-src="https://i.loli.net/2020/11/09/xvay8Z3iSPcotjg.png" alt="image-20201109153652342"></p><p><strong>钓饵：</strong></p><p><img data-src="https://i.loli.net/2020/11/09/JoP9rcgtbjFGNdz.png" alt="image-20201109155424147"></p><p><strong>钓线：</strong></p><p><img data-src="https://i.loli.net/2020/11/09/8iS6GvYqVp7g2KL.png" alt="image-20201109155904358"></p><h2 id="实例建模：对抽象层的最后一行进行实例化"><a href="#实例建模：对抽象层的最后一行进行实例化" class="headerlink" title="实例建模：对抽象层的最后一行进行实例化"></a>实例建模：对抽象层的最后一行进行实例化</h2><p><img data-src="https://i.loli.net/2020/11/09/gdB56YF3hmyG4Rs.png" alt="image-20201109215747281"></p><h2 id="能力建模：实例建模最后一行的工艺以及流程进行表示"><a href="#能力建模：实例建模最后一行的工艺以及流程进行表示" class="headerlink" title="能力建模：实例建模最后一行的工艺以及流程进行表示"></a>能力建模：实例建模最后一行的工艺以及流程进行表示</h2><p>轮座的工艺要求：轮座主体上设置有分别与线轮的两卡块相适配的第一卡槽和第二卡槽，线轮的两卡块能够分别插设在第一卡槽和第二卡槽内而将线轮固定在轮座主体上，其中，所述的轮座主体包括基体和可移动设置在基体上的锁定件，所述的第一卡槽由基体和锁定件围成或设置在锁定件上，锁定件能够由手动推动而相对基体移动至使线轮的卡块脱离所述第一卡槽以使线轮能够从轮座主体上拆离。本实用新型使用方便，能够快速的拆装线轮，结构也更为简单可靠，便于加工制造，能够有效减小本实用新型的体积和重量，便于长时间握持使用，锁定件也不易出现卡死和磨损。</p><p><strong>1.设计</strong></p><p>具备良好开发技术的厂商，因制造钓竿经验丰富，所以可依竿子所需的类别、调性、长度等条件，设计出模具。 但经验丰富的制造商表示，这些测量并不能了解被仿制品所用的材质，如碳织布T数、缠绕层数。有时原设计者为了突显调性，强化功能一段模具内甚至有几个渐缩比。因此真正优良的广告商会在开发过程中，不停地积累经验，再针对不同功能，长度，调性等，设计出不同的模具，再依此模具进行下一个步骤。</p><p><strong>2.裁布</strong></p><p>当模具制作完成后，下一个步骤便是裁布。一般来说，裁布之前已先设计过所需缠绕的层数。而这个层数有时不仅每节不相同，甚至在同一节裸竿上，也会出现层数不同或特别补强的需求。</p><p><strong>3.烫接</strong></p><p>目前的碳织布皆已预先做单面粘胶布，制造者只要将裁切好的碳织布其中一边，预热后熨在模具上。</p><p><strong>4.卷制</strong></p><p>完成烫接后，紧接着就要进入卷制的过程。这个过程是“卷制裸竿”的简称。这时，钓竿的雏形已经浮现。一般卷制钓竿时必须依赖卷制机，英文为“RollingMachine”。</p><p><strong>5.缠带</strong></p><p>卷制完成后，碳织布像蛋卷一样，卷在模具的外面，但着于布上的粘胶，并不会马上干燥、固化，甚至还会在还没完全干燥的这段时间中，可能发生布层间的剥离现象，因此得将竿胚加强粘着，而这个动作就称为“缠带”。</p><p><strong>6.固化</strong></p><p>完成缠带步骤后，这些半成品便要进入烤箱加温。放入烤箱加温，是以一个较高的温度环境，帮助碳织布层内的粘胶融化，充分粘妥每一布层后，再渗入织维强化结构。一般而言，技术优良的厂商会选择控温稳定的烤箱，并使其存放于摄氏一百二十五度到一百三十度之间两个小时左右。</p><p><strong>7.脱模</strong></p><p>取出的竿胚仍然附着于模具之上，所以还得将其分离，以完成接下来的加工过程。因此必须将这些含模具的竿胚，置于脱模机上，将模具取下，等一一取下模具后，再将先前为了固化所缠在外层的胶带取下。</p><p><strong>8.裁断</strong></p><p>由于裁布及卷制裸竿时，头尾都会预留一段，以避免误差和方便加工，因此到了这个阶段，便要依照原本设计的尺寸，将多余的部分切断。</p><p><strong>9.研磨</strong></p><p>事实上碳织布的表面是有一些粗糙的，不仅摸起来不甚舒服，也不美观。因此为了增加商品力，通常会将其表面做研磨处理以方便加工及增加以后的涂装效果。裁切好的裸竿必须要先以补土涂抹均匀，再放置在研磨机上并使其旋转，这时再以人工的方式，用砂布将多余的补土磨去。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;三层建模：抽象建模、实例建模和能力建模&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;抽象建模&lt;/strong&gt;：将渔具细分，分为鱼坠、鱼钩、鱼竿、鱼漂、钓饵和钓线。对上述六部分进行分类。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;实例建模：&lt;/strong&gt;是抽象建模的一个（或多个）实例。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="本体建模" scheme="kaikaihit.github.io/tags/%E6%9C%AC%E4%BD%93%E5%BB%BA%E6%A8%A1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>知识图谱构建论文总结</title>
     <link href="kaikaihit.github.io/2020/10/15/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E6%9E%84%E5%BB%BA%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/"/>
     <id>kaikaihit.github.io/2020/10/15/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1%E6%9E%84%E5%BB%BA%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/</id>
     <published>2020-10-15T01:56:55.000Z</published>
-    <updated>2020-10-20T03:13:27.415Z</updated>
+    <updated>2020-10-27T07:27:13.606Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Architecture-of-Knowledge-Graph-Construction-Techniques"><a href="#Architecture-of-Knowledge-Graph-Construction-Techniques" class="headerlink" title="Architecture of Knowledge Graph Construction Techniques"></a>Architecture of Knowledge Graph Construction Techniques</h2><p>DBpedia, Google Vault, YAGO, and NELL</p><p>two types of the approaches in the devlopment of KGs</p><ul><li><p>top-down approach</p><p>自上而下，领域本体建模模式。</p><p>1）定义模式</p><p>2）知识实例添加到知识图谱中</p></li><li><p>bottom-up approach</p><p>自下而上，知识实例，例如LOD：Linked Open Data </p></li></ul><p><strong>知识图谱的构建流程：</strong></p><p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201015162855846.png" alt="image-20201015162855846"></p><p>The primary sources of knowledge acquisition include structured data, semi-structured data and unstructured data. Knowledge extraction consists of en- tity extraction, attribute extraction and relation extraction. Knowledge fusion is an iterative process, which need to constantly con- struct ontology and evaluate quality of ontology. Currently, knowl edge storage is usually based on NoSQL databases.<br>（知识获取的主要来源包括结构化数据，半结构化数据和非结构化数据。 知识提取包括实体提取，属性提取和关系提取。 知识融合是一个反复的过程，需要不断地构建本体并评估本体的质量。 当前，知识边缘存储通常基于NoSQL数据库。）</p><p><strong>Knowledge extraction</strong></p><p>data sources</p><p>​    structured data</p><p>​        relational databases</p><p>​    semi-structured data</p><p>​        HTML，XML，JSON</p><p>​    unstruceured data</p><p>​        text，image，documents</p><p>types</p><p>​    entity extraction：实体抽取；包含NER，</p><p>​    relation extraction“：关系抽取</p><p>​    attribute extraction：特殊的关系抽取</p><p>apprpaches</p><p>​    NLP，text mining，maching learning</p><p>tools</p><p><strong>data sources</strong></p><p>知识提取：隐马尔可夫模型（HMM）；条件随机场模型（CRF）；K最近领居模型（KNN）；最大熵模型（MEM）；支持向量机（SVM）</p><p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201020090423905.png" alt="image-20201020090423905"></p><p><strong>Knowledge Fusion</strong><br>realize entity alignment and ontology construction（实现实体对齐和本体构建）</p><p>1.实体对齐的过程</p><p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201020090850301.png" alt="image-20201020090850301"></p><p>entity alignment algorithm（实体对齐）：成对对齐，然后集合实体对齐</p><p>Feature Matchin（特征匹配）：特征匹配源于由属性相似度函数和关系相似度函数组成的NLP应用。</p><p>文本相似度函数：属性的匹配与比较</p><p>结构相似函数：用于关系的匹配和比较</p><p>实体对齐的过程通常依赖于外部信息，如维基百科链接或人工开发的语料库中的实体信息</p><p><strong>本体构建和评估</strong></p><p>知识融合的目的是建立本体和构造知识图谱。除了实体对齐和关系外，本体和知识图谱的创建还需要更多的工作。</p><ol><li>构建分类学和层次结构</li><li>添加源数据和其它数据资源</li><li>为了保证知识图谱的质量，使用像FOAF这样的通用本体和来自架构的源数据</li></ol><p>如果本体和知识图谱的质量评价不符合要求，知识图谱的构建和融合过程将迭代进行。</p><p><strong>知识图谱的存储</strong></p><p>存储在NoSQL数据库。RDF和图数据库。</p><p>RDF是知识图谱的一种表现形式，使用三元组（主语，谓语和宾语）和IRI/uri（Uniform Resource Locator，统一资源定位符）来描述图的结构。</p><p>例如，Jena+HBase、Hive+HBase、Cas-sandra+Sesame等混合存储方法已经在大量知识库中进行了测试和应用</p><p>支持SPARQL查询的数据格式：JSON/JSON-LD/XML/RDF/N3/CSV/TSV/HTML等。输出格式是机器可读的，不是人可读的。</p><p>IsaViz是一个可视化的RDF图形编辑器，它使用GraphStyleSheets来显示数据</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Architecture-of-Knowledge-Graph-Construction-Techniques"><a href="#Architecture-of-Knowledge-Graph-Construction-Techniques" class="headerlink" title="Architecture of Knowledge Graph Construction Techniques"></a>Architecture of Knowledge Graph Construction Techniques</h2><p>DBpedia, Google Vault, YAGO, and NELL</p><p>two types of the approaches in the devlopment of KGs</p><ul><li><p>top-down approach</p><p>自上而下，领域本体建模模式。</p><p>1）定义模式</p><p>2）知识实例添加到知识图谱中</p></li><li><p>bottom-up approach</p><p>自下而上，知识实例，例如LOD：Linked Open Data </p></li></ul><p><strong>知识图谱的构建流程：</strong></p><p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201015162855846.png" alt="image-20201015162855846"></p><p>The primary sources of knowledge acquisition include structured data, semi-structured data and unstructured data. Knowledge extraction consists of en- tity extraction, attribute extraction and relation extraction. Knowledge fusion is an iterative process, which need to constantly con- struct ontology and evaluate quality of ontology. Currently, knowl edge storage is usually based on NoSQL databases.<br>（知识获取的主要来源包括结构化数据，半结构化数据和非结构化数据。 知识提取包括实体提取，属性提取和关系提取。 知识融合是一个反复的过程，需要不断地构建本体并评估本体的质量。 当前，知识边缘存储通常基于NoSQL数据库。）</p><p><strong>Knowledge extraction</strong></p><p>data sources</p><p>​    structured data</p><p>​        relational databases</p><p>​    semi-structured data</p><p>​        HTML，XML，JSON</p><p>​    unstruceured data</p><p>​        text，image，documents</p><p>types</p><p>​    entity extraction：实体抽取；包含NER，</p><p>​    relation extraction“：关系抽取</p><p>​    attribute extraction：特殊的关系抽取</p><p>apprpaches</p><p>​    NLP，text mining，maching learning</p><p>tools</p><p><strong>data sources</strong></p><p>知识提取：隐马尔可夫模型（HMM）；条件随机场模型（CRF）；K最近领居模型（KNN）；最大熵模型（MEM）；支持向量机（SVM）</p><p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201020090423905.png" alt="image-20201020090423905"></p><p><strong>Knowledge Fusion</strong><br>realize entity alignment and ontology construction（实现实体对齐和本体构建）</p><p>1.实体对齐的过程</p><p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201020090850301.png" alt="image-20201020090850301"></p><p>entity alignment algorithm（实体对齐）：成对对齐，然后集合实体对齐</p><p>Feature Matchin（特征匹配）：特征匹配源于由属性相似度函数和关系相似度函数组成的NLP应用。</p><p>文本相似度函数：属性的匹配与比较</p><p>结构相似函数：用于关系的匹配和比较</p><p>实体对齐的过程通常依赖于外部信息，如维基百科链接或人工开发的语料库中的实体信息</p><p><strong>本体构建和评估</strong></p><p>知识融合的目的是建立本体和构造知识图谱。除了实体对齐和关系外，本体和知识图谱的创建还需要更多的工作。</p><ol><li>构建分类学和层次结构</li><li>添加源数据和其它数据资源</li><li>为了保证知识图谱的质量，使用像FOAF这样的通用本体和来自架构的源数据</li></ol><p>如果本体和知识图谱的质量评价不符合要求，知识图谱的构建和融合过程将迭代进行。</p><p><strong>知识图谱的存储</strong></p><p>存储在NoSQL数据库。RDF和图数据库。</p><p>RDF是知识图谱的一种表现形式，使用三元组（主语，谓语和宾语）和IRI/uri（Uniform Resource Locator，统一资源定位符）来描述图的结构。</p><p>例如，Jena+HBase、Hive+HBase、Cas-sandra+Sesame等混合存储方法已经在大量知识库中进行了测试和应用</p><p>支持SPARQL查询的数据格式：JSON/JSON-LD/XML/RDF/N3/CSV/TSV/HTML等。输出格式是机器可读的，不是人可读的。</p><p>IsaViz是一个可视化的RDF图形编辑器，它使用GraphStyleSheets来显示数据。</p><p>基于文本的查询结果格式提供了对知识图的细粒度分析</p><p>知识图的图形化可视化允许更大的图片导航和发现相关的知识</p><h2 id="A-Knowledge-Graph-for-industry-4-0"><a href="#A-Knowledge-Graph-for-industry-4-0" class="headerlink" title="A Knowledge Graph for industry 4.0"></a>A Knowledge Graph for industry 4.0</h2><p>制造系统的数字化转型称为工业4.0（the digital transformation of manu- facturing systems, called Industry 4.0）我们为工业4.0相关标准、规范和参考框架提出了一个结构化的数据集，其形式是语义注释的知识图谱</p><p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201022100848600.png" alt="image-20201022100848600"></p><p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201026202528345.png" alt="image-20201026202528345"></p><p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201027090744965.png" alt="image-20201027090744965"></p><p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201027092802386.png" alt="image-20201027092802386"></p><p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201027144707570.png" alt="image-20201027144707570"></p><p><img data-src="C:\Users\hit_zhangkai\AppData\Roaming\Typora\typora-user-images\image-20201027144716387.png" alt="image-20201027144716387"></p>]]></content>
     
     
       
@@ -33,6 +58,55 @@
     
     
     
+    
+  </entry>
+  
+  <entry>
+    <title>协同化制造组会</title>
+    <link href="kaikaihit.github.io/2020/10/11/%E5%8D%8F%E5%90%8C%E5%8C%96%E5%88%B6%E9%80%A0%E7%BB%84%E4%BC%9A/"/>
+    <id>kaikaihit.github.io/2020/10/11/%E5%8D%8F%E5%90%8C%E5%8C%96%E5%88%B6%E9%80%A0%E7%BB%84%E4%BC%9A/</id>
+    <published>2020-10-11T06:27:28.000Z</published>
+    <updated>2020-11-10T02:08:36.817Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="2020-9-29"><a href="#2020-9-29" class="headerlink" title="2020/9/29"></a>2020/9/29</h2><p>Mendeley：paper管理工具</p><p>Copytranslator：翻译</p><p>Gitee：<a href="https://gitee.com/ICES-CManufacturing/dashboard">https://gitee.com/ICES-CManufacturing/dashboard</a></p><p><strong>web-crawler爬虫：姚泽坤，王泽华</strong></p><p><strong>和多源数据融合NLP：张明阳，路展</strong></p><p>本周任务：</p><p>​    路展：ERNIE模型的学习</p><p>​    张明阳：开源工具的测试</p><p>​    姚泽坤：服装数据的爬取，考虑BOM数据、服装的工艺生产流程</p><p>​    王泽华：服装数据的爬取，考虑BOM数据、服装的工艺生产流程</p><p>要求：</p><ol><li>一周至少一篇论文</li><li>有问题及时沟通</li></ol><h2 id="2020-10-11"><a href="#2020-10-11" class="headerlink" title="2020/10/11"></a>2020/10/11</h2><p><strong>知识服务构建平台</strong></p><ul><li>​    多源数据融合功能</li><li>​    数据资源管理</li><li>​    本体管理</li><li>​    知识图谱</li><li>​    模型中心</li><li>​    训练管理</li></ul><p>1.数据资源管理</p><p>nlp模型等：Bert，ERNIE，Transformer，StanfordNLP等</p><p>多源数据融合功能api集成：实现（半结构化、非结构化数据）&lt;——&gt;结构化数据</p><p>2.本体、知识图谱管理</p><p>本体管理&lt;————&gt;知识图谱管理，1对n的关系，一个本体可以有多个对应的知识图谱</p><p>3.模型管理和模型训练</p><p>模型管理：存储nlp模型和知识表示学习模型（Trans系列模型等）</p><p>模型训练：数据资源+模型管理</p><p>知识表示模型</p><p>​    </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;2020-9-29&quot;&gt;&lt;a href=&quot;#2020-9-29&quot; class=&quot;headerlink&quot; title=&quot;2020/9/29&quot;&gt;&lt;/a&gt;2020/9/29&lt;/h2&gt;&lt;p&gt;Mendeley：paper管理工具&lt;/p&gt;
+&lt;p&gt;Copytranslator：翻</summary>
+      
+    
+    
+    
+    <category term="组会" scheme="kaikaihit.github.io/categories/%E7%BB%84%E4%BC%9A/"/>
+    
+    
+    <category term="组会" scheme="kaikaihit.github.io/tags/%E7%BB%84%E4%BC%9A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>认知图谱概念</title>
+    <link href="kaikaihit.github.io/2020/10/09/%E8%AE%A4%E7%9F%A5%E5%9B%BE%E8%B0%B1%E6%A6%82%E5%BF%B5/"/>
+    <id>kaikaihit.github.io/2020/10/09/%E8%AE%A4%E7%9F%A5%E5%9B%BE%E8%B0%B1%E6%A6%82%E5%BF%B5/</id>
+    <published>2020-10-09T13:34:26.000Z</published>
+    <updated>2020-11-10T02:09:04.739Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="认知图谱的概念"><a href="#认知图谱的概念" class="headerlink" title="认知图谱的概念"></a>认知图谱的概念</h2><p>知识图谱在诸多应用中取得成功的同时，其方法论始终笼罩着几朵“乌云”，如歧义问题、链接困难、关系的冗余与组合爆炸等。虽然针对这些问题的一些修补工作取得了不错的效果，但是想要真正解决这些问题，或许需要在深度学习时代重新考虑知识表示的框架与方法论。因此认知图谱产生。</p><p>基于原始文本数据，针对特定问题情景，使用强大的机器学习模型动态构建的，节点带有上下文语义信息的知识图谱。</p><p>双过程推理论：系统1负责经验性的直觉判断，动态构建认知图谱；系统2再图上进行关系推理。由于认知图谱保留了实体节点上的语义信息的隐表示，所以在符号逻辑之外，比如图神经网络等深度学习模型钟也可以大显伸手。</p><h2 id="语义网和本体论"><a href="#语义网和本体论" class="headerlink" title="语义网和本体论"></a>语义网和本体论</h2><p>为了方便机器更好的理解，语义搜索很容易实现，为了实现这一个目标，设计了资源描述框架（RDF）和描述语言和描述本体的RDFS/OWL。</p><p>NELL开启了一个机器学习实现知识图谱构建的浪潮，目标是持续不断地从网络上获取资源并进行事实发现、规则总结等，里面涉及到命名实体识别、同名消歧、规则归纳等关键技术。</p><p>ArnetMiner实现了高精度学者画像、同名消歧、智能推荐、趋势分析等关键技术。</p><h2 id="大型知识图谱的嵌入训练"><a href="#大型知识图谱的嵌入训练" class="headerlink" title="大型知识图谱的嵌入训练"></a>大型知识图谱的嵌入训练</h2><p>算法的目的是为知识图谱中每个关系或实体学习一个d 维向量表示，对于指示图谱钟任意的三元组事实（h.r.t），算法要求它们的向量表示满足</p><p>基于知识图谱的问答系统（KBQA），知识图谱是对机器友好的结构，有了对应的SPARQL语句，</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;认知图谱的概念&quot;&gt;&lt;a href=&quot;#认知图谱的概念&quot; class=&quot;headerlink&quot; title=&quot;认知图谱的概念&quot;&gt;&lt;/a&gt;认知图谱的概念&lt;/h2&gt;&lt;p&gt;知识图谱在诸多应用中取得成功的同时，其方法论始终笼罩着几朵“乌云”，如歧义问题、链接困难、关系的冗余</summary>
+      
+    
+    
+    
+    <category term="知识图谱" scheme="kaikaihit.github.io/categories/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
+    
+    
+    <category term="知识图谱" scheme="kaikaihit.github.io/tags/%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1/"/>
     
   </entry>
   
@@ -550,95 +624,6 @@
     <category term="Java基础" scheme="kaikaihit.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
     
     <category term="GC" scheme="kaikaihit.github.io/tags/GC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java SE基础|JVM</title>
-    <link href="kaikaihit.github.io/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-JVM/"/>
-    <id>kaikaihit.github.io/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-JVM/</id>
-    <published>2020-08-28T12:20:14.000Z</published>
-    <updated>2020-08-29T08:18:47.637Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="JVM加载class文件的原理"><a href="#JVM加载class文件的原理" class="headerlink" title="JVM加载class文件的原理"></a>JVM加载class文件的原理</h2><p>JVM中类的装载是由ClassLoader和它的子类来实现的，Java ClassLoader是一个重要的Java运行时系统组件。它负责在运行时查找和装入类文件的类。</p><p>类装载方式，有两种。</p><p>隐式装载：程序在运行过程中当碰到通过new等方式生成对象时，隐式调用类装载器加载对应的类到jvm中。</p><p>显示装载：通过class.forname()等方法，显示加载需要的类，隐式加载与显式加载的区别：两者本质是一样的。</p><p>Java类的加载是动态的，它并不会一次性将所有类全部加载后再运行，而是保证程序运行的基础类(像是基类)完全加载到jvm中，至于其他类，则在需要的时候才加载。这当然就是为了节省内存开销。</p><h2 id="Java虚拟机"><a href="#Java虚拟机" class="headerlink" title="Java虚拟机"></a>Java虚拟机</h2><p>可执行Java字节码的虚拟机进程。Java源文件被编译成能被Java虚拟机执行的字节码文件。</p><p>Java被设计成允许应用程序可以运行在任意的平台，而不需要程序员为每一个平台单独重写或者重写编译。Java虚拟机让这个变为可能。</p><p>（1）堆内存分配</p><p>JVM初始内存由-Xms指定，默认是物理内存的1/64；JVM最大分配内存由-Xms指定，默认是物理内存的1/4。默认空余堆内存小 于40%时，JVM就会增大堆直到-Xmx的最大限制；空余堆内存大于70%时，JVM会减少堆直到-Xms的最小限制。因此服务器一般设置-Xms、 -Xmx相等以避免在每次GC后调整堆的大小</p><p>（2）非堆内存分配</p><p>JVM使用-XX:PermSize设置非堆内存初始值，默认是物理内存的1/64；由XX:MaxPermSize设置最大非堆内存的大小，默认是物理内存的1/4。</p><p>（3）VM最大内存</p><p>JVM内存限制于实际的最大物理内存，结社物理内存无限大的话，JVM内存的最大值跟操作系统有很大的关系。32位处理器虽然可控内存空间有4GB。但是具体的操作系统会给一个限制，这个限制一般是2GB~3GB（一般来说Windows系统下为1.5G-2G，Linux系 统下为2G-3G），而64bit以上的处理器就不会有限制了。</p><p>（4）几个不同公司不同版本JVM最大堆内存</p><p><img data-src="https://uploadfiles.nowcoder.com/images/20180926/308572_1537966762062_914FBB519FF1ACBAF602B2DCBD5184D6" alt="img"></p><h2 id="哪些可作为Root对象"><a href="#哪些可作为Root对象" class="headerlink" title="哪些可作为Root对象"></a>哪些可作为Root对象</h2><p>\1. 虚拟机栈中的引用对象<br>\2. 本地方法栈中JNI引用对象<br>\3. 方法区中类静态属性引用的对象<br>\4. 方法区中常量引用对象（如字符串常量池）<br>\5. 被同步锁持有的对象<br>\6. 内部引用（如基本数据类型对应的class对象、常驻的异常对象NullPointerException等、系统类加载器）</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;JVM加载class文件的原理&quot;&gt;&lt;a href=&quot;#JVM加载class文件的原理&quot; class=&quot;headerlink&quot; title=&quot;JVM加载class文件的原理&quot;&gt;&lt;/a&gt;JVM加载class文件的原理&lt;/h2&gt;&lt;p&gt;JVM中类的装载是由ClassLoa</summary>
-      
-    
-    
-    
-    <category term="Java面试宝典" scheme="kaikaihit.github.io/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/"/>
-    
-    <category term="JVM" scheme="kaikaihit.github.io/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/JVM/"/>
-    
-    
-    <category term="Java" scheme="kaikaihit.github.io/tags/Java/"/>
-    
-    <category term="Java基础" scheme="kaikaihit.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
-    
-    <category term="JVM" scheme="kaikaihit.github.io/tags/JVM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java SE基础|线程</title>
-    <link href="kaikaihit.github.io/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-%E7%BA%BF%E7%A8%8B/"/>
-    <id>kaikaihit.github.io/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-%E7%BA%BF%E7%A8%8B/</id>
-    <published>2020-08-28T08:58:45.000Z</published>
-    <updated>2020-08-28T12:20:05.492Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="线程的基本状态以及状态之间的关系"><a href="#线程的基本状态以及状态之间的关系" class="headerlink" title="线程的基本状态以及状态之间的关系"></a>线程的基本状态以及状态之间的关系</h2><p>运行态：Running</p><p>就绪态：Runnable，万事俱备，只欠CPU</p><p>阻塞状态：Blocked。调用wait()方法进入等待池，也可能是执行同步方法或同步代码块进入等锁池，或者是调用了sleep()方法或join()方法等待休眠或其他线程结束，或是因为发生了I/O中断。</p><h2 id="进程、线程和协程的区别"><a href="#进程、线程和协程的区别" class="headerlink" title="进程、线程和协程的区别"></a>进程、线程和协程的区别</h2><p>进程是系统进行资源分配和调用的基本单位，每一个进程都有它自己的内存空间和系统资源。</p><p>线程是进程的执行单位或者执行路线，进程也是CPU调度的基本单位。</p><p>协程是用户态的轻量级线程。</p><p>先有进程，然后进程可以创建线程，线程是依附在进程里面的， 线程里面可以包含多个协程 进程之间不共享全局变量，线程之间共享全局变量，但是要注意资源竞争的问题<br>多进程开发比单进程多线程开发稳定性要强，但是多进程开发比多线程开发资源开销要大<br>多线程开发线程之间执行是无序的，协程之间执行按照一定顺序交替执行<br>协程以后主要用在网络爬虫和网络请求，开辟一个协程大概需要5k空间，开辟一个线程需要512k空间， 开辟一个进程占用资源最多</p><h2 id="举例说明同步和异步"><a href="#举例说明同步和异步" class="headerlink" title="举例说明同步和异步"></a>举例说明同步和异步</h2><p>如果系统中存在临界资源（资源数量少于竞争资源的线程数量的资源），例如正在写的数据以后可能被另一个线程读到，或者正在读的数据可能已经被另一个线程写过了，那么这些数据就必须进行同步存取（数据库操作中的排他锁就是最好的例子）。当应用程序在对象上调用了一个需要花费很长时间来执行的方法，并且不希望让程序等待方法的返回时，就应该使用异步编程，在很多情况下采用异步途径往往更有效率。事实上，所谓的同步就是指阻塞式操作，而异步就是非阻塞式操作。</p><h2 id="线程同步的方法"><a href="#线程同步的方法" class="headerlink" title="线程同步的方法"></a>线程同步的方法</h2><p>wait():使一个线程处于等待状态，并且释放所持有的对象的lock。<br>sleep():使一个正在运行的线程处于睡眠状态，是一个静态方法，调用此方法要捕捉InterruptedException异常。<br>notify():唤醒一个处于等待状态的线程，注意的是在调用此方法的时候，并不能确切的唤醒某一个等待状态的线程，而是由JVM确定唤醒哪个线程，而且不是按优先级。<br>Allnotity():唤醒所有处入等待状态的线程，注意并不是给所有唤醒线程一个对象的锁，而是让它们竞争</p><h2 id="线程从创建到死亡的几种状态都有哪些"><a href="#线程从创建到死亡的几种状态都有哪些" class="headerlink" title="线程从创建到死亡的几种状态都有哪些"></a>线程从创建到死亡的几种状态都有哪些</h2><p><img data-src="https://uploadfiles.nowcoder.com/images/20190908/93694598_1567901669525_2E1604194BEFDDB0EE43167B50B364AB" alt="img"></p><h2 id="线程池的优势"><a href="#线程池的优势" class="headerlink" title="线程池的优势"></a>线程池的优势</h2><p>第一：降低资源消耗。通过重复利用已创建的线程降低线程创建和销毁造成的消耗。</p><p>第二：提高响应速度。当任务到达时，任务可以不需要等到线程创建就能执行。</p><p>第三：提高线程的可管理性，线程是稀缺资源，如果无限制地创建，不仅会消耗系统资源，还会降低系统的稳定性，使用线程池可以进行统一分配、调优和监控。</p><h2 id="AQS的理解"><a href="#AQS的理解" class="headerlink" title="AQS的理解"></a>AQS的理解</h2><p>AbstractQueuedSynchronizer简称AQS。是实现锁的框架。</p><p>实现的关键是：先进先出的队列、state状态。</p><h2 id="生产者消费者模式"><a href="#生产者消费者模式" class="headerlink" title="生产者消费者模式"></a>生产者消费者模式</h2><p>支持并发、解耦</p><p>生产者消费者在同一时间段内共用同一存储空间，生产者向空间里生产数据，而消费者取走数据。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h2 id=&quot;线程的基本状态以及状态之间的关系&quot;&gt;&lt;a href=&quot;#线程的基本状态以及状态之间的关系&quot; class=&quot;headerlink&quot; title=&quot;线程的基本状态以及状态之间的关系&quot;&gt;&lt;/a&gt;线程的基本状态以及状态之间的关系&lt;/h2&gt;&lt;p&gt;运行态：Running&lt;/p</summary>
-      
-    
-    
-    
-    <category term="Java面试宝典" scheme="kaikaihit.github.io/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/"/>
-    
-    <category term="Java线程" scheme="kaikaihit.github.io/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/Java%E7%BA%BF%E7%A8%8B/"/>
-    
-    
-    <category term="Java" scheme="kaikaihit.github.io/tags/Java/"/>
-    
-    <category term="Java基础" scheme="kaikaihit.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
-    
-    <category term="线程" scheme="kaikaihit.github.io/tags/%E7%BA%BF%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java SE基础|集合</title>
-    <link href="kaikaihit.github.io/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88/"/>
-    <id>kaikaihit.github.io/2020/08/28/Java-SE%E5%9F%BA%E7%A1%80-%E9%9B%86%E5%90%88/</id>
-    <published>2020-08-28T03:01:13.000Z</published>
-    <updated>2020-08-28T08:58:32.083Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="List、Map、Set的区别"><a href="#List、Map、Set的区别" class="headerlink" title="List、Map、Set的区别"></a>List、Map、Set的区别</h2><p>list：有序访问、索引访问，可以重复<br>set(HashSet、LinkedHashSet 或者 TreeSet)：去重<br>map：键值存储</p><p><img data-src="https://uploadfiles.nowcoder.com/images/20200215/1034884_1581738199162_50125D538C24748FCB1032CB38EEE0A9" alt="img"></p><p><img data-src="https://upload-images.jianshu.io/upload_images/5959612-31df64b17fb83cd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1018/format/webp" alt="img"></p><a id="more"></a><p>List：</p><blockquote><p>1.可以允许重复的对象。<br>2.可以插入多个null元素。<br>3.是一个有序容器，保持了每个元素的插入顺序，输出的顺序就是插入的顺序。<br>4.常用的实现类有 ArrayList、LinkedList 和 Vector。ArrayList 最为流行，它提供了使用索引的随意访问，而 LinkedList 则对于经常需要从 List 中添加或删除元素的场合更为合适。</p></blockquote><p>Set：</p><blockquote><p>1 .不允许重复对象</p><p>2.无序容器，你无法保证每个元素的存储顺序，TreeSet通过 Comparator  或者 Comparable 维护了一个排序顺序。</p><p>3.只允许一个 null 元素</p><p>4.Set 接口最流行的几个实现类是 HashSet、LinkedHashSet 以及 TreeSet。最流行的是基于 HashMap 实现的 HashSet；TreeSet 还实现了 SortedSet 接口，因此 TreeSet 是一个根据其 compare() 和 compareTo() 的定义进行排序的有序容器。</p></blockquote><p><img data-src="https://upload-images.jianshu.io/upload_images/5959612-bb4adde83f977ed8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/660/format/webp" alt="img"></p><p>Map：</p><blockquote><p>1.Map不是collection的子接口或者实现类。Map是一个接口。</p><p>2.Map 的 每个 Entry 都持有两个对象，也就是一个键一个值，Map 可能会持有相同的值对象但键对象必须是唯一的。</p><p>3.TreeMap 也通过 Comparator  或者 Comparable 维护了一个排序顺序。</p><p>4.Map 里你可以拥有随意个 null 值但最多只能有一个 null 键。</p><p>5.Map 接口最流行的几个实现类是 HashMap、LinkedHashMap、Hashtable 和 TreeMap。（HashMap、TreeMap最常用）</p></blockquote><h2 id="HashMap和Hashtable的区别"><a href="#HashMap和Hashtable的区别" class="headerlink" title="HashMap和Hashtable的区别"></a>HashMap和Hashtable的区别</h2><p>HashMap允许键和值是null，而Hashtable不允许键或者值是null。<br>Hashtable是同步的，而HashMap不是。因此，HashMap更适合于单线程环境，而Hashtable适合于多线程环境。<br>HashMap提供了可供应用迭代的键的集合，因此，HashMap是快速失败的。另一方面，Hashtable提供了对键的列举(Enumeration)。<br>一般认为Hashtable是一个遗留的类。</p><h2 id="快速失败-fail-fast-和安全失败-fail-safe-的区别"><a href="#快速失败-fail-fast-和安全失败-fail-safe-的区别" class="headerlink" title="快速失败(fail-fast)和安全失败(fail-safe)的区别"></a>快速失败(fail-fast)和安全失败(fail-safe)的区别</h2><p>Iterator的安全失败是基于对底层集合做拷贝，它不受源集合上修改的影响。</p><p>java.util包下面的所有的集合类都是快速失败的，而java.util.concurrent包下面的所有的类都是安全失败的</p><p>快速失败的迭代器会抛出ConcurrentModificationException异常，而安全失败的迭代器永远不会抛出这样的异常。</p><h2 id="Iterator和ListIterator的区别"><a href="#Iterator和ListIterator的区别" class="headerlink" title="Iterator和ListIterator的区别"></a>Iterator和ListIterator的区别</h2><p>Iterator和ListIterator的区别是：<br>Iterator可用来遍历Set和List集合，但是ListIterator只能用来遍历List。<br>Iterator对集合只能是前向遍历，ListIterator既可以前向也可以后向。<br>ListIterator实现了Iterator接口，并包含其他的功能，比如：<strong>增加元素，替换元素，获取前一个和后一个元素的索引</strong>，等等。</p><h2 id="什么是迭代器"><a href="#什么是迭代器" class="headerlink" title="什么是迭代器"></a>什么是迭代器</h2><p>Iterator提供了统一遍历操作集合元素的统一接口, Collection接口实现Iterable接口。</p><p>Java集合类框架的基本接口有哪些？</p><p>Collection：代表一组对象，每一个对象都是它的子元素。<br>Set：不包含重复元素的Collection。<br>List：有顺序的collection，并且可以包含重复元素。<br>Map：可以把键(key)映射到值(value)的对象，键不能重复。</p><h2 id="TreeMap的底层实现"><a href="#TreeMap的底层实现" class="headerlink" title="TreeMap的底层实现"></a>TreeMap的底层实现</h2><p>TreeMap 的实现就是红黑树数据结构，也就说是一棵自平衡的排序二叉树，这样就可以保证当需要快速检索指定节点。</p><p>红黑树的插入、删除、遍历时间复杂度都为O(lgN)，所以性能上低于哈希表。但是哈希表无法提供键值对的有序输出，红黑树因为是排序插入的，可以按照键的值的大小有序输出。</p><p>红黑树性质：</p><p>性质1：每个节点要么是红色，要么是黑色。</p><p>性质2：根节点永远是黑色的。</p><p>性质3：所有的叶节点都是空节点（即 null），并且是黑色的。</p><p>性质4：每个红色节点的两个子节点都是黑色。（从每个叶子到根的路径上不会有两个连续的红色节点）</p><p>性质5：从任一节点到其子树中每个叶子节点的路径都包含相同数量的黑色节点。</p><h2 id="红黑树"><a href="#红黑树" class="headerlink" title="红黑树"></a>红黑树</h2><p>红黑树是一种含有红黑结点并能自平衡的二叉查找树。</p><p>性质1：每个节点要么是黑色，要么是红色。</p><p>性质2：根节点是黑色。</p><p>性质3：每个叶子节点（NIL）是黑色。</p><p>性质4：每个红色结点的两个子结点一定都是黑色。</p><p><strong>性质5：任意一结点到每个叶子结点的路径都包含数量相同的黑结点。</strong></p><p>三种操作：左旋、右旋和变色。</p><ul><li><strong>左旋</strong>：以某个结点作为支点(旋转结点)，其右子结点变为旋转结点的父结点，右子结点的左子结点变为旋转结点的右子结点，左子结点保持不变。如图3。</li><li><strong>右旋</strong>：以某个结点作为支点(旋转结点)，其左子结点变为旋转结点的父结点，左子结点的右子结点变为旋转结点的左子结点，右子结点保持不变。如图4。</li><li><strong>变色</strong>：结点的颜色由红变黑或由黑变红。</li></ul>]]></content>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;List、Map、Set的区别&quot;&gt;&lt;a href=&quot;#List、Map、Set的区别&quot; class=&quot;headerlink&quot; title=&quot;List、Map、Set的区别&quot;&gt;&lt;/a&gt;List、Map、Set的区别&lt;/h2&gt;&lt;p&gt;list：有序访问、索引访问，可以重复&lt;br&gt;set(HashSet、LinkedHashSet 或者 TreeSet)：去重&lt;br&gt;map：键值存储&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&quot;https://uploadfiles.nowcoder.com/images/20200215/1034884_1581738199162_50125D538C24748FCB1032CB38EEE0A9&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&quot;https://upload-images.jianshu.io/upload_images/5959612-31df64b17fb83cd7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1018/format/webp&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Java面试宝典" scheme="kaikaihit.github.io/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/"/>
-    
-    <category term="Java" scheme="kaikaihit.github.io/categories/Java%E9%9D%A2%E8%AF%95%E5%AE%9D%E5%85%B8/Java/"/>
-    
-    
-    <category term="Java" scheme="kaikaihit.github.io/tags/Java/"/>
-    
-    <category term="Java基础" scheme="kaikaihit.github.io/tags/Java%E5%9F%BA%E7%A1%80/"/>
-    
-    <category term="集合" scheme="kaikaihit.github.io/tags/%E9%9B%86%E5%90%88/"/>
     
   </entry>
   
